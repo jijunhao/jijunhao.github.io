@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo入门, Ubuntu,ML,DL,Math,CV等">
-    <meta name="description" content="Hexo 通用简明教程，常用命令和目录结构">
+    <meta name="keywords" content="统计机器学习, Ubuntu,ML,DL,Math,CV等">
+    <meta name="description" content="学习的类型1. 监督学习（supervised learning）监督学习可以被视为一种学生学习的过程，即向导师提问并回答。在机器学习情境中，学生对应于计算机，导师对应于计算机的用户;计算机从问与答的成对样本中学习一种从问题到其答案的映射。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hexo入门 | 季俊豪的博客</title>
+    <title>统计机器学习 | 季俊豪的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -335,12 +335,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.webp')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.webp')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hexo入门</h1>
+                    <h1 class="description center-align post-title">统计机器学习</h1>
                 </div>
             </div>
         </div>
@@ -364,8 +364,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Hexo%E5%85%A5%E9%97%A8/">
-                                <span class="chip bg-color">Hexo入门</span>
+                            <a href="/tags/%E7%BB%9F%E8%AE%A1%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                                <span class="chip bg-color">统计机器学习</span>
                             </a>
                         
                     </div>
@@ -376,8 +376,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2/" class="post-category">
-                                博客
+                            <a href="/categories/%E7%BB%9F%E8%AE%A1%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                统计机器学习
                             </a>
                         
                     </div>
@@ -389,28 +389,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-09-25
+                    2022-12-09
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-09-25
+                    2022-12-09
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    914
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    5 分
                 </div>
                 
 
@@ -435,97 +435,165 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
-<p>参考链接</p>
-<p><a target="_blank" rel="noopener" href="https://blog.17lai.site/">夜法之书的Hexo</a>  </p>
-<p><a target="_blank" rel="noopener" href="https://fulequn.github.io/2020/08/23/Article202008231/">Hexo一篇文章多个categories</a></p>
-</blockquote>
-<h2 id="hexo-目录结构说明"><a href="#hexo-目录结构说明" class="headerlink" title="hexo 目录结构说明"></a>hexo 目录结构说明</h2><p>在执行过<code>Hexo d</code>命令之后，目录结构新增了<code>.deploy_git</code>，<code>public</code>，<code>.gitignore</code>，如下：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"> $ tree <span class="token parameter variable">-L</span> <span class="token number">2</span>
-<span class="token builtin class-name">.</span>
-├── .deploy_git
-├── node_modules
-├── public
-├── scaffolds
-│   ├── draft.md
-│   ├── page.md
-│   └── post.md
-├── <span class="token builtin class-name">source</span>
-│   ├── _posts
-│   ├── _drafts
-├── themes
-├── _config.yml
-├── db.json
-├── package.json
-└── package-lock.json<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="1-config-yml"><a href="#1-config-yml" class="headerlink" title="1. _config.yml"></a>1. _config.yml</h3><p>用来配置博客相关的参数，初始化时自动创建。具体参数设置，可参照 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration">Hexo 配置</a> 文档。</p>
-<h3 id="2-node-modules-和-package-json"><a href="#2-node-modules-和-package-json" class="headerlink" title="2. node_modules 和 package.json"></a>2. node_modules 和 package.json</h3><p>都是在初始化时自动创建。</p>
+                <h2 id="学习的类型"><a href="#学习的类型" class="headerlink" title="学习的类型"></a>学习的类型</h2><h3 id="1-监督学习（supervised-learning）"><a href="#1-监督学习（supervised-learning）" class="headerlink" title="1. 监督学习（supervised learning）"></a>1. 监督学习（supervised learning）</h3><p>监督学习可以被视为一种学生学习的过程，即向导师提问并回答。在机器学习情境中，学生对应于计算机，导师对应于计算机的用户;计算机从问与答的成对样本中学习一种从问题到其答案的映射。</p>
+<p>监督学习的目标在于获得**泛化能力(generalization ability)**：一种能够为从未被学习过的问题猜出恰当答案的能力。</p>
+<p>监督学习的典型任务：</p>
 <ul>
-<li><code>node_modules</code>用来存储已安装的各类依赖包。</li>
-<li><code>package.json</code>用来查看 Hexo 的版本以及相关依赖包的版本。</li>
+<li>**回归(regression)**，当答案是一个实数值(如:温度)</li>
+<li>**分类(classification)**，如果答案是一个分类值(如:“是”或“否”)</li>
+<li>**排序(ranking)**，如果答案是一个数列值(如:“好”“中”或“劣”)</li>
 </ul>
-<h3 id="3-scaffold"><a href="#3-scaffold" class="headerlink" title="3. scaffold"></a>3. scaffold</h3><p>模板文件夹，初始化时自动创建。包含<code>page</code>，<code>post</code>，<code>draft</code>三种模板，分别对应 页面、要发布的文章、草稿。</p>
-<h3 id="4-themes"><a href="#4-themes" class="headerlink" title="4. themes"></a>4. themes</h3><p>主题文件夹，初始化时自动创建。每一个主题，都有一个单独的文件夹。默认主题为 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-theme-landscape">landscape</a>。</p>
-<h3 id="5-source-，-public-和-deploy-git"><a href="#5-source-，-public-和-deploy-git" class="headerlink" title="5. source ， public 和 .deploy_git"></a>5. source ， public 和 .deploy_git</h3><ul>
-<li>source：资源文件夹。用来存放图片、Markdown 文档（文章、草稿）、各种页面（分类、关于页面等）。</li>
-<li>public：将 source 文件夹里的 Markdown 文档，转换成 index.html。再结合主题进行渲染，就是我们最终看到的博客。</li>
-<li>.deploy_git：将 public 文件夹的内容提交到 Github 后生成，内容与 public 文件夹基本一致。</li>
-</ul>
-<p>这三者的关系大致是：source -&gt; public -&gt; .deploy_git</p>
+<h3 id="2-非监督学习（unsupervised-learning）"><a href="#2-非监督学习（unsupervised-learning）" class="headerlink" title="2. 非监督学习（unsupervised learning）"></a>2. 非监督学习（unsupervised learning）</h3><p>非监督学习被认为是，导师不存在并且学生自学。在机器学习情境中，计算机通过互联网自动地收集数据并且尝试在没有用户任何指导下抽取有用的知识。因此，非监督学习比监督学习更加自动化，尽管其目标不一定指定清楚。</p>
+<p>非监督学习的典型任务：</p>
 <ul>
-<li>执行<code>hexo generate</code>，根据 source，更新 public。</li>
-<li>执行<code>hexo deploy</code>，根据 public，更新 .deploy_git。</li>
+<li><strong>聚类(data clustering)</strong></li>
+<li><strong>异常点检测(outlier detection)</strong></li>
+<li><strong>变化检测(change detection)</strong></li>
 </ul>
-<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><h3 id="1-指令说明"><a href="#1-指令说明" class="headerlink" title="1. 指令说明"></a>1. 指令说明</h3><ul>
-<li><code>hexo server</code> #启动本地服务器，用于预览主题。Hexo 会监视文件变动并自动更新，除修改站点配置文件外,无须重启服务器,直接刷新网页即可生效。</li>
-<li><code>hexo server -s</code> #以静态模式启动</li>
-<li><code>hexo server -p 5000</code> #更改访问端口 (默认端口为 4000，’ctrl + c’关闭 server)</li>
-<li><code>hexo server -i IP地址</code> #自定义 IP</li>
-<li><code>hexo clean</code> #清除缓存 ,网页正常情况下可以忽略此条命令,执行该指令后,会删掉站点根目录下的 public 文件夹</li>
-<li><code>hexo g</code> #生成静态网页 (执行 $ <code>hexo g</code>后会在站点根目录下生成 public 文件夹, hexo 会将”/blog/source/“ 下面的.md后缀的文件编译为.html 后缀的文件,存放在”/blog/public/ “ 路径下)</li>
-<li><code>hexo d</code> #自动生成网站静态文件，并将本地数据部署到设定的仓库(如 github)</li>
-<li><code>hexo init</code> 文件夹名称 #初始化 XX 文件夹名称</li>
-<li><code>npm update hexo -g</code>#升级</li>
-<li><code>npm install hexo -g</code> #安装</li>
-<li><code>node -v</code> #查看 node.js 版本号</li>
-<li><code>npm -v</code> #查看 npm 版本号</li>
-<li><code>git --version</code> #查看 git 版本号</li>
-<li><code>hexo -v</code> #查看 hexo 版本号</li>
-<li>hexo new page “music” #新增页面music</li>
-<li>hexo new post “文章名称” #新增文章</li>
+<h3 id="3-强化学习（reinforcement-learning）"><a href="#3-强化学习（reinforcement-learning）" class="headerlink" title="3. 强化学习（reinforcement learning）"></a>3. 强化学习（reinforcement learning）</h3><p>强化学习与监督学习类似，也是以使计算机获得对没有学习过的问题做出正确解答的泛化能力为目标，但是在学习过程中，不设置导师提示对错、告知最终答案的环节。相反，导师评价(evaluate)学生的行为并给予其反馈。强化学习的目标是基于来自导师的反馈，使得学生提高其行为，从而最大化导师的评价。</p>
+<h3 id="4-高级主题"><a href="#4-高级主题" class="headerlink" title="4. 高级主题"></a>4. 高级主题</h3><ul>
+<li><strong>半监督学习(semi-supervised learning)</strong></li>
+<li><strong>集成学习(ensemble learning)</strong></li>
+<li><strong>矩阵学习(matrix learning)、张量学习(tensor learning)</strong></li>
+<li><strong>在线学习(online learning)</strong></li>
+<li><strong>迁移学习(transfer learning)</strong></li>
+<li><strong>降维(dimensionality reduction)</strong></li>
 </ul>
-<h3 id="2-简写指令"><a href="#2-简写指令" class="headerlink" title="2. 简写指令"></a>2. 简写指令</h3><ul>
-<li><code>hexo n "我的第一篇文章"</code> 等价于 <code>hexo new "我的第一篇文章"</code> 还等价于 <code>hexo new post "我的第一篇文章"</code></li>
-<li><code>hexo p</code> 等价于 <code>hexo publish</code></li>
-<li><code>hexo g</code> 等价于 <code>hexo generate</code></li>
-<li><code>hexo s</code>等价于 <code>hexo server</code></li>
-<li><code>hexo d</code> 等价于 <code>hexo deploy</code></li>
-<li><code>hexo g -d</code>等价于<code>hexo generate --deploy</code></li>
+<h3 id="5-其他热点"><a href="#5-其他热点" class="headerlink" title="5. 其他热点"></a>5. 其他热点</h3><ul>
+<li><strong>关联规则挖掘</strong></li>
+<li><strong>概率图模型</strong></li>
+<li><strong>深度学习</strong></li>
+<li><strong>图、视频、文本、音频、网络的分析</strong></li>
+<li><strong>分布式计算</strong></li>
 </ul>
-<p>注: <code>hexo clean</code> 没有 简写, <code>git --version</code> 没有简写</p>
-<h2 id="tags与categories"><a href="#tags与categories" class="headerlink" title="tags与categories"></a>tags与categories</h2><p>在 Hexo 中使用 <code>tags</code> 与 <code>categories</code> 往往需要使用多标签和多分类,这里记录一下它们的用法。</p>
-<h3 id="1-tags"><a href="#1-tags" class="headerlink" title="1. tags"></a>1. tags</h3><p>多标签写法，这2种都是一样的效果，用哪个都可以，建议使用列表式，直观清晰。</p>
-<pre class="line-numbers language-text" data-language="text"><code class="language-text">tags:
-  - 123
-  - 456
-或者
-tags: [123, 456]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="2-categories"><a href="#2-categories" class="headerlink" title="2. categories"></a>2. categories</h3><pre class="line-numbers language-text" data-language="text"><code class="language-text"># 这是默认的写法，给文章添加一个分类。
-categories: 123
-
-# 这会将文章分类123/456子分类目录下。
-categories:
-  - 123
-  - 456
-或者
-categories: [123, 456]
-   
-# 文章被分类到123以及123的自分类456这2个分类下面，官方指定写法。
-categories:
-  - [123]
-  - [123, 456]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="两种学习模型：判别式模型和生成式模型"><a href="#两种学习模型：判别式模型和生成式模型" class="headerlink" title="两种学习模型：判别式模型和生成式模型"></a>两种学习模型：判别式模型和生成式模型</h2><h3 id="监督学习：分类、回归、标记"><a href="#监督学习：分类、回归、标记" class="headerlink" title="监督学习：分类、回归、标记"></a>监督学习：分类、回归、标记</h3><ul>
+<li>概率方式<ul>
+<li>判别式模型：直接对 $p(y|x)$ 建模或者学习 $y=f(x)$<ul>
+<li><strong>逻辑回归(Logistic Regression)</strong></li>
+<li><strong>条件随机场(Conditional Random Field，CRF)</strong></li>
+</ul>
+</li>
+<li>生成式模型：学习联合概率分布 $p(x,y)$<ul>
+<li><strong>朴素贝叶斯(Naive Bayesian Algorithm)</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>非概率方式<ul>
+<li><strong>线性回归(Linear Regression)/岭回归/LASSO</strong></li>
+<li><strong>样条回归(Spline Regression)</strong></li>
+<li><strong>支持向量机(Support Vector Machine，SVM)：基于间隔</strong></li>
+<li><strong>K近邻(K-Nearest Neighbor，KNN)：基于距离</strong></li>
+<li><strong>决策树(Decision Tree)：基于树的节点</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="非监督学习：降维、聚类、特征学习、概率密度估计（生成数据）"><a href="#非监督学习：降维、聚类、特征学习、概率密度估计（生成数据）" class="headerlink" title="非监督学习：降维、聚类、特征学习、概率密度估计（生成数据）"></a>非监督学习：降维、聚类、特征学习、概率密度估计（生成数据）</h3><ul>
+<li>概率方式<ul>
+<li>生成模型：直接对 $p(x)$ 建模<ul>
+<li><strong>高斯混合模型(Gaussian Mixture Model，GMM)</strong></li>
+<li><strong>隐马尔可夫模型(Hidden Markov Model，HMM)</strong></li>
+<li><strong>因子分析(Factor Analysis，FA)</strong></li>
+<li><strong>概率主成分分析(Probabilistic Principal Component Analysis，P-PCA)</strong></li>
+<li><strong>概率潜在语义分析(Probabilistic Latent Semantic Analysis，P-LSA)</strong></li>
+<li><strong>潜在狄利克雷分布 (Latent Dirichlet Allocation，LDA)</strong></li>
+</ul>
+</li>
+<li>深度生成模型：利用神经网络来建模 $p(x|z;\theta)$，并不对分布本身进行建模，而是建模生成过程<ul>
+<li><strong>玻尔兹曼机(Boltzmann machine)/受限玻尔兹曼机(Restricted Boltzmann Machines，RBM)</strong></li>
+<li><strong>深度信念网络(DeepBelief Network，DBN）</strong></li>
+<li><strong>变分自编码器(Variational Auto-Encoders，VAE)</strong></li>
+<li><strong>生成随机网络(Generative Stochastic Network，GSN)</strong></li>
+<li><strong>生成对抗网络(Generative Adversarial Network，GAN)</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>非概率方式<ul>
+<li><strong>主成分分析(Principal Component Analysis，PCA)/核主成分分析(Kernel Principal Component Analysis，KPCA)</strong></li>
+<li><strong>线性判别分析(Linear Discriminant Analysis，LDA)</strong></li>
+<li><strong>多维尺度变换(Multi-dimensional Scaling，MDS)</strong></li>
+<li><strong>局部线性嵌入(Locally Linear Embedding，LLE)</strong></li>
+<li><strong>自编码器(Auto-Encoder)/降噪自编码器(Denoising Auto-Encoder，DAE)</strong></li>
+<li><strong>K-均值(K-means)</strong></li>
+<li><strong>层次聚类(Hierarchical clustering)</strong></li>
+<li><strong>谱聚类(Spectral clustering)</strong></li>
+<li><strong>潜在语义分析((Latent Semantic Analysis，LSA)</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="正则化（约束）方法"><a href="#正则化（约束）方法" class="headerlink" title="正则化（约束）方法"></a>正则化（约束）方法</h2><ul>
+<li><strong>$l_1$约束</strong></li>
+<li><strong>$l_2$约束</strong></li>
+<li><strong>$l_1+l_2$约束</strong></li>
+<li><strong>$l_{1,2}$约束</strong></li>
+<li><strong>迹范数约束</strong></li>
+</ul>
+<h2 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h2><ul>
+<li><p>回归</p>
+<ul>
+<li><strong>$l_2$损失(平方差损失)</strong></li>
+<li><strong>$l_1$损失</strong></li>
+<li><strong>Huber损失</strong></li>
+<li><strong>Tukey损失</strong></li>
+</ul>
+</li>
+<li><p>分类</p>
+<ul>
+<li><p><strong>0/1损失</strong></p>
+</li>
+<li><p><strong>指数损失</strong></p>
+</li>
+<li><p><strong>Hinge损失</strong></p>
+</li>
+<li><p><strong>Ramp损失</strong></p>
+</li>
+<li><p><strong>交叉熵损失函数</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="评价指标"><a href="#评价指标" class="headerlink" title="评价指标"></a>评价指标</h2><ul>
+<li><p>回归</p>
+<ul>
+<li><p>均方误差(Mean Squared Error，MSE)</p>
+</li>
+<li><p>均方根误差(Root Mean Square Error，RMSE)</p>
+</li>
+<li><p>平方绝对误差(Mean Absolute Error，MAE)</p>
+</li>
+</ul>
+</li>
+<li><p>分类</p>
+<ul>
+<li><p>混淆矩阵(Confusion Matrix)</p>
+<p>真正样本(True Positive,TP): 样本真实类别是正向的,模型预测的类别也是正向的<br>真负样本(True Negative,TN): 样本真实类别是负向的,模型预测的类别也是负向的<br>假正样本(False Positive,FP): 样本真实类别是负向的,模型预测的类别是正向的<br>假负样本(False Negative,FN): 样本真实类别是正向的,模型预测的类别是负向的</p>
+<img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202212092205760.png" style="zoom: 60%;">
+</li>
+<li><p>正确率(accuracy)<br>$$<br>Accuracy=\frac{TP +TN}{TN+FN +FP +TP}<br>$$</p>
+</li>
+<li><p>精准率(Precision)<br>$$<br>Precision=\frac{TP}{TP+FP}<br>$$</p>
+</li>
+<li><p>召回率(Recall)<br>$$<br>Recall=\frac{TP}{TP+FN}<br>$$</p>
+</li>
+<li><p>特异度(Specificity)<br>$$<br>Specificity=\frac{TN}{TN+FP}<br>$$</p>
+</li>
+<li><p>F-值<br>$$<br>F_{\beta}-Measure=\frac{(1+\beta^2)×Precision×Recall}{\beta^2×Precision+Recall}<br>$$</p>
+<p>当$\beta=1$时候，即精准度和召回率一样重要的时候，公式如下：</p>
+<p>$$<br>F_1−Measure=\frac{2}{\frac{1}{Precision}+\frac{1}{Recall}}=\frac{2×Precision×Recall}{Precision+Recall}<br>$$</p>
+</li>
+<li><p>ROC</p>
+</li>
+</ul>
+</li>
+<li><p>聚类</p>
+<ul>
+<li>纯度(Purity)</li>
+<li>Rand指数</li>
+<li>互信息(Mutual Information)</li>
+</ul>
+</li>
+</ul>
 
                 
             </div>
@@ -552,7 +620,7 @@ categories:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://jijunhao.github.io/2022/09/25/hexo-ru-men/">http://jijunhao.github.io/2022/09/25/hexo-ru-men/</a>
+                    <a href="http://jijunhao.github.io/2022/12/09/tong-ji-ji-qi-xue-xi/">http://jijunhao.github.io/2022/12/09/tong-ji-ji-qi-xue-xi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -590,8 +658,8 @@ categories:
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Hexo%E5%85%A5%E9%97%A8/">
-                                    <span class="chip bg-color">Hexo入门</span>
+                                <a href="/tags/%E7%BB%9F%E8%AE%A1%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                                    <span class="chip bg-color">统计机器学习</span>
                                 </a>
                             
                         </div>
@@ -670,46 +738,48 @@ categories:
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/09/25/hexo-matery-zhu-ti-shi-yong-he-mei-hua/">
+                <a href="/2022/12/09/tong-ji-ji-qi-xue-xi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.webp" class="responsive-img" alt="Hexo-Matery主题使用和美化">
+                        <img src="/medias/featureimages/18.webp" class="responsive-img" alt="统计机器学习">
                         
-                        <span class="card-title">Hexo-Matery主题使用和美化</span>
+                        <span class="card-title">统计机器学习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            记录的配置Matery主题的流程，仅供后来的师傅们参考
+                            
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-09-25
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-12-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2/" class="post-category">
-                                    博客
+                            <a href="/categories/%E7%BB%9F%E8%AE%A1%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    统计机器学习
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hexo%E9%AB%98%E7%BA%A7%E4%BD%BF%E7%94%A8/">
-                        <span class="chip bg-color">Hexo高级使用</span>
+                    <a href="/tags/%E7%BB%9F%E8%AE%A1%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">统计机器学习</span>
                     </a>
                     
                 </div>
@@ -723,31 +793,31 @@ categories:
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/09/24/hexo/">
+                <a href="/2022/10/05/win10-ubuntu-shuang-xi-tong-an-zhuang/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.webp" class="responsive-img" alt="Hexo 博客搭建和使用">
+                        <img src="/medias/featureimages/13.webp" class="responsive-img" alt="win10+ubuntu双系统安装">
                         
-                        <span class="card-title">Hexo 博客搭建和使用</span>
+                        <span class="card-title">win10+ubuntu双系统安装</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            从零开始搭建一个属于自己的静态博客网站，使用 Hexo 博客框架搭建并部署到 Github
+                            win10+ubuntu双系统的安装步骤
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-05
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2/" class="post-category">
-                                    博客
+                            <a href="/categories/ubuntu/" class="post-category">
+                                    ubuntu
                                 </a>
                             
                             
@@ -757,8 +827,8 @@ categories:
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
+                    <a href="/tags/ubuntu%E5%8F%8C%E7%B3%BB%E7%BB%9F/">
+                        <span class="chip bg-color">ubuntu双系统</span>
                     </a>
                     
                 </div>
