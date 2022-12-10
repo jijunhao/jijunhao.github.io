@@ -436,12 +436,12 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="学习的类型"><a href="#学习的类型" class="headerlink" title="学习的类型"></a>学习的类型</h2><h3 id="1-监督学习（supervised-learning）"><a href="#1-监督学习（supervised-learning）" class="headerlink" title="1. 监督学习（supervised learning）"></a>1. 监督学习（supervised learning）</h3><p>监督学习可以被视为一种学生学习的过程，即向导师提问并回答。在机器学习情境中，学生对应于计算机，导师对应于计算机的用户;计算机从问与答的成对样本中学习一种从问题到其答案的映射。</p>
-<p>监督学习的目标在于获得**泛化能力(generalization ability)**：一种能够为从未被学习过的问题猜出恰当答案的能力。</p>
+<p>监督学习的目标在于获得 <strong>泛化能力(generalization ability)</strong> ：一种能够为从未被学习过的问题猜出恰当答案的能力。</p>
 <p>监督学习的典型任务：</p>
 <ul>
-<li><strong>回归(regression)，当答案是一个实数值(如:温度)</strong></li>
-<li><strong>分类(classification)，如果答案是一个分类值(如:“是”或“否”)</strong></li>
-<li><strong>排序(ranking)，如果答案是一个数列值(如:“好”“中”或“劣”)</strong></li>
+<li><strong>回归(regression)</strong> ，当答案是一个实数值(如:温度)</li>
+<li>**分类(classification) ** ，如果答案是一个分类值(如:“是”或“否”)</li>
+<li><strong>排序(ranking)</strong> ，如果答案是一个数列值(如:“好”“中”或“劣”)</li>
 </ul>
 <h3 id="2-非监督学习（unsupervised-learning）"><a href="#2-非监督学习（unsupervised-learning）" class="headerlink" title="2. 非监督学习（unsupervised learning）"></a>2. 非监督学习（unsupervised learning）</h3><p>非监督学习被认为是，导师不存在并且学生自学。在机器学习情境中，计算机通过互联网自动地收集数据并且尝试在没有用户任何指导下抽取有用的知识。因此，非监督学习比监督学习更加自动化，尽管其目标不一定指定清楚。</p>
 <p>非监督学习的典型任务：</p>
@@ -482,9 +482,9 @@
 <li>非概率方式<ul>
 <li><strong>线性回归(Linear Regression)/岭回归/LASSO</strong></li>
 <li><strong>样条回归(Spline Regression)</strong></li>
-<li><strong>支持向量机(Support Vector Machine，SVM)：基于间隔</strong></li>
-<li><strong>K近邻(K-Nearest Neighbor，KNN)：基于距离</strong></li>
-<li><strong>决策树(Decision Tree)：基于树的节点</strong></li>
+<li><strong>支持向量机(Support Vector Machine，SVM)</strong> ：基于间隔</li>
+<li><strong>K近邻(K-Nearest Neighbor，KNN)</strong> ：基于距离</li>
+<li><strong>决策树(Decision Tree)</strong> ：基于树的节点</li>
 </ul>
 </li>
 </ul>
@@ -556,41 +556,41 @@
 <h2 id="评价指标"><a href="#评价指标" class="headerlink" title="评价指标"></a>评价指标</h2><ul>
 <li><p>回归</p>
 <ul>
-<li><p>均方误差(Mean Squared Error，MSE)</p>
+<li><p><strong>均方误差(Mean Squared Error，MSE)</strong></p>
 </li>
-<li><p>均方根误差(Root Mean Square Error，RMSE)</p>
+<li><p><strong>均方根误差(Root Mean Square Error，RMSE)</strong></p>
 </li>
-<li><p>平方绝对误差(Mean Absolute Error，MAE)</p>
+<li><p><strong>平方绝对误差(Mean Absolute Error，MAE)</strong></p>
 </li>
 </ul>
 </li>
 <li><p>分类</p>
 <ul>
-<li><p>混淆矩阵(Confusion Matrix)</p>
-<p>真正样本(True Positive,TP): 样本真实类别是正向的,模型预测的类别也是正向的<br>真负样本(True Negative,TN): 样本真实类别是负向的,模型预测的类别也是负向的<br>假正样本(False Positive,FP): 样本真实类别是负向的,模型预测的类别是正向的<br>假负样本(False Negative,FN): 样本真实类别是正向的,模型预测的类别是负向的</p>
-<img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202212092205760.png" style="zoom: 60%;">
+<li><p><strong>混淆矩阵(Confusion Matrix)</strong></p>
+<p><strong>真正样本(True Positive,TP)</strong> : 样本真实类别是正向的,模型预测的类别也是正向的<br><strong>真负样本(True Negative,TN)</strong> : 样本真实类别是负向的,模型预测的类别也是负向的<br><strong>假正样本(False Positive,FP)</strong> : 样本真实类别是负向的,模型预测的类别是正向的<br><strong>假负样本(False Negative,FN)</strong> : 样本真实类别是正向的,模型预测的类别是负向的</p>
+<img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202212092205760.png" style="zoom: 50%;">
 </li>
-<li><p>正确率(accuracy)<br>$$<br>Accuracy=\frac{TP +TN}{TN+FN +FP +TP}<br>$$</p>
+<li><p><strong>正确率(accuracy)</strong><br>$$<br>Accuracy=\frac{TP +TN}{TN+FN +FP +TP}<br>$$</p>
 </li>
-<li><p>精准率(Precision)<br>$$<br>Precision=\frac{TP}{TP+FP}<br>$$</p>
+<li><p><strong>精准率(Precision)</strong><br>$$<br>Precision=\frac{TP}{TP+FP}<br>$$</p>
 </li>
-<li><p>召回率(Recall)<br>$$<br>Recall=\frac{TP}{TP+FN}<br>$$</p>
+<li><p><strong>召回率(Recall)</strong><br>$$<br>Recall=\frac{TP}{TP+FN}<br>$$</p>
 </li>
-<li><p>特异度(Specificity)<br>$$<br>Specificity=\frac{TN}{TN+FP}<br>$$</p>
+<li><p><strong>特异度(Specificity)</strong><br>$$<br>Specificity=\frac{TN}{TN+FP}<br>$$</p>
 </li>
-<li><p>F-值<br>$$<br>F_{\beta}-Measure=\frac{(1+\beta^2)×Precision×Recall}{\beta^2×Precision+Recall}<br>$$</p>
+<li><p><strong>F-值</strong><br>$$<br>F_{\beta}-Measure=\frac{(1+\beta^2)×Precision×Recall}{\beta^2×Precision+Recall}<br>$$</p>
 <p>当$\beta=1$时候，即精准度和召回率一样重要的时候，公式如下：</p>
 <p>$$<br>F_1−Measure=\frac{2}{\frac{1}{Precision}+\frac{1}{Recall}}=\frac{2×Precision×Recall}{Precision+Recall}<br>$$</p>
 </li>
-<li><p>ROC</p>
-</li>
+<li><p><strong>ROC曲线</strong></p>
+<img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202212101124206.png" alt="image-20221210112333462" style="zoom:60%;"></li>
 </ul>
 </li>
 <li><p>聚类</p>
 <ul>
-<li>纯度(Purity)</li>
-<li>Rand指数</li>
-<li>互信息(Mutual Information)</li>
+<li><strong>纯度(Purity)</strong></li>
+<li><strong>Rand指数</strong></li>
+<li><strong>互信息(Mutual Information)</strong></li>
 </ul>
 </li>
 </ul>
