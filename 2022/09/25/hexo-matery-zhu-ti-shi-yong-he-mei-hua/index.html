@@ -1279,18 +1279,24 @@ pre</span> <span class="token punctuation">{</span>
 <script src="/libs/valine/av-min.js"></script>
 <script src="/libs/valine/Valine.min.js"></script>
 <script>
-    new Valine({
+let metaPlaceholder = {"nick":"昵称/QQ号(必填)","mail":"邮箱(必填)","link":"网址(https://)"} ;
+//这里要换行
+new Valine({
         el: '#vcomments',
         appId: 'mIupjjAWjxgybHXD4tKoJrgi-gzGzoHsz',
         appKey: 'GQX2qB15T8D8d5xV6ECnjjyj',
-        serverURLs: '',
         notify: 'true' === 'true',
-        verify: 'flase' === 'true',
+        verify: 'true' === 'true',
         visitor: 'true' === 'true',
         avatar: 'mm',
         pageSize: '10',
-        lang: 'zh-cn',
-        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!'
+        lang: 'zh-CN',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+        meta: ["nick", "mail", "link"],
+        recordIP: 'true' === 'true',
+        enableQQ: 'mm',
+        metaPlaceholder: metaPlaceholder,
+
     });
 </script>
 
