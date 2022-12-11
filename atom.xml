@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>季俊豪的博客</title>
+  
+  <subtitle>感谢各位的来访，请在留言板上留下你的足迹</subtitle>
+  <link href="http://jijunhao.github.io/atom.xml" rel="self"/>
+  
+  <link href="http://jijunhao.github.io/"/>
+  <updated>2022-12-10T03:28:15.264Z</updated>
+  <id>http://jijunhao.github.io/</id>
+  
+  <author>
+    <name>JiJunhao</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>统计机器学习</title>
+    <link href="http://jijunhao.github.io/2022/12/09/tong-ji-ji-qi-xue-xi/"/>
+    <id>http://jijunhao.github.io/2022/12/09/tong-ji-ji-qi-xue-xi/</id>
+    <published>2022-12-09T10:49:37.000Z</published>
+    <updated>2022-12-10T03:28:15.264Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;学习的类型&quot;&gt;&lt;a href=&quot;#学习的类型&quot; class=&quot;headerlink&quot; title=&quot;学习的类型&quot;&gt;&lt;/a&gt;学习的类型&lt;/h2&gt;&lt;h3 id=&quot;1-监督学习（supervised-learning）&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="统计机器学习" scheme="http://jijunhao.github.io/categories/%E7%BB%9F%E8%AE%A1%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="统计机器学习" scheme="http://jijunhao.github.io/tags/%E7%BB%9F%E8%AE%A1%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>win10+ubuntu双系统安装</title>
+    <link href="http://jijunhao.github.io/2022/10/05/win10-ubuntu-shuang-xi-tong-an-zhuang/"/>
+    <id>http://jijunhao.github.io/2022/10/05/win10-ubuntu-shuang-xi-tong-an-zhuang/</id>
+    <published>2022-10-05T04:26:22.000Z</published>
+    <updated>2022-10-05T05:35:18.421Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;安装win10-ubuntu双系统&quot;&gt;&lt;a href=&quot;#安装win10-ubuntu双系统&quot; class=&quot;headerlink&quot; title=&quot;安装win10 + ubuntu双系统&quot;&gt;&lt;/a&gt;安装win10 + ubuntu双系统&lt;/h2&gt;&lt;h3</summary>
+        
+      
+    
+    
+    
+    <category term="ubuntu" scheme="http://jijunhao.github.io/categories/ubuntu/"/>
+    
+    
+    <category term="ubuntu双系统" scheme="http://jijunhao.github.io/tags/ubuntu%E5%8F%8C%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo-Matery主题使用和美化</title>
+    <link href="http://jijunhao.github.io/2022/09/25/hexo-matery-zhu-ti-shi-yong-he-mei-hua/"/>
+    <id>http://jijunhao.github.io/2022/09/25/hexo-matery-zhu-ti-shi-yong-he-mei-hua/</id>
+    <published>2022-09-25T12:03:17.000Z</published>
+    <updated>2022-12-10T03:28:40.443Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;参考链接&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://hexo.io/zh-cn/index.html&quot;&gt;Hexo 官网&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="博客" scheme="http://jijunhao.github.io/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+    <category term="Hexo" scheme="http://jijunhao.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo入门</title>
+    <link href="http://jijunhao.github.io/2022/09/25/hexo-ru-men/"/>
+    <id>http://jijunhao.github.io/2022/09/25/hexo-ru-men/</id>
+    <published>2022-09-25T06:06:28.000Z</published>
+    <updated>2022-12-10T03:28:27.638Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;参考链接&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://blog.17lai.site/&quot;&gt;夜法之书的Hexo&lt;/a&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="博客" scheme="http://jijunhao.github.io/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+    <category term="Hexo" scheme="http://jijunhao.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo 博客搭建和使用</title>
+    <link href="http://jijunhao.github.io/2022/09/24/hexo/"/>
+    <id>http://jijunhao.github.io/2022/09/24/hexo/</id>
+    <published>2022-09-24T09:59:31.000Z</published>
+    <updated>2022-09-25T12:06:00.825Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;参考链接&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://hexo.io/zh-cn/index.html&quot;&gt;Hexo 官网&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="博客" scheme="http://jijunhao.github.io/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+    <category term="Hexo" scheme="http://jijunhao.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://jijunhao.github.io/2022/09/24/hello-world/"/>
+    <id>http://jijunhao.github.io/2022/09/24/hello-world/</id>
+    <published>2022-09-24T02:59:31.000Z</published>
+    <updated>2022-09-25T14:35:02.663Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
