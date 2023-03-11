@@ -6,7 +6,7 @@
   <link href="http://jijunhao.github.io/atom.xml" rel="self"/>
   
   <link href="http://jijunhao.github.io/"/>
-  <updated>2022-12-10T03:28:16.000Z</updated>
+  <updated>2023-03-11T11:43:00.957Z</updated>
   <id>http://jijunhao.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo-Matery主题评论插件</title>
+    <link href="http://jijunhao.github.io/2023/03/11/hexo-matery-zhu-ti-ping-lun-cha-jian/"/>
+    <id>http://jijunhao.github.io/2023/03/11/hexo-matery-zhu-ti-ping-lun-cha-jian/</id>
+    <published>2023-03-11T10:55:42.000Z</published>
+    <updated>2023-03-11T11:43:00.957Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;参考链接&lt;/p&gt;
+&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="博客" scheme="http://jijunhao.github.io/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+    <category term="Hexo" scheme="http://jijunhao.github.io/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>统计机器学习</title>
