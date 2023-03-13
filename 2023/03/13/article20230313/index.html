@@ -491,9 +491,9 @@
 <p>以下是一般情况下连接 ChatGPT 和 QQ 的基本流程：</p>
 <ol>
 <li>初始化：首先需要准备好两个环境，即 Mirai 或 Onebot 的环境和 ChatGPT 的环境。在 Mirai 或 Onebot 环境中，需要安装好对应的插件（例如 Mirai-HTTP 和 Mirai-WebSocket）以及配置文件等。在这个项目中，只需要点击<code>初始化.cmd</code>即可</li>
-<li>配置登录信息：需要编辑配置文件 chatgpt/config.cfg，设置 QQ 号码、密码等登录信息和OpenAI等信息。</li>
-<li>启动 Mirai 或 Onebot：通过命令行启动 Mirai 或 Onebot，使其运行在后台。这样 ChatGPT 就能够通过 API 访问 Mirai 或 Onebot 提供的 QQ 服务了。</li>
-<li>启动 ChatGPT：在 ChatGPT 的环境中，需要编写代码来实现与 Mirai 或 Onebot 的通信。可以使用相应的 SDK 或 API，如 QQbot-sdk 或者 cqhttp-sdk。</li>
+<li>配置登录信息：需要编辑配置文件 <code>chatgpt/config.cfg</code>，设置 QQ 号码、密码等登录信息和OpenAI等信息。</li>
+<li>启动 <code>Mirai</code> 或 <code>Onebot</code>：通过命令行启动 Mirai 或 Onebot，使其运行在后台。这样 ChatGPT 就能够通过 API 访问 Mirai 或 Onebot 提供的 QQ 服务了。</li>
+<li>启动 <code>ChatGPT</code>：在 ChatGPT 的环境中，需要编写代码来实现与 Mirai 或 Onebot 的通信。可以使用相应的 SDK 或 API，如 QQbot-sdk 或者 cqhttp-sdk。</li>
 <li>连接 QQ 发消息：使用 ChatGPT 的 API，调用 Mirai 或 Onebot 的接口来连接到 QQ 并发送消息。</li>
 </ol>
 <p>需要注意的是，这只是一个基本流程，实际应用中可能还需要进行更多的设置和配置。此外，还需要保证 Mirai 或 Onebot 的稳定性和安全性，防止出现一些不必要的问题。</p>
