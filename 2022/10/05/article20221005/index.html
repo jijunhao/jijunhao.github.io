@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="标签: Hexo, Ubuntu,ML,DL,Math,CV等">
-    <meta name="description" content="本网站是个人兴趣爱好，总结分享经验，记录生活点滴的平台，希望在以后的学习旅途中，走出自己的风景。">
+    <meta name="keywords" content="win10+ubuntu双系统安装, Ubuntu,ML,DL,Math,CV等">
+    <meta name="description" content="win10+ubuntu双系统的安装步骤">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>标签: Hexo | 季俊豪的博客</title>
+    <title>win10+ubuntu双系统安装 | 季俊豪的博客</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/favicon.png">
     
 
@@ -332,242 +332,581 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                感谢各位的来访，请在留言板上留下你的足迹
-                
-            </div>
+    
 
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/typed/typed.js"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: [ 
-                            
-                                "从来没有真正的绝境, 只有心灵的迷途",
-                            
-                                "Never really desperate, only the lost of the soul",
-                            
-                        ],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/13.webp')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">win10+ubuntu双系统安装</h1>
+                </div>
             </div>
         </div>
     </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/ubuntu%E5%8F%8C%E7%B3%BB%E7%BB%9F/">
+                                <span class="chip bg-color">ubuntu双系统</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/ubuntu/" class="post-category">
+                                ubuntu
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-10-05
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2022-10-05
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    894
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    3 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/prism/prism.css">
+        
+
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="安装win10-ubuntu双系统"><a href="#安装win10-ubuntu双系统" class="headerlink" title="安装win10 + ubuntu双系统"></a>安装win10 + ubuntu双系统</h2><h3 id="安装前准备"><a href="#安装前准备" class="headerlink" title="安装前准备"></a>安装前准备</h3><ol>
+<li>一个4G以上的空U盘</li>
+<li>确定自己电脑的类型<br>A 类: MBR的bios + 单硬盘<br>B 类: MBR的bios + 双硬盘（SSD固态 + 机械硬盘）<br>C 类: UEFI的bios + 单硬盘<br>D 类: UEFI的bios + 双硬盘（SSD固态 + 机械硬盘）</li>
+<li>安装<a target="_blank" rel="noopener" href="http://rufus.ie/zh/">rufus</a>，下载 <a target="_blank" rel="noopener" href="https://cn.ubuntu.com/download">ubuntu</a> 的镜像</li>
+</ol>
+<h3 id="第一步：准备U盘"><a href="#第一步：准备U盘" class="headerlink" title="第一步：准备U盘"></a>第一步：准备U盘</h3><p>U盘最好是一个空U盘， 因为<strong>在安装过程中U盘会被格式化</strong></p>
+<h3 id="第二步：查看电脑的信息"><a href="#第二步：查看电脑的信息" class="headerlink" title="第二步：查看电脑的信息"></a>第二步：查看电脑的信息</h3><h4 id="1-查看BIOS模式"><a href="#1-查看BIOS模式" class="headerlink" title="1. 查看BIOS模式"></a>1. 查看BIOS模式</h4><p><strong>win+r</strong>快捷键进入运行，输入<strong>msinfo32</strong>回车，出现以下界面，可查看BIOS模式：</p>
+<p><img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202210051318732.png"></p>
+<p>BIOS模式有传统的MBR模式和新式UEFI模式，这将对安装双系统的方法产生直接影响。目前来看，大部分电脑都属于新式UEFI模式，不过也存在一些老机子仍然属于传统MBR模式。如果你的电脑属于传统MBR模式，强烈建议你重装windows系统来更新BIOS模式到UEFI。</p>
+<h4 id="2-查看电脑的硬盘数和类型"><a href="#2-查看电脑的硬盘数和类型" class="headerlink" title="2. 查看电脑的硬盘数和类型"></a>2. 查看电脑的硬盘数和类型</h4><p><strong>此电脑</strong>点击右键，点击<strong>管理</strong>，点击<strong>磁盘管理</strong>：</p>
+<p><img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202210051318262.png"></p>
+<p>要确定是安装在SSD还是机械硬盘上，还剩下多少空间。</p>
+<h3 id="第三步：硬盘分区"><a href="#第三步：硬盘分区" class="headerlink" title="第三步：硬盘分区"></a>第三步：硬盘分区</h3><p>在想要分区的硬盘上压缩卷，最好超过50GB，我装在了机械硬盘上，选择了200GB，即204800MB<br><strong>！！注意不要新建卷，保持空白分区就好，即显示是黑条</strong></p>
+<p><img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202210051318532.png"></p>
+<h3 id="第四步：用rufus写入ubuntu镜像"><a href="#第四步：用rufus写入ubuntu镜像" class="headerlink" title="第四步：用rufus写入ubuntu镜像"></a>第四步：用rufus写入ubuntu镜像</h3><ul>
+<li><p>【设备】选择u盘（u盘会被格式化，最好用4G以上或者8G）</p>
+</li>
+<li><p>【引导类型选择】选择下载好的ubuntu*.iso</p>
+</li>
+<li><p>【分区类型】一般MBR，适合BIOS和UEFI安装</p>
+</li>
+<li><p>【卷标】是格式化之后的u盘名称</p>
+</li>
+<li><p>【文件系统】选择默认的FAT32，此文件格式适合4G以下的文件，且最大只支持4G</p>
+</li>
+<li><p>【簇大小】选择默认，表示最小单位文件大小</p>
+<p>选择开始，之后耐心等待6-10分钟，直到显示<strong>绿色的准备就绪</strong>，点击关闭<br>期间可能需要联网，自动下载syslinux，选择<strong>是</strong>，并选择以iso镜像模式写入，选择<strong>是</strong></p>
+</li>
+</ul>
+<p><img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202210051318060.jpg"></p>
+<h3 id="第五步：安装"><a href="#第五步：安装" class="headerlink" title="第五步：安装"></a>第五步：安装</h3><h4 id="1-关机后开机，选择以U盘启动（U盘需一直插着）"><a href="#1-关机后开机，选择以U盘启动（U盘需一直插着）" class="headerlink" title="1. 关机后开机，选择以U盘启动（U盘需一直插着）"></a>1. 关机后开机，选择以U盘启动（U盘需一直插着）</h4><h4 id="方法1"><a href="#方法1" class="headerlink" title="方法1"></a>方法1</h4><p>快捷键启动，以华硕系列为例，开机快速按ESC，即可进入快捷界面，选择刚制作的启动盘启动(UEFI)<br>  <img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202210051318188.jpg"></p>
+<h4 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h4><p>进入BIOS，以华硕系列为例，开机快速按F2，把右侧u盘移到至首位（下图为移动）<br>  <img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202210051318837.jpg"></p>
+<p><strong>！！ 注意两种方法都要禁用FAST boot，即disabled，f7配置，f10保存退出</strong><br>  <img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202210051318725.jpg"></p>
+<h4 id="错误分析"><a href="#错误分析" class="headerlink" title="错误分析"></a>错误分析</h4><p>出现以下界面的原因：<strong>使用ubuntu20.04镜像</strong></p>
+<p>解决方案：<strong>选择使用ubuntu18.04镜像</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">GNU Grub Version <span class="token number">2.04</span>
+Minimal <span class="token environment constant">BASH</span>-like line editing is supported. For the first word, TAB lists possible <span class="token builtin class-name">command</span> completions. Anywhere <span class="token keyword">else</span> TAB lists 
+possible device or <span class="token function">file</span> completions.
+grub<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+<h4 id="2-禁用显卡（如果有显卡的话，我是GTX1050显卡）"><a href="#2-禁用显卡（如果有显卡的话，我是GTX1050显卡）" class="headerlink" title="2. 禁用显卡（如果有显卡的话，我是GTX1050显卡）"></a>2. 禁用显卡（如果有显卡的话，我是GTX1050显卡）</h4><ul>
+<li>选择第二个<strong>install ubuntu</strong>，按e进入<br><img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202210051319606.jpg"></li>
+<li>在 <strong>quiet</strong> 前面加入 <strong>nomodeset</strong>，按 <strong>f10</strong> ，开始安装<br><img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202210051319845.jpg"></li>
+</ul>
+<h4 id="3-安装"><a href="#3-安装" class="headerlink" title="3. 安装"></a>3. 安装</h4><p>   仅给出几张关键的图</p>
+<ul>
+<li>默认字体（可以选择简体中文）<br><img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202210051320473.jpg"></li>
+<li>安装选项（选择最下面的）<br><img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202210051320133.jpg"></li>
+<li>安装位置（默认第一个）<br><img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202210051320444.jpg"></li>
+</ul>
+<h4 id="4-进入高级模式安装显卡"><a href="#4-进入高级模式安装显卡" class="headerlink" title="4. 进入高级模式安装显卡"></a>4. 进入高级模式安装显卡</h4><ul>
+<li><p>安装结束后重启，进入高级选项<br><img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202210051320799.jpg"></p>
+</li>
+<li><p>进入<strong>recovery mode</strong><br><img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202210051320181.jpg"></p>
+</li>
+<li><p>选择<strong>resume</strong>，第一个<br><img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202210051320652.jpg"></p>
+</li>
+<li><p>换源<br>找到softwore&amp;updates ，Downloads from选择other，找到china下的清华源,close</p>
+</li>
+</ul>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> update
+<span class="token function">sudo</span> ubuntu-drivers autoinstall<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202210051320260.jpg"></p>
+<p><strong>注意可能会内核更新，要等内核更新完毕才能安装显卡，否则会出现dpkg锁住</strong> </p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">JiJunhao</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://jijunhao.github.io/2022/10/05/article20221005/">http://jijunhao.github.io/2022/10/05/article20221005/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">JiJunhao</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/ubuntu%E5%8F%8C%E7%B3%BB%E7%BB%9F/">
+                                    <span class="chip bg-color">ubuntu双系统</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="card" data-aos="fade-up">
+    <div id="utteranc-container" class="card-content">
+        <script src="https://utteranc.es/client.js"
+            repo="jijunhao/utterances"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+        </script>
+    </div>
+</div>
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2022/12/09/article20221209/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/18.webp" class="responsive-img" alt="统计机器学习">
+                        
+                        <span class="card-title">统计机器学习</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-12-09
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BB%9F%E8%AE%A1%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    统计机器学习
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%BB%9F%E8%AE%A1%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">统计机器学习</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/09/26/article20220926/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/17.webp" class="responsive-img" alt="Hexo-Matery主题使用和美化">
+                        
+                        <span class="card-title">Hexo-Matery主题使用和美化</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            记录的配置Matery主题的流程，仅供后来的师傅们参考
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-26
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2/" class="post-category">
+                                    博客
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Hexo/">
+                        <span class="chip bg-color">Hexo</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
 </div>
 
 
 <script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/banner/" + new Date().getDay() + '.webp';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('100')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 季俊豪的博客<br />'
+            + '文章作者: JiJunhao<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
 </script>
 
 
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/prism/prism.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/codeBlock/codeShrink.js"></script>
+
+
+
     </div>
-</div>
-
-<main class="content">
-
-    
-
-<div id="tags" class="container chip-container">
-    <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
-            </div>
-            <div class="tag-chips">
-                
-                
-                <a href="/tags/Hexo/" title="Hexo: 4">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            data-tagname="Hexo" style="background-color: #F9EBEA;">Hexo
-                        <span class="tag-length">4</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/ubuntu%E5%8F%8C%E7%B3%BB%E7%BB%9F/" title="ubuntu双系统: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="ubuntu双系统" style="background-color: #F5EEF8;">ubuntu双系统
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E7%BB%9F%E8%AE%A1%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" title="统计机器学习: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="统计机器学习" style="background-color: #D5F5E3;">统计机器学习
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA/" title="QQ机器人: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="QQ机器人" style="background-color: #E8F8F5;">QQ机器人
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-            </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
         </div>
     </div>
 </div>
 
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
     
 
-    <article id="articles" class="container articles">
-        <div class="row tags-posts">
-            
-            
-            <div class="article tag-post col s12 m6 l4" data-tags="Hexo" data-aos="fade-up">
-                <div class="card">
-                    <a href="/2023/03/11/article20230311/">
-                        <div class="card-image tag-image">
-                            
-                            
-                            <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/12.webp" class="responsive-img" alt="Hexo-Matery主题评论插件">
-                            
-                            <span class="card-title">Hexo-Matery主题评论插件</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-11
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E5%8D%9A%E5%AE%A2/" class="post-category">
-                                博客
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            
-            <div class="article tag-post col s12 m6 l4" data-tags="Hexo" data-aos="fade-up">
-                <div class="card">
-                    <a href="/2022/09/26/article20220926/">
-                        <div class="card-image tag-image">
-                            
-                            
-                            <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/17.webp" class="responsive-img" alt="Hexo-Matery主题使用和美化">
-                            
-                            <span class="card-title">Hexo-Matery主题使用和美化</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-26
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E5%8D%9A%E5%AE%A2/" class="post-category">
-                                博客
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            
-            <div class="article tag-post col s12 m6 l4" data-tags="Hexo" data-aos="fade-up">
-                <div class="card">
-                    <a href="/2022/09/25/article20220925/">
-                        <div class="card-image tag-image">
-                            
-                            
-                            <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/9.webp" class="responsive-img" alt="Hexo入门">
-                            
-                            <span class="card-title">Hexo入门</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-25
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E5%8D%9A%E5%AE%A2/" class="post-category">
-                                博客
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            
-            <div class="article tag-post col s12 m6 l4" data-tags="Hexo" data-aos="fade-up">
-                <div class="card">
-                    <a href="/2022/09/24/article20220924/">
-                        <div class="card-image tag-image">
-                            
-                            
-                            <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/20.webp" class="responsive-img" alt="Hexo 博客搭建和使用">
-                            
-                            <span class="card-title">Hexo 博客搭建和使用</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-24
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E5%8D%9A%E5%AE%A2/" class="post-category">
-                                博客
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </article>
 </main>
 
 

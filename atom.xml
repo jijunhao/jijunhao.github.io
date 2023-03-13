@@ -6,7 +6,7 @@
   <link href="http://jijunhao.github.io/atom.xml" rel="self"/>
   
   <link href="http://jijunhao.github.io/"/>
-  <updated>2023-03-11T12:00:44.041Z</updated>
+  <updated>2023-03-13T11:44:18.930Z</updated>
   <id>http://jijunhao.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hexo-Matery主题评论插件</title>
-    <link href="http://jijunhao.github.io/2023/03/11/hexo-matery-zhu-ti-ping-lun-cha-jian/"/>
-    <id>http://jijunhao.github.io/2023/03/11/hexo-matery-zhu-ti-ping-lun-cha-jian/</id>
-    <published>2023-03-11T10:55:42.000Z</published>
-    <updated>2023-03-11T12:00:44.041Z</updated>
+    <title>QQ机器人——接入ChatGPT</title>
+    <link href="http://jijunhao.github.io/2023/03/13/article20230313/"/>
+    <id>http://jijunhao.github.io/2023/03/13/article20230313/</id>
+    <published>2023-03-13T11:38:56.000Z</published>
+    <updated>2023-03-13T11:44:18.930Z</updated>
     
     
       
@@ -29,7 +29,35 @@
         
         
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;参考链接&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;参考文献&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://chat.openai.com/&quot;&gt;ChatGPT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="ChatGPT" scheme="http://jijunhao.github.io/categories/ChatGPT/"/>
+    
+    
+    <category term="QQ机器人" scheme="http://jijunhao.github.io/tags/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo-Matery主题评论插件</title>
+    <link href="http://jijunhao.github.io/2023/03/11/article20230311/"/>
+    <id>http://jijunhao.github.io/2023/03/11/article20230311/</id>
+    <published>2023-03-11T10:55:42.000Z</published>
+    <updated>2023-03-13T11:48:56.157Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;参考链接&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a</summary>
         
       
@@ -45,8 +73,8 @@
   
   <entry>
     <title>统计机器学习</title>
-    <link href="http://jijunhao.github.io/2022/12/09/tong-ji-ji-qi-xue-xi/"/>
-    <id>http://jijunhao.github.io/2022/12/09/tong-ji-ji-qi-xue-xi/</id>
+    <link href="http://jijunhao.github.io/2022/12/09/article20221209/"/>
+    <id>http://jijunhao.github.io/2022/12/09/article20221209/</id>
     <published>2022-12-09T10:49:37.000Z</published>
     <updated>2022-12-10T03:28:16.000Z</updated>
     
@@ -70,8 +98,8 @@
   
   <entry>
     <title>win10+ubuntu双系统安装</title>
-    <link href="http://jijunhao.github.io/2022/10/05/win10-ubuntu-shuang-xi-tong-an-zhuang/"/>
-    <id>http://jijunhao.github.io/2022/10/05/win10-ubuntu-shuang-xi-tong-an-zhuang/</id>
+    <link href="http://jijunhao.github.io/2022/10/05/article20221005/"/>
+    <id>http://jijunhao.github.io/2022/10/05/article20221005/</id>
     <published>2022-10-05T04:26:22.000Z</published>
     <updated>2022-10-05T05:35:20.000Z</updated>
     
@@ -95,10 +123,10 @@
   
   <entry>
     <title>Hexo-Matery主题使用和美化</title>
-    <link href="http://jijunhao.github.io/2022/09/25/hexo-matery-zhu-ti-shi-yong-he-mei-hua/"/>
-    <id>http://jijunhao.github.io/2022/09/25/hexo-matery-zhu-ti-shi-yong-he-mei-hua/</id>
-    <published>2022-09-25T12:03:17.000Z</published>
-    <updated>2023-03-11T12:00:56.263Z</updated>
+    <link href="http://jijunhao.github.io/2022/09/26/article20220926/"/>
+    <id>http://jijunhao.github.io/2022/09/26/article20220926/</id>
+    <published>2022-09-26T12:03:17.000Z</published>
+    <updated>2023-03-13T11:52:00.119Z</updated>
     
     
       
@@ -123,8 +151,8 @@
   
   <entry>
     <title>Hexo入门</title>
-    <link href="http://jijunhao.github.io/2022/09/25/hexo-ru-men/"/>
-    <id>http://jijunhao.github.io/2022/09/25/hexo-ru-men/</id>
+    <link href="http://jijunhao.github.io/2022/09/25/article20220925/"/>
+    <id>http://jijunhao.github.io/2022/09/25/article20220925/</id>
     <published>2022-09-25T06:06:28.000Z</published>
     <updated>2022-12-10T03:28:28.000Z</updated>
     
@@ -151,10 +179,10 @@
   
   <entry>
     <title>Hexo 博客搭建和使用</title>
-    <link href="http://jijunhao.github.io/2022/09/24/hexo/"/>
-    <id>http://jijunhao.github.io/2022/09/24/hexo/</id>
+    <link href="http://jijunhao.github.io/2022/09/24/article20220924/"/>
+    <id>http://jijunhao.github.io/2022/09/24/article20220924/</id>
     <published>2022-09-24T09:59:31.000Z</published>
-    <updated>2022-09-25T12:06:02.000Z</updated>
+    <updated>2023-03-13T11:43:30.594Z</updated>
     
     
       
