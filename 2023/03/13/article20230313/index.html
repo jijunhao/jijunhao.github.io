@@ -837,10 +837,10 @@ tree
         └── xyz.cssxsh.mirai.mirai-device-generator<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
-<li><code>config.cgf</code> 是配置openai和qq的文件（修改文件后重新运行即可docker-compose up -d）</li>
+<li><code>config.cgf</code> 是配置 openai 和 QQ 的文件（修改文件后重新运行即可<code>docker-compose up -d</code>）</li>
 <li><code>docker-compose.yml</code> 指定了需要启动的容器、服务、映像等信息 </li>
-<li><code>AutoLogin.yml</code> 是mirai的自动登录配置 </li>
-<li><code>setting.yml</code> 是包含mirai的api接口信息</li>
+<li><code>AutoLogin.yml</code> 是 mirai 的自动登录配置 </li>
+<li><code>setting.yml</code> 是包含 mirai 的 api 接口信息</li>
 </ul>
 <p>一键安装命令本质是执行一个shell脚本，用于自动部署chatgpt-mirai-qq-bot程序。下面是脚本的功能：</p>
 <ul>
@@ -857,7 +857,7 @@ tree
 <li>……</li>
 </ul>
 <p>如果程序已经安装，则提示无法重复安装，并提供升级和重装的命令。</p>
-<p>如果用户选择升级，则进行docker-compose pull和docker-compose up -d操作。</p>
+<p>如果用户选择升级，则进行 <code>docker-compose pull</code>和 <code>docker-compose up -d</code> 操作。</p>
 <h2 id="5-其他"><a href="#5-其他" class="headerlink" title="5. 其他"></a>5. 其他</h2><h3 id="5-1-常用命令"><a href="#5-1-常用命令" class="headerlink" title="5.1 常用命令"></a>5.1 常用命令</h3><h4 id="5-1-1-切换AI-xxx"><a href="#5-1-1-切换AI-xxx" class="headerlink" title="5.1.1 切换AI xxx"></a>5.1.1 切换AI xxx</h4><p>切换至另一个 AI 引擎。<br>目前支持的有：</p>
 <ul>
 <li>chatgpt-web - OpenAI ChatGPT 网页版</li>
