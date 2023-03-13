@@ -404,14 +404,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    5.3k
+                    5.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    19 分
+                    20 分
                 </div>
                 
 
@@ -816,8 +816,33 @@ scan_dir = "./presets/"
 <ul>
 <li>登录成功后，说明 <code>QQ</code> 机器人已经连接上了 <code>ChatGPT</code>，此时即可跟机器人聊天了</li>
 </ul>
-<h2 id="4-Linux下一键快速部署"><a href="#4-Linux下一键快速部署" class="headerlink" title="4. Linux下一键快速部署"></a>4. Linux下一键快速部署</h2><p>在linux服务器上输入最新版的命令即可，命令基于docker容器技术，会自动安装docker并拉取最新版的镜像，配置文件路径与Windows几乎一致。</p>
-<p>命令是执行是一个shell脚本，用于自动部署chatgpt-mirai-qq-bot程序。下面是脚本的功能：</p>
+<h2 id="4-Linux下一键快速部署"><a href="#4-Linux下一键快速部署" class="headerlink" title="4. Linux下一键快速部署"></a>4. Linux下一键快速部署</h2><p>在linux服务器上输入最新版的命令即可，命令基于docker容器技术，会自动安装docker并拉取最新版的镜像。</p>
+<p>配置文件路径和功能与Windows几乎一致，请参考前文的配置信息。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># chatgpt-qq下的文件</span>
+tree
+<span class="token builtin class-name">.</span>
+├── config.cfg
+├── docker-compose.yaml
+└── mirai
+    ├── config
+    │   ├── Console
+    │   │   ├── AutoLogin.yml
+    │   │   ├── Command.yml
+    │   │   ├── Logger.yml
+    │   │   ├── PermissionService.yml
+    │   │   └── PluginDependencies.yml
+    │   └── net.mamoe.mirai-api-http
+    │       └── setting.yml
+    └── data
+        └── xyz.cssxsh.mirai.mirai-device-generator<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li><code>config.cgf</code> 是配置openai和qq的文件（修改文件后重新运行即可docker-compose up -d）</li>
+<li><code>docker-compose.yml</code> 指定了需要启动的容器、服务、映像等信息 </li>
+<li><code>AutoLogin.yml</code> 是mirai的自动登录配置 </li>
+<li><code>setting.yml</code> 是包含mirai的api接口信息</li>
+</ul>
+<p>一键安装命令本质是执行一个shell脚本，用于自动部署chatgpt-mirai-qq-bot程序。下面是脚本的功能：</p>
 <ul>
 <li>自动检测curl，docker和docker-compose是否已安装，如果未安装，则提示安装并安装；</li>
 <li>下载docker-compose.yaml和config.cfg文件；</li>
@@ -831,7 +856,8 @@ scan_dir = "./presets/"
 <li>QQ机器人账号和密码;</li>
 <li>……</li>
 </ul>
-<p>如果程序已经安装，则提示无法重复安装，并提供升级和重装的命令。如果用户选择升级，则进行docker-compose pull和docker-compose up -d操作。</p>
+<p>如果程序已经安装，则提示无法重复安装，并提供升级和重装的命令。</p>
+<p>如果用户选择升级，则进行docker-compose pull和docker-compose up -d操作。</p>
 <h2 id="5-其他"><a href="#5-其他" class="headerlink" title="5. 其他"></a>5. 其他</h2><h3 id="5-1-常用命令"><a href="#5-1-常用命令" class="headerlink" title="5.1 常用命令"></a>5.1 常用命令</h3><h4 id="5-1-1-切换AI-xxx"><a href="#5-1-1-切换AI-xxx" class="headerlink" title="5.1.1 切换AI xxx"></a>5.1.1 切换AI xxx</h4><p>切换至另一个 AI 引擎。<br>目前支持的有：</p>
 <ul>
 <li>chatgpt-web - OpenAI ChatGPT 网页版</li>
@@ -1353,7 +1379,7 @@ scan_dir = "./presets/"
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">14.2k</span>
+                        class="white-color">14.3k</span>
             
             
             
