@@ -404,7 +404,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    5.4k
+                    5.5k
                 </div>
                 
 
@@ -572,12 +572,13 @@ reverse_ws_port = 8554
 <span class="token comment"># OpenAI 相关设置</span>
 <span class="token comment"># 自定义 ChatGPT 的 browserless 接入点</span>
 <span class="token comment"># 自 3月9日 开始，不设置此项将无法正常使用 browserless 模式下的网页版 ChatGPT</span>
+<span class="token comment"># browser模式没法用，browserless要endpoint，如果有可以选择自定义</span>
 browserless_endpoint = "https<span class="token punctuation">:</span>//bypass.duti.tech/"
 
 <span class="token comment"># 自定义 OpenAI 的 API 接口基础地址</span>
 <span class="token comment"># 通过此功能，你可以搭建一个 OpenAI 的反向代理来避免网络问题</span>
 <span class="token comment"># 例如此项目：https://github.com/Ice-Hazymoon/openai-scf-proxy</span>
-<span class="token comment"># api_endpoint = "https://api.openai.com/v1"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token comment"># api_endpoint = "https://api.openai.com/v1"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="3-1-3-账号登录模式选择"><a href="#3-1-3-账号登录模式选择" class="headerlink" title="3.1.3 账号登录模式选择"></a>3.1.3 账号登录模式选择</h4><pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token punctuation">[</span><span class="token punctuation">[</span>openai.accounts<span class="token punctuation">]</span><span class="token punctuation">]</span>
 <span class="token comment"># 模式选择</span>
@@ -857,6 +858,12 @@ tree
 </ul>
 <p>如果程序已经安装，则提示无法重复安装，并提供升级和重装的命令。</p>
 <p>如果用户选择升级，则进行 <code>docker-compose pull</code>和 <code>docker-compose up -d</code> 操作。</p>
+<ul>
+<li><p><code>docker-compose up -d</code> 后台启动所有容器（在 docker-compose.yaml 里面都写好）</p>
+</li>
+<li><p><code>docker-compose logs chatgpt -f</code> 来查看chatgpt的实时日志</p>
+</li>
+</ul>
 <h2 id="5-其他"><a href="#5-其他" class="headerlink" title="5. 其他"></a>5. 其他</h2><h3 id="5-1-常用命令"><a href="#5-1-常用命令" class="headerlink" title="5.1 常用命令"></a>5.1 常用命令</h3><h4 id="5-1-1-切换AI-xxx"><a href="#5-1-1-切换AI-xxx" class="headerlink" title="5.1.1 切换AI xxx"></a>5.1.1 切换AI xxx</h4><p>切换至另一个 AI 引擎。<br>目前支持的有：</p>
 <ul>
 <li>chatgpt-web - OpenAI ChatGPT 网页版</li>
@@ -1378,7 +1385,7 @@ tree
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">14.3k</span>
+                        class="white-color">14.4k</span>
             
             
             
