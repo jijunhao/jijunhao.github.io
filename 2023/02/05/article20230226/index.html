@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Miniconda的安装和使用, Ubuntu,ML,DL,Math,CV等">
-    <meta name="description" content="Miniconda的安装和使用、常用conda命令的使用">
+    <meta name="keywords" content="pip介绍及常用命令, Ubuntu,ML,DL,Math,CV等">
+    <meta name="description" content="pip介绍及常用命令">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Miniconda的安装和使用 | 季俊豪的博客</title>
+    <title>pip介绍及常用命令 | 季俊豪的博客</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/favicon.png">
     
 
@@ -336,12 +336,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/11.webp')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/0.webp')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Miniconda的安装和使用</h1>
+                    <h1 class="description center-align post-title">pip介绍及常用命令</h1>
                 </div>
             </div>
         </div>
@@ -365,8 +365,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/conda/">
-                                <span class="chip bg-color">conda</span>
+                            <a href="/tags/pip/">
+                                <span class="chip bg-color">pip</span>
                             </a>
                         
                     </div>
@@ -404,14 +404,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.6k
+                    842
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
+                    3 分
                 </div>
                 
 
@@ -436,205 +436,119 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
-<p><strong>参考文献</strong></p>
-<p><a target="_blank" rel="noopener" href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a>  <a target="_blank" rel="noopener" href="https://www.anaconda.com/">Anaconda</a></p>
-</blockquote>
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><code>Miniconda</code>和<code>Anaconda</code>都是Python环境管理工具，可以用于创建、管理和部署Python环境及其依赖的软件包。它们的主要区别在于其默认安装的软件包和所需空间的大小。</p>
-<ul>
-<li><p>Miniconda 是一个轻量级的Python环境管理工具，仅包括conda、Python及其所需的基本依赖库。因此，它的安装包大小较小，只有几十兆，相比于Anaconda更加灵活。用户可以根据自己的需要逐步安装所需的软件包，避免不必要的浪费。在需要安装新软件包时，可以使用conda install命令来安装所需的软件包。这使得Miniconda在轻量化、快速安装、定制化、跨平台方面具有优势。</p>
-</li>
-<li><p>Anaconda 是一个包含了数百个预安装软件包的Python环境管理工具，包括Python解释器、各种科学计算和数据分析库、可视化工具、深度学习框架等。Anaconda旨在为数据科学家和研究者提供一个完整的数据科学环境，可以直接安装并使用大量的数据科学工具。这也意味着，Anaconda的安装包非常大，通常需要几个GB的磁盘空间，安装所需的时间也较长。同时，由于默认安装了大量的软件包，如果不需要的话，可能会浪费磁盘空间和内存资源。</p>
-</li>
-</ul>
-<p>综上所述，如果您需要一个灵活、快速、定制化的Python环境管理工具，并且希望自己安装所需的软件包，那么Miniconda可能更适合您。如果您需要一个预装有大量数据科学工具的环境，那么Anaconda可能更适合您。两者安装步骤几乎一致。</p>
-<h2 id="1-安装-Miniconda"><a href="#1-安装-Miniconda" class="headerlink" title="1. 安装 Miniconda"></a>1. 安装 Miniconda</h2><h3 id="1-1-Windows下安装"><a href="#1-1-Windows下安装" class="headerlink" title="1.1 Windows下安装"></a>1.1 Windows下安装</h3><p>在 Windows 系统下安装 Miniconda，可以按照以下步骤进行：</p>
-<ul>
-<li><p>首先，从官网下载适合你 Windows 系统的 Miniconda 安装程序：<a target="_blank" rel="noopener" href="https://docs.conda.io/en/latest/miniconda.html">https://docs.conda.io/en/latest/miniconda.html</a></p>
-</li>
-<li><p>下载完成后，双击安装程序并按照提示进行安装。</p>
-</li>
-<li><p>安装过程中需要阅读并同意许可协议。</p>
-</li>
-<li><p>安装过程中需要选择 Miniconda 的安装路径。默认情况下是在 <code>C:\Users\&lt;username&gt;\Miniconda3</code> 目录下创建一个名为 <code>Miniconda3</code> 的目录。你也可以选择其他路径，根据提示进行选择。</p>
-</li>
-</ul>
-<p>安装完成后，你就可以在终端中使用 conda 命令了，创建环境，安装依赖等操作都可以使用 conda 命令完成。</p>
-<h3 id="1-2-macOS下安装"><a href="#1-2-macOS下安装" class="headerlink" title="1.2 macOS下安装"></a>1.2 macOS下安装</h3><p>在 macOS 系统下安装 Miniconda，可以按照以下步骤进行：</p>
-<ul>
-<li><p>首先，从官网下载适合你 macOS 系统的 Miniconda 安装程序：<a target="_blank" rel="noopener" href="https://docs.conda.io/en/latest/miniconda.html">https://docs.conda.io/en/latest/miniconda.html</a></p>
-</li>
-<li><p>下载完成后，双击安装程序并按照提示进行安装。</p>
-</li>
-<li><p>安装过程中需要阅读并同意许可协议。</p>
-</li>
-<li><p>安装过程中需要选择 Miniconda 的安装路径。默认情况下是在用户目录下创建一个名为 <code>miniconda3</code> 的目录。你也可以选择其他路径，根据提示进行选择。</p>
-</li>
-<li><p>安装完成后，需要在终端中运行以下命令，以便 Miniconda 的环境变量生效：</p>
-</li>
-</ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">source</span> ~/.bash_profile<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>安装完成后，你就可以在终端中使用 conda 命令了，创建环境，安装依赖等操作都可以使用 conda 命令完成。</p>
-<h3 id="1-3-Linux下安装"><a href="#1-3-Linux下安装" class="headerlink" title="1.3 Linux下安装"></a>1.3 Linux下安装</h3><p>在 Linux 下安装 Miniconda，可以按照以下步骤进行：</p>
-<ul>
-<li><p>首先，从官网下载适合你 Linux 系统的 Miniconda 安装程序：<a target="_blank" rel="noopener" href="https://docs.conda.io/en/latest/miniconda.html">https://docs.conda.io/en/latest/miniconda.html</a></p>
-</li>
-<li><p>打开终端，进入下载目录，执行以下命令，安装 Miniconda：</p>
-</li>
-</ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">bash</span> Miniconda3-latest-Linux-x86_64.sh<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<blockquote>
-<p><strong>注意</strong>：如果你下载的是不同版本的安装程序，文件名也会有所不同，请根据你下载的版本自行更改文件名。</p>
-</blockquote>
-<ul>
-<li><p>执行安装命令后，会出现 Miniconda 许可协议的信息，按照提示阅读并同意协议，即输入<code>accept</code></p>
-</li>
-<li><p>接下来会提示你选择安装路径，默认情况下是在用户目录下创建一个名为 <code>miniconda3</code> 的目录。你也可以选择其他路径，根据提示进行选择。</p>
-</li>
-<li><p>安装完成后，终端中会出现提示，说明 Miniconda 已经安装成功。需要重新打开终端，以便 Miniconda 的环境变量生效。</p>
-</li>
-</ul>
-<p>安装完成后，你就可以在终端中使用 conda 命令了，创建环境，安装依赖等操作都可以使用 conda 命令完成。</p>
-<h2 id="2-配置-Miniconda"><a href="#2-配置-Miniconda" class="headerlink" title="2. 配置 Miniconda"></a>2. 配置 Miniconda</h2><ul>
-<li><p>打开终端或 Anaconda Prompt（Windows 用户）。</p>
-</li>
-<li><p>创建并激活 conda 环境：</p>
-</li>
-</ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda create <span class="token parameter variable">--name</span> env_name
-conda activate env_name<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>这里的 <code>env_name</code> 是你想要创建的环境名称。</p>
-<ul>
-<li>安装所需的包和工具：</li>
-</ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda <span class="token function">install</span> package_name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>这里的 package_name 是你想要安装的包名称。</p>
-<ul>
-<li>可以通过修改 .condarc 文件来修改默认的 conda 配置。</li>
-</ul>
-<blockquote>
-<p>conda 配置文件的路径:</p>
-<ul>
-<li><p>Linux/macOS: <code>~/.condarc</code> 或 <code>$HOME/.condarc</code></p>
-</li>
-<li><p>Windows: <code>USERPROFILE%.condarc</code> 或 <code>C:\Users\username.condarc</code></p>
-</li>
-</ul>
-<p>其中，<code>%USERPROFILE%</code> 为 Windows 系统环境变量，表示当前用户的主目录路径，<code>username</code> 为当前用户名。</p>
-</blockquote>
-<h2 id="3-常用的-conda-命令"><a href="#3-常用的-conda-命令" class="headerlink" title="3. 常用的 conda 命令"></a>3. 常用的 conda 命令</h2><p>conda 是一个用于包管理和环境管理的工具，可以方便地创建、安装、升级和删除不同的软件包和其依赖项。以下是一些常用的 conda 命令：</p>
-<ul>
-<li>创建一个新的环境：</li>
-</ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda create <span class="token parameter variable">--name</span> env_name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><code>env_name</code> 为你想要创建的环境名称。</p>
-<ul>
-<li>激活一个环境：</li>
-</ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda activate env_name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><code>env_name</code> 为你想要激活的环境名称。</p>
-<ul>
-<li>在激活的环境中安装一个软件包：</li>
-</ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda <span class="token function">install</span> package_name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><code>package_name</code> 为你想要安装的软件包名称。</p>
-<ul>
-<li>列出当前环境中安装的所有软件包：</li>
-</ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<ul>
-<li>列出所有可用的环境：</li>
-</ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda <span class="token function">env</span> list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<ul>
-<li>更新 conda：</li>
-</ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda update conda<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<ul>
-<li>更新所有已安装的软件包：</li>
-</ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda update <span class="token parameter variable">--all</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<ul>
-<li>从环境中删除一个软件包：</li>
-</ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda remove package_name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><code>package_name</code> 为你想要删除的软件包名称。</p>
-<blockquote>
-<p>在使用conda创建虚拟环境时，默认会将虚拟环境的文件夹放在Anaconda/Miniconda的安装路径下的envs文件夹中，具体路径为：</p>
-<ul>
-<li>Windows系统下：C:\Anaconda3\envs 或 C:\Users\你的用户名\Anaconda3\envs</li>
-<li>Linux/Mac系统下：/home/你的用户名/anaconda3/envs 或 /Users/你的用户名/anaconda3/envs</li>
-</ul>
-</blockquote>
-<p>当然，你也可以使用conda config命令更改默认路径，例如：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda config <span class="token parameter variable">--add</span> envs_dirs /path/to/new/envs/folder<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>这个命令会在新路径下创建一个名为envs的文件夹，用来存储所有的虚拟环境。</p>
-<h2 id="4-conda-换源"><a href="#4-conda-换源" class="headerlink" title="4. conda 换源"></a>4. conda 换源</h2><p>如果你在使用 conda 时遇到网络问题，可以将 conda 的源换成清华源（<a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/%EF%BC%89%E3%80%82%E5%85%B7%E4%BD%93%E6%AD%A5%E9%AA%A4%E5%A6%82%E4%B8%8B%EF%BC%9A">https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/）。具体步骤如下：</a></p>
-<ul>
-<li><p>打开终端或 Anaconda Prompt。</p>
-</li>
-<li><p>在命令提示符中输入以下命令：</p>
-</li>
-</ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda config <span class="token parameter variable">--show</span> <span class="token comment"># 显示当前 conda 配置</span>
-conda config <span class="token parameter variable">--add</span> channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/ <span class="token comment"># 添加清华源的免费仓库</span>
-conda config <span class="token parameter variable">--add</span> channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/ <span class="token comment"># 添加清华源的主要仓库</span>
-conda config <span class="token parameter variable">--set</span> show_channel_urls <span class="token function">yes</span> <span class="token comment"># 显示添加的所有仓库地址</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>这会将清华源添加到你的 conda 配置文件中。</p>
-<ul>
-<li><p>执行 <code>conda update conda</code> 命令，以确保你的 conda 版本是最新的。</p>
-</li>
-<li><p>如果你要创建新的环境或安装新的软件包，请使用以下命令：</p>
-</li>
-</ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda create <span class="token parameter variable">--name</span> env_name package_name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><code>env_name</code> 为你想要创建的环境名称，<code>package_name</code> 为你想要安装的软件包名称。</p>
-<blockquote>
-<p>例如：<code>conda create -n pytorch python==3.8</code> 创建一个 pytorch 环境，pythoon 版本为3.8</p>
-</blockquote>
-<ul>
-<li>如果你需要取消这些换源更改，可以使用以下命令：</li>
-</ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda config --remove-key channels <span class="token comment"># 移除添加的仓库地址</span>
-conda config <span class="token parameter variable">--set</span> show_channel_urls no <span class="token comment"># 不再显示仓库地址</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-
-
-<p>除了清华源之外，还有不少其他的 conda 镜像源可以使用。以下是一些常用的 conda 镜像源及其地址：</p>
-<ul>
-<li>中科大镜像源：<a target="_blank" rel="noopener" href="https://mirrors.ustc.edu.cn/anaconda/pkgs/main/">https://mirrors.ustc.edu.cn/anaconda/pkgs/main/</a></li>
-<li>阿里云镜像源：<a target="_blank" rel="noopener" href="https://mirrors.aliyun.com/anaconda/pkgs/main/">https://mirrors.aliyun.com/anaconda/pkgs/main/</a></li>
-<li>华为云镜像源：<a target="_blank" rel="noopener" href="https://mirrors.huaweicloud.com/repository/anaconda/pkgs/main/">https://mirrors.huaweicloud.com/repository/anaconda/pkgs/main/</a></li>
-<li>中国科学院开源协会镜像源：<a target="_blank" rel="noopener" href="https://mirrors.opencas.cn/anaconda/pkgs/main/">https://mirrors.opencas.cn/anaconda/pkgs/main/</a></li>
-<li>豆瓣镜像源：<a target="_blank" rel="noopener" href="https://pypi.douban.com/simple">https://pypi.douban.com/simple</a></li>
-</ul>
-<p>如果你想切换到其他镜像源，可以使用类似于切换清华源的方法，将需要的镜像源地址添加到 conda 配置文件中。</p>
-<blockquote>
-<p>需要注意的是，不同的镜像源可能会有不同的速度和可靠性，建议根据自己的网络情况选择合适的镜像源。</p>
-</blockquote>
-<h2 id="5-总结"><a href="#5-总结" class="headerlink" title="5. 总结"></a>5. 总结</h2><p>使用 conda 时，需要注意以下几点：</p>
-<ol>
-<li><strong>环境隔离</strong>：conda 可以创建虚拟环境来隔离不同的 Python 包和版本。在使用 conda 安装包时，需要确保安装在正确的环境中，以免出现冲突或版本不兼容的问题。可以使用 <code>conda env list</code> 查看当前存在的环境，使用 <code>conda activate env_name</code> 激活指定的环境。</li>
-<li><strong>版本管理</strong>：conda 可以安装不同版本的 Python 包和库，并且可以轻松地切换不同版本之间。在安装新包或更新已有包时，需要注意是否与当前环境中的其他包兼容。可以使用 <code>conda search package_name</code> 命令查询指定包的可用版本，使用 <code>conda install package_name=version</code> 命令安装指定版本的包。</li>
-<li><strong>包管理</strong>：conda 不仅可以安装 Python 包和库，还可以安装其他语言的依赖库和系统工具。在使用 conda 安装包时，需要注意包的来源和可靠性，以免下载和安装恶意软件。可以使用官方的 conda-forge 渠道来安装社区维护的包，也可以使用其他可信的镜像源。</li>
-<li><strong>配置管理</strong>：conda 可以通过配置文件来管理镜像源、默认安装路径、自动激活环境等设置。在使用 conda 时，需要注意配置文件是否正确，以免出现安装失败或异常的问题。可以使用 <code>conda config --show</code> 命令查看当前的配置信息，使用 <code>conda config --set key=value</code> 命令修改指定的配置项。</li>
+                <h2 id="pip-简介"><a href="#pip-简介" class="headerlink" title="pip 简介"></a>pip 简介</h2><p>pip是Python官方的包管理器，可以方便地安装、升级和卸载Python包。</p>
+<h2 id="pip-常用命令"><a href="#pip-常用命令" class="headerlink" title="pip 常用命令"></a>pip 常用命令</h2><ol>
+<li>显示版本和路径</li>
 </ol>
-<p>总之，在使用 conda 时，需要仔细阅读文档，遵循最佳实践，以免出现不必要的问题。以上就是一些常用的 conda 小技巧。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token parameter variable">--version</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol start="2">
+<li>获取帮助</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token parameter variable">--help</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol start="3">
+<li>升级pip和升级包</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token function">install</span> <span class="token parameter variable">--upgrade</span> pip   <span class="token comment"># Linux/macOS </span>
+pip <span class="token function">install</span> <span class="token parameter variable">-U</span> pip          <span class="token comment"># windows</span>
+
+pip <span class="token function">install</span> <span class="token parameter variable">--upgrade</span> <span class="token operator">&lt;</span>package<span class="token operator">&gt;</span>  <span class="token comment"># 其中&lt;package&gt;是要升级的包名</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="4">
+<li>列出所有pip包</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol start="5">
+<li>安装包</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token function">install</span> <span class="token operator">&lt;</span>package<span class="token operator">&gt;</span>     <span class="token comment"># 其中&lt;package&gt;是要安装的包名</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol start="6">
+<li>卸载包</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip uninstall <span class="token operator">&lt;</span>package<span class="token operator">&gt;</span>    <span class="token comment"># 其中&lt;package&gt;是要卸载的包名</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol start="7">
+<li>搜索包</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip search <span class="token operator">&lt;</span>package<span class="token operator">&gt;</span>      <span class="token comment"># 其中&lt;package&gt;是要搜索的包名</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol start="8">
+<li>导出已安装的包列表</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip freeze <span class="token operator">&gt;</span> requirements.txt   <span class="token comment"># 将环境中已安装的包保存到requirements.txt文件中</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<blockquote>
+<p>安装只要 pip install requirments.txt</p>
+</blockquote>
+<h2 id="pip-换源"><a href="#pip-换源" class="headerlink" title="pip 换源"></a>pip 换源</h2><blockquote>
+<p>pip 的源配置文件在不同操作系统下的位置可能会有所不同。</p>
+<ul>
+<li>Windows 系统下，pip 的配置文件默认存储在 <code>C:\Users\用户名\AppData\Roaming\pip\pip.ini</code> 目录下，其中用户名是你的 Windows 用户名。如果该文件不存在，则需要手动创建一个。</li>
+<li>Linux 系统下，pip 的配置文件默认存储在 <code>~/.config/pip/pip.conf</code> 文件中。如果该文件不存在，则需要手动创建一个。</li>
+<li>macOS 系统下，pip 的配置文件默认存储在 <code>~/Library/Application Support/pip/pip.conf</code> 文件中。如果该文件不存在，则需要手动创建一个。</li>
+</ul>
+</blockquote>
+<ol>
+<li>全局源(清华源)</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip config <span class="token builtin class-name">set</span> global.index-url https://pypi.tuna.tsinghua.edu.cn/simple<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol start="2">
+<li>临时源</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token function">install</span> <span class="token parameter variable">-i</span> https://pypi.tuna.tsinghua.edu.cn/simple <span class="token operator">&lt;</span>package-name<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol start="3">
+<li>其他源</li>
+</ol>
+<p>中科大: <a target="_blank" rel="noopener" href="https://pypi.mirrors.ustc.edu.cn/simple">https://pypi.mirrors.ustc.edu.cn/simple</a></p>
+<p>阿里源：<a target="_blank" rel="noopener" href="https://mirrors.aliyun.com/pypi/simple/">https://mirrors.aliyun.com/pypi/simple/</a></p>
+<p>豆瓣源 ：<a target="_blank" rel="noopener" href="http://pypi.douban.com/simple/">http://pypi.douban.com/simple/</a></p>
+<p>腾讯源：<a target="_blank" rel="noopener" href="http://mirrors.cloud.tencent.com/pypi/simple">http://mirrors.cloud.tencent.com/pypi/simple</a> </p>
+<blockquote>
+<p>**注意https和http，http的需要信任(因为未加密)**，可以通过下面两个方法解决</p>
+</blockquote>
+<ul>
+<li>安装时加入 <code>--trusted-host</code> 临时参数</li>
+</ul>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token function">install</span> <span class="token parameter variable">-i</span> https://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com【package-name】<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li>在 <code>pip.conf</code> 中加入 <code>trusted-host</code> 选项，该方法是一劳永逸</li>
+</ul>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>global<span class="token punctuation">]</span>
+index-url <span class="token operator">=</span> http://mirrors.aliyun.com/pypi/simple/
+<span class="token punctuation">[</span>install<span class="token punctuation">]</span>
+trusted-host<span class="token operator">=</span>mirrors.aliyun.com<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="pip-缓存位置"><a href="#pip-缓存位置" class="headerlink" title="pip 缓存位置"></a>pip 缓存位置</h2><blockquote>
+<p>每次pip都会下载一些包，不会自动删除，手动删除即可</p>
+</blockquote>
+<p>pip 的缓存位置在不同的操作系统下会有所不同：</p>
+<ul>
+<li>Windows: 缓存位置为 <code>%APPDATA%\pip\cache</code>。其中，<code>%APPDATA%</code> 为当前用户的应用程序数据目录，通常位于 <code>C:\Users\{用户名}\AppData\Roaming</code>。</li>
+<li>macOS/Linux: 缓存位置为 <code>~/.cache/pip</code>。</li>
+</ul>
+<p>可以通过以下命令查看 pip 的配置信息，包括缓存位置：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip config list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>如果需要修改缓存位置，可以在 pip 的配置文件中进行设置。Windows 上的配置文件为 <code>%APPDATA%\pip\pip.ini</code> 或 <code>%APPDATA%\pip\pip.conf</code>，macOS/Linux 上的配置文件为 <code>~/.config/pip/pip.conf</code>。在配置文件中添加以下内容即可修改缓存位置：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>global<span class="token punctuation">]</span>
+cache-dir <span class="token operator">=</span> /path/to/cache/dir<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>其中 <code>/path/to/cache/dir</code> 替换为你希望设置的缓存路径。修改完成后，重启终端或者重新加载 pip 配置即可生效。</p>
+<h2 id="安装时间超时问题"><a href="#安装时间超时问题" class="headerlink" title="安装时间超时问题"></a>安装时间超时问题</h2><p>pip的超时时间默认为15秒，如果下载速度过慢，可以使用以下命令设置超时时间为60秒：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token function">install</span> --default-timeout<span class="token operator">=</span><span class="token number">60</span> <span class="token operator">&lt;</span>package<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol>
+<li>添加参数<code>--default-timeout=1000</code></li>
+<li>在配置里面<code>[global]</code>下添加<code>timeout=1000</code></li>
+</ol>
+<h2 id="虚拟环境多python版本问题"><a href="#虚拟环境多python版本问题" class="headerlink" title="虚拟环境多python版本问题"></a>虚拟环境多python版本问题</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">python <span class="token parameter variable">-m</span> pip <span class="token function">install</span> <span class="token operator">&lt;</span>package<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 
                 
             </div>
@@ -661,7 +575,7 @@ conda config <span class="token parameter variable">--set</span> show_channel_ur
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://jijunhao.github.io/2023/02/05/article20230205/">http://jijunhao.github.io/2023/02/05/article20230205/</a>
+                    <a href="http://jijunhao.github.io/2023/02/05/article20230226/">http://jijunhao.github.io/2023/02/05/article20230226/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -699,8 +613,8 @@ conda config <span class="token parameter variable">--set</span> show_channel_ur
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/conda/">
-                                    <span class="chip bg-color">conda</span>
+                                <a href="/tags/pip/">
+                                    <span class="chip bg-color">pip</span>
                                 </a>
                             
                         </div>
@@ -797,74 +711,25 @@ conda config <span class="token parameter variable">--set</span> show_channel_ur
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2023/03/11/article20230311/">
+                <a href="/2023/02/05/article20230205/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/12.webp" class="responsive-img" alt="Hexo-Matery主题评论插件">
+                        <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/11.webp" class="responsive-img" alt="Miniconda的安装和使用">
                         
-                        <span class="card-title">Hexo-Matery主题评论插件</span>
+                        <span class="card-title">Miniconda的安装和使用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            记录的配置Matery主题的评论
+                            Miniconda的安装和使用、常用conda命令的使用
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-03-11
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-02-05
                         </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2/" class="post-category">
-                                    博客
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2023/02/05/article20230226/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/0.webp" class="responsive-img" alt="pip介绍及常用命令">
-                        
-                        <span class="card-title">pip介绍及常用命令</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            pip介绍及常用命令
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-02-05
-                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -880,8 +745,57 @@ conda config <span class="token parameter variable">--set</span> show_channel_ur
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/pip/">
-                        <span class="chip bg-color">pip</span>
+                    <a href="/tags/conda/">
+                        <span class="chip bg-color">conda</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/12/09/article20221209/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/18.webp" class="responsive-img" alt="统计机器学习">
+                        
+                        <span class="card-title">统计机器学习</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            统计机器学习大框架
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-12-09
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BB%9F%E8%AE%A1%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    统计机器学习
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%BB%9F%E8%AE%A1%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">统计机器学习</span>
                     </a>
                     
                 </div>
