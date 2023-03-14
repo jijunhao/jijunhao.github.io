@@ -29,6 +29,31 @@
     
     
     <entry>
+      <title>搜索引擎高级指令</title>
+      <link href="/2023/02/08/article20230208/"/>
+      <url>/2023/02/08/article20230208/</url>
+      
+        <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>搜索引擎的高级指令是一些在搜索时能够增强搜索效果的特殊指令，可以让搜索结果更加准确、快速、精准。但需要注意的是，不同搜索引擎可能支持的指令有所不同，具体可以上官方文档查询。而且目前很多浏览器插件都自带这些命令功能，用途不是很广泛。</p><h2 id="1-site"><a href="#1-site" class="headerlink" title="1. site"></a>1. site</h2><p><code>site</code> 用途是搜索某个域名下的所有文件，可以帮助我们快速找到特定网站内的信息。</p><p>支持的搜索引擎有Google、Bing、Yahoo等。</p><ul><li>例如，site:wikipedia.org   将会在维基百科网站内搜索相关内容。</li></ul><h2 id="2-filetype"><a href="#2-filetype" class="headerlink" title="2. filetype"></a>2. filetype</h2><p><code>filetype</code> 用途是搜索特定文件格式，可以帮助我们快速找到特定格式的文档、图片、音频等文件。基本格式为filetype:文件格式 文件名称</p><p>支持的搜索引擎有Google、Bing、Yahoo等。</p><ul><li>例如，filetype:pdf “data mining”   将会在PDF文件中搜索关于数据挖掘的相关内容。</li></ul><h2 id="3-intitle"><a href="#3-intitle" class="headerlink" title="3. intitle"></a>3. intitle</h2><p><code>intitle</code> 用途是搜索页面标题包含某个关键词的页面，可以帮助我们快速找到特定主题的页面。</p><p>支持的搜索引擎有Google、Bing、Yahoo等。</p><ul><li>例如，intitle:”Python tutorial”   将会在页面标题中搜索Python教程相关的内容。</li></ul><h2 id="4-inurl"><a href="#4-inurl" class="headerlink" title="4. inurl"></a>4. inurl</h2><p><code>inurl</code> 用途是搜索<strong>查询词</strong>出现在URL地址中的页面，可以帮助我们快速找到特定主题的页面。</p><p>支持的搜索引擎有Google、Bing、Yahoo等。</p><ul><li>例如，inurl:”data analysis”   将会在URL地址中搜索与数据分析相关的内容。</li></ul><p>由于关键词(我们想要的查询词)出现在url 中对排名有一定影响，使用inurl:搜索可以更准确地找到目标。</p><ul><li>例如：site:github.com inurl:jijunhao  返回的结果是github.com这个域名下，包含jijunhao的url，前提是得被收录</li></ul><h2 id="5-intext"><a href="#5-intext" class="headerlink" title="5. intext"></a>5. intext</h2><p><code>intext</code> 用途是搜索页面正文中包含某个关键词的页面，可以帮助我们快速找到包含特定信息的页面。</p><p>支持的搜索引擎有Google、Bing、Yahoo等。</p><ul><li>例如，intext:”machine learning”   将会在页面正文中搜索与机器学习相关的内容。</li></ul><h2 id="6-allinurl"><a href="#6-allinurl" class="headerlink" title="6. allinurl"></a>6. allinurl</h2><p><code>allinurl</code> 用途是同时搜索多个关键词出现在URL地址中的页面，可以帮助我们快速找到包含多个关键词的页面。</p><p>支持的搜索引擎有Google、Bing、Yahoo等。</p><ul><li>例如，allinurl:”data analysis” tutorial   将会在URL地址中搜索同时包含数据分析和教程的页面。</li></ul><h2 id="7-allintitle"><a href="#7-allintitle" class="headerlink" title="7.allintitle"></a>7.allintitle</h2><p><code>allintitle</code> 用途是同时搜索多个关键词出现在页面标题中的页面，可以帮助我们快速找到包含多个关键词的页面。</p><p>支持的搜索引擎有Google、Bing、Yahoo等。</p><ul><li>例如，allintitle:”Python tutorial” beginner   将会在页面标题中搜索同时包含Python教程和初学者的页面。</li></ul><h2 id="8-related"><a href="#8-related" class="headerlink" title="8. related"></a>8. related</h2><p><code>related</code> 用途是搜索与特定网站相关的其他网站，可以帮助我们快速找到与特定网站类似的其他网站。</p><p>支持的搜索引擎有Google。</p><ul><li>例如，related:wikipedia.org   将会搜索与维基百科相关的其他网站。</li></ul><h2 id="9-减号"><a href="#9-减号" class="headerlink" title="9. (-)减号"></a>9. (-)减号</h2><p>减号代表搜索不包含减号后面的词的页面。使用这个指令时减号前面必需是空格，减号后面没有空格，紧跟着需求排除的词，baidu和Google 均支持该指令。</p><ul><li>例如，系统升级 -广告</li></ul><p>返回排除了广告后的系统升级内容。这是最简单的去除广告的方式。</p><h2 id="10-“…”-双引号"><a href="#10-“…”-双引号" class="headerlink" title="10. (“…”)双引号"></a>10. (“…”)双引号</h2><p>用双引号包住搜索词，代表完全匹配搜索，也就是说搜索结果返回的页面包含双引号中出现的所有的词，连顺序也必须完全匹配。百度和Google 都支持这个指令。</p><ul><li>例如，”假设A、B两地距离为5km”</li></ul><h2 id="11-星号"><a href="#11-星号" class="headerlink" title="11. (*)星号"></a>11. (*)星号</h2><p>星号是常用的通配符，也能够用在搜索中，百度不支持星号搜索指令。</p><ul><li>例如，统计*理论</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 搜索引擎 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 搜索引擎 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Linux常用解压与压缩命令</title>
       <link href="/2023/02/07/article20230207/"/>
       <url>/2023/02/07/article20230207/</url>
