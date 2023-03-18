@@ -458,14 +458,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-03-13
+                    2023-03-18
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    914
+                    974
                 </div>
                 
 
@@ -524,8 +524,8 @@
 <h3 id="1-config-yml"><a href="#1-config-yml" class="headerlink" title="1. _config.yml"></a>1. _config.yml</h3><p>用来配置博客相关的参数，初始化时自动创建。具体参数设置，可参照 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration">Hexo 配置</a> 文档。</p>
 <h3 id="2-node-modules-和-package-json"><a href="#2-node-modules-和-package-json" class="headerlink" title="2. node_modules 和 package.json"></a>2. node_modules 和 package.json</h3><p>都是在初始化时自动创建。</p>
 <ul>
-<li><code>node_modules</code>用来存储已安装的各类依赖包。</li>
-<li><code>package.json</code>用来查看 Hexo 的版本以及相关依赖包的版本。</li>
+<li><code>node_modules</code> 用来存储已安装的各类依赖包。</li>
+<li><code>package.json</code> 用来查看 Hexo 的版本以及相关依赖包的版本。</li>
 </ul>
 <h3 id="3-scaffold"><a href="#3-scaffold" class="headerlink" title="3. scaffold"></a>3. scaffold</h3><p>模板文件夹，初始化时自动创建。包含<code>page</code>，<code>post</code>，<code>draft</code>三种模板，分别对应 页面、要发布的文章、草稿。</p>
 <h3 id="4-themes"><a href="#4-themes" class="headerlink" title="4. themes"></a>4. themes</h3><p>主题文件夹，初始化时自动创建。每一个主题，都有一个单独的文件夹。默认主题为 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-theme-landscape">landscape</a>。</p>
@@ -545,7 +545,7 @@
 <li><code>hexo server -p 5000</code> #更改访问端口 (默认端口为 4000，’ctrl + c’关闭 server)</li>
 <li><code>hexo server -i IP地址</code> #自定义 IP</li>
 <li><code>hexo clean</code> #清除缓存 ,网页正常情况下可以忽略此条命令,执行该指令后,会删掉站点根目录下的 public 文件夹</li>
-<li><code>hexo g</code> #生成静态网页 (执行 $ <code>hexo g</code>后会在站点根目录下生成 public 文件夹, hexo 会将”/blog/source/“ 下面的.md后缀的文件编译为.html 后缀的文件,存放在”/blog/public/ “ 路径下)</li>
+<li><code>hexo g</code> #生成静态网页 (执行 $ <code>hexo g</code>后会在站点根目录下生成 public 文件夹, hexo 会将<code>/blog/source/</code> 下面的.md后缀的文件编译为.html 后缀的文件,存放在<code>/blog/public/</code> 路径下)</li>
 <li><code>hexo d</code> #自动生成网站静态文件，并将本地数据部署到设定的仓库(如 github)</li>
 <li><code>hexo init</code> 文件夹名称 #初始化 XX 文件夹名称</li>
 <li><code>npm update hexo -g</code>#升级</li>
@@ -554,8 +554,8 @@
 <li><code>npm -v</code> #查看 npm 版本号</li>
 <li><code>git --version</code> #查看 git 版本号</li>
 <li><code>hexo -v</code> #查看 hexo 版本号</li>
-<li>hexo new page “music” #新增页面music</li>
-<li>hexo new post “文章名称” #新增文章</li>
+<li><code>hexo new page “music”</code> #新增页面music</li>
+<li><code>hexo new post “文章名称”</code> #新增文章</li>
 </ul>
 <h3 id="2-简写指令"><a href="#2-简写指令" class="headerlink" title="2. 简写指令"></a>2. 简写指令</h3><ul>
 <li><code>hexo n "我的第一篇文章"</code> 等价于 <code>hexo new "我的第一篇文章"</code> 还等价于 <code>hexo new post "我的第一篇文章"</code></li>
@@ -566,28 +566,20 @@
 <li><code>hexo g -d</code>等价于<code>hexo generate --deploy</code></li>
 </ul>
 <p>注: <code>hexo clean</code> 没有 简写, <code>git --version</code> 没有简写</p>
-<h2 id="tags与categories"><a href="#tags与categories" class="headerlink" title="tags与categories"></a>tags与categories</h2><p>在 Hexo 中使用 <code>tags</code> 与 <code>categories</code> 往往需要使用多标签和多分类,这里记录一下它们的用法。</p>
-<h3 id="1-tags"><a href="#1-tags" class="headerlink" title="1. tags"></a>1. tags</h3><p>多标签写法，这2种都是一样的效果，用哪个都可以，建议使用列表式，直观清晰。</p>
-<pre class="line-numbers language-text" data-language="text"><code class="language-text">tags:
-  - 123
-  - 456
-或者
-tags: [123, 456]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="tags与categories"><a href="#tags与categories" class="headerlink" title="tags与categories"></a>tags与categories</h2><p>在博客或网站中，<code>Tags</code> 和 <code>Categories</code> 通常用来对文章进行分类和归档，以便读者可以更方便地查找和浏览相关主题的文章。</p>
+<ul>
+<li><p>Tags（标签）是指对文章进行的主题或关键词的描述，通常是一些具有代表性或关键性的单词或短语，可以用来标记一篇或多篇文章，使得读者可以方便地查找到相关主题的文章。</p>
+</li>
+<li><p>Categories（分类）是指对文章进行的归档或分类的描述，通常是一些具有代表性或普遍性的主题或类别，可以用来将一篇或多篇文章进行归类和整理，以便读者可以更方便地浏览和查找相关主题的文章。</p>
+</li>
+</ul>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">tags</span><span class="token punctuation">:</span>
+<span class="token punctuation">-</span> Hexo
+<span class="token punctuation">-</span> Markdown
+<span class="token key atrule">categories</span><span class="token punctuation">:</span>
+<span class="token punctuation">-</span> 技术
+<span class="token punctuation">-</span> 编程<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="2-categories"><a href="#2-categories" class="headerlink" title="2. categories"></a>2. categories</h3><pre class="line-numbers language-text" data-language="text"><code class="language-text"># 这是默认的写法，给文章添加一个分类。
-categories: 123
-
-# 这会将文章分类123/456子分类目录下。
-categories:
-  - 123
-  - 456
-或者
-categories: [123, 456]
-   
-# 文章被分类到123以及123的自分类456这2个分类下面，官方指定写法。
-categories:
-  - [123]
-  - [123, 456]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -1014,7 +1006,7 @@ categories:
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">19k</span>
+                        class="white-color">20.2k</span>
             
             
             
