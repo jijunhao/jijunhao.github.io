@@ -458,21 +458,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-03-18
+                    2023-03-19
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    450
+                    490
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -526,7 +526,7 @@
 </blockquote>
 <h3 id="3-2-下载-Gitlab-仓库"><a href="#3-2-下载-Gitlab-仓库" class="headerlink" title="3.2 下载 Gitlab 仓库"></a>3.2 下载 Gitlab 仓库</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> clone <span class="token operator">&lt;</span>git-repository-url<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h3 id="3-3-将已有的博客复制到本地仓库"><a href="#3-3-将已有的博客复制到本地仓库" class="headerlink" title="3.3 将已有的博客复制到本地仓库"></a>3.3 将已有的博客复制到本地仓库</h3><p>只需要复制如下文件即可</p>
+<h3 id="3-3-将已有的博客复制到本地仓库"><a href="#3-3-将已有的博客复制到本地仓库" class="headerlink" title="3.3 将已有的博客复制到本地仓库"></a>3.3 将已有的博客复制到本地仓库</h3><p>只需要复制<code>scaffolds</code>、<code>source</code>、<code>themes</code>和一些配置文件到gitlab的本地仓库</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"> $ tree <span class="token parameter variable">-L</span> <span class="token number">2</span>
 <span class="token builtin class-name">.</span>
 ├── scaffolds
@@ -565,12 +565,13 @@
   <span class="token punctuation">-</span> main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="3-5-部署到-Gitlab"><a href="#3-5-部署到-Gitlab" class="headerlink" title="3.5 部署到 Gitlab"></a>3.5 部署到 Gitlab</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
-<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"init blog"</span>
+<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"update blog"</span>
 <span class="token function">git</span> push<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
-<p>以后每次异地修改只要 git pull，然后 git push</p>
+<p>以后每次异地修改只要 git pull，然后运行上面三条命令即可</p>
 </blockquote>
+<h3 id="3-6-修改-Pages-权限"><a href="#3-6-修改-Pages-权限" class="headerlink" title="3.6 修改 Pages 权限"></a>3.6 修改 Pages 权限</h3><p>进入设置，把Pages权限设置为<code>everyone</code>。非常重要！！</p>
 <p>完成推送后在项目里点击 <code>CI/CD</code> 查看，显示成功部署即可由<code>https://username.gitlab.io/</code>访问你的博客</p>
 
                 
@@ -1000,7 +1001,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">20.2k</span>
+                        class="white-color">20.3k</span>
             
             
             
