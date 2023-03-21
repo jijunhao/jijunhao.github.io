@@ -464,19 +464,19 @@
                 </a>
                 
                 
-                <a href="/categories/ubuntu/" title="ubuntu: 1">
+                <a href="/categories/%E7%BB%9F%E8%AE%A1%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" title="统计机器学习: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F5EEF8;">ubuntu
+                            style="background-color: #F5EEF8;">统计机器学习
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/%E7%BB%9F%E8%AE%A1%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" title="统计机器学习: 1">
+                <a href="/categories/ubuntu/" title="ubuntu: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #D5F5E3;">统计机器学习
+                            style="background-color: #D5F5E3;">ubuntu
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -491,19 +491,19 @@
                 </a>
                 
                 
-                <a href="/categories/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/" title="搜索引擎: 1">
+                <a href="/categories/Linux/" title="Linux: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #FEF9E7;">搜索引擎
+                            style="background-color: #FEF9E7;">Linux
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/Linux/" title="Linux: 1">
+                <a href="/categories/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/" title="搜索引擎: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F8F9F9;">Linux
+                            style="background-color: #F8F9F9;">搜索引擎
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -641,6 +641,8 @@
             <a href="/about" target="_blank">JiJunhao</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+                <span id="translate">|&nbsp;繁/简：</span><a id="translateLink" href="javascript:translatePage();">繁</a>
             
             <br>
             
@@ -896,6 +898,17 @@ $(function () {
 
     
 
+    
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/js/tw_cn.js"></script>
+        <script type="text/javascript">
+          var defaultEncoding = 2; //网站编写字体是否繁体，1-繁体，2-简体
+          var translateDelay = 0; //延迟时间,若不在前, 要设定延迟翻译时间, 如100表示100ms,默认为0
+          var cookieDomain = "http://jijunhao.github.io"; //Cookie地址, 一定要设定, 通常为你的网址
+          var msgToTraditionalChinese = "繁"; //此处可以更改为你想要显示的文字
+          var msgToSimplifiedChinese = "简"; //同上，但两处均不建议更改
+          var translateButtonId = "translateLink"; //默认互换id
+          translateInitilization();
+        </script>
     
     
     

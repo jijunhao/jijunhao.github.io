@@ -463,19 +463,19 @@
                 </a>
                 
                 
-                <a href="/tags/ubuntu%E5%8F%8C%E7%B3%BB%E7%BB%9F/" title="ubuntu双系统: 1">
+                <a href="/tags/%E7%BB%9F%E8%AE%A1%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" title="统计机器学习: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="ubuntu双系统" style="background-color: #F5EEF8;">ubuntu双系统
+                            data-tagname="统计机器学习" style="background-color: #F5EEF8;">统计机器学习
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/%E7%BB%9F%E8%AE%A1%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" title="统计机器学习: 1">
+                <a href="/tags/ubuntu%E5%8F%8C%E7%B3%BB%E7%BB%9F/" title="ubuntu双系统: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="统计机器学习" style="background-color: #D5F5E3;">统计机器学习
+                            data-tagname="ubuntu双系统" style="background-color: #D5F5E3;">ubuntu双系统
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -490,19 +490,10 @@
                 </a>
                 
                 
-                <a href="/tags/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/" title="搜索引擎: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="搜索引擎" style="background-color: #FEF9E7;">搜索引擎
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/pip/" title="pip: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-active "
-                            data-tagname="pip" style="background-color: #F8F9F9;">pip
+                            data-tagname="pip" style="background-color: #FEF9E7;">pip
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -511,7 +502,16 @@
                 <a href="/tags/Linux/" title="Linux: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="Linux" style="background-color: #82E0AA;">Linux
+                            data-tagname="Linux" style="background-color: #F8F9F9;">Linux
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/" title="搜索引擎: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="搜索引擎" style="background-color: #82E0AA;">搜索引擎
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -587,6 +587,8 @@
             <a href="/about" target="_blank">JiJunhao</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+                <span id="translate">|&nbsp;繁/简：</span><a id="translateLink" href="javascript:translatePage();">繁</a>
             
             <br>
             
@@ -842,6 +844,17 @@ $(function () {
 
     
 
+    
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/js/tw_cn.js"></script>
+        <script type="text/javascript">
+          var defaultEncoding = 2; //网站编写字体是否繁体，1-繁体，2-简体
+          var translateDelay = 0; //延迟时间,若不在前, 要设定延迟翻译时间, 如100表示100ms,默认为0
+          var cookieDomain = "http://jijunhao.github.io"; //Cookie地址, 一定要设定, 通常为你的网址
+          var msgToTraditionalChinese = "繁"; //此处可以更改为你想要显示的文字
+          var msgToSimplifiedChinese = "简"; //同上，但两处均不建议更改
+          var translateButtonId = "translateLink"; //默认互换id
+          translateInitilization();
+        </script>
     
     
     

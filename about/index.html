@@ -667,7 +667,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"博客","value":5},{"name":"ubuntu","value":1},{"name":"统计机器学习","value":1},{"name":"Python","value":2},{"name":"搜索引擎","value":1},{"name":"Linux","value":1},{"name":"ChatGPT","value":1}],
+                data: [{"name":"博客","value":5},{"name":"统计机器学习","value":1},{"name":"ubuntu","value":1},{"name":"Python","value":2},{"name":"Linux","value":1},{"name":"搜索引擎","value":1},{"name":"ChatGPT","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -691,7 +691,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["Hexo","ubuntu双系统","统计机器学习","conda","搜索引擎","pip","Linux","QQ机器人"]
+                data: ["Hexo","统计机器学习","ubuntu双系统","conda","pip","Linux","搜索引擎","QQ机器人"]
             }
         ],
         yAxis: [
@@ -828,26 +828,20 @@
             
             
             
-            <a href="/tags/ubuntu%E5%8F%8C%E7%B3%BB%E7%BB%9F/">
-                <span class="chip center-align waves-effect waves-light chip-default">ubuntu双系统</span>
-            </a>
-            
-            
-            
             <a href="/tags/%E7%BB%9F%E8%AE%A1%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
                 <span class="chip center-align waves-effect waves-light chip-default">统计机器学习</span>
             </a>
             
             
             
-            <a href="/tags/conda/">
-                <span class="chip center-align waves-effect waves-light chip-default">conda</span>
+            <a href="/tags/ubuntu%E5%8F%8C%E7%B3%BB%E7%BB%9F/">
+                <span class="chip center-align waves-effect waves-light chip-default">ubuntu双系统</span>
             </a>
             
             
             
-            <a href="/tags/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/">
-                <span class="chip center-align waves-effect waves-light chip-default">搜索引擎</span>
+            <a href="/tags/conda/">
+                <span class="chip center-align waves-effect waves-light chip-default">conda</span>
             </a>
             
             
@@ -860,6 +854,12 @@
             
             <a href="/tags/Linux/">
                 <span class="chip center-align waves-effect waves-light chip-default">Linux</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/">
+                <span class="chip center-align waves-effect waves-light chip-default">搜索引擎</span>
             </a>
             
             
@@ -900,6 +900,8 @@
             <a href="/about" target="_blank">JiJunhao</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+                <span id="translate">|&nbsp;繁/简：</span><a id="translateLink" href="javascript:translatePage();">繁</a>
             
             <br>
             
@@ -1155,6 +1157,17 @@ $(function () {
 
     
 
+    
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/js/tw_cn.js"></script>
+        <script type="text/javascript">
+          var defaultEncoding = 2; //网站编写字体是否繁体，1-繁体，2-简体
+          var translateDelay = 0; //延迟时间,若不在前, 要设定延迟翻译时间, 如100表示100ms,默认为0
+          var cookieDomain = "http://jijunhao.github.io"; //Cookie地址, 一定要设定, 通常为你的网址
+          var msgToTraditionalChinese = "繁"; //此处可以更改为你想要显示的文字
+          var msgToSimplifiedChinese = "简"; //同上，但两处均不建议更改
+          var translateButtonId = "translateLink"; //默认互换id
+          translateInitilization();
+        </script>
     
     
     
