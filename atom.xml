@@ -6,7 +6,7 @@
   <link href="http://jijunhao.github.io/atom.xml" rel="self"/>
   
   <link href="http://jijunhao.github.io/"/>
-  <updated>2023-03-22T11:15:34.122Z</updated>
+  <updated>2023-03-22T15:02:22.025Z</updated>
   <id>http://jijunhao.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git操作指南</title>
+    <link href="http://jijunhao.github.io/2023/03/23/article20230323/"/>
+    <id>http://jijunhao.github.io/2023/03/23/article20230323/</id>
+    <published>2023-03-23T11:38:56.000Z</published>
+    <updated>2023-03-22T15:02:22.025Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;参考文献&lt;/strong&gt;&lt;br&gt;&lt;a href=&quot;https://docs.github.com/&quot;&gt;Github docs&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;Git操作指南&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Git" scheme="http://jijunhao.github.io/categories/Git/"/>
+    
+    
+    <category term="Git" scheme="http://jijunhao.github.io/tags/Git/"/>
+    
+  </entry>
   
   <entry>
     <title>ChatGPT 工具整理</title>
