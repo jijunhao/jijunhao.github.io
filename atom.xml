@@ -6,7 +6,7 @@
   <link href="http://jijunhao.github.io/atom.xml" rel="self"/>
   
   <link href="http://jijunhao.github.io/"/>
-  <updated>2023-03-23T09:06:23.449Z</updated>
+  <updated>2023-03-23T14:14:18.338Z</updated>
   <id>http://jijunhao.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>显卡驱动+cuda+cudnn+深度学习框架</title>
+    <link href="http://jijunhao.github.io/2023/03/25/article20230325/"/>
+    <id>http://jijunhao.github.io/2023/03/25/article20230325/</id>
+    <published>2023-03-25T02:38:56.000Z</published>
+    <updated>2023-03-23T14:14:18.338Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;安装概览&quot;&gt;&lt;a href=&quot;#安装概览&quot; class=&quot;headerlink&quot; title=&quot;安装概览&quot;&gt;&lt;/a&gt;安装概览&lt;/h2&gt;&lt;p&gt;安装显卡驱动、CUDA 和 cuDNN 可能因操作系统和 GPU</summary>
+        
+      
+    
+    
+    
+    <category term="Linux" scheme="http://jijunhao.github.io/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="http://jijunhao.github.io/tags/Linux/"/>
+    
+    <category term="Python" scheme="http://jijunhao.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Word论文排版</title>
     <link href="http://jijunhao.github.io/2023/03/24/article20230324/"/>
     <id>http://jijunhao.github.io/2023/03/24/article20230324/</id>
     <published>2023-03-24T11:38:56.000Z</published>
-    <updated>2023-03-23T09:06:23.449Z</updated>
+    <updated>2023-03-23T14:12:13.667Z</updated>
     
     
       
@@ -34,7 +61,7 @@
     
     
     
-    <category term="Office" scheme="http://jijunhao.github.io/categories/Office/"/>
+    <category term="技术工具" scheme="http://jijunhao.github.io/categories/%E6%8A%80%E6%9C%AF%E5%B7%A5%E5%85%B7/"/>
     
     
     <category term="Word" scheme="http://jijunhao.github.io/tags/Word/"/>
@@ -46,7 +73,7 @@
     <link href="http://jijunhao.github.io/2023/03/23/article20230323/"/>
     <id>http://jijunhao.github.io/2023/03/23/article20230323/</id>
     <published>2023-03-23T11:38:56.000Z</published>
-    <updated>2023-03-23T11:24:41.114Z</updated>
+    <updated>2023-03-23T14:11:57.287Z</updated>
     
     
       
@@ -62,7 +89,7 @@
     
     
     
-    <category term="Git" scheme="http://jijunhao.github.io/categories/Git/"/>
+    <category term="技术工具" scheme="http://jijunhao.github.io/categories/%E6%8A%80%E6%9C%AF%E5%B7%A5%E5%85%B7/"/>
     
     
     <category term="Git" scheme="http://jijunhao.github.io/tags/Git/"/>
@@ -124,7 +151,7 @@
     <link href="http://jijunhao.github.io/2023/03/13/article20230313/"/>
     <id>http://jijunhao.github.io/2023/03/13/article20230313/</id>
     <published>2023-03-13T11:38:56.000Z</published>
-    <updated>2023-03-18T08:59:18.000Z</updated>
+    <updated>2023-03-23T14:11:42.564Z</updated>
     
     
       
@@ -145,6 +172,8 @@
     
     <category term="QQ机器人" scheme="http://jijunhao.github.io/tags/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA/"/>
     
+    <category term="ChatGPT" scheme="http://jijunhao.github.io/tags/ChatGPT/"/>
+    
   </entry>
   
   <entry>
@@ -152,7 +181,7 @@
     <link href="http://jijunhao.github.io/2023/02/08/article20230208/"/>
     <id>http://jijunhao.github.io/2023/02/08/article20230208/</id>
     <published>2023-02-08T14:10:50.000Z</published>
-    <updated>2023-03-18T08:59:18.000Z</updated>
+    <updated>2023-03-23T14:13:12.507Z</updated>
     
     
       
@@ -165,7 +194,7 @@
     
     
     
-    <category term="搜索引擎" scheme="http://jijunhao.github.io/categories/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/"/>
+    <category term="技术工具" scheme="http://jijunhao.github.io/categories/%E6%8A%80%E6%9C%AF%E5%B7%A5%E5%85%B7/"/>
     
     
     <category term="搜索引擎" scheme="http://jijunhao.github.io/tags/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/"/>
@@ -202,7 +231,7 @@
     <link href="http://jijunhao.github.io/2023/02/06/article20230206/"/>
     <id>http://jijunhao.github.io/2023/02/06/article20230206/</id>
     <published>2023-02-06T02:34:56.000Z</published>
-    <updated>2023-03-18T08:59:18.000Z</updated>
+    <updated>2023-03-23T14:10:34.662Z</updated>
     
     
       
@@ -219,6 +248,8 @@
     <category term="Python" scheme="http://jijunhao.github.io/categories/Python/"/>
     
     
+    <category term="Python" scheme="http://jijunhao.github.io/tags/Python/"/>
+    
     <category term="pip" scheme="http://jijunhao.github.io/tags/pip/"/>
     
   </entry>
@@ -228,7 +259,7 @@
     <link href="http://jijunhao.github.io/2023/02/05/article20230205/"/>
     <id>http://jijunhao.github.io/2023/02/05/article20230205/</id>
     <published>2023-02-05T07:28:56.000Z</published>
-    <updated>2023-03-23T08:01:49.400Z</updated>
+    <updated>2023-03-23T14:12:30.999Z</updated>
     
     
       
@@ -247,6 +278,8 @@
     
     
     <category term="conda" scheme="http://jijunhao.github.io/tags/conda/"/>
+    
+    <category term="Python" scheme="http://jijunhao.github.io/tags/Python/"/>
     
   </entry>
   
@@ -282,7 +315,7 @@
     <link href="http://jijunhao.github.io/2022/12/09/article20221209/"/>
     <id>http://jijunhao.github.io/2022/12/09/article20221209/</id>
     <published>2022-12-09T10:49:37.000Z</published>
-    <updated>2023-03-18T08:59:18.000Z</updated>
+    <updated>2023-03-23T14:09:58.652Z</updated>
     
     
       
@@ -295,10 +328,10 @@
     
     
     
-    <category term="统计机器学习" scheme="http://jijunhao.github.io/categories/%E7%BB%9F%E8%AE%A1%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    <category term="机器学习" scheme="http://jijunhao.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="统计机器学习" scheme="http://jijunhao.github.io/tags/%E7%BB%9F%E8%AE%A1%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    <category term="人工智能" scheme="http://jijunhao.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
     
   </entry>
   
@@ -307,7 +340,7 @@
     <link href="http://jijunhao.github.io/2022/10/05/article20221005/"/>
     <id>http://jijunhao.github.io/2022/10/05/article20221005/</id>
     <published>2022-10-05T04:26:22.000Z</published>
-    <updated>2023-03-18T11:45:10.000Z</updated>
+    <updated>2023-03-23T14:09:31.161Z</updated>
     
     
       
@@ -320,10 +353,10 @@
     
     
     
-    <category term="ubuntu" scheme="http://jijunhao.github.io/categories/ubuntu/"/>
+    <category term="Linux" scheme="http://jijunhao.github.io/categories/Linux/"/>
     
     
-    <category term="ubuntu双系统" scheme="http://jijunhao.github.io/tags/ubuntu%E5%8F%8C%E7%B3%BB%E7%BB%9F/"/>
+    <category term="Linux" scheme="http://jijunhao.github.io/tags/Linux/"/>
     
   </entry>
   

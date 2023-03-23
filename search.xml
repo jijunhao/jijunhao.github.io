@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>显卡驱动+cuda+cudnn+深度学习框架</title>
+      <link href="/2023/03/25/article20230325/"/>
+      <url>/2023/03/25/article20230325/</url>
+      
+        <content type="html"><![CDATA[<h2 id="安装概览"><a href="#安装概览" class="headerlink" title="安装概览"></a>安装概览</h2><p>安装显卡驱动、CUDA 和 cuDNN 可能因操作系统和 GPU 型号而异，下面是一般的步骤：</p><ol><li>下载和安装适合你 GPU 型号的显卡驱动，可以从官方网站或者 GPU 制造商的网站下载。</li><li>下载和安装适合你 CUDA 版本的 CUDA 工具包，可以从官方网站下载。</li><li>下载和安装适合你 CUDA 版本的 cuDNN 库，可以从 NVIDIA Developer 网站下载。</li><li>配置环境变量，以便你的系统能够找到 CUDA 和 cuDNN 的库文件。</li></ol><blockquote><p><strong>注意</strong>：显卡、驱动、CUDA、cuDNN、Python和深度学习环境（TensorFlow等）都要匹配</p><p>尤其是 TensorFlow1.0 和 2.0 的使用对显卡等要求及其严格。</p><p>例如：GTX 1050 + CUDA10.1 + python3.8 + tensorflow2.3.0</p></blockquote><h2 id="1-安装驱动"><a href="#1-安装驱动" class="headerlink" title="1. 安装驱动"></a>1. 安装驱动</h2><p>不同操作系统和显卡型号需要使用不同的命令来安装显卡驱动，下面是几个常见的操作系统的命令：</p><h3 id="1-1-Windows"><a href="#1-1-Windows" class="headerlink" title="1.1 Windows"></a>1.1 Windows</h3><p>在 Windows 系统中，你可以通过<a href="https://www.nvidia.cn/Download/index.aspx?lang=cn">官方网站</a>下载适合你显卡型号的驱动程序，然后运行 .exe 文件进行安装。在安装过程中，你可以根据提示选择“自定义安装”选项来选择需要安装的组件。</p><h3 id="1-2-Ubuntu"><a href="#1-2-Ubuntu" class="headerlink" title="1.2 Ubuntu"></a>1.2 Ubuntu</h3><p>在 Ubuntu 中，你可以使用 <code>ubuntu-drivers</code> 命令来自动安装显卡驱动程序。这个命令是 Ubuntu 提供的官方工具，用于识别和安装适用于硬件的推荐和建议驱动程序。</p><p>首先，你需要更新软件包列表和已安装软件包的版本：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> update<span class="token function">sudo</span> <span class="token function">apt</span> upgrade<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>然后，安装 <code>ubuntu-drivers</code> 命令行工具：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> ubuntu-drivers-common<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>接下来，你可以运行下面的命令来获取可以使用的所有驱动程序的列表：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> ubuntu-drivers list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>然后，你可以使用下面的命令来安装推荐的驱动程序：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> ubuntu-drivers autoinstall<span class="token comment"># 或者</span><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> nvidia-driver-470<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><blockquote><p>需要注意的是，<code>ubuntu-drivers</code> 命令不会安装 NVIDIA CUDA 和 cuDNN 等其他必需的组件，你需要另外安装它们来进行深度学习开发。</p></blockquote><p>最后输入 <code>nvidia-smi</code> 查看是否安装成功。（所有系统通用命令）</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">nvidia-smi<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="1-3-MacOS"><a href="#1-3-MacOS" class="headerlink" title="1.3 MacOS"></a>1.3 MacOS</h3><p>在 MacOS 系统中，你可以通过以下步骤来安装显卡驱动：</p><ol><li>检查系统中是否安装了其他版本的显卡驱动，可以使用以下命令来查看：</li></ol><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">kextstat <span class="token operator">|</span> <span class="token function">grep</span> <span class="token parameter variable">-i</span> <span class="token string">"nvidia"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>如果输出了 NVIDIA 的信息，说明系统中已经安装了显卡驱动。</p><ol start="2"><li><p>下载适合你显卡型号和 MacOS 版本的显卡驱动，可以从<a href="https://www.nvidia.cn/Download/index.aspx?lang=cn">NVIDIA官方网站</a>下载。</p></li><li><p>双击下载的 .dmg 文件，然后按照提示进行操作，通常会要求你输入管理员密码。</p></li><li><p>安装完成后，重启系统即可。</p></li></ol><h2 id="2-安装cuda"><a href="#2-安装cuda" class="headerlink" title="2. 安装cuda"></a>2. 安装cuda</h2><p>windows 无脑装.exe，同样不要安装驱动，主要介绍 Ubuntu 的安装</p><p>首先在 Nvidia 官网下载适合自己机器的 CUDA 版本，<a href="https://developer.nvidia.com/CUDA-TOOLKIT-ARCHIVE">官网下载</a>，使用 <code>runfile</code> 的方式安装</p><blockquote><p><strong>可以直接将网址复制到浏览器下载，或者命令行 wget 下载</strong></p></blockquote><img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202303232205824.png" style="zoom: 67%;"><img src="Article20230325/1.png" style="zoom: 50%;"><p>接着输入安装命令，按照指示即可</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">sh</span> cuda_*.run<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>如果电脑没有安装Nvidia显卡驱动，安装会顺利进行；若已经安装了Nvidia驱动，会提醒移除可以选择Abort退出，之后去删除驱动，也可以直接继续Continue，我选择Continue</p><img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202303232205277.png" alt="img" style="zoom: 70%;"><p>选择accpet接受协议</p><img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202303232205402.png" alt="img" style="zoom: 75%;"><p>取消勾选第一个driver，直接回车就能取消前面的[X]，然后install</p><img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202303232205986.png" alt="img" style="zoom:95%;"><p><img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202303232205544.png" alt="img"></p><p>根据提示的信息，配置环境变量</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">vi</span> ~/.bashrc   <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml">export CUDA_HOME=/usr/local/cuda<span class="token punctuation">-</span><span class="token number">11.3</span>export PATH=$CUDA_HOME/bin<span class="token punctuation">:</span>$PATHexport LD_LIBRARY_PATH=/usr/local/cuda<span class="token punctuation">-</span>11.3/lib64$<span class="token punctuation">{</span>LD_LIBRARY_PATH<span class="token punctuation">:</span>+<span class="token punctuation">:</span>$<span class="token punctuation">{</span>LD_LIBRARY_PATH<span class="token punctuation">}</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>然后刷新环境变量</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">source</span> ~/.bashrc <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>测试CUDA是否安装成功</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">nvcc <span class="token parameter variable">-V</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>显示下图，说明成功</p><p><img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202303232205939.png" alt="img"></p><h2 id="3-安装cuDNN"><a href="#3-安装cuDNN" class="headerlink" title="3. 安装cuDNN"></a>3. 安装cuDNN</h2><p>下载cuDNN ，<a href="https://developer.nvidia.com/rdp/cudnn-download?spm=a2c4e.10696291.0.0.1df819a4HJWSTe">官网</a>（未注册的话，注册一个账号即可）</p><p><img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202303232205561.png" alt="img"></p><p>解压复制到 cuda 路径下</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">tar</span> <span class="token parameter variable">-zxvf</span> cudnn*<span class="token function">sudo</span> <span class="token function">cp</span> cuda/include/cudnn.h /usr/local/cuda/include<span class="token function">sudo</span> <span class="token function">cp</span> cuda/lib64/libcudnn* /usr/local/cuda/lib64<span class="token function">sudo</span> <span class="token function">chmod</span> a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn* <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>安装deb</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> dpkg <span class="token parameter variable">-i</span> libcudnn8_8.0.5.39-1+cuda11.0_amd64.deb<span class="token function">sudo</span> dpkg <span class="token parameter variable">-i</span> libcudnn8-dev_8.0.5.39-1+cuda11.0_amd64.deb <span class="token function">sudo</span> dpkg <span class="token parameter variable">-i</span> libcudnn8-samples_8.0.5.39-1+cuda11.0_amd64.deb<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202303232206714.png" alt="img"><p>测试</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> /usr/local/cuda/samples/1_Utilities/deviceQuery <span class="token function">sudo</span> <span class="token function">make</span> ./deviceQuery <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202303232206016.png" alt="img"><p>结果为PASS就成功了。</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">make</span> clean  <span class="token comment">#洁癖患者请清除编译</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="4-安装深度学习框架"><a href="#4-安装深度学习框架" class="headerlink" title="4. 安装深度学习框架"></a>4. 安装深度学习框架</h2><ul><li>查看 <code>Pytorch</code> 官网 <a href="https://pytorch.org/">https://pytorch.org/</a></li></ul><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 安装cuda=11.3的专属pytorch</span>conda <span class="token function">install</span> <span class="token assign-left variable">pytorch</span><span class="token operator">==</span><span class="token number">1.12</span>.1 <span class="token assign-left variable">torchvision</span><span class="token operator">==</span><span class="token number">0.13</span>.1 <span class="token assign-left variable">torchaudio</span><span class="token operator">==</span><span class="token number">0.12</span>.1 <span class="token assign-left variable">cudatoolkit</span><span class="token operator">=</span><span class="token number">11.3</span> <span class="token parameter variable">-c</span> pytorchpip <span class="token function">install</span> <span class="token assign-left variable">torch</span><span class="token operator">==</span><span class="token number">1.12</span>.1+cu113 <span class="token assign-left variable">torchvision</span><span class="token operator">==</span><span class="token number">0.13</span>.1+cu113 <span class="token assign-left variable">torchaudio</span><span class="token operator">==</span><span class="token number">0.12</span>.1 --extra-index-url https://download.pytorch.org/whl/cu113<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><ul><li>查看 <code>Tensorflow</code>官网 <a href="https://www.tensorflow.org/">https://www.tensorflow.org/</a></li></ul><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># GPU 版本</span>pip <span class="token function">install</span> tensorflow-gpu<span class="token operator">==</span><span class="token number">2.3</span>.0<span class="token comment"># CPU 版本</span>pip <span class="token function">install</span> <span class="token assign-left variable">tensorflow</span><span class="token operator">==</span><span class="token number">2.3</span>.0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Word论文排版</title>
       <link href="/2023/03/24/article20230324/"/>
       <url>/2023/03/24/article20230324/</url>
@@ -13,7 +40,7 @@
       
       <categories>
           
-          <category> Office </category>
+          <category> 技术工具 </category>
           
       </categories>
       
@@ -38,7 +65,7 @@
       
       <categories>
           
-          <category> Git </category>
+          <category> 技术工具 </category>
           
       </categories>
       
@@ -122,6 +149,8 @@
             
             <tag> QQ机器人 </tag>
             
+            <tag> ChatGPT </tag>
+            
         </tags>
       
     </entry>
@@ -138,7 +167,7 @@
       
       <categories>
           
-          <category> 搜索引擎 </category>
+          <category> 技术工具 </category>
           
       </categories>
       
@@ -195,6 +224,8 @@
       
         <tags>
             
+            <tag> Python </tag>
+            
             <tag> pip </tag>
             
         </tags>
@@ -221,6 +252,8 @@
         <tags>
             
             <tag> conda </tag>
+            
+            <tag> Python </tag>
             
         </tags>
       
@@ -263,14 +296,14 @@
       
       <categories>
           
-          <category> 统计机器学习 </category>
+          <category> 机器学习 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 统计机器学习 </tag>
+            <tag> 人工智能 </tag>
             
         </tags>
       
@@ -288,14 +321,14 @@
       
       <categories>
           
-          <category> ubuntu </category>
+          <category> Linux </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> ubuntu双系统 </tag>
+            <tag> Linux </tag>
             
         </tags>
       
