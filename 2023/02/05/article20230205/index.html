@@ -458,7 +458,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-03-18
+                    2023-03-23
                 </div>
                 
 
@@ -688,7 +688,14 @@ conda config <span class="token parameter variable">--set</span> show_channel_ur
 <blockquote>
 <p>需要注意的是，不同的镜像源可能会有不同的速度和可靠性，建议根据自己的网络情况选择合适的镜像源。</p>
 </blockquote>
-<h2 id="5-总结"><a href="#5-总结" class="headerlink" title="5. 总结"></a>5. 总结</h2><p>使用 conda 时，需要注意以下几点：</p>
+<h2 id="5-导出环境"><a href="#5-导出环境" class="headerlink" title="5. 导出环境"></a>5. 导出环境</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda <span class="token function">env</span> <span class="token builtin class-name">export</span> <span class="token operator">&gt;</span> environment.yaml
+
+conda <span class="token function">env</span> create <span class="token parameter variable">-f</span> environment.yaml<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>移植过来的环境只有原来环境里用conda install等命令直接安装的包，用pip之类装的东西没有移植过来，需要重新安装。</p>
+</blockquote>
+<h2 id="6-总结"><a href="#6-总结" class="headerlink" title="6. 总结"></a>6. 总结</h2><p>使用 conda 时，需要注意以下几点：</p>
 <ol>
 <li><strong>环境隔离</strong>：conda 可以创建虚拟环境来隔离不同的 Python 包和版本。在使用 conda 安装包时，需要确保安装在正确的环境中，以免出现冲突或版本不兼容的问题。可以使用 <code>conda env list</code> 查看当前存在的环境，使用 <code>conda activate env_name</code> 激活指定的环境。</li>
 <li><strong>版本管理</strong>：conda 可以安装不同版本的 Python 包和库，并且可以轻松地切换不同版本之间。在安装新包或更新已有包时，需要注意是否与当前环境中的其他包兼容。可以使用 <code>conda search package_name</code> 命令查询指定包的可用版本，使用 <code>conda install package_name=version</code> 命令安装指定版本的包。</li>
@@ -1125,7 +1132,7 @@ conda config <span class="token parameter variable">--set</span> show_channel_ur
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">27.9k</span>
+                        class="white-color">28k</span>
             
             
             
