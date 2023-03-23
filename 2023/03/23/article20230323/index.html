@@ -465,7 +465,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    7.6k
+                    7.5k
                 </div>
                 
 
@@ -501,16 +501,16 @@
 <p><strong>参考文献</strong><br><a target="_blank" rel="noopener" href="https://docs.github.com/">Github docs</a></p>
 </blockquote>
 <h2 id="Git操作指南"><a href="#Git操作指南" class="headerlink" title="Git操作指南"></a>Git操作指南</h2><blockquote>
-<p><code>Git</code>是一种分布式版本控制系统，用于跟踪文件的修改历史和协作开发。它可以记录文件的所有修改、修改者、修改时间等信息，并将这些信息存储在一个称为“仓库”（<code>repository</code>）的地方。Git可以让多个开发者在同一个代码库上协作，同时保持代码的版本控制和完整性。</p>
+<p><code>Git</code> 是一种分布式版本控制系统，用于跟踪文件的修改历史和协作开发。它可以记录文件的所有修改、修改者、修改时间等信息，并将这些信息存储在一个称为“仓库”（<code>repository</code>）的地方。Git 可以让多个开发者在同一个代码库上协作，同时保持代码的版本控制和完整性。</p>
 </blockquote>
-<h3 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h3><p>安装<code>Git</code>通常有几种方法，下面列出了其中的两种常见方法：</p>
-<p>方法一：通过Git官方网站下载安装程序进行安装。</p>
+<h3 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h3><p>安装 <code>Git</code> 通常有几种方法，下面列出了其中的两种常见方法：</p>
+<p>方法一：通过 Git 官方网站下载安装程序进行安装。</p>
 <ol>
-<li>访问Git官方网站：<a target="_blank" rel="noopener" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></li>
+<li>访问 Git 官方网站：<a target="_blank" rel="noopener" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></li>
 <li>根据你的操作系统选择下载相应的安装程序。</li>
 <li>下载完成后，运行安装程序，并按照提示进行安装。</li>
 </ol>
-<p>方法二：使用包管理器安装Git（适用于Linux系统）</p>
+<p>方法二：使用包管理器安装 Git（适用于 Linux 系统）</p>
 <ol>
 <li>在终端中输入以下命令以更新包列表：</li>
 </ol>
@@ -522,13 +522,13 @@
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> <span class="token function">git</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <ol start="3">
-<li>等待安装完成后，可以输入以下命令来检查Git是否已成功安装：</li>
+<li>等待安装完成后，可以输入以下命令来检查 Git 是否已成功安装：</li>
 </ol>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> <span class="token parameter variable">--version</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>如果Git已成功安装，会显示Git的版本号信息。</p>
+<p>如果 Git 已成功安装，会显示 Git 的版本号信息。</p>
 <blockquote>
-<p>无论使用哪种方法安装Git，安装完成后都可以在终端或命令行中运行Git命令。</p>
+<p>无论使用哪种方法安装 Git，安装完成后都可以在终端或命令行中运行 Git 命令。</p>
 </blockquote>
 <ul>
 <li>针对 OS X 的安装。</li>
@@ -552,7 +552,7 @@
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> <span class="token builtin class-name">help</span> glossary<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h3 id="4-Git的常见命令"><a href="#4-Git的常见命令" class="headerlink" title="4. Git的常见命令"></a>4. Git的常见命令</h3><ul>
-<li><code>git init</code>：将当前目录转换为Git仓库。</li>
+<li><code>git init</code>：将当前目录转换为 Git 仓库。</li>
 <li><code>git clone</code>：将远程仓库克隆到本地。</li>
 <li><code>git add</code>：将文件添加到暂存区。</li>
 <li><code>git commit</code>：将暂存区中的文件提交到本地仓库。</li>
@@ -583,7 +583,7 @@
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config <span class="token parameter variable">--global</span> user.email <span class="token string">'Your email@example.com'</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <blockquote>
-<p><strong>注意</strong>：对于特殊项目设置，用 –local 替换 –global，然后应用配置命令。</p>
+<p><strong>注意</strong>：对于特殊项目设置，用 <code>--local</code> 替换 <code>--global</code>，然后应用配置命令。</p>
 </blockquote>
 <h4 id="5-3-配置编辑器（可选）"><a href="#5-3-配置编辑器（可选）" class="headerlink" title="5.3 配置编辑器（可选）"></a>5.3 配置编辑器（可选）</h4><p>如果你想使用不同于默认编辑器的编辑器，例如 vim ，可以运行以下命令：</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config <span class="token parameter variable">--global</span> core.editor <span class="token string">"vim"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -604,17 +604,17 @@
 </ul>
 <p>为了避免这些问题，你可以使用<code>core.autocrlf</code>配置项将行结束符转换为你喜欢的格式。<code>core.autocrlf</code>有三个可能的值：</p>
 <ul>
-<li><code>input</code>：这是默认值。它告诉Git在检出文件时不转换行结束符，但在提交时将行结束符转换为LF格式。</li>
-<li><code>true</code>：这告诉Git在检出文件时将行结束符转换为CRLF格式，在提交时将行结束符转换为LF格式。</li>
-<li><code>false</code>：这告诉Git不要自动转换行结束符。</li>
+<li><code>input</code>：这是默认值。它告诉 Git 在检出文件时不转换行结束符，但在提交时将行结束符转换为 LF 格式。</li>
+<li><code>true</code>：这告诉 Git 在检出文件时将行结束符转换为 CRLF 格式，在提交时将行结束符转换为 LF 格式。</li>
+<li><code>false</code>：这告诉 Git 不要自动转换行结束符。</li>
 </ul>
-<p>如果你使用的是Unix/Linux系统，则建议将<code>core.autocrlf</code>设置为<code>input</code>。如果你使用的是Windows系统，则建议将其设置为<code>true</code>。</p>
+<p>如果你使用的是 Unix/Linux 系统，则建议将 <code>core.autocrlf</code> 设置为 <code>input</code>。如果你使用的是 Windows 系统，则建议将其设置为<code>true</code>。</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config <span class="token parameter variable">--global</span> core.autocrlf input  <span class="token comment"># 这将在检出文件时不转换行结束符，但在提交时将行结束符转换为LF格式。</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <blockquote>
-<p>如果你在一个特定的仓库中需要使用不同的行结束符转换规则，你可以在该仓库的根目录中创建一个名为<code>.gitattributes</code>的文件，并在其中添加适当的行结束符转换规则。</p>
+<p>如果你在一个特定的仓库中需要使用不同的行结束符转换规则，你可以在该仓库的根目录中创建一个名为 <code>.gitattributes</code> 的文件，并在其中添加适当的行结束符转换规则。</p>
 </blockquote>
-<p>例如，要将一个仓库中的所有文件转换为 CRLF 格式，可以将以下内容添加到<code>.gitattributes</code>文件中：</p>
+<p>例如，要将一个仓库中的所有文件转换为 CRLF 格式，可以将以下内容添加到 <code>.gitattributes</code> 文件中：</p>
 <pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># 设置所有文件的默认行为</span>
 <span class="token important">*.text=auto</span>
 
@@ -623,7 +623,7 @@
 <span class="token important">*.html</span> text
 <span class="token important">*.css</span> text  
 
-<span class="token comment"># 列出应使用CRLF行结束符且不根据本地操作系统转换的文件 </span>
+<span class="token comment"># 列出应使用 CRLF 行结束符且不根据本地操作系统转换的文件 </span>
 <span class="token important">*.sln</span> text eol=crlf  
 
 <span class="token comment"># 列出所有不应进行修改的二进制文件 </span>
@@ -632,40 +632,76 @@
 <span class="token important">*.gif</span> binary  
 <span class="token important">*.ico</span> binary <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="5-6-Windows中文乱码问题"><a href="#5-6-Windows中文乱码问题" class="headerlink" title="5.6 Windows中文乱码问题"></a>5.6 Windows中文乱码问题</h4><p>在Windows中使用Git时，中文文件名可能会出现乱码的问题。为了解决这个问题，你可以使用以下命令在全局级别禁用对文件名的引用：</p>
+<h4 id="5-6-Windows中文乱码问题"><a href="#5-6-Windows中文乱码问题" class="headerlink" title="5.6 Windows中文乱码问题"></a>5.6 Windows中文乱码问题</h4><p>在 Windows 中使用 Git 时，中文文件名可能会出现乱码的问题。为了解决这个问题，你可以使用以下命令在全局级别禁用对文件名的引用：</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config <span class="token parameter variable">--global</span> core.quotepath <span class="token boolean">false</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h4 id="5-7-设置SSH密钥"><a href="#5-7-设置SSH密钥" class="headerlink" title="5.7 设置SSH密钥"></a>5.7 设置SSH密钥</h4><blockquote>
-<p><code>SSH密钥</code>是一种用于安全通信的加密密钥，通常用于远程登录和文件传输。在SSH协议中，每个用户都会有一对密钥：私钥和公钥。私钥只能由用户拥有，并用于对传输的数据进行加密和签名，而公钥可以向其他人公开，并用于解密和验证数据的来源。</p>
+<p><code>SSH密钥</code> 是一种用于安全通信的加密密钥，通常用于远程登录和文件传输。在 SSH 协议中，每个用户都会有一对密钥：私钥和公钥。私钥只能由用户拥有，并用于对传输的数据进行加密和签名，而公钥可以向其他人公开，并用于解密和验证数据的来源。</p>
 </blockquote>
-<p>在Git中，使用SSH密钥是与远程Git仓库进行安全通信的一种常见方式。当你与远程Git仓库进行通信时，Git会使用SSH协议进行加密通信，从而确保你的数据不会被篡改或窃取。在设置SSH密钥时，你将生成一对密钥：私钥和公钥。<strong>私钥存储在本地计算机上，而公钥存储在远程Git仓库中</strong>。当你进行与远程Git仓库的通信时，Git会使用私钥对传输的数据进行加密和签名，从而确保数据的安全性。</p>
+<p>在 Git 中，使用 SSH 密钥是与远程 Git 仓库进行安全通信的一种常见方式。当你与远程 Git 仓库进行通信时，Git 会使用 SSH 协议进行加密通信，从而确保你的数据不会被篡改或窃取。在设置 SSH 密钥时，你将生成一对密钥：私钥和公钥。<strong>私钥存储在本地计算机上，而公钥存储在远程 Git 仓库中</strong>。当你进行与远程 Git 仓库的通信时，Git 会使用私钥对传输的数据进行加密和签名，从而确保数据的安全性。</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ssh-keygen <span class="token parameter variable">-t</span> rsa <span class="token parameter variable">-b</span> <span class="token number">4096</span> <span class="token parameter variable">-C</span> <span class="token string">"your_email@example.com"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><code>-t</code> 表示密钥的类型 ，<code>-b</code> 表示密钥的长度，<code>-C</code> 用于识别这个密钥的注释 ，这个注释可以输入任何内容。</p>
 <blockquote>
-<p>生成的SSH密钥将存储在你的计算机的默认SSH密钥存储目录中，一般是在~/.ssh目录中。</p>
+<p>生成的SSH密钥将存储在你的计算机的默认 SSH 密钥存储目录中，一般是在 <code>~/.ssh</code> 目录中。</p>
 </blockquote>
-<h4 id="5-8-配置SSH代理"><a href="#5-8-配置SSH代理" class="headerlink" title="5.8 配置SSH代理"></a>5.8 配置SSH代理</h4><blockquote>
-<p>SSH代理是运行在本地计算机上的一个进程，它可以为你的SSH密钥提供缓存和管理服务。它是全局的，可以为多个项目提供服务，直到你关闭代理或者手动从代理中删除密钥。配置SSH代理的作用是将SSH密钥添加到代理中，以便无需每次输入密码即可连接到远程服务器。这可以节省时间和提高工作效率，特别是在需要频繁进行SSH连接的情况下。</p>
-<p>如果想在本地使用SSH密钥进行与GitHub的交互（例如，上传代码到GitHub仓库），那么需要配置SSH代理。</p>
-<p>如果使用HTTPS协议进行与GitHub的交互，那么就不需要配置SSH代理。</p>
-</blockquote>
-<p>在终端中输入以下命令，将SSH代理添加到系统中，这会启动一个 SSH 代理，并显示其进程 ID。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">eval</span> <span class="token string">"<span class="token variable"><span class="token variable">$(</span>ssh-agent <span class="token parameter variable">-s</span><span class="token variable">)</span></span>"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="5-8-配置代理（可选）"><a href="#5-8-配置代理（可选）" class="headerlink" title="5.8 配置代理（可选）"></a>5.8 配置代理（可选）</h4><p>本地开启 VPN 代理后，Git 也需要设置代理。否则就会出现能访问 GitHub 网站，但是 git push 超时等情况。</p>
+<ul>
+<li>设置全局 http/https 代理</li>
+</ul>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 不同代理的端口号不一样</span>
+<span class="token function">git</span> config <span class="token parameter variable">--global</span> http.proxy http://127.0.0.1:7890
+<span class="token function">git</span> config <span class="token parameter variable">--global</span> https.proxy https://127.0.0.1:7890
 
-<p>随后，你可以使用 <code>ssh-add</code> 命令将你的 SSH 密钥添加到代理中。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ssh-add ~/.ssh/id_rsa<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>其中，<code>id_rsa</code>是刚刚生成的SSH私钥文件名。如果你在生成密钥时使用了其他文件名，需要相应地修改命令。</p>
-<p> 可以通过运行以下命令来列出当前正在运行的SSH代理</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ps</span> aux <span class="token operator">|</span> <span class="token function">grep</span> ssh-agents<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<span class="token comment"># 或者有时候</span>
+<span class="token function">git</span> config <span class="token parameter variable">--global</span> http.proxy <span class="token string">'socks5://127.0.0.1:7890'</span> 
+<span class="token function">git</span> config <span class="token parameter variable">--global</span> https.proxy <span class="token string">'socks5://127.0.0.1:7890'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>测试ssh连接时候成功，如果连接成功并身份验证通过，它会返回一个欢迎信息，表示ssh连接和身份验证成功。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ssh</span> <span class="token parameter variable">-T</span> git@github.com<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>取消全局 http/https 代理</li>
+</ul>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config <span class="token parameter variable">--global</span> <span class="token parameter variable">--unset</span> http.proxy
+
+<span class="token function">git</span> config <span class="token parameter variable">--global</span> <span class="token parameter variable">--unset</span> https.proxy<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li><p>设置 ssh 代理，需要新建并配置一个 <code>config</code></p>
+<ul>
+<li><p>linux、MacOS系统：~/.ssh/config</p>
+</li>
+<li><p>Windows系统：C:/Users/用户名/.ssh/config</p>
+</li>
+</ul>
+</li>
+</ul>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># Windows，注意替换端口号和 git\mingw64\bin\connect.exe 的路径</span>
+ProxyCommand "D<span class="token punctuation">:</span>\Program Files\Git\mingw64\bin\connect" <span class="token punctuation">-</span>S 127.0.0.1<span class="token punctuation">:</span>7890 <span class="token punctuation">-</span>a none %h %p
+
+<span class="token comment"># MacOS，注意替换端口号</span>
+ProxyCommand /usr/bin/nc <span class="token punctuation">-</span>v <span class="token punctuation">-</span>x 127.0.0.1<span class="token punctuation">:</span>7890 %h %p
+
+Host github.com
+  User git
+  Port 22
+  Hostname github.com
+  IdentityFile "C<span class="token punctuation">:</span>\Users\用户名\.ssh\id_rsa"
+  TCPKeepAlive yes
+
+Host ssh.github.com
+  User git
+  Port 443
+  Hostname ssh.github.com
+  IdentityFile "C<span class="token punctuation">:</span>\Users\用户名\.ssh\id_rsa"
+  TCPKeepAlive yes<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
-<p>需要注意的是,GitHub已经默认使用了 SSH 协议的443端口,如果使用 HTTPS 协议可能更加稳定,可以尝试使用HTTPS 协议进行连接。</p>
+<p>需要注意的是，GitHub 已经默认使用了 SSH 协议的443端口，如果使用 HTTPS 协议可能更加稳定，可以尝试使用HTTPS 协议进行连接。</p>
 </blockquote>
+<p>保存后 <code>config</code> 文件后测试方法如下，返回successful之类的就成功了。(需要保证已经讲SSH公钥添加到托管平台)</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 测试是否设置成功</span>
+<span class="token function">ssh</span> <span class="token parameter variable">-T</span> git@github.com<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
 <h2 id="Git托管平台-基于GitHub"><a href="#Git托管平台-基于GitHub" class="headerlink" title="Git托管平台(基于GitHub)"></a>Git托管平台(基于GitHub)</h2><p>三个流行的协作平台：<code>GitHub</code>、<code>Bitbucket</code> 和 <code>GitLab</code>。在 GitHub 上托管开源项目，在 Bitbucket 上托管私有客户工作，以及 GitLab 上的内部自治项目。</p>
 <h3 id="1-创建账号"><a href="#1-创建账号" class="headerlink" title="1. 创建账号"></a>1. 创建账号</h3><h4 id="1-1-创建账号"><a href="#1-1-创建账号" class="headerlink" title="1.1 创建账号"></a>1.1 创建账号</h4><ol>
 <li><p>访问 <a target="_blank" rel="noopener" href="https://github.com./">https://github.com</a></p>
@@ -1576,7 +1612,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">28.4k</span>
+                        class="white-color">28.3k</span>
             
             
             
