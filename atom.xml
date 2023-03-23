@@ -6,7 +6,7 @@
   <link href="http://jijunhao.github.io/atom.xml" rel="self"/>
   
   <link href="http://jijunhao.github.io/"/>
-  <updated>2023-03-23T07:37:31.876Z</updated>
+  <updated>2023-03-23T09:06:23.449Z</updated>
   <id>http://jijunhao.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Word论文排版</title>
+    <link href="http://jijunhao.github.io/2023/03/24/article20230324/"/>
+    <id>http://jijunhao.github.io/2023/03/24/article20230324/</id>
+    <published>2023-03-24T11:38:56.000Z</published>
+    <updated>2023-03-23T09:06:23.449Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Word论文排版&quot;&gt;&lt;a href=&quot;#Word论文排版&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Office" scheme="http://jijunhao.github.io/categories/Office/"/>
+    
+    
+    <category term="Word" scheme="http://jijunhao.github.io/tags/Word/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Git操作指南</title>
     <link href="http://jijunhao.github.io/2023/03/23/article20230323/"/>
     <id>http://jijunhao.github.io/2023/03/23/article20230323/</id>
     <published>2023-03-23T11:38:56.000Z</published>
-    <updated>2023-03-23T07:37:31.876Z</updated>
+    <updated>2023-03-23T09:04:11.209Z</updated>
     
     
       
