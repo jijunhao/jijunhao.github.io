@@ -224,9 +224,9 @@
       
         <tags>
             
-            <tag> pip </tag>
-            
             <tag> Python </tag>
+            
+            <tag> pip </tag>
             
         </tags>
       
@@ -251,9 +251,9 @@
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> conda </tag>
+            
+            <tag> Python </tag>
             
         </tags>
       
