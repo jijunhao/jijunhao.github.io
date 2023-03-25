@@ -465,14 +465,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    8.1k
+                    8.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    30 分
+                    31 分
                 </div>
                 
 
@@ -747,7 +747,8 @@ Host gitlab.com
 <span class="token function">ssh</span> <span class="token parameter variable">-T</span> git@gitlab.com<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
-<p>测试成功后会在~/.ssh 生成known_hosts</p>
+<p>测试成功后会在~/.ssh 生成known_hosts。known_hosts 是 SSH 客户端用来记录远程 SSH 服务器的公钥指纹的文件。在 SSH 连接建立时，客户端会检查该文件中是否存在远程主机的公钥指纹。如果公钥指纹匹配，则说明远程主机是可信的，客户端会接受连接并建立 SSH 会话。如果公钥指纹不匹配，则说明远程主机的身份可能受到篡改或欺骗，客户端会拒绝连接并给出警告信息，以防止中间人攻击。</p>
+<p>当第一次连接到一个新的 SSH 服务器时，SSH 客户端会自动将该服务器的公钥指纹保存到 known_hosts 文件中。这样，在以后的连接中，客户端就可以比较该服务器的公钥指纹和 known_hosts 文件中的记录来验证服务器的身份。该文件的格式是每行一个记录，其中包含了远程服务器的 IP 地址、公钥指纹以及可选的注释信息。在一些情况下，如果你不想保存某个主机的公钥指纹，你可以手动编辑 known_hosts 文件并删除相应的记录。</p>
 </blockquote>
 <h2 id="Git托管平台-基于GitHub"><a href="#Git托管平台-基于GitHub" class="headerlink" title="Git托管平台(基于GitHub)"></a>Git托管平台(基于GitHub)</h2><p>三个流行的协作平台：<code>GitHub</code>、<code>Bitbucket</code> 和 <code>GitLab</code>。在 GitHub 上托管开源项目，在 Bitbucket 上托管私有客户工作，以及 GitLab 上的内部自治项目。</p>
 <h3 id="1-创建账号"><a href="#1-创建账号" class="headerlink" title="1. 创建账号"></a>1. 创建账号</h3><h4 id="1-1-创建账号"><a href="#1-1-创建账号" class="headerlink" title="1.1 创建账号"></a>1.1 创建账号</h4><ol>
@@ -1661,7 +1662,7 @@ Host gitlab.com
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">30.1k</span>
+                        class="white-color">30.4k</span>
             
             
             
