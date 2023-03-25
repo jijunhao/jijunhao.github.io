@@ -462,21 +462,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-03-23
+                    2023-03-25
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.6k
+                    2.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
+                    10 分
                 </div>
                 
 
@@ -633,9 +633,39 @@ conda activate env_name<span aria-hidden="true" class="line-numbers-rows"><span>
 <ul>
 <li>从环境中删除一个软件包：</li>
 </ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda remove package_name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda remove package_name
+
+conda remove <span class="token parameter variable">-n</span> env_name package_name<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p><code>package_name</code> 为你想要删除的软件包名称。</p>
+<ul>
+<li>退出环境</li>
+</ul>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda deactivate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li>删除一个环境</li>
+</ul>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda remove <span class="token parameter variable">-n</span> env_name <span class="token parameter variable">--all</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li>conda清理缓存</li>
+</ul>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda clean <span class="token parameter variable">-p</span>        <span class="token comment"># 删除没有用的包</span>
+conda clean <span class="token parameter variable">-t</span>        <span class="token comment"># 删除tar包</span>
+conda clean <span class="token parameter variable">-y</span> <span class="token parameter variable">--all</span>  <span class="token comment"># 删除所有的安装包及cache</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>自动开启和关闭</li>
+</ul>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda config <span class="token parameter variable">--set</span> auto_activate_base <span class="token boolean">false</span>  <span class="token comment"># 关闭自动激活状态</span>
+conda config <span class="token parameter variable">--set</span> auto_activate_base <span class="token boolean">true</span>   <span class="token comment"># 关开启自动激活状态</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<ul>
+<li>复制一个环境</li>
+</ul>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda create <span class="token parameter variable">--name</span> new <span class="token parameter variable">--clone</span> old<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <blockquote>
 <p>在使用conda创建虚拟环境时，默认会将虚拟环境的文件夹放在Anaconda/Miniconda的安装路径下的envs文件夹中，具体路径为：</p>
 <ul>
@@ -677,8 +707,6 @@ conda config <span class="token parameter variable">--set</span> show_channel_ur
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda config --remove-key channels <span class="token comment"># 移除添加的仓库地址</span>
 conda config <span class="token parameter variable">--set</span> show_channel_urls no <span class="token comment"># 不再显示仓库地址</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-
 
 <p>除了清华源之外，还有不少其他的 conda 镜像源可以使用。以下是一些常用的 conda 镜像源及其地址：</p>
 <ul>
@@ -1144,7 +1172,7 @@ conda <span class="token function">env</span> create <span class="token paramete
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">29.5k</span>
+                        class="white-color">29.6k</span>
             
             
             
