@@ -465,14 +465,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    7.6k
+                    8.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    28 分
+                    30 分
                 </div>
                 
 
@@ -645,6 +645,26 @@
 <blockquote>
 <p>生成的SSH密钥将存储在你的计算机的默认 SSH 密钥存储目录中，一般是在 <code>~/.ssh</code> 目录中。</p>
 </blockquote>
+<p><code>ssh-keygen</code> 是一个用于生成 SSH 密钥对的命令行工具，它可以使用多种密钥协议生成密钥对，常见的有以下几种：</p>
+<ul>
+<li><p>RSA（Rivest–Shamir–Adleman）：RSA 是最常用的 SSH 密钥协议之一，它基于一种非对称加密算法，具有较高的安全性和性能。</p>
+</li>
+<li><p>DSA（Digital Signature Algorithm）：DSA 是另一种非对称加密算法，它比 RSA 更快，但通常需要更长的密钥长度才能提供相同的安全性。</p>
+</li>
+<li><p>ECDSA（Elliptic Curve Digital Signature Algorithm）：ECDSA 是基于椭圆曲线加密算法的一种 SSH 密钥协议，相比 RSA 和 DSA，它使用更短的密钥长度提供相同的安全性，因此更适合在资源受限的设备上使用。</p>
+</li>
+<li><p>Ed25519：Ed25519 是一种基于椭圆曲线加密算法的 SSH 密钥协议，它提供与 RSA 相当的安全性，但生成和验证密钥的速度更快。</p>
+</li>
+</ul>
+<p>这些协议在 SSH 密钥对生成时可以通过 ssh-keygen 命令的参数指定，例如：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ssh-keygen <span class="token parameter variable">-t</span> rsa <span class="token comment"># 生成 RSA 密钥对 </span>
+
+ssh-keygen <span class="token parameter variable">-t</span> dsa <span class="token comment"># 生成 DSA 密钥对 </span>
+
+ssh-keygen <span class="token parameter variable">-t</span> ecdsa <span class="token comment"># 生成 ECDSA 密钥对 </span>
+
+ssh-keygen <span class="token parameter variable">-t</span> ed25519 <span class="token comment"># 生成 Ed25519 密钥对</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <h4 id="5-8-配置代理（可选）"><a href="#5-8-配置代理（可选）" class="headerlink" title="5.8 配置代理（可选）"></a>5.8 配置代理（可选）</h4><p>本地开启 VPN 代理后，Git 也需要设置代理。否则就会出现能访问 GitHub 网站，但是 git push 超时等情况。</p>
 <ul>
 <li>设置全局 http/https 代理</li>
@@ -659,14 +679,14 @@
 <span class="token function">git</span> config <span class="token parameter variable">--global</span> https.proxy <span class="token string">'socks5://127.0.0.1:7890'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
-<li>取消全局 http/https 代理</li>
+<li>取消全局 http/https 代理（如果不用 VPN，记得取消代理）</li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config <span class="token parameter variable">--global</span> <span class="token parameter variable">--unset</span> http.proxy
 
 <span class="token function">git</span> config <span class="token parameter variable">--global</span> <span class="token parameter variable">--unset</span> https.proxy<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <ul>
-<li><p>设置 ssh 代理，需要新建并配置一个 <code>config</code></p>
+<li><p>设置 ssh 代理，需要新建并配置一个 <code>config</code>。</p>
 <ul>
 <li><p>linux、MacOS系统：~/.ssh/config</p>
 </li>
@@ -675,39 +695,56 @@
 </ul>
 </li>
 </ul>
+<blockquote>
+<p>在SSH连接时，这个配置文件通常被用来设置主机别名、指定用户和身份验证方法等。</p>
+</blockquote>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml">Host example.com  <span class="token comment"># 主机别名</span>
+  HostName example.com <span class="token comment"># 主机名</span>
+  User username        <span class="token comment"># 用户名</span>
+  IdentityFile ~/.ssh/id_rsa <span class="token comment"># 身份验证方法</span>
+  
+Host github.com
+  HostName github.com 
+  User git 
+  IdentityFile ~/.ssh/github_rsa 
+
+Host gitee.com
+  HostName gitee.com 
+  User git 
+  IdentityFile ~/.ssh/gitee_rsa <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>一个详细的基于自己的代理案例</strong></p>
 <pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># Windows，注意替换端口号和 git\mingw64\bin\connect.exe 的路径</span>
 ProxyCommand "D<span class="token punctuation">:</span>\Program Files\Git\mingw64\bin\connect" <span class="token punctuation">-</span>S 127.0.0.1<span class="token punctuation">:</span>7890 <span class="token punctuation">-</span>a none %h %p
 
 <span class="token comment"># MacOS，注意替换端口号</span>
 ProxyCommand /usr/bin/nc <span class="token punctuation">-</span>v <span class="token punctuation">-</span>x 127.0.0.1<span class="token punctuation">:</span>7890 %h %p
 
+<span class="token comment"># 备用主机名</span>
 Host github.com
   User git
   Port 443
-  Hostname github.com
-  IdentityFile "C<span class="token punctuation">:</span>\Users\用户名\.ssh\id_rsa"
-  TCPKeepAlive yes
-
-Host ssh.github.com
-  User git
-  Port 443
   Hostname ssh.github.com
-  IdentityFile "C<span class="token punctuation">:</span>\Users\用户名\.ssh\id_rsa"
   TCPKeepAlive yes
-  
+  IdentityFile "C<span class="token punctuation">:</span>\Users\用户名\.ssh\id_rsa"
+
+<span class="token comment"># 备用主机名</span>
 Host gitlab.com
   Hostname altssh.gitlab.com
   User git
   Port 443
   PreferredAuthentications publickey
-  IdentityFile "C<span class="token punctuation">:</span>\Users\用户名\.ssh\id_rsa"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+  IdentityFile "C<span class="token punctuation">:</span>\Users\用户名\.ssh\id_rsa"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
-<p>需要注意的是，GitHub 已经默认使用了 SSH 协议的443端口，如果使用 HTTPS 协议可能更加稳定，可以尝试使用HTTPS 协议进行连接。</p>
+<p>需要注意的是如果使用 HTTPS 协议可能更加稳定，可以尝试使用HTTPS 协议进行连接。</p>
+<p>ssh.github.com 是 Github 的 SSH 代理服务器地址。当你在使用 Git 命令或者其他 Git 工具时，如果直接连接 Github 的 SSH 服务github.com，可能会因为网络限制或其他原因导致连接失败。为了解决这个问题，Github 提供了一个 SSH 代理服务器ssh.github.com，可以通过这个代理服务器来连接 Github 的 SSH 服务。</p>
 </blockquote>
-<p>保存后 <code>config</code> 文件后测试方法如下，返回successful之类的就成功了。(需要保证已经讲SSH公钥添加到托管平台)</p>
+<p>保存后 <code>config</code> 文件后测试方法如下，返回 successful 或者 welcome 之类的就成功了。(需要保证已经讲SSH公钥添加到托管平台)</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 测试是否设置成功</span>
-<span class="token function">ssh</span> <span class="token parameter variable">-T</span> git@github.com<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<span class="token function">ssh</span> <span class="token parameter variable">-T</span> git@github.com
+
+<span class="token function">ssh</span> <span class="token parameter variable">-T</span> git@gitlab.com<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="Git托管平台-基于GitHub"><a href="#Git托管平台-基于GitHub" class="headerlink" title="Git托管平台(基于GitHub)"></a>Git托管平台(基于GitHub)</h2><p>三个流行的协作平台：<code>GitHub</code>、<code>Bitbucket</code> 和 <code>GitLab</code>。在 GitHub 上托管开源项目，在 Bitbucket 上托管私有客户工作，以及 GitLab 上的内部自治项目。</p>
 <h3 id="1-创建账号"><a href="#1-创建账号" class="headerlink" title="1. 创建账号"></a>1. 创建账号</h3><h4 id="1-1-创建账号"><a href="#1-1-创建账号" class="headerlink" title="1.1 创建账号"></a>1.1 创建账号</h4><ol>
@@ -1621,7 +1658,7 @@ Host gitlab.com
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">29.6k</span>
+                        class="white-color">30.1k</span>
             
             
             
