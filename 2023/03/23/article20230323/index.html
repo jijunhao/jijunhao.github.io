@@ -722,9 +722,9 @@ ProxyCommand /usr/bin/nc <span class="token punctuation">-</span>v <span class="
 
 <span class="token comment"># 备用主机名</span>
 Host github.com
+  Hostname ssh.github.com
   User git
   Port 443
-  Hostname ssh.github.com
   TCPKeepAlive yes
   IdentityFile "C<span class="token punctuation">:</span>\Users\用户名\.ssh\id_rsa"
 
@@ -737,7 +737,7 @@ Host gitlab.com
   IdentityFile "C<span class="token punctuation">:</span>\Users\用户名\.ssh\id_rsa"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
-<p>需要注意的是如果使用 HTTPS 协议可能更加稳定，可以尝试使用HTTPS 协议进行连接。</p>
+<p>需要注意的是，如果使用 HTTPS 协议可能更加稳定，可以尝试使用HTTPS 协议进行连接。</p>
 <p>ssh.github.com 是 Github 的 SSH 代理服务器地址。当你在使用 Git 命令或者其他 Git 工具时，如果直接连接 Github 的 SSH 服务github.com，可能会因为网络限制或其他原因导致连接失败。为了解决这个问题，Github 提供了一个 SSH 代理服务器ssh.github.com，可以通过这个代理服务器来连接 Github 的 SSH 服务。</p>
 </blockquote>
 <p>保存后 <code>config</code> 文件后测试方法如下，返回 successful 或者 welcome 之类的就成功了。(需要保证已经讲SSH公钥添加到托管平台)</p>
