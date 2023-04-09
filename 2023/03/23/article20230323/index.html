@@ -51,9 +51,9 @@
 
     <script src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0">
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="季俊豪的博客" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="季俊豪的博客" type="application/atom+xml">
 </head>
 
 
@@ -458,21 +458,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-03-25
+                    2023-04-09
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    8.4k
+                    8.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    31 分
+                    32 分
                 </div>
                 
 
@@ -647,13 +647,13 @@
 </blockquote>
 <p><code>ssh-keygen</code> 是一个用于生成 SSH 密钥对的命令行工具，它可以使用多种密钥协议生成密钥对，常见的有以下几种：</p>
 <ul>
-<li><p>RSA（Rivest–Shamir–Adleman）：RSA 是最常用的 SSH 密钥协议之一，它基于一种非对称加密算法，具有较高的安全性和性能。</p>
+<li><p><code>RSA（Rivest–Shamir–Adleman）</code>：RSA 是最常用的 SSH 密钥协议之一，它基于一种非对称加密算法，具有较高的安全性和性能。</p>
 </li>
-<li><p>DSA（Digital Signature Algorithm）：DSA 是另一种非对称加密算法，它比 RSA 更快，但通常需要更长的密钥长度才能提供相同的安全性。</p>
+<li><p><code>DSA（Digital Signature Algorithm）</code>：DSA 是另一种非对称加密算法，它比 RSA 更快，但通常需要更长的密钥长度才能提供相同的安全性。</p>
 </li>
-<li><p>ECDSA（Elliptic Curve Digital Signature Algorithm）：ECDSA 是基于椭圆曲线加密算法的一种 SSH 密钥协议，相比 RSA 和 DSA，它使用更短的密钥长度提供相同的安全性，因此更适合在资源受限的设备上使用。</p>
+<li><p><code>ECDSA（Elliptic Curve Digital Signature Algorithm）</code>：ECDSA 是基于椭圆曲线加密算法的一种 SSH 密钥协议，相比 RSA 和 DSA，它使用更短的密钥长度提供相同的安全性，因此更适合在资源受限的设备上使用。</p>
 </li>
-<li><p>Ed25519：Ed25519 是一种基于椭圆曲线加密算法的 SSH 密钥协议，它提供与 RSA 相当的安全性，但生成和验证密钥的速度更快。</p>
+<li><p><code>Ed25519</code>：Ed25519 是一种基于椭圆曲线加密算法的 SSH 密钥协议，它提供与 RSA 相当的安全性，但生成和验证密钥的速度更快。</p>
 </li>
 </ul>
 <p>这些协议在 SSH 密钥对生成时可以通过 ssh-keygen 命令的参数指定，例如：</p>
@@ -964,11 +964,11 @@ Host gitlab.com
 
 <h4 id="3-2-更新拉取远程分支列表"><a href="#3-2-更新拉取远程分支列表" class="headerlink" title="3.2 更新拉取远程分支列表"></a>3.2 更新拉取远程分支列表</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> fetch<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h4 id="3-3-切换使用不同的分支"><a href="#3-3-切换使用不同的分支" class="headerlink" title="3.3. 切换使用不同的分支"></a>3.3. 切换使用不同的分支</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> checkout <span class="token parameter variable">--track</span> 分支名称            <span class="token comment"># 在本地创建并切换到一个新的分支，该分支会跟踪远程仓库的同名分支</span>
+<h4 id="3-3-切换使用不同的分支"><a href="#3-3-切换使用不同的分支" class="headerlink" title="3.3 切换使用不同的分支"></a>3.3 切换使用不同的分支</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> checkout <span class="token parameter variable">--track</span> 分支名称            <span class="token comment"># 在本地创建并切换到一个新的分支，该分支会跟踪远程仓库的同名分支</span>
 									    <span class="token comment"># 如果本地没有对应的远程分支，可以先使用 git fetch 命令获取远程分支</span>
 <span class="token function">git</span> checkout <span class="token parameter variable">-b</span> 子分支名称 父分支名称      <span class="token comment"># 在本地创建、切换分支</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="3-4-创建新的分支"><a href="#3-4-创建新的分支" class="headerlink" title="3.4. 创建新的分支"></a>3.4. 创建新的分支</h4><p>分支名应该能够反映正在进行的工作。</p>
+<h4 id="3-4-创建新的分支"><a href="#3-4-创建新的分支" class="headerlink" title="3.4 创建新的分支"></a>3.4 创建新的分支</h4><p>分支名应该能够反映正在进行的工作。</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 切换到一个父节点</span>
 <span class="token function">git</span> checkout main
 <span class="token comment"># 在本地创建分支节点</span>
@@ -977,13 +977,13 @@ Host gitlab.com
 <span class="token function">git</span> checkout 子分支名称
 <span class="token function">git</span> checkout <span class="token parameter variable">-b</span> 子分支名称 main   <span class="token comment"># 在本地创建、切换分支</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="3-5-合并分支"><a href="#3-5-合并分支" class="headerlink" title="3.5. 合并分支"></a>3.5. 合并分支</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 将工单分支并入你的主分支</span>
+<h4 id="3-5-合并分支"><a href="#3-5-合并分支" class="headerlink" title="3.5 合并分支"></a>3.5 合并分支</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 将工单分支并入你的主分支</span>
 <span class="token function">git</span> checkout main
 <span class="token function">git</span> merge --no-ff 工单分支名称          <span class="token comment"># --no-ff 为了记录合并历史，强制 Git 生成一个新的提交记录</span>
 <span class="token function">git</span> push --set-upstream 远程仓库名<span class="token punctuation">(</span>默认是origin<span class="token punctuation">)</span> 分支名称   <span class="token comment"># 将本地分支推送到远程仓库并在远程仓库中创建与本地分支同名的分支</span>
 <span class="token function">git</span> push --set-upstream origin main <span class="token comment"># 将本地 main 分支推送到远程仓库 origin 并在 origin 上创建名为 main 的分支</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="3-6-删除分支"><a href="#3-6-删除分支" class="headerlink" title="3.6. 删除分支"></a>3.6. 删除分支</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 删除这个分支的本地副本</span>
+<h4 id="3-6-删除分支"><a href="#3-6-删除分支" class="headerlink" title="3.6 删除分支"></a>3.6 删除分支</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 删除这个分支的本地副本</span>
 <span class="token function">git</span> branch <span class="token parameter variable">--delete</span> 工单分支名称
 <span class="token comment"># 或者</span>
 <span class="token function">git</span> branch <span class="token parameter variable">-d</span> 工单分支名称
@@ -994,7 +994,7 @@ Host gitlab.com
 <blockquote>
 <p>如果分支还没有被合并，将无法删除它。如果你想强制删除一个尚未合并的分支，可以使用 <code>git branch -D &lt;branch-name&gt;</code> 命令</p>
 </blockquote>
-<h4 id="3-7-查看分支结构"><a href="#3-7-查看分支结构" class="headerlink" title="3.7. 查看分支结构"></a>3.7. 查看分支结构</h4><ul>
+<h4 id="3-7-查看分支结构"><a href="#3-7-查看分支结构" class="headerlink" title="3.7 查看分支结构"></a>3.7 查看分支结构</h4><ul>
 <li><code>--all</code>: 显示所有分支的提交历史。</li>
 <li><code>--abbrev-commit</code>: 仅显示 SHA-1 的前几个字符而不是完整的 SHA-1 值。</li>
 <li><code>--decorate</code>: 显示每个提交所在的分支和标签。</li>
@@ -1003,6 +1003,21 @@ Host gitlab.com
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> log <span class="token parameter variable">--graph</span>
 <span class="token function">git</span> log <span class="token parameter variable">--graph</span> <span class="token parameter variable">--all</span> --abbrev-commit <span class="token parameter variable">--decorate</span> <span class="token parameter variable">--date</span><span class="token operator">=</span>iso <span class="token parameter variable">--pretty</span><span class="token operator">=</span>format:<span class="token string">'%h %Cgreen%ar %Creset%an %s'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h4 id="3-8-重命名分支"><a href="#3-8-重命名分支" class="headerlink" title="3.8 重命名分支"></a>3.8 重命名分支</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 重命名当前分支</span>
+<span class="token function">git</span> branch <span class="token parameter variable">-m</span> <span class="token operator">&lt;</span>new_branch_name<span class="token operator">&gt;</span> 
+
+<span class="token comment"># 推送新分支，从而创建一个新的远程分支</span>
+<span class="token function">git</span> push origin <span class="token operator">&lt;</span>new_branch_name<span class="token operator">&gt;</span> 
+
+<span class="token comment"># 删除旧的远程分支</span>
+<span class="token function">git</span> push origin <span class="token parameter variable">-d</span> <span class="token parameter variable">-f</span> <span class="token operator">&lt;</span>old_branch_name<span class="token operator">&gt;</span> 
+
+<span class="token comment"># 本地分支重命名：</span>
+<span class="token function">git</span> branch <span class="token parameter variable">-m</span> oldName newName 
+
+<span class="token comment"># 删除远程对应的旧分支：</span>
+<span class="token function">git</span> push origin <span class="token parameter variable">--delete</span> oldName <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="4-在仓库中添加更改"><a href="#4-在仓库中添加更改" class="headerlink" title="4. 在仓库中添加更改"></a>4. 在仓库中添加更改</h3><p>Git中的更改必须先进行暂存，进入缓存区，然后再保存至仓库。</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 将选中的已更改文件添加至Git仓库</span>
@@ -1662,7 +1677,7 @@ Host gitlab.com
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">30.4k</span>
+                        class="white-color">30.5k</span>
             
             
             
