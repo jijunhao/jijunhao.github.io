@@ -1249,6 +1249,17 @@ Host gitlab.com
 <p>如果要一次推送所有本地新增的标签上去，可以使用 <code>--tags</code> 选项：</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> push origin <span class="token parameter variable">--tags</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
+
+
+<h2 id="自用初始化"><a href="#自用初始化" class="headerlink" title="自用初始化"></a>自用初始化</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> init
+<span class="token function">git</span> remote <span class="token function">add</span> origin https://github.com/user/repo.git
+<span class="token function">git</span> branch <span class="token parameter variable">-m</span> main
+<span class="token function">git</span> pull origin main
+<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">'init'</span>
+<span class="token function">git</span> push <span class="token parameter variable">-u</span> origin main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
                 
             </div>
             <hr/>
@@ -1677,7 +1688,7 @@ Host gitlab.com
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">33k</span>
+                        class="white-color">34.3k</span>
             
             
             

@@ -6,7 +6,7 @@
   <link href="http://jijunhao.github.io/atom.xml" rel="self"/>
   
   <link href="http://jijunhao.github.io/"/>
-  <updated>2023-04-09T04:37:36.261Z</updated>
+  <updated>2023-04-09T04:56:17.012Z</updated>
   <id>http://jijunhao.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://jijunhao.github.io/2023/04/09/article20230409/"/>
     <id>http://jijunhao.github.io/2023/04/09/article20230409/</id>
     <published>2023-04-09T02:38:56.000Z</published>
-    <updated>2023-04-09T04:37:36.261Z</updated>
+    <updated>2023-04-09T04:56:17.012Z</updated>
     
     
       
@@ -44,11 +44,38 @@
   </entry>
   
   <entry>
+    <title>归一化方法</title>
+    <link href="http://jijunhao.github.io/2023/04/08/article20230408/"/>
+    <id>http://jijunhao.github.io/2023/04/08/article20230408/</id>
+    <published>2023-04-08T02:38:56.000Z</published>
+    <updated>2023-04-09T04:56:17.012Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;常用归一化方法&quot;&gt;&lt;a href=&quot;#常用归一化方法&quot; class=&quot;headerlink&quot; title=&quot;常用归一化方法&quot;&gt;&lt;/a&gt;常用归一化方法&lt;/h2&gt;&lt;h3 id=&quot;1-BatchNorm&quot;&gt;&lt;a href=&quot;#1-BatchNorm&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Python" scheme="http://jijunhao.github.io/categories/Python/"/>
+    
+    
+    <category term="Python" scheme="http://jijunhao.github.io/tags/Python/"/>
+    
+    <category term="PyTorch" scheme="http://jijunhao.github.io/tags/PyTorch/"/>
+    
+  </entry>
+  
+  <entry>
     <title>显卡驱动+cuda+cudnn+深度学习框架</title>
     <link href="http://jijunhao.github.io/2023/03/25/article20230325/"/>
     <id>http://jijunhao.github.io/2023/03/25/article20230325/</id>
     <published>2023-03-25T02:38:56.000Z</published>
-    <updated>2023-03-25T10:33:44.581Z</updated>
+    <updated>2023-04-09T04:56:17.012Z</updated>
     
     
       
@@ -75,7 +102,7 @@
     <link href="http://jijunhao.github.io/2023/03/24/article20230324/"/>
     <id>http://jijunhao.github.io/2023/03/24/article20230324/</id>
     <published>2023-03-24T11:38:56.000Z</published>
-    <updated>2023-03-25T10:34:34.114Z</updated>
+    <updated>2023-04-09T04:56:17.011Z</updated>
     
     
       
@@ -100,7 +127,7 @@
     <link href="http://jijunhao.github.io/2023/03/23/article20230323/"/>
     <id>http://jijunhao.github.io/2023/03/23/article20230323/</id>
     <published>2023-03-23T11:38:56.000Z</published>
-    <updated>2023-04-09T04:39:09.784Z</updated>
+    <updated>2023-04-09T04:56:17.011Z</updated>
     
     
       
@@ -128,7 +155,7 @@
     <link href="http://jijunhao.github.io/2023/03/22/article20230322/"/>
     <id>http://jijunhao.github.io/2023/03/22/article20230322/</id>
     <published>2023-03-22T12:03:17.000Z</published>
-    <updated>2023-03-23T10:55:52.840Z</updated>
+    <updated>2023-04-09T04:56:17.011Z</updated>
     
     
       
@@ -153,7 +180,7 @@
     <link href="http://jijunhao.github.io/2023/03/18/article20230318/"/>
     <id>http://jijunhao.github.io/2023/03/18/article20230318/</id>
     <published>2023-03-18T12:03:17.000Z</published>
-    <updated>2023-03-19T03:10:52.000Z</updated>
+    <updated>2023-04-09T04:56:17.011Z</updated>
     
     
       
@@ -178,7 +205,7 @@
     <link href="http://jijunhao.github.io/2023/03/13/article20230313/"/>
     <id>http://jijunhao.github.io/2023/03/13/article20230313/</id>
     <published>2023-03-13T11:38:56.000Z</published>
-    <updated>2023-04-09T04:38:27.218Z</updated>
+    <updated>2023-04-09T04:56:17.011Z</updated>
     
     
       
@@ -197,8 +224,6 @@
     <category term="ChatGPT" scheme="http://jijunhao.github.io/categories/ChatGPT/"/>
     
     
-    <category term="QQ机器人" scheme="http://jijunhao.github.io/tags/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA/"/>
-    
     <category term="ChatGPT" scheme="http://jijunhao.github.io/tags/ChatGPT/"/>
     
   </entry>
@@ -208,7 +233,7 @@
     <link href="http://jijunhao.github.io/2023/02/08/article20230208/"/>
     <id>http://jijunhao.github.io/2023/02/08/article20230208/</id>
     <published>2023-02-08T14:10:50.000Z</published>
-    <updated>2023-03-23T14:13:12.507Z</updated>
+    <updated>2023-04-09T04:56:17.011Z</updated>
     
     
       
@@ -233,7 +258,7 @@
     <link href="http://jijunhao.github.io/2023/02/07/article20230207/"/>
     <id>http://jijunhao.github.io/2023/02/07/article20230207/</id>
     <published>2023-02-07T03:18:36.000Z</published>
-    <updated>2023-03-18T08:59:18.000Z</updated>
+    <updated>2023-04-09T04:56:17.011Z</updated>
     
     
       
@@ -258,7 +283,7 @@
     <link href="http://jijunhao.github.io/2023/02/06/article20230206/"/>
     <id>http://jijunhao.github.io/2023/02/06/article20230206/</id>
     <published>2023-02-06T02:34:56.000Z</published>
-    <updated>2023-03-23T14:10:34.662Z</updated>
+    <updated>2023-04-09T04:56:17.011Z</updated>
     
     
       
@@ -275,9 +300,9 @@
     <category term="Python" scheme="http://jijunhao.github.io/categories/Python/"/>
     
     
-    <category term="pip" scheme="http://jijunhao.github.io/tags/pip/"/>
-    
     <category term="Python" scheme="http://jijunhao.github.io/tags/Python/"/>
+    
+    <category term="pip" scheme="http://jijunhao.github.io/tags/pip/"/>
     
   </entry>
   
@@ -286,7 +311,7 @@
     <link href="http://jijunhao.github.io/2023/02/05/article20230205/"/>
     <id>http://jijunhao.github.io/2023/02/05/article20230205/</id>
     <published>2023-02-05T07:28:56.000Z</published>
-    <updated>2023-03-25T06:06:56.897Z</updated>
+    <updated>2023-04-09T04:56:17.011Z</updated>
     
     
       
@@ -304,9 +329,9 @@
     <category term="Python" scheme="http://jijunhao.github.io/categories/Python/"/>
     
     
-    <category term="Python" scheme="http://jijunhao.github.io/tags/Python/"/>
-    
     <category term="conda" scheme="http://jijunhao.github.io/tags/conda/"/>
+    
+    <category term="Python" scheme="http://jijunhao.github.io/tags/Python/"/>
     
   </entry>
   
@@ -315,7 +340,7 @@
     <link href="http://jijunhao.github.io/2023/01/01/article20230101/"/>
     <id>http://jijunhao.github.io/2023/01/01/article20230101/</id>
     <published>2023-01-01T10:55:42.000Z</published>
-    <updated>2023-03-18T08:59:18.000Z</updated>
+    <updated>2023-04-09T04:56:17.011Z</updated>
     
     
       
@@ -342,7 +367,7 @@
     <link href="http://jijunhao.github.io/2022/12/09/article20221209/"/>
     <id>http://jijunhao.github.io/2022/12/09/article20221209/</id>
     <published>2022-12-09T10:49:37.000Z</published>
-    <updated>2023-03-23T14:09:58.652Z</updated>
+    <updated>2023-04-09T04:56:17.011Z</updated>
     
     
       
@@ -367,7 +392,7 @@
     <link href="http://jijunhao.github.io/2022/10/05/article20221005/"/>
     <id>http://jijunhao.github.io/2022/10/05/article20221005/</id>
     <published>2022-10-05T04:26:22.000Z</published>
-    <updated>2023-03-23T14:09:31.161Z</updated>
+    <updated>2023-04-09T04:56:17.011Z</updated>
     
     
       
@@ -392,7 +417,7 @@
     <link href="http://jijunhao.github.io/2022/09/26/article20220926/"/>
     <id>http://jijunhao.github.io/2022/09/26/article20220926/</id>
     <published>2022-09-26T12:03:17.000Z</published>
-    <updated>2023-03-18T11:49:42.000Z</updated>
+    <updated>2023-04-09T04:56:17.011Z</updated>
     
     
       
@@ -420,7 +445,7 @@
     <link href="http://jijunhao.github.io/2022/09/25/article20220925/"/>
     <id>http://jijunhao.github.io/2022/09/25/article20220925/</id>
     <published>2022-09-25T06:06:28.000Z</published>
-    <updated>2023-03-18T11:41:26.000Z</updated>
+    <updated>2023-04-09T04:56:17.011Z</updated>
     
     
       
@@ -448,7 +473,7 @@
     <link href="http://jijunhao.github.io/2022/09/24/article20220924/"/>
     <id>http://jijunhao.github.io/2022/09/24/article20220924/</id>
     <published>2022-09-24T09:59:31.000Z</published>
-    <updated>2023-03-23T11:23:36.890Z</updated>
+    <updated>2023-04-09T04:56:17.011Z</updated>
     
     
       
@@ -476,7 +501,7 @@
     <link href="http://jijunhao.github.io/2022/09/24/hello-world/"/>
     <id>http://jijunhao.github.io/2022/09/24/hello-world/</id>
     <published>2022-09-24T02:59:31.000Z</published>
-    <updated>2023-03-18T08:59:18.000Z</updated>
+    <updated>2023-04-09T04:56:17.012Z</updated>
     
     
       
