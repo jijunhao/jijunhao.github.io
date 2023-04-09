@@ -6,7 +6,7 @@
   <link href="http://jijunhao.github.io/atom.xml" rel="self"/>
   
   <link href="http://jijunhao.github.io/"/>
-  <updated>2023-03-25T10:33:44.581Z</updated>
+  <updated>2023-04-09T04:37:36.261Z</updated>
   <id>http://jijunhao.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PyTorch常用操作</title>
+    <link href="http://jijunhao.github.io/2023/04/09/article20230409/"/>
+    <id>http://jijunhao.github.io/2023/04/09/article20230409/</id>
+    <published>2023-04-09T02:38:56.000Z</published>
+    <updated>2023-04-09T04:37:36.261Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;数据集加载&quot;&gt;&lt;a href=&quot;#数据集加载&quot; class=&quot;headerlink&quot; title=&quot;数据集加载&quot;&gt;&lt;/a&gt;数据集加载&lt;/h2&gt;&lt;h3 id=&quot;1-网络数据集&quot;&gt;&lt;a href=&quot;#1-网络数据集&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Python" scheme="http://jijunhao.github.io/categories/Python/"/>
+    
+    
+    <category term="Python" scheme="http://jijunhao.github.io/tags/Python/"/>
+    
+    <category term="PyTorch" scheme="http://jijunhao.github.io/tags/PyTorch/"/>
+    
+  </entry>
   
   <entry>
     <title>显卡驱动+cuda+cudnn+深度学习框架</title>
@@ -73,7 +100,7 @@
     <link href="http://jijunhao.github.io/2023/03/23/article20230323/"/>
     <id>http://jijunhao.github.io/2023/03/23/article20230323/</id>
     <published>2023-03-23T11:38:56.000Z</published>
-    <updated>2023-04-09T04:33:47.098Z</updated>
+    <updated>2023-04-09T04:39:09.784Z</updated>
     
     
       
@@ -151,7 +178,7 @@
     <link href="http://jijunhao.github.io/2023/03/13/article20230313/"/>
     <id>http://jijunhao.github.io/2023/03/13/article20230313/</id>
     <published>2023-03-13T11:38:56.000Z</published>
-    <updated>2023-03-23T14:11:42.564Z</updated>
+    <updated>2023-04-09T04:38:27.218Z</updated>
     
     
       
