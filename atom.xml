@@ -6,7 +6,7 @@
   <link href="http://jijunhao.github.io/atom.xml" rel="self"/>
   
   <link href="http://jijunhao.github.io/"/>
-  <updated>2023-04-12T15:09:27.625Z</updated>
+  <updated>2023-04-19T10:27:30.063Z</updated>
   <id>http://jijunhao.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>计算机视觉任务1</title>
+    <title>概率估计方法</title>
+    <link href="http://jijunhao.github.io/2023/04/18/article20230418/"/>
+    <id>http://jijunhao.github.io/2023/04/18/article20230418/</id>
+    <published>2023-04-18T10:07:56.000Z</published>
+    <updated>2023-04-19T10:27:30.063Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;概率估计方法&quot;&gt;&lt;a href=&quot;#概率估计方法&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Math" scheme="http://jijunhao.github.io/categories/Math/"/>
+    
+    
+    <category term="Math，ML" scheme="http://jijunhao.github.io/tags/Math%EF%BC%8CML/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算机视觉任务</title>
     <link href="http://jijunhao.github.io/2023/04/12/article20230412/"/>
     <id>http://jijunhao.github.io/2023/04/12/article20230412/</id>
     <published>2023-04-12T15:07:56.000Z</published>
-    <updated>2023-04-12T15:09:27.625Z</updated>
+    <updated>2023-04-19T10:28:21.968Z</updated>
     
     
       
@@ -522,27 +547,6 @@
     
     
     <category term="Hexo" scheme="http://jijunhao.github.io/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://jijunhao.github.io/2022/09/24/hello-world/"/>
-    <id>http://jijunhao.github.io/2022/09/24/hello-world/</id>
-    <published>2022-09-24T02:59:31.000Z</published>
-    <updated>2023-04-09T04:56:17.012Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
-        
-      
-    
-    
-    
     
   </entry>
   

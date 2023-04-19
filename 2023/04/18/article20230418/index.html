@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo-Matery主题评论插件, Ubuntu,ML,DL,Math,CV等">
-    <meta name="description" content="记录的配置Matery主题的评论">
+    <meta name="keywords" content="概率估计方法, Ubuntu,ML,DL,Math,CV等">
+    <meta name="description" content="总结两类概率估计方法">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hexo-Matery主题评论插件 | 季俊豪的博客</title>
+    <title>概率估计方法 | 季俊豪的博客</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/favicon.png">
     
 
@@ -397,12 +397,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/12.webp')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/6.webp')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hexo-Matery主题评论插件</h1>
+                    <h1 class="description center-align post-title">概率估计方法</h1>
                 </div>
             </div>
         </div>
@@ -426,8 +426,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Hexo/">
-                                <span class="chip bg-color">Hexo</span>
+                            <a href="/tags/Math%EF%BC%8CML/">
+                                <span class="chip bg-color">Math，ML</span>
                             </a>
                         
                     </div>
@@ -438,8 +438,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2/" class="post-category">
-                                博客
+                            <a href="/categories/Math/" class="post-category">
+                                Math
                             </a>
                         
                     </div>
@@ -451,28 +451,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-01-01
+                    2023-04-18
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-04-09
+                    2023-04-19
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    491
+                    2.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    8 分
                 </div>
                 
 
@@ -497,74 +497,74 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
-<p><strong>参考链接</strong></p>
-<p><a target="_blank" rel="noopener" href="https://liukgg.github.io/2021/08/15/hexo/hexo-zai-matery-zhu-ti-xia-ji-cheng-utteranc-ping-lun-cha-jian/">LuckLiu</a></p>
-<p><a target="_blank" rel="noopener" href="https://utteranc.es/">utteranc</a></p>
+                <h2 id="概率估计方法"><a href="#概率估计方法" class="headerlink" title="概率估计方法"></a>概率估计方法</h2><p>在实践中，概率分布通常是未知的，如何从样本中识别出潜在的概率分布是统计估计。</p>
+<ul>
+<li><p>参数方法</p>
+<ul>
+<li>极大似然估计MLE</li>
+<li>最大化后验估计MAP</li>
+</ul>
+</li>
+<li><p>非参数方法</p>
+<ul>
+<li><p>直方图方法</p>
+</li>
+<li><p>核密度估计KDE</p>
+</li>
+<li><p>最近邻密度估计NNDE</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="两种观点（关于参数方法-theta-）"><a href="#两种观点（关于参数方法-theta-）" class="headerlink" title="两种观点（关于参数方法$\theta$）"></a>两种观点（关于参数方法$\theta$）</h2><p>假设我们有一个样本数据集合$D={X^1,X^2,\dots,X^n}$，其中每个样本$X^i=(x_1^i,x_2^i,\dots,x_m^i)$都是从一个未知分布$p(X;\theta)$中独立地抽取得到的。我们要通过这些样本数据，估计出这个未知分布的某些参数$\theta=(\theta_1,\theta_2,\dots,\theta_b)$。</p>
+<p>频率派和贝叶斯派是概率统计学中两个主要的派别，它们对于统计推断的基本假设和方法有不同的观点。</p>
+<ul>
+<li><p>频率派认为，概率是事件在长期重复试验中出现的频率，因此概率是客观存在的，不依赖于任何主观假设。在频率派的框架下，统计推断的目标是从样本中推断出总体的未知参数，并通过置信区间和假设检验等方法对统计结论进行评估。频率派的方法通常基于假设检验和置信区间，强调的是样本的规模和可靠性，而不考虑先验知识和主观因素。</p>
+</li>
+<li><p>贝叶斯派则认为，概率是在已知先验知识的情况下，根据新的数据更新后验概率的一种度量。因此，贝叶斯派方法强调的是先验知识和主观因素的重要性。在贝叶斯派的框架下，统计推断的目标是基于已知的数据和先验知识，推断出未知参数的后验分布，并通过后验分布的点估计和区间估计等方法对统计结论进行评估。</p>
+</li>
+</ul>
+<blockquote>
+<p>一般来说$p(X;\theta)$结构是给定的，例如假设$p$为高斯分布，$\theta$就是$\mu,\Sigma$；假设$p$为一个神经网络模型，$\theta$就是所有神经网络参数</p>
 </blockquote>
-<h2 id="Hexo-Matery主题评论插件"><a href="#Hexo-Matery主题评论插件" class="headerlink" title="Hexo-Matery主题评论插件"></a>Hexo-Matery主题评论插件</h2><p><code>matery</code>主题集成了各种评论模块，例如 <strong>gitalk</strong>、<strong>gitment</strong>、<strong>disqus</strong>、<strong>livere</strong>、<strong>valine</strong>、<strong>waline</strong>、<strong>Twikoo</strong>、<strong>utteranc</strong> 等，但我使用最好的还是 <code>utteranc</code> 这种集成在github种的评论插件，并且能够做到github邮箱通知。</p>
-<h3 id="1-新建一个评论仓库"><a href="#1-新建一个评论仓库" class="headerlink" title="1. 新建一个评论仓库"></a>1. 新建一个评论仓库</h3><p>首先创建一个公开的评论仓库&lt;自定义名称&gt;<strong>！注意一定要公开，否则别人无法评论</strong></p>
-<img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202303111940745.png" style="zoom:80%;">
-
-<h3 id="2-安装utterances"><a href="#2-安装utterances" class="headerlink" title="2. 安装utterances"></a>2. 安装utterances</h3><ul>
-<li>进入<a target="_blank" rel="noopener" href="https://github.com/apps/utterances">utterances</a>，点击 <code>install</code></li>
-</ul>
-<img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202303111940868.png" style="zoom: 67%;">
-
+<h3 id="1-频率派观点（参数-theta-是未知常量）"><a href="#1-频率派观点（参数-theta-是未知常量）" class="headerlink" title="1. 频率派观点（参数$\theta$是未知常量）"></a>1. 频率派观点（参数$\theta$是未知常量）</h3><p><code>极大似然估计（Maximum Likelihood Estimation，简称MLE）</code>是一种常用的参数估计方法。其基本思想是在给定观测数据的情况下，寻找一个能够最大化样本似然函数的参数值，作为总体参数的估计值。</p>
+<p>对于给定的样本数据，我们可以计算出其似然函数 $L(\theta)$，它表示在给定参数 $\theta$ 的情况下，这个样本数据出现的概率密度函数值的乘积。</p>
+<p>$$<br>L(\theta)=\prod_{i=1}^{n}p(X^i;\theta)<br>$$<br>其中 $X^i$ 表示样本数据中的第 $i$ 个样本观测值。</p>
+<p>MLE的核心思想就是在所有可能的参数取值中，寻找一个能够最大化似然函数 $L(\theta)$ 的参数 $\hat\theta_{MLE}$，此时的<strong>密度估计</strong>$p(X;\hat\theta_{MLE})$，即：<br>$$<br>\begin{aligned}<br>\hat\theta_{MLE}&amp;=\operatorname*{argmax}<em>{\theta} L(\theta) \<br>            &amp;=\operatorname*{argmax}</em>{\theta}  \log L(\theta) \<br>            &amp;=\operatorname*{argmax}<em>{\theta} \log \prod</em>{i=1}^{n}p(X^i;\theta) \<br>            &amp;=\operatorname*{argmax}<em>{\theta}  \sum</em>{i=1}^{n}\log p(x^i;\theta)<br>\end{aligned}<br>$$<br>简单情况下，如果$L(\theta)$可微，我们会使用数值优化方法来求解上式，以找到最大化对数似然函数的参数 $\hat\theta_{MLE}$。求解的方法是直接对对数似然函数求导，并令其等于 0，得到：<br>$$<br>\frac{\partial }{\partial \theta}\log L(\theta)=\sum_{i=1}^{n}\frac{\partial}{\partial \theta}\log p(X^i;\theta)=0<br>$$<br>极大似然估计可能存在多个估计值，这时需要根据具体情况选择最优的估计值。另外，极大似然估计也可能出现无解或者不稳定的情况，需要进行额外的处理或者使用其他的估计方法。</p>
+<p>MLE具有良好的渐进性质，当样本量充分大时，MLE的估计结果具有<strong>一致性</strong>、<strong>渐进无偏性</strong>、<strong>渐进正态性</strong>和<strong>渐进有效性</strong>等性质。</p>
+<blockquote>
+<p>参数计算：梯度下降、EM算法</p>
+<p>模型选择：KL散度、AIC信息论准则（大样本）、交叉检验</p>
+</blockquote>
+<h3 id="2-贝叶斯派观点（参数-theta-是随机变量）"><a href="#2-贝叶斯派观点（参数-theta-是随机变量）" class="headerlink" title="2. 贝叶斯派观点（参数$\theta$是随机变量）"></a>2. 贝叶斯派观点（参数$\theta$是随机变量）</h3><p>在贝叶斯统计学中，参数的估计是通过后验概率分布来实现的，$\theta \sim p(\theta)$。在给定数据集 $D$ 的情况下，参数 $\theta$ 的后验概率分布可以表示为：<br>$$<br>p(\theta|D) = \frac{p(D|\theta) p(\theta)}{p(D)}<br>$$<br>其中，$p(D|\theta)$ 表示数据集 $D$ 在给定参数 $\theta$ 的条件下的似然函数，$p(\theta)$ 表示参数 $\theta$ 的先验分布，$p(D)$ 表示数据集 $D$ 的边缘概率分布。</p>
 <ul>
-<li>选择刚刚创建的自定义评论仓库，点击<code>install</code></li>
+<li><p>先验分布：贝叶斯统计学中，将参数视为随机变量，引入了先验分布用于描述参数的不确定性信息。先验分布可以是任何概率分布，通常是基于领域知识或历史数据来选择的。</p>
+</li>
+<li><p>后验概率分布：在贝叶斯统计学中，参数的估计不再是一个点估计值，而是一个后验概率分布。后验概率分布表示参数在给定数据的情况下的不确定性，它可以用于计算置信区间、预测区间等信息。</p>
+</li>
+<li><p>边缘概率分布：在贝叶斯统计学中，边缘概率分布是指在所有可能参数值上的联合概率分布的积分，边缘概率分布是计算后验概率分布时的归一化常数，通常可以通过数值积分或MCMC等方法进行计算。</p>
+</li>
 </ul>
-<img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202303111940318.png" style="zoom:80%;">
-
-<h3 id="3-配置评论风格configuration"><a href="#3-配置评论风格configuration" class="headerlink" title="3. 配置评论风格configuration"></a>3. 配置评论风格configuration</h3><ul>
-<li>首先输入自己的刚刚新建的评论仓库</li>
-</ul>
-<img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202303111940744.png" style="zoom:80%;">
-
+<p>$$<br>p(D) =\int p(D,\theta) d\theta =\int p(D|\theta)p(\theta) d\theta=\int \prod_{i=1}^{n}p(X^i;\theta)p(\theta)d\theta<br>$$</p>
 <ul>
-<li>其他按照自己的需要挑战，把最后生成的配置，<code>copy</code> 下来</li>
+<li>贝叶斯因子：贝叶斯因子是用于比较两个模型相对拟合数据的相对证据的指标。贝叶斯因子等于两个模型的边缘概率分布的比值，即：</li>
 </ul>
-<img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202303111940722.png" style="zoom:80%;">
-
-<h3 id="4-添加配置到matery主题"><a href="#4-添加配置到matery主题" class="headerlink" title="4. 添加配置到matery主题"></a>4. 添加配置到matery主题</h3><ul>
-<li>修改matery主题的配置文件 <code>themes/hexo-theme-matery/_config.yml</code> ，开启utteranc功能</li>
-</ul>
-<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># utteranc config, default disabled</span>
-<span class="token comment"># utteranc 评论模块的配置，默认为不激活</span>
-<span class="token key atrule">utteranc</span><span class="token punctuation">:</span>
-  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
+<p>$$<br>\text{BF}_{ij} = \frac{p(D|M_i)}{p(D|M_j)}<br>$$</p>
+<p>其中，$M_i$ 和 $M_j$ 分别表示两个模型，$p(D|M_i)$ 和 $p(D|M_j)$ 分别表示数据集 $D$ 在模型 $M_i$ 和 $M_j$ 下的边缘概率分布。当 $\text{BF}_{ij}$ 大于1时，说明模型 $M_i$ 比模型 $M_j$ 更能解释数据。</p>
+<p><code>贝叶斯预测分布（Bayesian predictive distribution）</code>是贝叶斯统计学中的一个概念，它描述了基于已知数据和模型参数的情况下，对未知数据的预测分布。贝叶斯预测分布是一种计算密度的方法，即计算参数模型$p(X|\theta)$在后验概率$p(\theta|D)$上的期望。<br>$$<br>\begin{aligned}<br>\hat p_{Bayes}(X)&amp;=\int p(X|\theta)p(\theta|D) d\theta \<br>    &amp;=\int p(X|\theta)\frac{p(D|\theta) p(\theta)}{p(D)} d\theta \<br>    &amp;=\int p(X|\theta)\frac{\prod_{i=1}^{n}p(X^i;\theta) p(\theta)}{\int \prod_{i=1}^{n}p(X^i;\theta’) p(\theta’) d\theta’} d\theta \<br>\end{aligned}<br>$$</p>
+<p>如果参数模型$p(X|\theta)$和先验概率$p(\theta)$是给定的，那贝叶斯推测分布原理上可以不通过任何学习计算出来，然而，如果$\theta$的维数过高，那么上面两个积分式计算起来会很复杂。因此，在贝叶斯推理中一个主要的技术问题是如何高效地处理高维积分。</p>
+<p>为了简单地处理上面的积分，解析地获得后验概率 $p(\theta|D)$是一种好方式。一种可能的方式是手动选择先验概率$p(\theta)$，然后就可以清楚地得到后验概率$p(\theta|D)$的参数形式。另一种可能的方式是求积分式的解析近似。此外还有方法就是直接使用后验概率求单点的$p(\theta|D)$，即最大化后验估计。</p>
+<p><code>最大化后验概率 (Maximum a posteriori estimation，MAP) </code>是另一种一种常用的参数估计方法，它的本质是在贝叶斯统计学框架下，使用后验概率最大化来确定参数的点估计值。在 MAP 方法中，通过最大化后验概率 $p(\theta|D)$ 来确定参数的点估计值。如果样本是独立同分布的取出来的，计算公式为<br>$$<br>\begin{aligned}<br>\hat{\theta}<em>{MAP} &amp;= \operatorname*{argmax}</em>{\theta} p(\theta|D) \<br>&amp;= \operatorname*{argmax}<em>{\theta} p(D|\theta) p(\theta) \<br>&amp;= \operatorname*{argmax}</em>{\theta} \prod_{i=1}^{n}p(X^i;\theta) p(\theta) \<br>&amp;= \operatorname*{argmax}<em>{\theta} \sum</em>{i=1}^{n}\log p(X^i;\theta) + \log p(\theta)<br>\end{aligned}<br>$$<br>此时的<strong>密度估计</strong>为$p(X;\hat\theta_{MAP})$。前一项就是MLE，后一项是正则化项，因此MAP也被称为修正的极大似然估计。</p>
+<blockquote>
+<p>模型选择：在贝叶斯推理里面先验概率决定了贝叶斯推理的解，即$p(\theta;\beta)$</p>
+</blockquote>
+<h3 id="3-总结比较"><a href="#3-总结比较" class="headerlink" title="3. 总结比较"></a>3. 总结比较</h3><p>各种都在想尽办法计算$p(X)$</p>
 <ul>
-<li>修改博客文章 <code>themes/hexo-theme-matery/layout/_partial/post-detail.ejs</code></li>
+<li>第一种方式是$p(X;\theta)$，其中$\theta$是计算出来的常量，例如$\hat\theta_{MLE}、\hat\theta_{MAP}$</li>
+<li>第二种方式是$p(X|D)$，即贝叶斯预测分布</li>
 </ul>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>utteranc <span class="token operator">&amp;&amp;</span> theme<span class="token punctuation">.</span>utteranc<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">&gt;</span>
-<span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/utteranc'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">&gt;</span>
-<span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p>该处改动的目的是为了在所有博客文章中统一在底部加入一个评论模块，这个改动很关键、所放位置也很重要。</p>
-<ul>
-<li>新增一个文件 <code>themes/hexo-theme-matery/layout/_partial/utteranc.ejs</code></li>
-</ul>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card"</span> data<span class="token operator">-</span>aos<span class="token operator">=</span><span class="token string">"fade-up"</span><span class="token operator">&gt;</span>
-    <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"utteranc-container"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card-content"</span><span class="token operator">&gt;</span>
-        <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://utteranc.es/client.js"</span>
-                repo<span class="token operator">=</span><span class="token string">"jijunhao/utterances"</span>
-                issue<span class="token operator">-</span>term<span class="token operator">=</span><span class="token string">"pathname"</span>
-                theme<span class="token operator">=</span><span class="token string">"github-light"</span>
-                crossorigin<span class="token operator">=</span><span class="token string">"anonymous"</span>
-                async<span class="token operator">&gt;</span>
-        <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
-    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>所有的留言都会出现在自定义评论仓库 <code>issues</code> 的，并且会每次给邮箱发消息。</p>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>如果博客中还有单独的一个留言板模块，需要改 <code>themes/hexo-theme-matery/layout/contact.ejs</code></p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>utteranc <span class="token operator">&amp;&amp;</span> theme<span class="token punctuation">.</span>utteranc<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">&gt;</span>
-    <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/utteranc'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">&gt;</span>
-<span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p>最后重启hexo，就能在网页拥有评论功能了。</p>
-<p>如有问题，欢迎在我以上的博客留言板中留言交流。</p>
+<p><strong>频率派—&gt;统计机器学习—&gt;优化问题—&gt;(损失函数是什么；优化算法是什么)</strong></p>
+<p><strong>贝叶斯派—&gt;概率图模型—&gt;积分问题和概率计算—&gt;(精确计算；近似计算)</strong></p>
 
                 
             </div>
@@ -591,7 +591,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://jijunhao.github.io/2023/01/01/article20230101/">http://jijunhao.github.io/2023/01/01/article20230101/</a>
+                    <a href="http://jijunhao.github.io/2023/04/18/article20230418/">http://jijunhao.github.io/2023/04/18/article20230418/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -629,8 +629,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Hexo/">
-                                    <span class="chip bg-color">Hexo</span>
+                                <a href="/tags/Math%EF%BC%8CML/">
+                                    <span class="chip bg-color">Math，ML</span>
                                 </a>
                             
                         </div>
@@ -723,50 +723,48 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2023/02/05/article20230205/">
+                <a href="/2023/04/18/article20230418/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/11.webp" class="responsive-img" alt="Miniconda的安装和使用">
+                        <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/6.webp" class="responsive-img" alt="概率估计方法">
                         
-                        <span class="card-title">Miniconda的安装和使用</span>
+                        <span class="card-title">概率估计方法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Miniconda的安装和使用、常用conda命令的使用
+                            总结两类概率估计方法
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-02-05
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-18
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Python/" class="post-category">
-                                    Python
+                            <a href="/categories/Math/" class="post-category">
+                                    Math
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/conda/">
-                        <span class="chip bg-color">conda</span>
-                    </a>
-                    
-                    <a href="/tags/Python/">
-                        <span class="chip bg-color">Python</span>
+                    <a href="/tags/Math%EF%BC%8CML/">
+                        <span class="chip bg-color">Math，ML</span>
                     </a>
                     
                 </div>
@@ -780,31 +778,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/12/09/article20221209/">
+                <a href="/2023/04/12/article20230412/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/18.webp" class="responsive-img" alt="统计机器学习">
+                        <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/5.webp" class="responsive-img" alt="计算机视觉任务">
                         
-                        <span class="card-title">统计机器学习</span>
+                        <span class="card-title">计算机视觉任务</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            统计机器学习大框架
+                            总结计算机视觉任务和常见的操作：图像分类、目标检测、语义分割
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-12-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-12
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    机器学习
+                            <a href="/categories/CV/" class="post-category">
+                                    CV
                                 </a>
                             
                             
@@ -814,8 +812,16 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">
-                        <span class="chip bg-color">人工智能</span>
+                    <a href="/tags/Python/">
+                        <span class="chip bg-color">Python</span>
+                    </a>
+                    
+                    <a href="/tags/PyTorch/">
+                        <span class="chip bg-color">PyTorch</span>
+                    </a>
+                    
+                    <a href="/tags/CV/">
+                        <span class="chip bg-color">CV</span>
                     </a>
                     
                 </div>
@@ -976,6 +982,13 @@
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+</script>
 
 
 
