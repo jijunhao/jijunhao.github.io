@@ -6,7 +6,7 @@
   <link href="http://jijunhao.github.io/atom.xml" rel="self"/>
   
   <link href="http://jijunhao.github.io/"/>
-  <updated>2023-04-19T10:27:30.063Z</updated>
+  <updated>2023-04-19T13:25:00.189Z</updated>
   <id>http://jijunhao.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Diffusion Model 论文阅读</title>
+    <link href="http://jijunhao.github.io/2023/04/20/article20230420/"/>
+    <id>http://jijunhao.github.io/2023/04/20/article20230420/</id>
+    <published>2023-04-20T02:07:56.000Z</published>
+    <updated>2023-04-19T13:25:00.189Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;【论文阅读】Denoising Diffusion Probabilistic Models&lt;/p&gt;
+
+
+	&lt;div class=&quot;row&quot;&gt;
+    &lt;embed src=&quot;https://arxiv.org/pdf/2006.11239.pdf&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Diffusion" scheme="http://jijunhao.github.io/categories/Diffusion/"/>
+    
+    
+    <category term="Diffusion" scheme="http://jijunhao.github.io/tags/Diffusion/"/>
+    
+  </entry>
   
   <entry>
     <title>概率估计方法</title>
@@ -508,34 +537,6 @@
     <summary type="html">&lt;blockquote&gt;
 &lt;p&gt;参考链接&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://hexo.io/zh-cn/index.html&quot;&gt;Hexo 官网&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="博客" scheme="http://jijunhao.github.io/categories/%E5%8D%9A%E5%AE%A2/"/>
-    
-    
-    <category term="Hexo" scheme="http://jijunhao.github.io/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo入门</title>
-    <link href="http://jijunhao.github.io/2022/09/25/article20220925/"/>
-    <id>http://jijunhao.github.io/2022/09/25/article20220925/</id>
-    <published>2022-09-25T06:06:28.000Z</published>
-    <updated>2023-04-09T04:56:17.011Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;参考链接&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://blog.17lai.site/&quot;&gt;夜法之书的Hexo&lt;/a&gt;  &lt;/p&gt;
 &lt;p&gt;&lt;a</summary>
         
       
