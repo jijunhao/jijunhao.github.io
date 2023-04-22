@@ -6,7 +6,7 @@
   <link href="http://jijunhao.github.io/atom.xml" rel="self"/>
   
   <link href="http://jijunhao.github.io/"/>
-  <updated>2023-04-19T13:25:00.189Z</updated>
+  <updated>2023-04-22T06:09:39.676Z</updated>
   <id>http://jijunhao.github.io/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Differential Privacy 论文阅读</title>
+    <link href="http://jijunhao.github.io/2023/04/21/article20230421/"/>
+    <id>http://jijunhao.github.io/2023/04/21/article20230421/</id>
+    <published>2023-04-21T04:07:56.000Z</published>
+    <updated>2023-04-22T06:09:39.676Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;【论文阅读】Deep Learning with Differential Privacy&lt;/p&gt;
+
+
+	&lt;div class=&quot;row&quot;&gt;
+    &lt;embed src=&quot;https://arxiv.org/pdf/1607.00133.pdf&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Differential Privacy" scheme="http://jijunhao.github.io/categories/Differential-Privacy/"/>
+    
+    
+    <category term="Differential Privacy" scheme="http://jijunhao.github.io/tags/Differential-Privacy/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Diffusion Model 论文阅读</title>
     <link href="http://jijunhao.github.io/2023/04/20/article20230420/"/>
     <id>http://jijunhao.github.io/2023/04/20/article20230420/</id>
     <published>2023-04-20T02:07:56.000Z</published>
-    <updated>2023-04-19T13:25:00.189Z</updated>
+    <updated>2023-04-22T06:09:58.665Z</updated>
     
     
       
@@ -50,7 +79,7 @@
     <link href="http://jijunhao.github.io/2023/04/18/article20230418/"/>
     <id>http://jijunhao.github.io/2023/04/18/article20230418/</id>
     <published>2023-04-18T10:07:56.000Z</published>
-    <updated>2023-04-22T03:22:34.537Z</updated>
+    <updated>2023-04-22T06:03:58.419Z</updated>
     
     
       
@@ -477,7 +506,7 @@
     <link href="http://jijunhao.github.io/2022/12/09/article20221209/"/>
     <id>http://jijunhao.github.io/2022/12/09/article20221209/</id>
     <published>2022-12-09T10:49:37.000Z</published>
-    <updated>2023-04-09T04:56:17.011Z</updated>
+    <updated>2023-04-22T06:13:19.533Z</updated>
     
     
       
@@ -519,34 +548,6 @@
     
     
     <category term="Linux" scheme="http://jijunhao.github.io/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo-Matery主题使用和美化</title>
-    <link href="http://jijunhao.github.io/2022/09/26/article20220926/"/>
-    <id>http://jijunhao.github.io/2022/09/26/article20220926/</id>
-    <published>2022-09-26T12:03:17.000Z</published>
-    <updated>2023-04-09T04:56:17.011Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;参考链接&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://hexo.io/zh-cn/index.html&quot;&gt;Hexo 官网&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="博客" scheme="http://jijunhao.github.io/categories/%E5%8D%9A%E5%AE%A2/"/>
-    
-    
-    <category term="Hexo" scheme="http://jijunhao.github.io/tags/Hexo/"/>
     
   </entry>
   
