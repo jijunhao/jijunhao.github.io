@@ -6,7 +6,7 @@
   <link href="http://jijunhao.github.io/atom.xml" rel="self"/>
   
   <link href="http://jijunhao.github.io/"/>
-  <updated>2023-04-22T06:09:39.676Z</updated>
+  <updated>2023-04-22T13:12:18.991Z</updated>
   <id>http://jijunhao.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://jijunhao.github.io/2023/04/21/article20230421/"/>
     <id>http://jijunhao.github.io/2023/04/21/article20230421/</id>
     <published>2023-04-21T04:07:56.000Z</published>
-    <updated>2023-04-22T06:09:39.676Z</updated>
+    <updated>2023-04-22T13:12:18.991Z</updated>
     
     
       
@@ -29,10 +29,7 @@
         
         
     <summary type="html">&lt;p&gt;【论文阅读】Deep Learning with Differential Privacy&lt;/p&gt;
-
-
-	&lt;div class=&quot;row&quot;&gt;
-    &lt;embed src=&quot;https://arxiv.org/pdf/1607.00133.pdf&quot;</summary>
+&lt;p&gt;（梯度层面）提出DP-SGD，它在更新参数的同时给梯度增加噪声。他们引入了moment accountant算法来跟踪累积隐私损失来估计$\epsilon$和</summary>
         
       
     
