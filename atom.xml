@@ -436,9 +436,9 @@
     <category term="Python" scheme="http://jijunhao.github.io/categories/Python/"/>
     
     
-    <category term="pip" scheme="http://jijunhao.github.io/tags/pip/"/>
-    
     <category term="Python" scheme="http://jijunhao.github.io/tags/Python/"/>
+    
+    <category term="pip" scheme="http://jijunhao.github.io/tags/pip/"/>
     
   </entry>
   
@@ -465,9 +465,9 @@
     <category term="Python" scheme="http://jijunhao.github.io/categories/Python/"/>
     
     
-    <category term="Python" scheme="http://jijunhao.github.io/tags/Python/"/>
-    
     <category term="conda" scheme="http://jijunhao.github.io/tags/conda/"/>
+    
+    <category term="Python" scheme="http://jijunhao.github.io/tags/Python/"/>
     
   </entry>
   

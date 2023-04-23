@@ -59,27 +59,6 @@
 
 <body>
     
-  <div id="loading-box">
-    <div class="loading-left-bg"></div>
-    <div class="loading-right-bg"></div>
-    <div class="spinner-box">
-      <div class="configure-border-1">
-        <div class="configure-core"></div>
-      </div>
-      <div class="configure-border-2">
-        <div class="configure-core"></div>
-      </div>
-      <div class="loading-word">加载中...</div>
-    </div>
-  </div>
-  <!-- 页面加载动画 -->
-  <script>
-    $(document).ready(function () {
-      document.body.style.overflow = 'auto';
-      document.getElementById('loading-box').classList.add("loaded")
-    })
-  </script>
-
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
@@ -518,10 +497,10 @@
                 </a>
                 
                 
-                <a href="/tags/pip/" title="pip: 1">
+                <a href="/tags/conda/" title="conda: 1">
                     <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            data-tagname="pip" style="background-color: #E8F8F5;">pip
+                             chip-default "
+                            data-tagname="conda" style="background-color: #E8F8F5;">conda
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -536,10 +515,10 @@
                 </a>
                 
                 
-                <a href="/tags/conda/" title="conda: 1">
+                <a href="/tags/pip/" title="pip: 1">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="conda" style="background-color: #F8F9F9;">conda
+                             chip-active "
+                            data-tagname="pip" style="background-color: #F8F9F9;">pip
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -654,7 +633,7 @@
         <div class="row tags-posts">
             
             
-            <div class="article tag-post col s12 m6 l4" data-tags="pip, Python" data-aos="fade-up">
+            <div class="article tag-post col s12 m6 l4" data-tags="Python, pip" data-aos="fade-up">
                 <div class="card">
                     <a href="/2023/02/06/article20230206/">
                         <div class="card-image tag-image">
