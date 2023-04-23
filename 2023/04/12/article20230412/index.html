@@ -51,9 +51,9 @@
 
     <script src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/jquery/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/css/loading.css">
-<meta name="generator" content="Hexo 6.3.0">
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="季俊豪的博客" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="季俊豪的博客" type="application/atom+xml">
 </head>
 
 
@@ -482,14 +482,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-04-19
+                    2023-04-23
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    7.7k
+                    7.8k
                 </div>
                 
 
@@ -671,6 +671,16 @@
     <span class="token keyword">def</span> <span class="token function">forward</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> x<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token keyword">return</span> self<span class="token punctuation">.</span>fn<span class="token punctuation">(</span>x<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span> <span class="token operator">+</span> x<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<p>【论文阅读】Deep Residual Learning for Image Recognition</p>
+
+
+	<div class="row">
+    <embed src="https://arxiv.org/pdf/1512.03385.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
 <h4 id="DenseNet"><a href="#DenseNet" class="headerlink" title="DenseNet"></a>DenseNet</h4><blockquote>
 <p>亮点：Dense Block、Transition Layer、Global Average Pooling</p>
 </blockquote>
@@ -724,6 +734,26 @@
 <p>RoI池化层（Region of Interest Pooling）：RoI池化层可以将不同大小的候选区域映射到相同大小的特征图上，减少了特征提取的计算量，提高了算法的速度。</p>
 <p>候选区域网络(Region Proposal Networks)：RPN的基本思想是在CNN特征图上滑动一个小的卷积窗口，对每个窗口生成一个固定数量的候选区域。在卷积窗口的中心点上，通过两个分支来预测每个候选区域的边界框坐标和是否包含目标物体。这两个分支在RPN中共享卷积特征，可以有效地减少计算量。候选区域网络实际上延续了基于滑动窗进行目标定位的思路，不同之处在于候选区域网络在卷积特征而不是在原图上进行滑动。</p>
 <p>多任务损失函数：Fast R-CNN算法使用了一个多任务损失函数，同时训练分类和回归器，使得算法的训练过程更加简单和高效。</p>
+<p>【论文阅读】Fast R-CNN</p>
+
+
+	<div class="row">
+    <embed src="https://arxiv.org/pdf/1504.08083.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
+<p>【论文阅读】Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks</p>
+
+
+	<div class="row">
+    <embed src="https://arxiv.org/pdf/1506.01497.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
 <h4 id="R-FCN"><a href="#R-FCN" class="headerlink" title="R-FCN"></a>R-FCN</h4><blockquote>
 <p>亮点：在RoI池化层加一个全卷积层并平均池化</p>
 </blockquote>
@@ -744,9 +774,39 @@
 <li><code>Confidence Score（置信度得分）</code>：YOLO通过置信度得分来衡量预测框中是否包含目标。置信度得分由两部分组成，即目标存在的概率和预测框与真实框之间的IOU（交并比）值。</li>
 <li><code>Darknet</code>：Darknet是YOLO使用的深度神经网络框架，支持多种深度学习算法，包括卷积神经网络、循环神经网络和深度强化学习等。</li>
 </ol>
+<p>【论文阅读】You Only Look Once: Unified, Real-Time Object Detection</p>
+
+
+	<div class="row">
+    <embed src="https://arxiv.org/pdf/1506.02640.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
+<p>【论文阅读】YOLOv3: An Incremental Improvement</p>
+
+
+	<div class="row">
+    <embed src="https://arxiv.org/pdf/1804.02767.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
 <h4 id="SSD（Single-Shot-MultiBox-Detector）"><a href="#SSD（Single-Shot-MultiBox-Detector）" class="headerlink" title="SSD（Single Shot MultiBox Detector）"></a>SSD（Single Shot MultiBox Detector）</h4><blockquote>
 <p>多尺度的卷积神经网络</p>
 </blockquote>
+<p>【论文阅读】SSD: Single Shot MultiBox Detector</p>
+
+
+	<div class="row">
+    <embed src="https://arxiv.org/pdf/1512.02325.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
 <h4 id="FPN"><a href="#FPN" class="headerlink" title="FPN"></a>FPN</h4><blockquote>
 <p>特征金字塔架构</p>
 </blockquote>
@@ -775,7 +835,17 @@
 <h4 id="U-Net"><a href="#U-Net" class="headerlink" title="U-Net"></a>U-Net</h4><blockquote>
 <p>反卷积（Deconvolution）、上采样（Upsampling）、跳跃连接（Skip Connection）</p>
 </blockquote>
-<p>U-Net的网络结构由对称的编码器和解码器组成，中间通过跳跃连接连接起来。编码器由多个卷积层和池化层组成，用于提取图像的特征。解码器则由多个上采样层和卷积层组成，用于将特征图还原为原始输入的大小，并进行像素级别的分类预测。利用低层结果可以弥补随着网络加深丢失的细节和边缘信息</p>
+<p>U-Net的网络结构由对称的编码器和解码器组成，中间通过跳跃连接连接起来。编码器由多个卷积层和池化层组成，用于提取图像的特征。解码器则由多个上采样层和卷积层组成，用于将特征图还原为原始输入的大小，并进行像素级别的分类预测。利用低层结果可以弥补随着网络加深丢失的细节和边缘信息。</p>
+<p>【论文阅读】U-Net: Convolutional Networks for Biomedical Image Segmentation</p>
+
+
+	<div class="row">
+    <embed src="https://arxiv.org/pdf/1505.04597.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
 <h2 id="5-实例分割-Instance-Segmentation"><a href="#5-实例分割-Instance-Segmentation" class="headerlink" title="5. 实例分割(Instance Segmentation)"></a>5. 实例分割(Instance Segmentation)</h2><p>实例分割（Instance Segmentation）是一种计算机视觉任务，旨在将图像中的每个像素分配给其对应的物体实例，并同时对物体进行精确的像素级别分割。例如，当图像中有多只猫时，语义分割会将两只猫整体的所有像素预测为“猫”这个类别。与此不同的是，实例分割需要区分出哪些像素属于第一只猫、哪些像素属于第二只猫。常见思想是：先用目标检测方法将图像中的不同实例框出，再用语义分割方法在不同包围盒内进行逐像素标记。</p>
 <h4 id="FCIS（Fully-Convolutional-Instance-aware-Semantic-Segmentation）"><a href="#FCIS（Fully-Convolutional-Instance-aware-Semantic-Segmentation）" class="headerlink" title="FCIS（Fully Convolutional Instance-aware Semantic Segmentation）"></a>FCIS（Fully Convolutional Instance-aware Semantic Segmentation）</h4><blockquote>
 <p>FCN、RoI池化层、实例分割分支</p>
@@ -785,6 +855,16 @@
 </blockquote>
 <p>共享卷积层用于提取图像的特征，RPN用于生成候选物体区域，并计算每个区域的物体得分和边界框位置。分割分支则基于RPN提供的候选物体区域，对每个物体生成一个掩码，从而实现像素级别的实例分割。分割分支使用了全卷积网络（Fully Convolutional Network，FCN）的结构，并对其进行了改进。具体来说，分割分支引入了一个并行的全连接层（Parallel Fully Connected Layer），用于生成每个物体的掩码。此外，分割分支还使用了RoI Pooling和RoI Align等技术，以提高掩码的准确性和稳定性。</p>
 <p>Mask R-CNN的训练过程通常使用多任务损失函数（Multi-task Loss Function）进行优化，其中包括物体分类损失、边界框回归损失和掩码分割损失。</p>
+<p>【论文阅读】Mask R-CNN</p>
+
+
+	<div class="row">
+    <embed src="https://arxiv.org/pdf/1703.06870.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
 <h4 id="PANet（Path-Aggregation-Network）"><a href="#PANet（Path-Aggregation-Network）" class="headerlink" title="PANet（Path Aggregation Network）"></a>PANet（Path Aggregation Network）</h4><blockquote>
 <p>Path Aggregation模块</p>
 </blockquote>
@@ -1237,7 +1317,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">47k</span>
+                        class="white-color">47.6k</span>
             
             
             

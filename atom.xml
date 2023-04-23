@@ -6,7 +6,7 @@
   <link href="http://jijunhao.github.io/atom.xml" rel="self"/>
   
   <link href="http://jijunhao.github.io/"/>
-  <updated>2023-04-23T09:18:06.827Z</updated>
+  <updated>2023-04-23T12:11:56.216Z</updated>
   <id>http://jijunhao.github.io/</id>
   
   <author>
@@ -17,18 +17,43 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>AI Generated Content(AIGC)</title>
+    <link href="http://jijunhao.github.io/2023/04/24/article20230424/"/>
+    <id>http://jijunhao.github.io/2023/04/24/article20230424/</id>
+    <published>2023-04-24T04:07:56.000Z</published>
+    <updated>2023-04-23T12:11:56.216Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;AIGC的三个层面&quot;&gt;&lt;a href=&quot;#AIGC的三个层面&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="AIGC" scheme="http://jijunhao.github.io/categories/AIGC/"/>
+    
+    
+    <category term="AIGC" scheme="http://jijunhao.github.io/tags/AIGC/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Transformer and MLP 论文阅读</title>
     <link href="http://jijunhao.github.io/2023/04/23/article20230423/"/>
     <id>http://jijunhao.github.io/2023/04/23/article20230423/</id>
     <published>2023-04-23T04:07:56.000Z</published>
-    <updated>2023-04-23T09:18:06.827Z</updated>
+    <updated>2023-04-23T12:11:56.215Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;现有主流视觉机制有三类：CNN、Attention和MLP-mixer。后两种都是谷歌提出的基于transformer和token的架构。token就是图片分块后进行线性映射的向量。怎么自定义token-mixing操作是各种基于mlp架构的关键。此外MLP-mixer其实</summary>
+    <summary type="html">&lt;p&gt;现有主流视觉机制有三类：CNN、Attention和MLP-mixer。后两种都是谷歌提出的基于Transformer和token的架构。token就是图片分块后进行线性映射的向量。怎么自定义token-mixing操作是各种基于mlp架构的关键。此外MLP-mixer其实</summary>
         
       
     
@@ -181,7 +206,7 @@
     <link href="http://jijunhao.github.io/2023/04/12/article20230412/"/>
     <id>http://jijunhao.github.io/2023/04/12/article20230412/</id>
     <published>2023-04-12T15:07:56.000Z</published>
-    <updated>2023-04-19T10:28:20.000Z</updated>
+    <updated>2023-04-23T12:11:56.213Z</updated>
     
     
       
@@ -519,35 +544,6 @@
     <category term="Python" scheme="http://jijunhao.github.io/tags/Python/"/>
     
     <category term="pip" scheme="http://jijunhao.github.io/tags/pip/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Miniconda的安装和使用</title>
-    <link href="http://jijunhao.github.io/2023/02/05/article20230205/"/>
-    <id>http://jijunhao.github.io/2023/02/05/article20230205/</id>
-    <published>2023-02-05T07:28:56.000Z</published>
-    <updated>2023-04-09T04:56:16.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;参考文献&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://docs.conda.io/en/latest/miniconda.html&quot;&gt;Miniconda&lt;/a&gt;  &lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="Python" scheme="http://jijunhao.github.io/categories/Python/"/>
-    
-    
-    <category term="conda" scheme="http://jijunhao.github.io/tags/conda/"/>
-    
-    <category term="Python" scheme="http://jijunhao.github.io/tags/Python/"/>
     
   </entry>
   
