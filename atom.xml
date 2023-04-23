@@ -6,7 +6,7 @@
   <link href="http://jijunhao.github.io/atom.xml" rel="self"/>
   
   <link href="http://jijunhao.github.io/"/>
-  <updated>2023-04-22T13:12:18.991Z</updated>
+  <updated>2023-04-23T09:18:06.827Z</updated>
   <id>http://jijunhao.github.io/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Transformer and MLP 论文阅读</title>
+    <link href="http://jijunhao.github.io/2023/04/23/article20230423/"/>
+    <id>http://jijunhao.github.io/2023/04/23/article20230423/</id>
+    <published>2023-04-23T04:07:56.000Z</published>
+    <updated>2023-04-23T09:18:06.827Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;现有主流视觉机制有三类：CNN、Attention和MLP-mixer。后两种都是谷歌提出的基于transformer和token的架构。token就是图片分块后进行线性映射的向量。怎么自定义token-mixing操作是各种基于mlp架构的关键。此外MLP-mixer其实</summary>
+        
+      
+    
+    
+    
+    <category term="Transformer" scheme="http://jijunhao.github.io/categories/Transformer/"/>
+    
+    
+    <category term="Transformer" scheme="http://jijunhao.github.io/tags/Transformer/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Attention 论文阅读</title>
+    <link href="http://jijunhao.github.io/2023/04/22/article20230422/"/>
+    <id>http://jijunhao.github.io/2023/04/22/article20230422/</id>
+    <published>2023-04-22T04:07:56.000Z</published>
+    <updated>2023-04-23T09:18:06.698Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Attention的目的是让模型知道关注的输入是哪些，自定义一个权重，然后组合输出。Attention的输入可以是任何东西，包括各种隐变量。&lt;/p&gt;
+&lt;p&gt;此外在Attention里面有位置编码（Positional</summary>
+        
+      
+    
+    
+    
+    <category term="Attention" scheme="http://jijunhao.github.io/categories/Attention/"/>
+    
+    
+    <category term="Attention" scheme="http://jijunhao.github.io/tags/Attention/"/>
+    
+  </entry>
   
   <entry>
     <title>Differential Privacy 论文阅读</title>
@@ -47,7 +98,7 @@
     <link href="http://jijunhao.github.io/2023/04/20/article20230420/"/>
     <id>http://jijunhao.github.io/2023/04/20/article20230420/</id>
     <published>2023-04-20T02:07:56.000Z</published>
-    <updated>2023-04-22T06:09:58.000Z</updated>
+    <updated>2023-04-23T09:18:06.697Z</updated>
     
     
       
@@ -68,6 +119,35 @@
     
     
     <category term="Diffusion" scheme="http://jijunhao.github.io/tags/Diffusion/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GAN 论文阅读</title>
+    <link href="http://jijunhao.github.io/2023/04/19/article20230419/"/>
+    <id>http://jijunhao.github.io/2023/04/19/article20230419/</id>
+    <published>2023-04-19T04:07:56.000Z</published>
+    <updated>2023-04-23T09:18:06.696Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;【论文阅读】Generative Adversarial Nets&lt;/p&gt;
+
+
+	&lt;div class=&quot;row&quot;&gt;
+    &lt;embed src=&quot;https://arxiv.org/pdf/1406.2661.pdf&quot; width=&quot;100%&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="GAN" scheme="http://jijunhao.github.io/categories/GAN/"/>
+    
+    
+    <category term="GAN" scheme="http://jijunhao.github.io/tags/GAN/"/>
     
   </entry>
   
@@ -468,83 +548,6 @@
     <category term="conda" scheme="http://jijunhao.github.io/tags/conda/"/>
     
     <category term="Python" scheme="http://jijunhao.github.io/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo-Matery主题评论插件</title>
-    <link href="http://jijunhao.github.io/2023/01/01/article20230101/"/>
-    <id>http://jijunhao.github.io/2023/01/01/article20230101/</id>
-    <published>2023-01-01T10:55:42.000Z</published>
-    <updated>2023-04-09T04:56:16.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;参考链接&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="博客" scheme="http://jijunhao.github.io/categories/%E5%8D%9A%E5%AE%A2/"/>
-    
-    
-    <category term="Hexo" scheme="http://jijunhao.github.io/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>统计机器学习</title>
-    <link href="http://jijunhao.github.io/2022/12/09/article20221209/"/>
-    <id>http://jijunhao.github.io/2022/12/09/article20221209/</id>
-    <published>2022-12-09T10:49:37.000Z</published>
-    <updated>2023-04-22T06:13:18.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;学习的类型&quot;&gt;&lt;a href=&quot;#学习的类型&quot; class=&quot;headerlink&quot; title=&quot;学习的类型&quot;&gt;&lt;/a&gt;学习的类型&lt;/h2&gt;&lt;h3 id=&quot;1-监督学习（supervised-learning）&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="机器学习" scheme="http://jijunhao.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="人工智能" scheme="http://jijunhao.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>win10+ubuntu双系统安装</title>
-    <link href="http://jijunhao.github.io/2022/10/05/article20221005/"/>
-    <id>http://jijunhao.github.io/2022/10/05/article20221005/</id>
-    <published>2022-10-05T04:26:22.000Z</published>
-    <updated>2023-04-09T04:56:16.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;安装win10-ubuntu双系统&quot;&gt;&lt;a href=&quot;#安装win10-ubuntu双系统&quot; class=&quot;headerlink&quot; title=&quot;安装win10 + ubuntu双系统&quot;&gt;&lt;/a&gt;安装win10 + ubuntu双系统&lt;/h2&gt;&lt;h3</summary>
-        
-      
-    
-    
-    
-    <category term="Linux" scheme="http://jijunhao.github.io/categories/Linux/"/>
-    
-    
-    <category term="Linux" scheme="http://jijunhao.github.io/tags/Linux/"/>
     
   </entry>
   
