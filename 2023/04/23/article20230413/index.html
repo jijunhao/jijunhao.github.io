@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="标签: pip, Ubuntu,ML,DL,Math,CV等">
-    <meta name="description" content="本网站是个人兴趣爱好，总结分享经验，记录生活点滴的平台，希望在以后的学习旅途中，走出自己的风景。">
+    <meta name="keywords" content="计算机视觉任务(二), Ubuntu,ML,DL,Math,CV等">
+    <meta name="description" content="总结计算机视觉任务和常见的操作：生成模型">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>标签: pip | 季俊豪的博客</title>
+    <title>计算机视觉任务(二) | 季俊豪的博客</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/favicon.png">
     
 
@@ -409,301 +409,598 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                感谢各位的来访，请在留言板上留下你的足迹
-                
-            </div>
+    
 
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/typed/typed.js"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: [ 
-                            
-                                "从来没有真正的绝境, 只有心灵的迷途",
-                            
-                                "Never really desperate, only the lost of the soul",
-                            
-                        ],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/0.webp')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">计算机视觉任务(二)</h1>
+                </div>
             </div>
         </div>
     </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Python/">
+                                <span class="chip bg-color">Python</span>
+                            </a>
+                        
+                            <a href="/tags/PyTorch/">
+                                <span class="chip bg-color">PyTorch</span>
+                            </a>
+                        
+                            <a href="/tags/CV/">
+                                <span class="chip bg-color">CV</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/CV/" class="post-category">
+                                CV
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2023-04-23
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2023-04-24
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    1.2k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    4 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/prism/prism.css">
+        
+
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="Generative-Models"><a href="#Generative-Models" class="headerlink" title="Generative Models"></a>Generative Models</h2><p>给定来自感兴趣分布的观察到的样本$x$，生成模型的目标是学习对其真实数据分布$p(x)$ 进行建模。一旦学会，我们就可以随意从我们的近似模型中生成新的样本。此外，在某些公式下，我们还可以使用学习的模型来评估观察或采样数据的可能性。生成对抗网络 (GANs) 对复杂分布的采样过程进行建模，该过程以对抗方式学习。另一类生成模型，称为 “基于似然”，旨在学习一种模型，该模型为观察到的数据样本分配了高似然性。这包括自回归模型，归一化流和变分自动编码器 (VAEs)。另一种类似的方法是基于能量的建模，其中将分布学习为任意灵活的能量函数，然后将其归一化。基于分数的生成模型高度相关; 他们不是学习对能量函数本身进行建模，而是将基于能量的模型的分数学习为神经网络。</p>
+<p>对于许多模态，我们可以认为我们观察到的数据是由相关的看不见的潜在变量表示或生成的，我们可以用随机变量$z$表示。表达这种想法的最佳直觉是通过柏拉图的洞穴寓言。在寓言中，一群人一生都被锁在洞穴中，只能看到投射在他们面前墙壁上的二维阴影，这些阴影是由看不见的三维物体在火灾前通过的物体产生的。对这样的人来说，他们观察到的一切实际上都是由他们永远看不到的更高维度的抽象概念决定的。</p>
+<p>类似地，我们在实际世界中遇到的对象也可以作为某些更高级表示的函数生成; 例如，此类表示可以封装抽象属性，例如颜色，大小，形状等。那么，我们观察到的东西就可以解释为这种抽象概念的三维投影或实例化，就像洞穴人观察到的东西实际上是三维物体的二维投影一样。尽管洞穴人永远看不到 (甚至完全理解) 隐藏的物体，但他们仍然可以对它们进行推理和推论; 以类似的方式，我们可以近似描述我们观察到的数据的潜在表示。</p>
+<p>柏拉图的寓言说明了潜在变量背后的思想，即确定观测值的潜在不可观察的表示形式，而这种类比的一个警告是，在生成建模中，我们通常寻求学习低维的潜在表示形式，而不是高维的表示形式。这是因为尝试学习比观察更高维度的表示是没有强烈先验的徒劳的尝试。另一方面，学习低维延迟也可以看作是一种压缩形式，并且可以潜在地发现描述观察结果的语义上有意义的结构。</p>
+<blockquote>
+<p>图像生成模型的本质：把简单分布(normal distribution 或者 uniform distribution)对应到一张张的图像上</p>
+<p>$c$文字条件，$x$ 图像，学习$p(x|c)$是很困难的，不能拿高斯分布或者任何分布表示，怎么近似表达出整个分布是生成模型的核心。</p>
+</blockquote>
+<h2 id="Autoregressive-Model"><a href="#Autoregressive-Model" class="headerlink" title="Autoregressive Model"></a>Autoregressive Model</h2><p><a target="_blank" rel="noopener" href="https://openai.com/blog/imgae-gpt/">https://openai.com/blog/imgae-gpt/</a></p>
+<p>拉成一排 ，一排一排的生成像素</p>
+<h2 id="Variational-Auto-encoder-VAE"><a href="#Variational-Auto-encoder-VAE" class="headerlink" title="Variational Auto-encoder (VAE)"></a>Variational Auto-encoder (VAE)</h2><p>将图像和分布对应训练 一个decoder 和一个 encoder</p>
+<h2 id="Flow-based-Generative-Model"><a href="#Flow-based-Generative-Model" class="headerlink" title="Flow-based Generative Model"></a>Flow-based Generative Model</h2><p>刻意限制神经网络的架构 ，encoder是可逆的，输入和输出是一致大小的</p>
+<h2 id="Diffusion-Model"><a href="#Diffusion-Model" class="headerlink" title="Diffusion Model"></a>Diffusion Model</h2><p>Denoising Diffusion Probabilistic Models (DDPM) </p>
+<p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2006.11239">https://arxiv.org/abs/2006.11239</a></p>
+<p>Stable Diffusion </p>
+<p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2112.10752">https://arxiv.org/abs/2112.10752</a></p>
+<p>DALL-E series  </p>
+<p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2204.06125">https://arxiv.org/abs/2204.06125</a></p>
+<p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2102.12092">https://arxiv.org/abs/2102.12092</a></p>
+<p>Imagen  </p>
+<p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2205.11487">https://arxiv.org/abs/2205.11487</a></p>
+<h2 id="Generative-Adversarial-Network-GAN"><a href="#Generative-Adversarial-Network-GAN" class="headerlink" title="Generative Adversarial Network (GAN)"></a>Generative Adversarial Network (GAN)</h2><p>学习一个decoder，在训练一个discriminator，去判断是否是真的图片，即图像的分布是否一样</p>
+<h2 id="评价指标"><a href="#评价指标" class="headerlink" title="评价指标"></a>评价指标</h2><p><strong>FID 值</strong>：评估图像生成模型的好坏，用预训练的CNN生成特征向量latent，假设真和假都是高斯分布，算两个高斯分布的距离frechet distance</p>
+<p><strong>CLIP值：</strong>Contrastive language-image pre-trainimg，文字输入文字编码器，图像输入图像编码器，看两个距离远不远。</p>
+<p>VAE + GAN         <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1512.09300">https://arxiv.org/abs/1512.09300</a><br>Flow +GAN        <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1705.08868">https://arxiv.org/abs/1705.08868</a><br>Diffusion +GAN<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2206.02262">https://arxiv.org/abs/2206.02262</a></p>
+<h2 id="学习问题–如何找到最大化似然函数-p-x-theta"><a href="#学习问题–如何找到最大化似然函数-p-x-theta" class="headerlink" title="学习问题–如何找到最大化似然函数$p(x;\theta)$"></a>学习问题–如何找到最大化似然函数$p(x;\theta)$</h2><h3 id="1-显式的建模（设定了-p-x-theta-的形式）"><a href="#1-显式的建模（设定了-p-x-theta-的形式）" class="headerlink" title="1. 显式的建模（设定了$p(x;\theta)$的形式）"></a>1. 显式的建模（设定了$p(x;\theta)$的形式）</h3><h4 id="1-1-精确建模"><a href="#1-1-精确建模" class="headerlink" title="1.1 精确建模"></a>1.1 精确建模</h4><ul>
+<li>不含隐变量 Autoregressive Model</li>
+<li>含有隐变量 Flow-based Model</li>
+</ul>
+<h4 id="1-2-近似建模"><a href="#1-2-近似建模" class="headerlink" title="1.2 近似建模"></a>1.2 近似建模</h4><ul>
+<li>变分推断 VAE</li>
+<li>采样 MCMC</li>
+<li>扩散模型 Diffusion Model</li>
+</ul>
+<h3 id="2-隐式的建模（不关系-p-x-theta-的形式）"><a href="#2-隐式的建模（不关系-p-x-theta-的形式）" class="headerlink" title="2. 隐式的建模（不关系$p(x;\theta)$的形式）"></a>2. 隐式的建模（不关系$p(x;\theta)$的形式）</h3><ul>
+<li>直接建模 GAN</li>
+<li>简介建模 (MC)GSN</li>
+</ul>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">JiJunhao</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://jijunhao.github.io/2023/04/23/article20230413/">http://jijunhao.github.io/2023/04/23/article20230413/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">JiJunhao</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Python/">
+                                    <span class="chip bg-color">Python</span>
+                                </a>
+                            
+                                <a href="/tags/PyTorch/">
+                                    <span class="chip bg-color">PyTorch</span>
+                                </a>
+                            
+                                <a href="/tags/CV/">
+                                    <span class="chip bg-color">CV</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="card" data-aos="fade-up">
+    <div id="utteranc-container" class="card-content">
+        <script src="https://utteranc.es/client.js"
+            repo="jijunhao/utterances"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+        </script>
+    </div>
+</div>
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2023/04/23/article20230423/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/6.webp" class="responsive-img" alt="Transformer and MLP 论文阅读">
+                        
+                        <span class="card-title">Transformer and MLP 论文阅读</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Transformer and MLP 论文阅读
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-04-23
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Transformer/" class="post-category">
+                                    Transformer
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Transformer/">
+                        <span class="chip bg-color">Transformer</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/04/22/article20230422/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/21.webp" class="responsive-img" alt="Attention 论文阅读">
+                        
+                        <span class="card-title">Attention 论文阅读</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Attention 论文阅读
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-22
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Attention/" class="post-category">
+                                    Attention
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Attention/">
+                        <span class="chip bg-color">Attention</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
 </div>
 
 
 <script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/banner/" + new Date().getDay() + '.webp';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('100')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 季俊豪的博客<br />'
+            + '文章作者: JiJunhao<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
 </script>
 
 
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/prism/prism.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/codeBlock/codeShrink.js"></script>
+
+
+
     </div>
-</div>
-
-<main class="content">
-
-    
-
-<div id="tags" class="container chip-container">
-    <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
-            </div>
-            <div class="tag-chips">
-                
-                
-                <a href="/tags/Hexo/" title="Hexo: 5">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Hexo" style="background-color: #F9EBEA;">Hexo
-                        <span class="tag-length">5</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Linux/" title="Linux: 3">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Linux" style="background-color: #F5EEF8;">Linux
-                        <span class="tag-length">3</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" title="人工智能: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="人工智能" style="background-color: #D5F5E3;">人工智能
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/conda/" title="conda: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="conda" style="background-color: #E8F8F5;">conda
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Python/" title="Python: 7">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Python" style="background-color: #FEF9E7;">Python
-                        <span class="tag-length">7</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/pip/" title="pip: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            data-tagname="pip" style="background-color: #F8F9F9;">pip
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/" title="搜索引擎: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="搜索引擎" style="background-color: #82E0AA;">搜索引擎
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/ChatGPT/" title="ChatGPT: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="ChatGPT" style="background-color: #D7BDE2;">ChatGPT
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Git/" title="Git: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Git" style="background-color: #A3E4D7;">Git
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Word/" title="Word: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Word" style="background-color: #85C1E9;">Word
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/PyTorch/" title="PyTorch: 4">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="PyTorch" style="background-color: #F8C471;">PyTorch
-                        <span class="tag-length">4</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/CV/" title="CV: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="CV" style="background-color: #F9E79F;">CV
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%8A%80%E6%9C%AF%E5%B7%A5%E5%85%B7/" title="技术工具: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="技术工具" style="background-color: #F9E79F;">技术工具
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Zotero/" title="Zotero: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Zotero" style="background-color: #D7BDE2;">Zotero
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Math%EF%BC%8CML/" title="Math，ML: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Math，ML" style="background-color: #82E0AA;">Math，ML
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/GAN/" title="GAN: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="GAN" style="background-color: #D7BDE2;">GAN
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Diffusion/" title="Diffusion: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Diffusion" style="background-color: #FEF9E7;">Diffusion
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Differential-Privacy/" title="Differential Privacy: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Differential Privacy" style="background-color: #F9E79F;">Differential Privacy
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Attention/" title="Attention: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Attention" style="background-color: #FFF;">Attention
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Transformer/" title="Transformer: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Transformer" style="background-color: #F5EEF8;">Transformer
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/AIGC/" title="AIGC: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="AIGC" style="background-color: #F9E79F;">AIGC
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-            </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
         </div>
     </div>
 </div>
 
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
     
 
-    <article id="articles" class="container articles">
-        <div class="row tags-posts">
-            
-            
-            <div class="article tag-post col s12 m6 l4" data-tags="Python, pip" data-aos="fade-up">
-                <div class="card">
-                    <a href="/2023/02/06/article20230206/">
-                        <div class="card-image tag-image">
-                            
-                            
-                            <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/0.webp" class="responsive-img" alt="pip介绍及常用命令">
-                            
-                            <span class="card-title">pip介绍及常用命令</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-02-06
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Python/" class="post-category">
-                                Python
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </article>
 </main>
 
+
+<!-- mathjax2.0-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+</script>
+
+
+
+<!-- mathjax3.0
+
+<script type="text/javascript" id="MathJax-script" async  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML"></script>
+<script>
+MathJax = {
+    tex:{
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+    svg:{
+            fontCache: 'global'
+        }
+    };
+</script>
+
+-->
 
 
 
