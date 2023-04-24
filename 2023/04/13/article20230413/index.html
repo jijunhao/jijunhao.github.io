@@ -489,7 +489,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    1.4k
                 </div>
                 
 
@@ -559,6 +559,10 @@
 <li>直接建模 GAN</li>
 <li>简介建模 (MC)GSN</li>
 </ul>
+<h2 id="一个生成模型通用的框架"><a href="#一个生成模型通用的框架" class="headerlink" title="一个生成模型通用的框架"></a>一个生成模型通用的框架</h2><p>文字、semantic map、representation等条件输入<strong>Text Encoder</strong> </p>
+<p>然后和image（选带噪音）一起塞到<strong>Generative Model</strong>（可以是任何生成模型）</p>
+<p>生成一个<strong>中间产物</strong>（类似于图像的压缩版本或者带噪音的版本或者特征表示）</p>
+<p>然后将这个<strong>中间产物</strong>输入到<strong>Decoder</strong>（可以是超分辨率，可以是去噪，任意类型任意个数的Decoder），恢复出图像</p>
 
                 
             </div>
@@ -1031,7 +1035,7 @@ MathJax = {
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">48.9k</span>
+                        class="white-color">49k</span>
             
             
             
