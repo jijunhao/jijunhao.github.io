@@ -6,7 +6,7 @@
   <link href="http://jijunhao.github.io/atom.xml" rel="self"/>
   
   <link href="http://jijunhao.github.io/"/>
-  <updated>2023-04-29T08:04:13.585Z</updated>
+  <updated>2023-04-29T08:40:43.113Z</updated>
   <id>http://jijunhao.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://jijunhao.github.io/2023/04/28/article20230428/"/>
     <id>http://jijunhao.github.io/2023/04/28/article20230428/</id>
     <published>2023-04-28T02:07:56.000Z</published>
-    <updated>2023-04-29T08:04:13.585Z</updated>
+    <updated>2023-04-29T08:40:43.113Z</updated>
     
     
       
@@ -34,7 +34,7 @@
     
     
     
-    <category term="Diffusion" scheme="http://jijunhao.github.io/categories/Diffusion/"/>
+    <category term="论文阅读" scheme="http://jijunhao.github.io/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/"/>
     
     
     <category term="Diffusion" scheme="http://jijunhao.github.io/tags/Diffusion/"/>
@@ -46,7 +46,7 @@
     <link href="http://jijunhao.github.io/2023/04/24/article20230424/"/>
     <id>http://jijunhao.github.io/2023/04/24/article20230424/</id>
     <published>2023-04-24T04:07:56.000Z</published>
-    <updated>2023-04-26T00:20:23.939Z</updated>
+    <updated>2023-04-29T08:40:30.527Z</updated>
     
     
       
@@ -60,7 +60,7 @@
     
     
     
-    <category term="AIGC" scheme="http://jijunhao.github.io/categories/AIGC/"/>
+    <category term="人工智能" scheme="http://jijunhao.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
     
     
     <category term="AIGC" scheme="http://jijunhao.github.io/tags/AIGC/"/>
@@ -72,7 +72,7 @@
     <link href="http://jijunhao.github.io/2023/04/23/article20230423/"/>
     <id>http://jijunhao.github.io/2023/04/23/article20230423/</id>
     <published>2023-04-23T04:07:56.000Z</published>
-    <updated>2023-04-23T12:11:56.000Z</updated>
+    <updated>2023-04-29T08:40:18.512Z</updated>
     
     
       
@@ -85,7 +85,7 @@
     
     
     
-    <category term="Transformer" scheme="http://jijunhao.github.io/categories/Transformer/"/>
+    <category term="论文阅读" scheme="http://jijunhao.github.io/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/"/>
     
     
     <category term="Transformer" scheme="http://jijunhao.github.io/tags/Transformer/"/>
@@ -97,7 +97,7 @@
     <link href="http://jijunhao.github.io/2023/04/22/article20230422/"/>
     <id>http://jijunhao.github.io/2023/04/22/article20230422/</id>
     <published>2023-04-22T04:07:56.000Z</published>
-    <updated>2023-04-23T09:18:06.000Z</updated>
+    <updated>2023-04-29T08:40:15.544Z</updated>
     
     
       
@@ -111,7 +111,7 @@
     
     
     
-    <category term="Attention" scheme="http://jijunhao.github.io/categories/Attention/"/>
+    <category term="论文阅读" scheme="http://jijunhao.github.io/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/"/>
     
     
     <category term="Attention" scheme="http://jijunhao.github.io/tags/Attention/"/>
@@ -123,7 +123,7 @@
     <link href="http://jijunhao.github.io/2023/04/21/article20230421/"/>
     <id>http://jijunhao.github.io/2023/04/21/article20230421/</id>
     <published>2023-04-21T04:07:56.000Z</published>
-    <updated>2023-04-22T13:12:18.000Z</updated>
+    <updated>2023-04-29T08:40:12.741Z</updated>
     
     
       
@@ -137,7 +137,7 @@
     
     
     
-    <category term="Differential Privacy" scheme="http://jijunhao.github.io/categories/Differential-Privacy/"/>
+    <category term="论文阅读" scheme="http://jijunhao.github.io/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/"/>
     
     
     <category term="Differential Privacy" scheme="http://jijunhao.github.io/tags/Differential-Privacy/"/>
@@ -149,7 +149,7 @@
     <link href="http://jijunhao.github.io/2023/04/20/article20230420/"/>
     <id>http://jijunhao.github.io/2023/04/20/article20230420/</id>
     <published>2023-04-20T02:07:56.000Z</published>
-    <updated>2023-04-23T09:18:06.000Z</updated>
+    <updated>2023-04-29T08:40:09.013Z</updated>
     
     
       
@@ -166,7 +166,7 @@
     
     
     
-    <category term="Diffusion" scheme="http://jijunhao.github.io/categories/Diffusion/"/>
+    <category term="论文阅读" scheme="http://jijunhao.github.io/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/"/>
     
     
     <category term="Diffusion" scheme="http://jijunhao.github.io/tags/Diffusion/"/>
@@ -178,7 +178,7 @@
     <link href="http://jijunhao.github.io/2023/04/19/article20230419/"/>
     <id>http://jijunhao.github.io/2023/04/19/article20230419/</id>
     <published>2023-04-19T04:07:56.000Z</published>
-    <updated>2023-04-23T09:18:06.000Z</updated>
+    <updated>2023-04-29T08:40:05.797Z</updated>
     
     
       
@@ -195,7 +195,7 @@
     
     
     
-    <category term="GAN" scheme="http://jijunhao.github.io/categories/GAN/"/>
+    <category term="论文阅读" scheme="http://jijunhao.github.io/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/"/>
     
     
     <category term="GAN" scheme="http://jijunhao.github.io/tags/GAN/"/>
@@ -207,7 +207,7 @@
     <link href="http://jijunhao.github.io/2023/04/18/article20230418/"/>
     <id>http://jijunhao.github.io/2023/04/18/article20230418/</id>
     <published>2023-04-18T10:07:56.000Z</published>
-    <updated>2023-04-29T08:04:24.544Z</updated>
+    <updated>2023-04-29T08:41:48.285Z</updated>
     
     
       
@@ -220,10 +220,10 @@
     
     
     
-    <category term="Math" scheme="http://jijunhao.github.io/categories/Math/"/>
+    <category term="人工智能" scheme="http://jijunhao.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
     
     
-    <category term="Math，ML" scheme="http://jijunhao.github.io/tags/Math%EF%BC%8CML/"/>
+    <category term="Math，机器学习" scheme="http://jijunhao.github.io/tags/Math%EF%BC%8C%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
@@ -232,7 +232,7 @@
     <link href="http://jijunhao.github.io/2023/04/13/article20230413/"/>
     <id>http://jijunhao.github.io/2023/04/13/article20230413/</id>
     <published>2023-04-13T04:07:56.000Z</published>
-    <updated>2023-04-29T07:24:56.218Z</updated>
+    <updated>2023-04-29T08:39:54.478Z</updated>
     
     
       
@@ -246,7 +246,7 @@
     
     
     
-    <category term="CV" scheme="http://jijunhao.github.io/categories/CV/"/>
+    <category term="计算机视觉" scheme="http://jijunhao.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
     
     
     <category term="Python" scheme="http://jijunhao.github.io/tags/Python/"/>
@@ -262,7 +262,7 @@
     <link href="http://jijunhao.github.io/2023/04/12/article20230412/"/>
     <id>http://jijunhao.github.io/2023/04/12/article20230412/</id>
     <published>2023-04-12T15:07:56.000Z</published>
-    <updated>2023-04-24T03:36:46.000Z</updated>
+    <updated>2023-04-29T08:39:46.203Z</updated>
     
     
       
@@ -275,7 +275,7 @@
     
     
     
-    <category term="CV" scheme="http://jijunhao.github.io/categories/CV/"/>
+    <category term="计算机视觉" scheme="http://jijunhao.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
     
     
     <category term="Python" scheme="http://jijunhao.github.io/tags/Python/"/>
@@ -456,7 +456,7 @@
     <link href="http://jijunhao.github.io/2023/03/22/article20230322/"/>
     <id>http://jijunhao.github.io/2023/03/22/article20230322/</id>
     <published>2023-03-22T12:03:17.000Z</published>
-    <updated>2023-04-25T15:51:02.343Z</updated>
+    <updated>2023-04-29T08:39:14.907Z</updated>
     
     
       
@@ -470,7 +470,7 @@
     
     
     
-    <category term="ChatGPT" scheme="http://jijunhao.github.io/categories/ChatGPT/"/>
+    <category term="技术工具" scheme="http://jijunhao.github.io/categories/%E6%8A%80%E6%9C%AF%E5%B7%A5%E5%85%B7/"/>
     
     
     <category term="ChatGPT" scheme="http://jijunhao.github.io/tags/ChatGPT/"/>
@@ -507,7 +507,7 @@
     <link href="http://jijunhao.github.io/2023/03/13/article20230313/"/>
     <id>http://jijunhao.github.io/2023/03/13/article20230313/</id>
     <published>2023-03-13T11:38:56.000Z</published>
-    <updated>2023-04-09T04:56:16.000Z</updated>
+    <updated>2023-04-29T08:39:05.580Z</updated>
     
     
       
@@ -523,7 +523,7 @@
     
     
     
-    <category term="ChatGPT" scheme="http://jijunhao.github.io/categories/ChatGPT/"/>
+    <category term="技术工具" scheme="http://jijunhao.github.io/categories/%E6%8A%80%E6%9C%AF%E5%B7%A5%E5%85%B7/"/>
     
     
     <category term="ChatGPT" scheme="http://jijunhao.github.io/tags/ChatGPT/"/>
