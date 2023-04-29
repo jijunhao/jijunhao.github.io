@@ -49,9 +49,9 @@
 
     <script src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/jquery/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/css/loading.css">
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="季俊豪的博客" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="季俊豪的博客" type="application/atom+xml">
 </head>
 
 
@@ -543,7 +543,7 @@
 <li>智能数字内容创作</li>
 </ul>
 <h2 id="aigc-能干什么"><a class="markdownIt-Anchor" href="#aigc-能干什么"></a> AIGC 能干什么</h2>
-<p><img src="https://pic4.zhimg.com/v2-241adda09df69287c823a4e710d877a3_b.jpg" alt=""></p>
+<p><img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202304292126851.png" alt=""></p>
 <h2 id="深度学习促进了aigc的发展"><a class="markdownIt-Anchor" href="#深度学习促进了aigc的发展"></a> 深度学习促进了AIGC的发展</h2>
 <p>深度神经网络的结构升级是推动 AIGC 快速发展的主要因素之一。</p>
 <p>一方面，实验证明，深度神经网络的学习能力和模型大小呈正相关，伴随着模型参数量的增加，相对应深度神经网络的能力一般会取得大幅提升。但是，随意地增加神经网络规模是行不通的，越大规模神经网络往往意味着更大的训练难度，因此深度神经网络的结构设计显得尤为关键。从早期的玻尔兹曼机，多层感知机，卷积神经网络到深度残差网络和 Transformer 大模型，网络结构进化带来了深度学习模型参数量从几万到数千亿跃升，模型层数也从开始的个位数逐步发展到成百上千。</p>
@@ -558,11 +558,11 @@
 <h3 id="2-gpt"><a class="markdownIt-Anchor" href="#2-gpt"></a> 2. GPT</h3>
 <p>当前最热门的大模型 ChatGPT，其采用的大规模预训练模型 GPT-3.5，核心便是 transformer 和 RLHF 两种语言模型。GPT 的全称是 Generative Pre-Trained Transformer，顾名思义，GPT 的目的就是以 Transformer 为基础模型，使用预训练技术得到通用的文本模型。</p>
 <h3 id="3-dmdiffusion-model扩散模型"><a class="markdownIt-Anchor" href="#3-dmdiffusion-model扩散模型"></a> 3. DM（Diffusion Model，扩散模型）</h3>
-<p><img src="https://pic4.zhimg.com/v2-53b8d583b86d4b734effa808ed01c0cb_b.jpg" alt=""></p>
+<p><img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202304292126617.png" alt=""></p>
 <h3 id="4-clipcontrastive-language-image-pre-training大规模预训练图文表征模型"><a class="markdownIt-Anchor" href="#4-clipcontrastive-language-image-pre-training大规模预训练图文表征模型"></a> 4. CLIP（Contrastive Language-Image Pre-Training，大规模预训练图文表征模型）</h3>
 <p>大规模预训练图文表征模型用 4 亿对来自网络的图文数据集，将文本作为图像标签，进行训练。进行下游任务时，只需要提供和图上的 concepts 对应的文本描述，就可以进行 zero-shot transfer。CLIP 为 CV 研究者打开了一片非常非常广阔的天地，<strong>把自然语言级别的抽象概念带到计算机视觉里</strong>。</p>
 <p>图片分类的 zero-shot 指的是对未知类别进行推理。CLIP 在进行 zero-shot transfer 时，将数据集中的类别标签转换为文字描述（100 个类别就是 100 个文本描述）zero-shot CLIP 怎么做 prediction？<strong>zero-shot prediction</strong>：基于输入的图片，在类别描述中检索，找到最合适的类别。<strong>Linear-probe evaluation</strong>：通过 CLIP 的 image_encoder 得到视觉向量，结合标签做 Logistic Regression</p>
-<p><img src="https://pic4.zhimg.com/v2-077aa1ebb712d3899e7b4b9fb33f673f_b.jpg" alt=""></p>
+<p><img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202304292126903.png" alt=""></p>
 <p>CLIP 结构非常简单，将图片分类任务转换成图文匹配任务：</p>
 <ol>
 <li>
@@ -600,7 +600,7 @@
 <p>图像解码器通过将图像从潜在空间转换回像素空间来生成最终图像。</p>
 </li>
 </ol>
-<p><img src="https://pic4.zhimg.com/v2-71400db3be2ab83ea870a10a07d9b4db_b.jpg" alt=""></p>
+<p><img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202304292126911.png" alt=""></p>
 <h2 id="工具"><a class="markdownIt-Anchor" href="#工具"></a> 工具</h2>
 <ul>
 <li>ChatGPT</li>
@@ -1004,7 +1004,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">57.8k</span>
+                        class="white-color">61.7k</span>
             
             
             
