@@ -481,7 +481,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    490
+                    492
                 </div>
                 
 
@@ -513,36 +513,48 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="为什么选择-Gitlab"><a href="#为什么选择-Gitlab" class="headerlink" title="为什么选择 Gitlab"></a>为什么选择 Gitlab</h2><ol>
-<li><p>GitHub部署存在的问题</p>
+                <h2 id="为什么选择-gitlab"><a class="markdownIt-Anchor" href="#为什么选择-gitlab"></a> 为什么选择 Gitlab</h2>
+<ol>
+<li>
+<p>GitHub部署存在的问题</p>
 <ul>
-<li><p>不能被百度爬虫爬取，很难被百度收录</p>
+<li>
+<p>不能被百度爬虫爬取，很难被百度收录</p>
 </li>
-<li><p>须本地生成静态网页后部署，并且很难异地或异机编辑</p>
+<li>
+<p>须本地生成静态网页后部署，并且很难异地或异机编辑</p>
 </li>
 </ul>
 </li>
-<li><p>GitLab的优点</p>
+<li>
+<p>GitLab的优点</p>
 <ul>
-<li><p>可被百度爬取内容，没有DNS污染</p>
+<li>
+<p>可被百度爬取内容，没有DNS污染</p>
 </li>
-<li><p>在GitLab服务器自动化部署，可以在线编辑md文档后直接部署</p>
+<li>
+<p>在GitLab服务器自动化部署，可以在线编辑md文档后直接部署</p>
 </li>
-<li><p>隐私保护程度高，仓库为私有仓库，但页面可以发布出去</p>
+<li>
+<p>隐私保护程度高，仓库为私有仓库，但页面可以发布出去</p>
 </li>
-<li><p>有中文支持，<strong>Settings-&gt;Preferences-&gt;Localization-&gt;Language</strong> 选择语言中文</p>
+<li>
+<p>有中文支持，<strong>Settings-&gt;Preferences-&gt;Localization-&gt;Language</strong> 选择语言中文</p>
 </li>
 </ul>
 </li>
 </ol>
-<h2 id="移植博客并部署到-Gitlab上"><a href="#移植博客并部署到-Gitlab上" class="headerlink" title="移植博客并部署到 Gitlab上"></a>移植博客并部署到 Gitlab上</h2><h3 id="3-1-在-Gitlab-上创建仓库"><a href="#3-1-在-Gitlab-上创建仓库" class="headerlink" title="3.1 在 Gitlab 上创建仓库"></a>3.1 在 Gitlab 上创建仓库</h3><p>在 Gitlab 上创建一个新的仓库。您可以在 Gitlab 上创建一个新的仓库，仓库名称应该为 <code>&lt;username&gt;.gitlab.io</code>。其中，<code>&lt;username&gt;</code>是您的 Gitlab 用户名。一般来说仓库设定为私有就行。</p>
+<h2 id="移植博客并部署到-gitlab上"><a class="markdownIt-Anchor" href="#移植博客并部署到-gitlab上"></a> 移植博客并部署到 Gitlab上</h2>
+<h3 id="31-在-gitlab-上创建仓库"><a class="markdownIt-Anchor" href="#31-在-gitlab-上创建仓库"></a> 3.1 在 Gitlab 上创建仓库</h3>
+<p>在 Gitlab 上创建一个新的仓库。您可以在 Gitlab 上创建一个新的仓库，仓库名称应该为 <code>&lt;username&gt;.gitlab.io</code>。其中，<code>&lt;username&gt;</code>是您的 Gitlab 用户名。一般来说仓库设定为私有就行。</p>
 <blockquote>
 <p>注意配置 git 和 ssh 免密登录</p>
 <p><a target="_blank" rel="noopener" href="https://github.com/jijunhao/git-skills/blob/main/02%E9%85%8D%E7%BD%AEGit.md">配置git</a>    <a target="_blank" rel="noopener" href="https://github.com/jijunhao/git-skills/blob/main/%E9%99%84%E5%BD%95B-SSH%E5%AF%86%E5%8C%99.md">配置ssh密钥</a></p>
 </blockquote>
-<h3 id="3-2-下载-Gitlab-仓库"><a href="#3-2-下载-Gitlab-仓库" class="headerlink" title="3.2 下载 Gitlab 仓库"></a>3.2 下载 Gitlab 仓库</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> clone <span class="token operator">&lt;</span>git-repository-url<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h3 id="3-3-将已有的博客复制到本地仓库"><a href="#3-3-将已有的博客复制到本地仓库" class="headerlink" title="3.3 将已有的博客复制到本地仓库"></a>3.3 将已有的博客复制到本地仓库</h3><p>只需要复制<code>scaffolds</code>、<code>source</code>、<code>themes</code>和一些配置文件到gitlab的本地仓库</p>
+<h3 id="32-下载-gitlab-仓库"><a class="markdownIt-Anchor" href="#32-下载-gitlab-仓库"></a> 3.2 下载 Gitlab 仓库</h3>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> clone <span class="token operator">&lt;</span>git-repository-url<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="33-将已有的博客复制到本地仓库"><a class="markdownIt-Anchor" href="#33-将已有的博客复制到本地仓库"></a> 3.3 将已有的博客复制到本地仓库</h3>
+<p>只需要复制<code>scaffolds</code>、<code>source</code>、<code>themes</code>和一些配置文件到gitlab的本地仓库</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"> $ tree <span class="token parameter variable">-L</span> <span class="token number">2</span>
 <span class="token builtin class-name">.</span>
 ├── scaffolds
@@ -556,11 +568,11 @@
 ├── _config.yml
 ├── package.json
 └── package-lock.json<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <blockquote>
 <p>注意需要卸载 hexo-deployer-git 及其相关配置文件，或者直接修改package.json</p>
 </blockquote>
-<h3 id="3-4-创建一个自动化部署文件"><a href="#3-4-创建一个自动化部署文件" class="headerlink" title="3.4  创建一个自动化部署文件"></a>3.4  创建一个自动化部署文件</h3><p>创建一个<code>.gitlab-ci.yml</code> 的文件，可以直接创建，也可以在网页端创建。</p>
+<h3 id="34-创建一个自动化部署文件"><a class="markdownIt-Anchor" href="#34-创建一个自动化部署文件"></a> 3.4  创建一个自动化部署文件</h3>
+<p>创建一个<code>.gitlab-ci.yml</code> 的文件，可以直接创建，也可以在网页端创建。</p>
 <pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">image</span><span class="token punctuation">:</span> node<span class="token punctuation">:</span>18.9.1
 
 <span class="token key atrule">pages</span><span class="token punctuation">:</span>
@@ -579,15 +591,15 @@
     <span class="token punctuation">-</span> public
   <span class="token key atrule">only</span><span class="token punctuation">:</span>
   <span class="token punctuation">-</span> main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="3-5-部署到-Gitlab"><a href="#3-5-部署到-Gitlab" class="headerlink" title="3.5 部署到 Gitlab"></a>3.5 部署到 Gitlab</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+<h3 id="35-部署到-gitlab"><a class="markdownIt-Anchor" href="#35-部署到-gitlab"></a> 3.5 部署到 Gitlab</h3>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
 <span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"update blog"</span>
 <span class="token function">git</span> push<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
 <blockquote>
 <p>以后每次异地修改只要 git pull，然后运行上面三条命令即可</p>
 </blockquote>
-<h3 id="3-6-修改-Pages-权限"><a href="#3-6-修改-Pages-权限" class="headerlink" title="3.6 修改 Pages 权限"></a>3.6 修改 Pages 权限</h3><p>进入设置，把Pages权限设置为<code>everyone</code>。非常重要！！</p>
+<h3 id="36-修改-pages-权限"><a class="markdownIt-Anchor" href="#36-修改-pages-权限"></a> 3.6 修改 Pages 权限</h3>
+<p>进入设置，把Pages权限设置为<code>everyone</code>。非常重要！！</p>
 <p>完成推送后在项目里点击 <code>CI/CD</code> 查看，显示成功部署即可由<code>https://username.gitlab.io/</code>访问你的博客</p>
 
                 
@@ -1026,7 +1038,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">50.2k</span>
+                        class="white-color">57.8k</span>
             
             
             
@@ -1346,6 +1358,11 @@ $(function () {
     
     <script src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/instantpage/instantpage.js" type="module"></script>
     
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
 
 </body>
 

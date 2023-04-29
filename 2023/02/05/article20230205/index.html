@@ -521,78 +521,98 @@
 <p><strong>参考文献</strong></p>
 <p><a target="_blank" rel="noopener" href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a>  <a target="_blank" rel="noopener" href="https://www.anaconda.com/">Anaconda</a></p>
 </blockquote>
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><code>Miniconda</code>和<code>Anaconda</code>都是Python环境管理工具，可以用于创建、管理和部署Python环境及其依赖的软件包。它们的主要区别在于其默认安装的软件包和所需空间的大小。</p>
+<h2 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h2>
+<p><code>Miniconda</code>和<code>Anaconda</code>都是Python环境管理工具，可以用于创建、管理和部署Python环境及其依赖的软件包。它们的主要区别在于其默认安装的软件包和所需空间的大小。</p>
 <ul>
-<li><p>Miniconda 是一个轻量级的Python环境管理工具，仅包括conda、Python及其所需的基本依赖库。因此，它的安装包大小较小，只有几十兆，相比于Anaconda更加灵活。用户可以根据自己的需要逐步安装所需的软件包，避免不必要的浪费。在需要安装新软件包时，可以使用conda install命令来安装所需的软件包。这使得Miniconda在轻量化、快速安装、定制化、跨平台方面具有优势。</p>
+<li>
+<p>Miniconda 是一个轻量级的Python环境管理工具，仅包括conda、Python及其所需的基本依赖库。因此，它的安装包大小较小，只有几十兆，相比于Anaconda更加灵活。用户可以根据自己的需要逐步安装所需的软件包，避免不必要的浪费。在需要安装新软件包时，可以使用conda install命令来安装所需的软件包。这使得Miniconda在轻量化、快速安装、定制化、跨平台方面具有优势。</p>
 </li>
-<li><p>Anaconda 是一个包含了数百个预安装软件包的Python环境管理工具，包括Python解释器、各种科学计算和数据分析库、可视化工具、深度学习框架等。Anaconda旨在为数据科学家和研究者提供一个完整的数据科学环境，可以直接安装并使用大量的数据科学工具。这也意味着，Anaconda的安装包非常大，通常需要几个GB的磁盘空间，安装所需的时间也较长。同时，由于默认安装了大量的软件包，如果不需要的话，可能会浪费磁盘空间和内存资源。</p>
+<li>
+<p>Anaconda 是一个包含了数百个预安装软件包的Python环境管理工具，包括Python解释器、各种科学计算和数据分析库、可视化工具、深度学习框架等。Anaconda旨在为数据科学家和研究者提供一个完整的数据科学环境，可以直接安装并使用大量的数据科学工具。这也意味着，Anaconda的安装包非常大，通常需要几个GB的磁盘空间，安装所需的时间也较长。同时，由于默认安装了大量的软件包，如果不需要的话，可能会浪费磁盘空间和内存资源。</p>
 </li>
 </ul>
 <p>综上所述，如果您需要一个灵活、快速、定制化的Python环境管理工具，并且希望自己安装所需的软件包，那么Miniconda可能更适合您。如果您需要一个预装有大量数据科学工具的环境，那么Anaconda可能更适合您。两者安装步骤几乎一致。</p>
-<h2 id="1-安装-Miniconda"><a href="#1-安装-Miniconda" class="headerlink" title="1. 安装 Miniconda"></a>1. 安装 Miniconda</h2><h3 id="1-1-Windows下安装"><a href="#1-1-Windows下安装" class="headerlink" title="1.1 Windows下安装"></a>1.1 Windows下安装</h3><p>在 Windows 系统下安装 Miniconda，可以按照以下步骤进行：</p>
+<h2 id="1-安装-miniconda"><a class="markdownIt-Anchor" href="#1-安装-miniconda"></a> 1. 安装 Miniconda</h2>
+<h3 id="11-windows下安装"><a class="markdownIt-Anchor" href="#11-windows下安装"></a> 1.1 Windows下安装</h3>
+<p>在 Windows 系统下安装 Miniconda，可以按照以下步骤进行：</p>
 <ul>
-<li><p>首先，从官网下载适合你 Windows 系统的 Miniconda 安装程序：<a target="_blank" rel="noopener" href="https://docs.conda.io/en/latest/miniconda.html">https://docs.conda.io/en/latest/miniconda.html</a></p>
+<li>
+<p>首先，从官网下载适合你 Windows 系统的 Miniconda 安装程序：<a target="_blank" rel="noopener" href="https://docs.conda.io/en/latest/miniconda.html">https://docs.conda.io/en/latest/miniconda.html</a></p>
 </li>
-<li><p>下载完成后，双击安装程序并按照提示进行安装。</p>
+<li>
+<p>下载完成后，双击安装程序并按照提示进行安装。</p>
 </li>
-<li><p>安装过程中需要阅读并同意许可协议。</p>
+<li>
+<p>安装过程中需要阅读并同意许可协议。</p>
 </li>
-<li><p>安装过程中需要选择 Miniconda 的安装路径。默认情况下是在 <code>C:\Users\&lt;username&gt;\Miniconda3</code> 目录下创建一个名为 <code>Miniconda3</code> 的目录。你也可以选择其他路径，根据提示进行选择。</p>
+<li>
+<p>安装过程中需要选择 Miniconda 的安装路径。默认情况下是在 <code>C:\Users\&lt;username&gt;\Miniconda3</code> 目录下创建一个名为 <code>Miniconda3</code> 的目录。你也可以选择其他路径，根据提示进行选择。</p>
 </li>
 </ul>
 <p>安装完成后，你就可以在终端中使用 conda 命令了，创建环境，安装依赖等操作都可以使用 conda 命令完成。</p>
-<h3 id="1-2-macOS下安装"><a href="#1-2-macOS下安装" class="headerlink" title="1.2 macOS下安装"></a>1.2 macOS下安装</h3><p>在 macOS 系统下安装 Miniconda，可以按照以下步骤进行：</p>
+<h3 id="12-macos下安装"><a class="markdownIt-Anchor" href="#12-macos下安装"></a> 1.2 macOS下安装</h3>
+<p>在 macOS 系统下安装 Miniconda，可以按照以下步骤进行：</p>
 <ul>
-<li><p>首先，从官网下载适合你 macOS 系统的 Miniconda 安装程序：<a target="_blank" rel="noopener" href="https://docs.conda.io/en/latest/miniconda.html">https://docs.conda.io/en/latest/miniconda.html</a></p>
+<li>
+<p>首先，从官网下载适合你 macOS 系统的 Miniconda 安装程序：<a target="_blank" rel="noopener" href="https://docs.conda.io/en/latest/miniconda.html">https://docs.conda.io/en/latest/miniconda.html</a></p>
 </li>
-<li><p>下载完成后，双击安装程序并按照提示进行安装。</p>
+<li>
+<p>下载完成后，双击安装程序并按照提示进行安装。</p>
 </li>
-<li><p>安装过程中需要阅读并同意许可协议。</p>
+<li>
+<p>安装过程中需要阅读并同意许可协议。</p>
 </li>
-<li><p>安装过程中需要选择 Miniconda 的安装路径。默认情况下是在用户目录下创建一个名为 <code>miniconda3</code> 的目录。你也可以选择其他路径，根据提示进行选择。</p>
+<li>
+<p>安装过程中需要选择 Miniconda 的安装路径。默认情况下是在用户目录下创建一个名为 <code>miniconda3</code> 的目录。你也可以选择其他路径，根据提示进行选择。</p>
 </li>
-<li><p>安装完成后，需要在终端中运行以下命令，以便 Miniconda 的环境变量生效：</p>
+<li>
+<p>安装完成后，需要在终端中运行以下命令，以便 Miniconda 的环境变量生效：</p>
 </li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">source</span> ~/.bash_profile<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <p>安装完成后，你就可以在终端中使用 conda 命令了，创建环境，安装依赖等操作都可以使用 conda 命令完成。</p>
-<h3 id="1-3-Linux下安装"><a href="#1-3-Linux下安装" class="headerlink" title="1.3 Linux下安装"></a>1.3 Linux下安装</h3><p>在 Linux 下安装 Miniconda，可以按照以下步骤进行：</p>
+<h3 id="13-linux下安装"><a class="markdownIt-Anchor" href="#13-linux下安装"></a> 1.3 Linux下安装</h3>
+<p>在 Linux 下安装 Miniconda，可以按照以下步骤进行：</p>
 <ul>
-<li><p>首先，从官网下载适合你 Linux 系统的 Miniconda 安装程序：<a target="_blank" rel="noopener" href="https://docs.conda.io/en/latest/miniconda.html">https://docs.conda.io/en/latest/miniconda.html</a></p>
+<li>
+<p>首先，从官网下载适合你 Linux 系统的 Miniconda 安装程序：<a target="_blank" rel="noopener" href="https://docs.conda.io/en/latest/miniconda.html">https://docs.conda.io/en/latest/miniconda.html</a></p>
 </li>
-<li><p>打开终端，进入下载目录，执行以下命令，安装 Miniconda：</p>
+<li>
+<p>打开终端，进入下载目录，执行以下命令，安装 Miniconda：</p>
 </li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">bash</span> Miniconda3-latest-Linux-x86_64.sh<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <blockquote>
 <p><strong>注意</strong>：如果你下载的是不同版本的安装程序，文件名也会有所不同，请根据你下载的版本自行更改文件名。</p>
 </blockquote>
 <ul>
-<li><p>执行安装命令后，会出现 Miniconda 许可协议的信息，按照提示阅读并同意协议，即输入<code>accept</code></p>
+<li>
+<p>执行安装命令后，会出现 Miniconda 许可协议的信息，按照提示阅读并同意协议，即输入<code>accept</code></p>
 </li>
-<li><p>接下来会提示你选择安装路径，默认情况下是在用户目录下创建一个名为 <code>miniconda3</code> 的目录。你也可以选择其他路径，根据提示进行选择。</p>
+<li>
+<p>接下来会提示你选择安装路径，默认情况下是在用户目录下创建一个名为 <code>miniconda3</code> 的目录。你也可以选择其他路径，根据提示进行选择。</p>
 </li>
-<li><p>安装完成后，终端中会出现提示，说明 Miniconda 已经安装成功。需要重新打开终端，以便 Miniconda 的环境变量生效。</p>
+<li>
+<p>安装完成后，终端中会出现提示，说明 Miniconda 已经安装成功。需要重新打开终端，以便 Miniconda 的环境变量生效。</p>
 </li>
 </ul>
 <p>安装完成后，你就可以在终端中使用 conda 命令了，创建环境，安装依赖等操作都可以使用 conda 命令完成。</p>
-<h2 id="2-配置-Miniconda"><a href="#2-配置-Miniconda" class="headerlink" title="2. 配置 Miniconda"></a>2. 配置 Miniconda</h2><ul>
-<li><p>打开终端或 Anaconda Prompt（Windows 用户）。</p>
+<h2 id="2-配置-miniconda"><a class="markdownIt-Anchor" href="#2-配置-miniconda"></a> 2. 配置 Miniconda</h2>
+<ul>
+<li>
+<p>打开终端或 Anaconda Prompt（Windows 用户）。</p>
 </li>
-<li><p>创建并激活 conda 环境：</p>
+<li>
+<p>创建并激活 conda 环境：</p>
 </li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda create <span class="token parameter variable">--name</span> env_name
 conda activate env_name<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
 <p>这里的 <code>env_name</code> 是你想要创建的环境名称。</p>
 <ul>
 <li>安装所需的包和工具：</li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda <span class="token function">install</span> package_name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <p>这里的 package_name 是你想要安装的包名称。</p>
 <ul>
 <li>可以通过修改 .condarc 文件来修改默认的 conda 配置。</li>
@@ -600,88 +620,78 @@ conda activate env_name<span aria-hidden="true" class="line-numbers-rows"><span>
 <blockquote>
 <p>conda 配置文件的路径:</p>
 <ul>
-<li><p>Linux/macOS: <code>~/.condarc</code> 或 <code>$HOME/.condarc</code></p>
+<li>
+<p>Linux/macOS: <code>~/.condarc</code> 或 <code>$HOME/.condarc</code></p>
 </li>
-<li><p>Windows: <code>USERPROFILE%.condarc</code> 或 <code>C:\Users\username.condarc</code></p>
+<li>
+<p>Windows: <code>USERPROFILE%.condarc</code> 或 <code>C:\Users\username.condarc</code></p>
 </li>
 </ul>
 <p>其中，<code>%USERPROFILE%</code> 为 Windows 系统环境变量，表示当前用户的主目录路径，<code>username</code> 为当前用户名。</p>
 </blockquote>
-<h2 id="3-常用的-conda-命令"><a href="#3-常用的-conda-命令" class="headerlink" title="3. 常用的 conda 命令"></a>3. 常用的 conda 命令</h2><p>conda 是一个用于包管理和环境管理的工具，可以方便地创建、安装、升级和删除不同的软件包和其依赖项。以下是一些常用的 conda 命令：</p>
+<h2 id="3-常用的-conda-命令"><a class="markdownIt-Anchor" href="#3-常用的-conda-命令"></a> 3. 常用的 conda 命令</h2>
+<p>conda 是一个用于包管理和环境管理的工具，可以方便地创建、安装、升级和删除不同的软件包和其依赖项。以下是一些常用的 conda 命令：</p>
 <ul>
 <li>创建一个新的环境：</li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda create <span class="token parameter variable">--name</span> env_name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <p><code>env_name</code> 为你想要创建的环境名称。</p>
 <ul>
 <li>激活一个环境：</li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda activate env_name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <p><code>env_name</code> 为你想要激活的环境名称。</p>
 <ul>
 <li>在激活的环境中安装一个软件包：</li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda <span class="token function">install</span> package_name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <p><code>package_name</code> 为你想要安装的软件包名称。</p>
 <ul>
 <li>列出当前环境中安装的所有软件包：</li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <ul>
 <li>列出所有可用的环境：</li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda <span class="token function">env</span> list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <ul>
 <li>更新 conda：</li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda update conda<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <ul>
 <li>更新所有已安装的软件包：</li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda update <span class="token parameter variable">--all</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <ul>
 <li>从环境中删除一个软件包：</li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda remove package_name
 
 conda remove <span class="token parameter variable">-n</span> env_name package_name<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
 <p><code>package_name</code> 为你想要删除的软件包名称。</p>
 <ul>
 <li>退出环境</li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda deactivate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <ul>
 <li>删除一个环境</li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda remove <span class="token parameter variable">-n</span> env_name <span class="token parameter variable">--all</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <ul>
 <li>conda清理缓存</li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda clean <span class="token parameter variable">-p</span>        <span class="token comment"># 删除没有用的包</span>
 conda clean <span class="token parameter variable">-t</span>        <span class="token comment"># 删除tar包</span>
 conda clean <span class="token parameter variable">-y</span> <span class="token parameter variable">--all</span>  <span class="token comment"># 删除所有的安装包及cache</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
 <ul>
 <li>自动开启和关闭</li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda config <span class="token parameter variable">--set</span> auto_activate_base <span class="token boolean">false</span>  <span class="token comment"># 关闭自动激活状态</span>
 conda config <span class="token parameter variable">--set</span> auto_activate_base <span class="token boolean">true</span>   <span class="token comment"># 关开启自动激活状态</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
 <ul>
 <li>复制一个环境</li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda create <span class="token parameter variable">--name</span> new <span class="token parameter variable">--clone</span> old<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <blockquote>
 <p>在使用conda创建虚拟环境时，默认会将虚拟环境的文件夹放在Anaconda/Miniconda的安装路径下的envs文件夹中，具体路径为：</p>
 <ul>
@@ -691,29 +701,31 @@ conda config <span class="token parameter variable">--set</span> auto_activate_b
 </blockquote>
 <p>当然，你也可以使用conda config命令更改默认路径，例如：</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda config <span class="token parameter variable">--add</span> envs_dirs /path/to/new/envs/folder<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <p>这个命令会在新路径下创建一个名为envs的文件夹，用来存储所有的虚拟环境。</p>
-<h2 id="4-conda-换源"><a href="#4-conda-换源" class="headerlink" title="4. conda 换源"></a>4. conda 换源</h2><p>如果你在使用 conda 时遇到网络问题，可以将 conda 的源换成清华源（<a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/%EF%BC%89%E3%80%82%E5%85%B7%E4%BD%93%E6%AD%A5%E9%AA%A4%E5%A6%82%E4%B8%8B%EF%BC%9A">https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/）。具体步骤如下：</a></p>
+<h2 id="4-conda-换源"><a class="markdownIt-Anchor" href="#4-conda-换源"></a> 4. conda 换源</h2>
+<p>如果你在使用 conda 时遇到网络问题，可以将 conda 的源换成清华源（<a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/%EF%BC%89%E3%80%82%E5%85%B7%E4%BD%93%E6%AD%A5%E9%AA%A4%E5%A6%82%E4%B8%8B%EF%BC%9A">https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/）。具体步骤如下：</a></p>
 <ul>
-<li><p>打开终端或 Anaconda Prompt。</p>
+<li>
+<p>打开终端或 Anaconda Prompt。</p>
 </li>
-<li><p>在命令提示符中输入以下命令：</p>
+<li>
+<p>在命令提示符中输入以下命令：</p>
 </li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda config <span class="token parameter variable">--show</span> <span class="token comment"># 显示当前 conda 配置</span>
 conda config <span class="token parameter variable">--add</span> channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/ <span class="token comment"># 添加清华源的免费仓库</span>
 conda config <span class="token parameter variable">--add</span> channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/ <span class="token comment"># 添加清华源的主要仓库</span>
 conda config <span class="token parameter variable">--set</span> show_channel_urls <span class="token function">yes</span> <span class="token comment"># 显示添加的所有仓库地址</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>这会将清华源添加到你的 conda 配置文件中。</p>
 <ul>
-<li><p>执行 <code>conda update conda</code> 命令，以确保你的 conda 版本是最新的。</p>
+<li>
+<p>执行 <code>conda update conda</code> 命令，以确保你的 conda 版本是最新的。</p>
 </li>
-<li><p>如果你要创建新的环境或安装新的软件包，请使用以下命令：</p>
+<li>
+<p>如果你要创建新的环境或安装新的软件包，请使用以下命令：</p>
 </li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda create <span class="token parameter variable">--name</span> env_name package_name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <p><code>env_name</code> 为你想要创建的环境名称，<code>package_name</code> 为你想要安装的软件包名称。</p>
 <blockquote>
 <p>例如：<code>conda create -n pytorch python==3.8</code> 创建一个 pytorch 环境，pythoon 版本为3.8</p>
@@ -723,7 +735,6 @@ conda config <span class="token parameter variable">--set</span> show_channel_ur
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda config --remove-key channels <span class="token comment"># 移除添加的仓库地址</span>
 conda config <span class="token parameter variable">--set</span> show_channel_urls no <span class="token comment"># 不再显示仓库地址</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
 <p>除了清华源之外，还有不少其他的 conda 镜像源可以使用。以下是一些常用的 conda 镜像源及其地址：</p>
 <ul>
 <li>中科大镜像源：<a target="_blank" rel="noopener" href="https://mirrors.ustc.edu.cn/anaconda/pkgs/main/">https://mirrors.ustc.edu.cn/anaconda/pkgs/main/</a></li>
@@ -736,14 +747,15 @@ conda config <span class="token parameter variable">--set</span> show_channel_ur
 <blockquote>
 <p>需要注意的是，不同的镜像源可能会有不同的速度和可靠性，建议根据自己的网络情况选择合适的镜像源。</p>
 </blockquote>
-<h2 id="5-导出环境"><a href="#5-导出环境" class="headerlink" title="5. 导出环境"></a>5. 导出环境</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda <span class="token function">env</span> <span class="token builtin class-name">export</span> <span class="token operator">&gt;</span> environment.yaml
+<h2 id="5-导出环境"><a class="markdownIt-Anchor" href="#5-导出环境"></a> 5. 导出环境</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda <span class="token function">env</span> <span class="token builtin class-name">export</span> <span class="token operator">&gt;</span> environment.yaml
 
 conda <span class="token function">env</span> create <span class="token parameter variable">-f</span> environment.yaml<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
 <blockquote>
 <p>移植过来的环境只有原来环境里用conda install等命令直接安装的包，用pip之类装的东西没有移植过来，需要重新安装。</p>
 </blockquote>
-<h2 id="6-总结"><a href="#6-总结" class="headerlink" title="6. 总结"></a>6. 总结</h2><p>使用 conda 时，需要注意以下几点：</p>
+<h2 id="6-总结"><a class="markdownIt-Anchor" href="#6-总结"></a> 6. 总结</h2>
+<p>使用 conda 时，需要注意以下几点：</p>
 <ol>
 <li><strong>环境隔离</strong>：conda 可以创建虚拟环境来隔离不同的 Python 包和版本。在使用 conda 安装包时，需要确保安装在正确的环境中，以免出现冲突或版本不兼容的问题。可以使用 <code>conda env list</code> 查看当前存在的环境，使用 <code>conda activate env_name</code> 激活指定的环境。</li>
 <li><strong>版本管理</strong>：conda 可以安装不同版本的 Python 包和库，并且可以轻松地切换不同版本之间。在安装新包或更新已有包时，需要注意是否与当前环境中的其他包兼容。可以使用 <code>conda search package_name</code> 命令查询指定包的可用版本，使用 <code>conda install package_name=version</code> 命令安装指定版本的包。</li>
@@ -1196,7 +1208,7 @@ conda <span class="token function">env</span> create <span class="token paramete
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">50.2k</span>
+                        class="white-color">57.8k</span>
             
             
             
@@ -1516,6 +1528,11 @@ $(function () {
     
     <script src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/instantpage/instantpage.js" type="module"></script>
     
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
 
 </body>
 

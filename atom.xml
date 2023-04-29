@@ -6,7 +6,7 @@
   <link href="http://jijunhao.github.io/atom.xml" rel="self"/>
   
   <link href="http://jijunhao.github.io/"/>
-  <updated>2023-04-26T00:20:23.939Z</updated>
+  <updated>2023-04-29T07:36:58.109Z</updated>
   <id>http://jijunhao.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Diffusion公式推导和理解</title>
+    <link href="http://jijunhao.github.io/2023/04/28/article20230428/"/>
+    <id>http://jijunhao.github.io/2023/04/28/article20230428/</id>
+    <published>2023-04-28T02:07:56.000Z</published>
+    <updated>2023-04-29T07:36:58.109Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Diffusion</summary>
+        
+      
+    
+    
+    
+    <category term="Diffusion" scheme="http://jijunhao.github.io/categories/Diffusion/"/>
+    
+    
+    <category term="Diffusion" scheme="http://jijunhao.github.io/tags/Diffusion/"/>
+    
+  </entry>
   
   <entry>
     <title>AI Generated Content(AIGC)</title>
@@ -28,7 +53,8 @@
       
         
         
-    <summary type="html">&lt;h2 id=&quot;大模型是什么？&quot;&gt;&lt;a href=&quot;#大模型是什么？&quot; class=&quot;headerlink&quot; title=&quot;大模型是什么？&quot;&gt;&lt;/a&gt;大模型是什么？&lt;/h2&gt;&lt;p&gt;大规模预训练模型(large pretrained language</summary>
+    <summary type="html">&lt;h2 id=&quot;大模型是什么&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#大模型是什么&quot;&gt;&lt;/a&gt; 大模型是什么？&lt;/h2&gt;
+&lt;p&gt;大规模预训练模型(large pretrained language</summary>
         
       
     
@@ -105,7 +131,7 @@
         
         
     <summary type="html">&lt;p&gt;【论文阅读】Deep Learning with Differential Privacy&lt;/p&gt;
-&lt;p&gt;（梯度层面）提出DP-SGD，它在更新参数的同时给梯度增加噪声。他们引入了moment accountant算法来跟踪累积隐私损失来估计$\epsilon$和</summary>
+&lt;p&gt;（梯度层面）提出DP-SGD，它在更新参数的同时给梯度增加噪声。他们引入了moment accountant算法来跟踪累积隐私损失来估计&lt;span</summary>
         
       
     
@@ -181,14 +207,14 @@
     <link href="http://jijunhao.github.io/2023/04/18/article20230418/"/>
     <id>http://jijunhao.github.io/2023/04/18/article20230418/</id>
     <published>2023-04-18T10:07:56.000Z</published>
-    <updated>2023-04-22T08:03:36.000Z</updated>
+    <updated>2023-04-29T07:37:22.071Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;概率估计方法&quot;&gt;&lt;a href=&quot;#概率估计方法&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h2 id=&quot;概率估计方法&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#概率估计方法&quot;&gt;&lt;/a&gt;</summary>
         
       
     
@@ -206,14 +232,15 @@
     <link href="http://jijunhao.github.io/2023/04/13/article20230413/"/>
     <id>http://jijunhao.github.io/2023/04/13/article20230413/</id>
     <published>2023-04-13T04:07:56.000Z</published>
-    <updated>2023-04-24T03:55:08.000Z</updated>
+    <updated>2023-04-29T07:24:56.218Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;Generative-Models&quot;&gt;&lt;a href=&quot;#Generative-Models&quot; class=&quot;headerlink&quot; title=&quot;Generative Models&quot;&gt;&lt;/a&gt;Generative</summary>
+    <summary type="html">&lt;h2 id=&quot;generative-models&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#generative-models&quot;&gt;&lt;/a&gt; Generative Models&lt;/h2&gt;
+&lt;p&gt;给定来自感兴趣分布的观察到的样本&lt;span</summary>
         
       
     
@@ -242,7 +269,7 @@
       
         
         
-    <summary type="html">&lt;h2 id=&quot;1-图像分类-Image-classification&quot;&gt;&lt;a href=&quot;#1-图像分类-Image-classification&quot; class=&quot;headerlink&quot; title=&quot;1. 图像分类(Image classification)&quot;&gt;&lt;/a&gt;1.</summary>
+    <summary type="html">&lt;h2 id=&quot;1-图像分类image-classification&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#1-图像分类image-classification&quot;&gt;&lt;/a&gt; 1. 图像分类(Image</summary>
         
       
     
@@ -298,7 +325,8 @@
       
         
         
-    <summary type="html">&lt;h2 id=&quot;数据集加载&quot;&gt;&lt;a href=&quot;#数据集加载&quot; class=&quot;headerlink&quot; title=&quot;数据集加载&quot;&gt;&lt;/a&gt;数据集加载&lt;/h2&gt;&lt;h3 id=&quot;1-网络数据集&quot;&gt;&lt;a href=&quot;#1-网络数据集&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h2 id=&quot;数据集加载&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#数据集加载&quot;&gt;&lt;/a&gt; 数据集加载&lt;/h2&gt;
+&lt;h3 id=&quot;1-网络数据集&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot;</summary>
         
       
     
@@ -318,14 +346,15 @@
     <link href="http://jijunhao.github.io/2023/04/08/article20230408/"/>
     <id>http://jijunhao.github.io/2023/04/08/article20230408/</id>
     <published>2023-04-08T02:38:56.000Z</published>
-    <updated>2023-04-09T04:56:16.000Z</updated>
+    <updated>2023-04-29T07:37:42.979Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;常用归一化方法&quot;&gt;&lt;a href=&quot;#常用归一化方法&quot; class=&quot;headerlink&quot; title=&quot;常用归一化方法&quot;&gt;&lt;/a&gt;常用归一化方法&lt;/h2&gt;&lt;h3 id=&quot;1-BatchNorm&quot;&gt;&lt;a href=&quot;#1-BatchNorm&quot;</summary>
+    <summary type="html">&lt;h2 id=&quot;常用归一化方法&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#常用归一化方法&quot;&gt;&lt;/a&gt; 常用归一化方法&lt;/h2&gt;
+&lt;h3 id=&quot;1-batchnorm&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot;</summary>
         
       
     
@@ -352,7 +381,8 @@
       
         
         
-    <summary type="html">&lt;h2 id=&quot;安装概览&quot;&gt;&lt;a href=&quot;#安装概览&quot; class=&quot;headerlink&quot; title=&quot;安装概览&quot;&gt;&lt;/a&gt;安装概览&lt;/h2&gt;&lt;p&gt;安装显卡驱动、CUDA 和 cuDNN 可能因操作系统和 GPU</summary>
+    <summary type="html">&lt;h2 id=&quot;安装概览&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#安装概览&quot;&gt;&lt;/a&gt; 安装概览&lt;/h2&gt;
+&lt;p&gt;安装显卡驱动、CUDA 和 cuDNN 可能因操作系统和 GPU</summary>
         
       
     
@@ -379,7 +409,7 @@
       
         
         
-    <summary type="html">&lt;h2 id=&quot;Word论文排版&quot;&gt;&lt;a href=&quot;#Word论文排版&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h2 id=&quot;word论文排版&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#word论文排版&quot;&gt;&lt;/a&gt;</summary>
         
       
     
@@ -405,9 +435,10 @@
         
         
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;参考文献&lt;/strong&gt;&lt;br&gt;&lt;a href=&quot;https://docs.github.com/&quot;&gt;Github docs&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;参考文献&lt;/strong&gt;&lt;br&gt;
+&lt;a href=&quot;https://docs.github.com/&quot;&gt;Github docs&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&quot;Git操作指南&quot;&gt;&lt;a</summary>
+&lt;h2 id=&quot;git操作指南&quot;&gt;&lt;a</summary>
         
       
     
@@ -432,7 +463,8 @@
       
         
         
-    <summary type="html">&lt;h2 id=&quot;ChatGPT-工具整理&quot;&gt;&lt;a href=&quot;#ChatGPT-工具整理&quot; class=&quot;headerlink&quot; title=&quot;ChatGPT 工具整理&quot;&gt;&lt;/a&gt;ChatGPT 工具整理&lt;/h2&gt;&lt;h3 id=&quot;1-搜索引擎&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;h2 id=&quot;chatgpt-工具整理&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#chatgpt-工具整理&quot;&gt;&lt;/a&gt; ChatGPT 工具整理&lt;/h2&gt;
+&lt;h3 id=&quot;1-搜索引擎&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot;</summary>
         
       
     
@@ -457,7 +489,7 @@
       
         
         
-    <summary type="html">&lt;h2 id=&quot;为什么选择-Gitlab&quot;&gt;&lt;a href=&quot;#为什么选择-Gitlab&quot; class=&quot;headerlink&quot; title=&quot;为什么选择 Gitlab&quot;&gt;&lt;/a&gt;为什么选择</summary>
+    <summary type="html">&lt;h2 id=&quot;为什么选择-gitlab&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#为什么选择-gitlab&quot;&gt;&lt;/a&gt; 为什么选择</summary>
         
       
     
@@ -510,7 +542,7 @@
       
         
         
-    <summary type="html">&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h2 id=&quot;简介&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#简介&quot;&gt;&lt;/a&gt;</summary>
         
       
     
@@ -520,31 +552,6 @@
     
     
     <category term="搜索引擎" scheme="http://jijunhao.github.io/tags/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux常用解压与压缩命令</title>
-    <link href="http://jijunhao.github.io/2023/02/07/article20230207/"/>
-    <id>http://jijunhao.github.io/2023/02/07/article20230207/</id>
-    <published>2023-02-07T03:18:36.000Z</published>
-    <updated>2023-04-09T04:56:16.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;tar-文件&quot;&gt;&lt;a href=&quot;#tar-文件&quot; class=&quot;headerlink&quot; title=&quot;.tar 文件&quot;&gt;&lt;/a&gt;.tar 文件&lt;/h3&gt;&lt;pre class=&quot;line-numbers language-bash&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Linux" scheme="http://jijunhao.github.io/categories/Linux/"/>
-    
-    
-    <category term="Linux" scheme="http://jijunhao.github.io/tags/Linux/"/>
     
   </entry>
   

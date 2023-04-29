@@ -515,10 +515,11 @@
             <div id="articleContent">
                 <blockquote>
 <p>参考链接</p>
-<p><a target="_blank" rel="noopener" href="https://blog.17lai.site/">夜法之书的Hexo</a>  </p>
+<p><a target="_blank" rel="noopener" href="https://blog.17lai.site/">夜法之书的Hexo</a></p>
 <p><a target="_blank" rel="noopener" href="https://fulequn.github.io/2020/08/23/Article202008231/">Hexo一篇文章多个categories</a></p>
 </blockquote>
-<h2 id="hexo-目录结构说明"><a href="#hexo-目录结构说明" class="headerlink" title="hexo 目录结构说明"></a>hexo 目录结构说明</h2><p>在执行过<code>Hexo d</code>命令之后，目录结构新增了<code>.deploy_git</code>，<code>public</code>，<code>.gitignore</code>，如下：</p>
+<h2 id="hexo-目录结构说明"><a class="markdownIt-Anchor" href="#hexo-目录结构说明"></a> hexo 目录结构说明</h2>
+<p>在执行过<code>Hexo d</code>命令之后，目录结构新增了<code>.deploy_git</code>，<code>public</code>，<code>.gitignore</code>，如下：</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"> $ tree <span class="token parameter variable">-L</span> <span class="token number">2</span>
 <span class="token builtin class-name">.</span>
 ├── .deploy_git
@@ -536,16 +537,20 @@
 ├── db.json
 ├── package.json
 └── package-lock.json<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="1-config-yml"><a href="#1-config-yml" class="headerlink" title="1. _config.yml"></a>1. _config.yml</h3><p>用来配置博客相关的参数，初始化时自动创建。具体参数设置，可参照 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration">Hexo 配置</a> 文档。</p>
-<h3 id="2-node-modules-和-package-json"><a href="#2-node-modules-和-package-json" class="headerlink" title="2. node_modules 和 package.json"></a>2. node_modules 和 package.json</h3><p>都是在初始化时自动创建。</p>
+<h3 id="1-_configyml"><a class="markdownIt-Anchor" href="#1-_configyml"></a> 1. _config.yml</h3>
+<p>用来配置博客相关的参数，初始化时自动创建。具体参数设置，可参照 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration">Hexo 配置</a> 文档。</p>
+<h3 id="2-node_modules-和-packagejson"><a class="markdownIt-Anchor" href="#2-node_modules-和-packagejson"></a> 2. node_modules 和 package.json</h3>
+<p>都是在初始化时自动创建。</p>
 <ul>
 <li><code>node_modules</code> 用来存储已安装的各类依赖包。</li>
 <li><code>package.json</code> 用来查看 Hexo 的版本以及相关依赖包的版本。</li>
 </ul>
-<h3 id="3-scaffold"><a href="#3-scaffold" class="headerlink" title="3. scaffold"></a>3. scaffold</h3><p>模板文件夹，初始化时自动创建。包含<code>page</code>，<code>post</code>，<code>draft</code>三种模板，分别对应 页面、要发布的文章、草稿。</p>
-<h3 id="4-themes"><a href="#4-themes" class="headerlink" title="4. themes"></a>4. themes</h3><p>主题文件夹，初始化时自动创建。每一个主题，都有一个单独的文件夹。默认主题为 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-theme-landscape">landscape</a>。</p>
-<h3 id="5-source-，-public-和-deploy-git"><a href="#5-source-，-public-和-deploy-git" class="headerlink" title="5. source ， public 和 .deploy_git"></a>5. source ， public 和 .deploy_git</h3><ul>
+<h3 id="3-scaffold"><a class="markdownIt-Anchor" href="#3-scaffold"></a> 3. scaffold</h3>
+<p>模板文件夹，初始化时自动创建。包含<code>page</code>，<code>post</code>，<code>draft</code>三种模板，分别对应 页面、要发布的文章、草稿。</p>
+<h3 id="4-themes"><a class="markdownIt-Anchor" href="#4-themes"></a> 4. themes</h3>
+<p>主题文件夹，初始化时自动创建。每一个主题，都有一个单独的文件夹。默认主题为 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-theme-landscape">landscape</a>。</p>
+<h3 id="5-source-public-和-deploy_git"><a class="markdownIt-Anchor" href="#5-source-public-和-deploy_git"></a> 5. source ， public 和 .deploy_git</h3>
+<ul>
 <li>source：资源文件夹。用来存放图片、Markdown 文档（文章、草稿）、各种页面（分类、关于页面等）。</li>
 <li>public：将 source 文件夹里的 Markdown 文档，转换成 index.html。再结合主题进行渲染，就是我们最终看到的博客。</li>
 <li>.deploy_git：将 public 文件夹的内容提交到 Github 后生成，内容与 public 文件夹基本一致。</li>
@@ -555,7 +560,9 @@
 <li>执行<code>hexo generate</code>，根据 source，更新 public。</li>
 <li>执行<code>hexo deploy</code>，根据 public，更新 .deploy_git。</li>
 </ul>
-<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><h3 id="1-指令说明"><a href="#1-指令说明" class="headerlink" title="1. 指令说明"></a>1. 指令说明</h3><ul>
+<h2 id="常用命令"><a class="markdownIt-Anchor" href="#常用命令"></a> 常用命令</h2>
+<h3 id="1-指令说明"><a class="markdownIt-Anchor" href="#1-指令说明"></a> 1. 指令说明</h3>
+<ul>
 <li><code>hexo server</code> #启动本地服务器，用于预览主题。Hexo 会监视文件变动并自动更新，除修改站点配置文件外,无须重启服务器,直接刷新网页即可生效。</li>
 <li><code>hexo server -s</code> #以静态模式启动</li>
 <li><code>hexo server -p 5000</code> #更改访问端口 (默认端口为 4000，’ctrl + c’关闭 server)</li>
@@ -573,7 +580,8 @@
 <li><code>hexo new page “music”</code> #新增页面music</li>
 <li><code>hexo new post “文章名称”</code> #新增文章</li>
 </ul>
-<h3 id="2-简写指令"><a href="#2-简写指令" class="headerlink" title="2. 简写指令"></a>2. 简写指令</h3><ul>
+<h3 id="2-简写指令"><a class="markdownIt-Anchor" href="#2-简写指令"></a> 2. 简写指令</h3>
+<ul>
 <li><code>hexo n "我的第一篇文章"</code> 等价于 <code>hexo new "我的第一篇文章"</code> 还等价于 <code>hexo new post "我的第一篇文章"</code></li>
 <li><code>hexo p</code> 等价于 <code>hexo publish</code></li>
 <li><code>hexo g</code> 等价于 <code>hexo generate</code></li>
@@ -582,11 +590,14 @@
 <li><code>hexo g -d</code>等价于<code>hexo generate --deploy</code></li>
 </ul>
 <p>注: <code>hexo clean</code> 没有 简写, <code>git --version</code> 没有简写</p>
-<h2 id="tags与categories"><a href="#tags与categories" class="headerlink" title="tags与categories"></a>tags与categories</h2><p>在博客或网站中，<code>Tags</code> 和 <code>Categories</code> 通常用来对文章进行分类和归档，以便读者可以更方便地查找和浏览相关主题的文章。</p>
+<h2 id="tags与categories"><a class="markdownIt-Anchor" href="#tags与categories"></a> tags与categories</h2>
+<p>在博客或网站中，<code>Tags</code> 和 <code>Categories</code> 通常用来对文章进行分类和归档，以便读者可以更方便地查找和浏览相关主题的文章。</p>
 <ul>
-<li><p>Tags（标签）是指对文章进行的主题或关键词的描述，通常是一些具有代表性或关键性的单词或短语，可以用来标记一篇或多篇文章，使得读者可以方便地查找到相关主题的文章。</p>
+<li>
+<p>Tags（标签）是指对文章进行的主题或关键词的描述，通常是一些具有代表性或关键性的单词或短语，可以用来标记一篇或多篇文章，使得读者可以方便地查找到相关主题的文章。</p>
 </li>
-<li><p>Categories（分类）是指对文章进行的归档或分类的描述，通常是一些具有代表性或普遍性的主题或类别，可以用来将一篇或多篇文章进行归类和整理，以便读者可以更方便地浏览和查找相关主题的文章。</p>
+<li>
+<p>Categories（分类）是指对文章进行的归档或分类的描述，通常是一些具有代表性或普遍性的主题或类别，可以用来将一篇或多篇文章进行归类和整理，以便读者可以更方便地浏览和查找相关主题的文章。</p>
 </li>
 </ul>
 <pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">tags</span><span class="token punctuation">:</span>
@@ -595,7 +606,6 @@
 <span class="token key atrule">categories</span><span class="token punctuation">:</span>
 <span class="token punctuation">-</span> 技术
 <span class="token punctuation">-</span> 编程<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 
                 
             </div>
@@ -1033,7 +1043,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">50.2k</span>
+                        class="white-color">57.8k</span>
             
             
             
@@ -1353,6 +1363,11 @@ $(function () {
     
     <script src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/instantpage/instantpage.js" type="module"></script>
     
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
 
 </body>
 

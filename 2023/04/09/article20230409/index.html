@@ -517,7 +517,9 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="数据集加载"><a href="#数据集加载" class="headerlink" title="数据集加载"></a>数据集加载</h2><h3 id="1-网络数据集"><a href="#1-网络数据集" class="headerlink" title="1. 网络数据集"></a>1. 网络数据集</h3><p>加载数据集：<a target="_blank" rel="noopener" href="https://pytorch.org/vision/stable/datasets.html">https://pytorch.org/vision/stable/datasets.html</a></p>
+                <h2 id="数据集加载"><a class="markdownIt-Anchor" href="#数据集加载"></a> 数据集加载</h2>
+<h3 id="1-网络数据集"><a class="markdownIt-Anchor" href="#1-网络数据集"></a> 1. 网络数据集</h3>
+<p>加载数据集：<a target="_blank" rel="noopener" href="https://pytorch.org/vision/stable/datasets.html">https://pytorch.org/vision/stable/datasets.html</a></p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> torchvision<span class="token punctuation">.</span>datasets <span class="token keyword">as</span> datasets
 <span class="token keyword">import</span> torchvision<span class="token punctuation">.</span>transforms <span class="token keyword">as</span> transforms
 
@@ -530,8 +532,8 @@ transform <span class="token operator">=</span> transforms<span class="token pun
 <span class="token comment"># 加载MNIST数据集</span>
 train_set <span class="token operator">=</span> datasets<span class="token punctuation">.</span>MNIST<span class="token punctuation">(</span>root<span class="token operator">=</span><span class="token string">'./data'</span><span class="token punctuation">,</span> train<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> download<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> transform<span class="token operator">=</span>transform<span class="token punctuation">)</span>
 test_set <span class="token operator">=</span> datasets<span class="token punctuation">.</span>MNIST<span class="token punctuation">(</span>root<span class="token operator">=</span><span class="token string">'./data'</span><span class="token punctuation">,</span> train<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> download<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> transform<span class="token operator">=</span>transform<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="2-自己构造数据集"><a href="#2-自己构造数据集" class="headerlink" title="2. 自己构造数据集"></a>2. 自己构造数据集</h3><p><code>dataset.ImageFolder</code> 是 PyTorch 中 torchvision.datasets 模块中的一个函数，用于从一个文件夹中加载图像数据集。该文件夹包含子文件夹，每个子文件夹对应一种类别，每个文件对应一个样本。</p>
+<h3 id="2-自己构造数据集"><a class="markdownIt-Anchor" href="#2-自己构造数据集"></a> 2. 自己构造数据集</h3>
+<p><code>dataset.ImageFolder</code> 是 PyTorch 中 torchvision.datasets 模块中的一个函数，用于从一个文件夹中加载图像数据集。该文件夹包含子文件夹，每个子文件夹对应一种类别，每个文件对应一个样本。</p>
 <p><code>dataset.ImageFolder</code> 函数的参数包括：</p>
 <ul>
 <li><code>root</code>: 数据集存放的根目录。</li>
@@ -554,16 +556,15 @@ transform <span class="token operator">=</span> transforms<span class="token pun
 
 <span class="token comment"># 加载数据集</span>
 dataset <span class="token operator">=</span> datasets<span class="token punctuation">.</span>ImageFolder<span class="token punctuation">(</span>root<span class="token operator">=</span><span class="token string">'./data'</span><span class="token punctuation">,</span> transform<span class="token operator">=</span>transform<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>上述代码中，首先定义了一个数据集变换，其中包括将图像缩放到256×256大小、居中裁剪到224×224大小、将图像转换为张量以及对图像进行归一化的操作。然后使用 <code>dataset.ImageFolder</code> 函数加载 <code>./data </code>目录下的数据集，并应用上述变换。</p>
+<p>上述代码中，首先定义了一个数据集变换，其中包括将图像缩放到256×256大小、居中裁剪到224×224大小、将图像转换为张量以及对图像进行归一化的操作。然后使用 <code>dataset.ImageFolder</code> 函数加载 <code>./data</code>目录下的数据集，并应用上述变换。</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 定义加载函数</span>
 <span class="token keyword">def</span> <span class="token function">loader</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>path<span class="token punctuation">,</span> <span class="token string">'rb'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
         img <span class="token operator">=</span> Image<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span>f<span class="token punctuation">)</span>
         <span class="token keyword">return</span> img<span class="token punctuation">.</span>convert<span class="token punctuation">(</span><span class="token string">'RGB'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>上述代码中，定义了一个加载函数loader，用于从文件路径中加载图像并返回一个PIL图像对象。该函数将图像转换为RGB格式，以便于应用数据集变换。</p>
-<h3 id="3-DataLoader"><a href="#3-DataLoader" class="headerlink" title="3. DataLoader"></a>3. DataLoader</h3><p><code>DataLoader</code> 是 PyTorch 中用于加载数据的工具类。它可以将数据集封装成一个迭代器，用于在训练过程中按照指定的批次大小、随机打乱等方式加载数据。</p>
+<h3 id="3-dataloader"><a class="markdownIt-Anchor" href="#3-dataloader"></a> 3. DataLoader</h3>
+<p><code>DataLoader</code> 是 PyTorch 中用于加载数据的工具类。它可以将数据集封装成一个迭代器，用于在训练过程中按照指定的批次大小、随机打乱等方式加载数据。</p>
 <ul>
 <li><code>dataset</code>: Dataset类， 决定数据从哪读取以及如何读取</li>
 <li><code>bathsize</code>: 批大小</li>
@@ -589,7 +590,6 @@ val_set <span class="token operator">=</span> data<span class="token punctuation
 <span class="token comment"># 定义数据加载器</span>
 train_loader <span class="token operator">=</span> data<span class="token punctuation">.</span>DataLoader<span class="token punctuation">(</span>train_set<span class="token punctuation">,</span> batch_size<span class="token operator">=</span><span class="token number">32</span><span class="token punctuation">,</span> shuffle<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
 val_loader <span class="token operator">=</span> data<span class="token punctuation">.</span>DataLoader<span class="token punctuation">(</span>val_set<span class="token punctuation">,</span> batch_size<span class="token operator">=</span><span class="token number">32</span><span class="token punctuation">,</span> shuffle<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>上述代码中，首先定义了一个数据集变换<code>transform</code>，并使用<code>dataset.ImageFolder()</code>类加载图像数据集。然后，使用<code>data.DataLoader()</code>类定义了两个数据加载器，分别表示训练集和验证集。其中，<code>train_loader</code>和<code>val_loader</code>分别表示训练集和验证集的数据加载器。在数据加载器中，使用<code>batch_size</code>参数指定了每个批次的大小，使用<code>shuffle</code>参数指定了是否随机打乱数据集。</p>
 <pre class="line-numbers language-none"><code class="language-none">data/
 ├── train/
@@ -613,14 +613,13 @@ val_loader <span class="token operator">=</span> data<span class="token punctuat
 │   │   └── ...
 │   └── ...
 └── ...<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>需要注意的是，<code>DataLoader</code>类是一个迭代器，可以使用<code>for</code>循环遍历数据集中的数据。例如：</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">for</span> inputs<span class="token punctuation">,</span> labels <span class="token keyword">in</span> train_loader<span class="token punctuation">:</span>
     <span class="token comment"># 训练过程</span>
     <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
 <p>在上述代码中，使用<code>for</code>循环遍历训练集中的数据。每次迭代返回一个批次的数据，其中<code>inputs</code>表示输入数据，<code>labels</code>表示对应的标签数据。</p>
-<h3 id="4-数据集展示"><a href="#4-数据集展示" class="headerlink" title="4. 数据集展示"></a>4. 数据集展示</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+<h3 id="4-数据集展示"><a class="markdownIt-Anchor" href="#4-数据集展示"></a> 4. 数据集展示</h3>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
 figure <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 cols<span class="token punctuation">,</span> rows <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">4</span>
 <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> cols <span class="token operator">*</span> rows <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -632,9 +631,10 @@ cols<span class="token punctuation">,</span> rows <span class="token operator">=
     plt<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span>img<span class="token punctuation">.</span>squeeze<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
     <span class="token comment">#plt.imshow(img.squeeze(), cmap="gray")</span>
 plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="数据集变换"><a href="#数据集变换" class="headerlink" title="数据集变换"></a>数据集变换</h2><p>PyTorch中提供了多种数据集变换（Transform），可以对图像、文本等不同类型的数据进行预处理。以下是常用的数据集变换：</p>
-<h3 id="1-图像数据变换"><a href="#1-图像数据变换" class="headerlink" title="1. 图像数据变换"></a>1. 图像数据变换</h3><ul>
+<h2 id="数据集变换"><a class="markdownIt-Anchor" href="#数据集变换"></a> 数据集变换</h2>
+<p>PyTorch中提供了多种数据集变换（Transform），可以对图像、文本等不同类型的数据进行预处理。以下是常用的数据集变换：</p>
+<h3 id="1-图像数据变换"><a class="markdownIt-Anchor" href="#1-图像数据变换"></a> 1. 图像数据变换</h3>
+<ul>
 <li><strong>transforms.Resize(size)</strong></li>
 </ul>
 <p>将图像的大小调整为指定的大小。<code>size</code>可以是一个整数，表示将图像的最短边调整为该大小，另一边按比例缩放；也可以是一个二元组，表示将图像的大小调整为指定的宽度和高度。</p>
@@ -658,7 +658,8 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
 <li><strong>transforms.Normalize(mean, std)</strong></li>
 </ul>
 <p>对图像进行标准化处理。<code>mean</code>和<code>std</code>分别为均值和标准差，可以是一个列表或元组，表示RGB三个通道的均值和标准差。</p>
-<h3 id="2-文本数据变换"><a href="#2-文本数据变换" class="headerlink" title="2. 文本数据变换"></a>2. 文本数据变换</h3><ul>
+<h3 id="2-文本数据变换"><a class="markdownIt-Anchor" href="#2-文本数据变换"></a> 2. 文本数据变换</h3>
+<ul>
 <li><strong>transforms.ToTensor()</strong></li>
 </ul>
 <p>将文本转换为Tensor格式。</p>
@@ -667,12 +668,13 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
 </ul>
 <p>自定义变换，使用lambda函数对文本进行处理。</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">Lambda<span class="token punctuation">(</span><span class="token keyword">lambda</span> y<span class="token punctuation">:</span> torch<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> dtype<span class="token operator">=</span>torch<span class="token punctuation">.</span><span class="token builtin">float</span><span class="token punctuation">)</span><span class="token punctuation">.</span>scatter_<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> torch<span class="token punctuation">.</span>tensor<span class="token punctuation">(</span>y<span class="token punctuation">)</span><span class="token punctuation">,</span> value<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment">#one-hot编码</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h3 id="3-其他数据变换"><a href="#3-其他数据变换" class="headerlink" title="3. 其他数据变换"></a>3. 其他数据变换</h3><ul>
+<h3 id="3-其他数据变换"><a class="markdownIt-Anchor" href="#3-其他数据变换"></a> 3. 其他数据变换</h3>
+<ul>
 <li><strong>transforms.Compose(transforms)</strong></li>
 </ul>
 <p>将多个变换组合起来使用。<code>transforms</code>为一个很多tansformes列表，表示需要组合使用的变换。</p>
-<h2 id="预训练模型与权重"><a href="#预训练模型与权重" class="headerlink" title="预训练模型与权重"></a>预训练模型与权重</h2><p><a target="_blank" rel="noopener" href="https://pytorch.org/vision/stable/models.html">https://pytorch.org/vision/stable/models.html</a></p>
+<h2 id="预训练模型与权重"><a class="markdownIt-Anchor" href="#预训练模型与权重"></a> 预训练模型与权重</h2>
+<p><a target="_blank" rel="noopener" href="https://pytorch.org/vision/stable/models.html">https://pytorch.org/vision/stable/models.html</a></p>
 <p>PyTorch中提供了很多预训练的模型，包括图像分类、目标检测、分割等领域的模型。这些预训练模型已经在大规模数据集上进行了训练，可以直接用于特定任务的微调或特征提取。</p>
 <p>预训练模型通常包含两个部分：模型结构和权重。模型结构定义了模型的网络结构和参数，权重则包含了预训练模型的参数值。在PyTorch中，可以使用<code>torchvision.models</code>模块中的函数加载预训练模型及其权重。</p>
 <p>以下是加载预训练模型及其权重的示例代码：</p>
@@ -688,14 +690,15 @@ model<span class="token punctuation">.</span>fc <span class="token operator">=</
 
 <span class="token comment"># 加载预训练模型的权重</span>
 model<span class="token punctuation">.</span>load_state_dict<span class="token punctuation">(</span>torch<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token string">'resnet18.pth'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>在上述代码中，使用<code>models.resnet18(pretrained=True)</code>函数加载预训练的ResNet18模型，其中<code>pretrained=True</code>表示加载预训练模型的权重。然后，将最后一层的全连接层替换为自定义的层。最后，使用<code>torch.load()</code>函数加载预训练模型的权重。</p>
-<h2 id="建立神经网络"><a href="#建立神经网络" class="headerlink" title="建立神经网络"></a><strong>建立神经网络</strong></h2><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/nn.html">https://pytorch.org/docs/stable/nn.html</a></p>
-<h3 id="1-卷积层"><a href="#1-卷积层" class="headerlink" title="1. 卷积层"></a>1. 卷积层</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">nn<span class="token punctuation">.</span>Conv2d<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h3 id="2-反卷积层"><a href="#2-反卷积层" class="headerlink" title="2. 反卷积层"></a>2. 反卷积层</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">nn<span class="token punctuation">.</span>ConvTranspose2d<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h3 id="3-Pooling-层"><a href="#3-Pooling-层" class="headerlink" title="3. Pooling 层"></a>3. Pooling 层</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">nn<span class="token punctuation">.</span>MaxPool2d<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<h2 id="建立神经网络"><a class="markdownIt-Anchor" href="#建立神经网络"></a> <strong>建立神经网络</strong></h2>
+<p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/nn.html">https://pytorch.org/docs/stable/nn.html</a></p>
+<h3 id="1-卷积层"><a class="markdownIt-Anchor" href="#1-卷积层"></a> 1. 卷积层</h3>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">nn<span class="token punctuation">.</span>Conv2d<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="2-反卷积层"><a class="markdownIt-Anchor" href="#2-反卷积层"></a> 2. 反卷积层</h3>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">nn<span class="token punctuation">.</span>ConvTranspose2d<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="3-pooling-层"><a class="markdownIt-Anchor" href="#3-pooling-层"></a> 3. Pooling 层</h3>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">nn<span class="token punctuation">.</span>MaxPool2d<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
 nn<span class="token punctuation">.</span>AvgPool2d<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
@@ -706,8 +709,9 @@ nn<span class="token punctuation">.</span>LPPool2d<span class="token punctuation
 nn<span class="token punctuation">.</span>AdaptiveMaxPool2d<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
 nn<span class="token punctuation">.</span>AdaptiveAvgPool2d<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="4-Padding-层"><a href="#4-Padding-层" class="headerlink" title="4. Padding 层"></a>4. Padding 层</h3><h3 id="5-激活层"><a href="#5-激活层" class="headerlink" title="5. 激活层"></a>5. 激活层</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">nn<span class="token punctuation">.</span>ReLU<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<h3 id="4-padding-层"><a class="markdownIt-Anchor" href="#4-padding-层"></a> 4. Padding 层</h3>
+<h3 id="5-激活层"><a class="markdownIt-Anchor" href="#5-激活层"></a> 5. 激活层</h3>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">nn<span class="token punctuation">.</span>ReLU<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
 nn<span class="token punctuation">.</span>Softmax<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
@@ -716,12 +720,12 @@ nn<span class="token punctuation">.</span>Tanh<span class="token punctuation">(<
 nn<span class="token punctuation">.</span>Sigmoid<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
 nn<span class="token punctuation">.</span>LeakyReLU<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="6-线性层"><a href="#6-线性层" class="headerlink" title="6. 线性层"></a>6. 线性层</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">nn<span class="token punctuation">.</span>Identity<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<h3 id="6-线性层"><a class="markdownIt-Anchor" href="#6-线性层"></a> 6. 线性层</h3>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">nn<span class="token punctuation">.</span>Identity<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
 nn<span class="token punctuation">.</span>Linear<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="7-Sequential"><a href="#7-Sequential" class="headerlink" title="7. Sequential"></a>7. Sequential</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">model <span class="token operator">=</span> nn<span class="token punctuation">.</span>Sequential<span class="token punctuation">(</span>
+<h3 id="7-sequential"><a class="markdownIt-Anchor" href="#7-sequential"></a> 7. Sequential</h3>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">model <span class="token operator">=</span> nn<span class="token punctuation">.</span>Sequential<span class="token punctuation">(</span>
           nn<span class="token punctuation">.</span>Conv2d<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
           nn<span class="token punctuation">.</span>ReLU<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
           nn<span class="token punctuation">.</span>Conv2d<span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">64</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
@@ -734,8 +738,8 @@ model <span class="token operator">=</span> nn<span class="token punctuation">.<
           <span class="token punctuation">(</span><span class="token string">'conv2'</span><span class="token punctuation">,</span> nn<span class="token punctuation">.</span>Conv2d<span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">64</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
           <span class="token punctuation">(</span><span class="token string">'relu2'</span><span class="token punctuation">,</span> nn<span class="token punctuation">.</span>ReLU<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
         <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="8-Block示例"><a href="#8-Block示例" class="headerlink" title="8. Block示例"></a>8. Block示例</h3><p>构造块有助于编写重复复杂的网络</p>
+<h3 id="8-block示例"><a class="markdownIt-Anchor" href="#8-block示例"></a> 8. Block示例</h3>
+<p>构造块有助于编写重复复杂的网络</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> torch
 <span class="token keyword">import</span> torch<span class="token punctuation">.</span>nn <span class="token keyword">as</span> nn
 
@@ -766,8 +770,9 @@ model <span class="token operator">=</span> nn<span class="token punctuation">.<
     <span class="token keyword">def</span> <span class="token function">forward</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">:</span>
         x <span class="token operator">=</span> self<span class="token punctuation">.</span>norm<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
         <span class="token keyword">return</span> self<span class="token punctuation">.</span>fn<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="优化神经网络"><a href="#优化神经网络" class="headerlink" title="优化神经网络"></a><strong>优化神经网络</strong></h2><h3 id="1-定义损失函数"><a href="#1-定义损失函数" class="headerlink" title="1. 定义损失函数"></a>1. 定义损失函数</h3><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/nn.html">https://pytorch.org/docs/stable/nn.html</a></p>
+<h2 id="优化神经网络"><a class="markdownIt-Anchor" href="#优化神经网络"></a> <strong>优化神经网络</strong></h2>
+<h3 id="1-定义损失函数"><a class="markdownIt-Anchor" href="#1-定义损失函数"></a> 1. 定义损失函数</h3>
+<p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/nn.html">https://pytorch.org/docs/stable/nn.html</a></p>
 <p>在深度学习中，损失函数是评估模型性能的重要指标。PyTorch提供了多种常用的损失函数，可以根据具体情况选择合适的损失函数。</p>
 <p>下面介绍几种常用的损失函数：</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> torch <span class="token keyword">import</span> nn
@@ -792,8 +797,8 @@ nn<span class="token punctuation">.</span>HuberLoss<span class="token punctuatio
 
 <span class="token comment"># Hinge损失</span>
 nn<span class="token punctuation">.</span>HingeEmbeddingLoss<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="2-定义优化器"><a href="#2-定义优化器" class="headerlink" title="2. 定义优化器"></a>2. 定义优化器</h3><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/optim.html">https://pytorch.org/docs/stable/optim.html</a></p>
+<h3 id="2-定义优化器"><a class="markdownIt-Anchor" href="#2-定义优化器"></a> 2. 定义优化器</h3>
+<p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/optim.html">https://pytorch.org/docs/stable/optim.html</a></p>
 <p>PyTorch中提供了许多优化器（Optimizer）用于优化神经网络的参数，使得损失函数最小化。以下是一些常用的优化器：</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> torch <span class="token keyword">import</span> optim
 
@@ -809,15 +814,15 @@ optimizer <span class="token operator">=</span> optim<span class="token punctuat
 
 <span class="token comment"># RMSprop（Root Mean Square Propagation）</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="3-使用示例"><a href="#3-使用示例" class="headerlink" title="3. 使用示例"></a>3. 使用示例</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">for</span> <span class="token builtin">input</span><span class="token punctuation">,</span> target <span class="token keyword">in</span> dataset<span class="token punctuation">:</span>
+<h3 id="3-使用示例"><a class="markdownIt-Anchor" href="#3-使用示例"></a> 3. 使用示例</h3>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">for</span> <span class="token builtin">input</span><span class="token punctuation">,</span> target <span class="token keyword">in</span> dataset<span class="token punctuation">:</span>
     optimizer<span class="token punctuation">.</span>zero_grad<span class="token punctuation">(</span><span class="token punctuation">)</span>
     output <span class="token operator">=</span> model<span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">)</span>
     loss <span class="token operator">=</span> criterion<span class="token punctuation">(</span>output<span class="token punctuation">,</span> target<span class="token punctuation">)</span>
     loss<span class="token punctuation">.</span>backward<span class="token punctuation">(</span><span class="token punctuation">)</span>
     optimizer<span class="token punctuation">.</span>step<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="保存和加载模型"><a href="#保存和加载模型" class="headerlink" title="保存和加载模型"></a><strong>保存和加载模型</strong></h2><p>在PyTorch中，我们可以使用<code>torch.save()</code>和<code>torch.load()</code>函数来保存和加载模型。</p>
+<h2 id="保存和加载模型"><a class="markdownIt-Anchor" href="#保存和加载模型"></a> <strong>保存和加载模型</strong></h2>
+<p>在PyTorch中，我们可以使用<code>torch.save()</code>和<code>torch.load()</code>函数来保存和加载模型。</p>
 <p>通常，我们将模型的参数保存到一个文件中，可以是<code>.pt</code>或<code>.pth</code>格式的文件。</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 保存模型参数</span>
 torch<span class="token punctuation">.</span>save<span class="token punctuation">(</span>model<span class="token punctuation">.</span>state_dict<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'model_weights.pth'</span><span class="token punctuation">)</span>
@@ -826,9 +831,8 @@ model<span class="token punctuation">.</span>load_state_dict<span class="token p
 <span class="token comment"># 保存整个模型</span>
 torch<span class="token punctuation">.</span>save<span class="token punctuation">(</span>model<span class="token punctuation">,</span> <span class="token string">'model.pth'</span><span class="token punctuation">)</span>
 model <span class="token operator">=</span> torch<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token string">'model.pth'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="调用GPU"><a href="#调用GPU" class="headerlink" title="调用GPU"></a>调用GPU</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">device <span class="token operator">=</span> torch<span class="token punctuation">.</span>device<span class="token punctuation">(</span><span class="token string">'cuda'</span> <span class="token keyword">if</span> torch<span class="token punctuation">.</span>cuda<span class="token punctuation">.</span>is_available<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">else</span> <span class="token string">'cpu'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
+<h2 id="调用gpu"><a class="markdownIt-Anchor" href="#调用gpu"></a> 调用GPU</h2>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">device <span class="token operator">=</span> torch<span class="token punctuation">.</span>device<span class="token punctuation">(</span><span class="token string">'cuda'</span> <span class="token keyword">if</span> torch<span class="token punctuation">.</span>cuda<span class="token punctuation">.</span>is_available<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">else</span> <span class="token string">'cpu'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
                 
             </div>
@@ -1278,7 +1282,7 @@ model <span class="token operator">=</span> torch<span class="token punctuation"
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">50.2k</span>
+                        class="white-color">57.8k</span>
             
             
             
@@ -1598,6 +1602,11 @@ $(function () {
     
     <script src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/instantpage/instantpage.js" type="module"></script>
     
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
 
 </body>
 

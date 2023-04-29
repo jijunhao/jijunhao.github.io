@@ -481,7 +481,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    491
+                    492
                 </div>
                 
 
@@ -518,45 +518,43 @@
 <p><a target="_blank" rel="noopener" href="https://liukgg.github.io/2021/08/15/hexo/hexo-zai-matery-zhu-ti-xia-ji-cheng-utteranc-ping-lun-cha-jian/">LuckLiu</a></p>
 <p><a target="_blank" rel="noopener" href="https://utteranc.es/">utteranc</a></p>
 </blockquote>
-<h2 id="Hexo-Matery主题评论插件"><a href="#Hexo-Matery主题评论插件" class="headerlink" title="Hexo-Matery主题评论插件"></a>Hexo-Matery主题评论插件</h2><p><code>matery</code>主题集成了各种评论模块，例如 <strong>gitalk</strong>、<strong>gitment</strong>、<strong>disqus</strong>、<strong>livere</strong>、<strong>valine</strong>、<strong>waline</strong>、<strong>Twikoo</strong>、<strong>utteranc</strong> 等，但我使用最好的还是 <code>utteranc</code> 这种集成在github种的评论插件，并且能够做到github邮箱通知。</p>
-<h3 id="1-新建一个评论仓库"><a href="#1-新建一个评论仓库" class="headerlink" title="1. 新建一个评论仓库"></a>1. 新建一个评论仓库</h3><p>首先创建一个公开的评论仓库&lt;自定义名称&gt;<strong>！注意一定要公开，否则别人无法评论</strong></p>
+<h2 id="hexo-matery主题评论插件"><a class="markdownIt-Anchor" href="#hexo-matery主题评论插件"></a> Hexo-Matery主题评论插件</h2>
+<p><code>matery</code>主题集成了各种评论模块，例如 <strong>gitalk</strong>、<strong>gitment</strong>、<strong>disqus</strong>、<strong>livere</strong>、<strong>valine</strong>、<strong>waline</strong>、<strong>Twikoo</strong>、<strong>utteranc</strong> 等，但我使用最好的还是 <code>utteranc</code> 这种集成在github种的评论插件，并且能够做到github邮箱通知。</p>
+<h3 id="1-新建一个评论仓库"><a class="markdownIt-Anchor" href="#1-新建一个评论仓库"></a> 1. 新建一个评论仓库</h3>
+<p>首先创建一个公开的评论仓库&lt;自定义名称&gt;<strong>！注意一定要公开，否则别人无法评论</strong></p>
 <img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202303111940745.png" style="zoom:80%;">
-
-<h3 id="2-安装utterances"><a href="#2-安装utterances" class="headerlink" title="2. 安装utterances"></a>2. 安装utterances</h3><ul>
+<h3 id="2-安装utterances"><a class="markdownIt-Anchor" href="#2-安装utterances"></a> 2. 安装utterances</h3>
+<ul>
 <li>进入<a target="_blank" rel="noopener" href="https://github.com/apps/utterances">utterances</a>，点击 <code>install</code></li>
 </ul>
 <img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202303111940868.png" style="zoom: 67%;">
-
 <ul>
 <li>选择刚刚创建的自定义评论仓库，点击<code>install</code></li>
 </ul>
 <img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202303111940318.png" style="zoom:80%;">
-
-<h3 id="3-配置评论风格configuration"><a href="#3-配置评论风格configuration" class="headerlink" title="3. 配置评论风格configuration"></a>3. 配置评论风格configuration</h3><ul>
+<h3 id="3-配置评论风格configuration"><a class="markdownIt-Anchor" href="#3-配置评论风格configuration"></a> 3. 配置评论风格configuration</h3>
+<ul>
 <li>首先输入自己的刚刚新建的评论仓库</li>
 </ul>
 <img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202303111940744.png" style="zoom:80%;">
-
 <ul>
 <li>其他按照自己的需要挑战，把最后生成的配置，<code>copy</code> 下来</li>
 </ul>
 <img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202303111940722.png" style="zoom:80%;">
-
-<h3 id="4-添加配置到matery主题"><a href="#4-添加配置到matery主题" class="headerlink" title="4. 添加配置到matery主题"></a>4. 添加配置到matery主题</h3><ul>
+<h3 id="4-添加配置到matery主题"><a class="markdownIt-Anchor" href="#4-添加配置到matery主题"></a> 4. 添加配置到matery主题</h3>
+<ul>
 <li>修改matery主题的配置文件 <code>themes/hexo-theme-matery/_config.yml</code> ，开启utteranc功能</li>
 </ul>
 <pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># utteranc config, default disabled</span>
 <span class="token comment"># utteranc 评论模块的配置，默认为不激活</span>
 <span class="token key atrule">utteranc</span><span class="token punctuation">:</span>
   <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
 <ul>
 <li>修改博客文章 <code>themes/hexo-theme-matery/layout/_partial/post-detail.ejs</code></li>
 </ul>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>utteranc <span class="token operator">&amp;&amp;</span> theme<span class="token punctuation">.</span>utteranc<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">&gt;</span>
 <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/utteranc'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">&gt;</span>
 <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
 <p>该处改动的目的是为了在所有博客文章中统一在底部加入一个评论模块，这个改动很关键、所放位置也很重要。</p>
 <ul>
 <li>新增一个文件 <code>themes/hexo-theme-matery/layout/_partial/utteranc.ejs</code></li>
@@ -572,13 +570,12 @@
         <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
     <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>所有的留言都会出现在自定义评论仓库 <code>issues</code> 的，并且会每次给邮箱发消息。</p>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>如果博客中还有单独的一个留言板模块，需要改 <code>themes/hexo-theme-matery/layout/contact.ejs</code></p>
+<h3 id="其他"><a class="markdownIt-Anchor" href="#其他"></a> 其他</h3>
+<p>如果博客中还有单独的一个留言板模块，需要改 <code>themes/hexo-theme-matery/layout/contact.ejs</code></p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>utteranc <span class="token operator">&amp;&amp;</span> theme<span class="token punctuation">.</span>utteranc<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">&gt;</span>
     <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/utteranc'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">&gt;</span>
 <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
 <p>最后重启hexo，就能在网页拥有评论功能了。</p>
 <p>如有问题，欢迎在我以上的博客留言板中留言交流。</p>
 
@@ -1022,7 +1019,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">50.2k</span>
+                        class="white-color">57.8k</span>
             
             
             
@@ -1342,6 +1339,11 @@ $(function () {
     
     <script src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/instantpage/instantpage.js" type="module"></script>
     
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
 
 </body>
 

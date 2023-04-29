@@ -482,7 +482,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-04-24
+                    2023-04-29
                 </div>
                 
 
@@ -496,7 +496,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    5 分
                 </div>
                 
 
@@ -521,45 +521,60 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Generative-Models"><a href="#Generative-Models" class="headerlink" title="Generative Models"></a>Generative Models</h2><p>给定来自感兴趣分布的观察到的样本$x$，生成模型的目标是学习对其真实数据分布$p(x)$ 进行建模。一旦学会，我们就可以随意从我们的近似模型中生成新的样本。此外，在某些公式下，我们还可以使用学习的模型来评估观察或采样数据的可能性。生成对抗网络 (GANs) 对复杂分布的采样过程进行建模，该过程以对抗方式学习。另一类生成模型，称为 “基于似然”，旨在学习一种模型，该模型为观察到的数据样本分配了高似然性。这包括自回归模型，归一化流和变分自动编码器 (VAEs)。另一种类似的方法是基于能量的建模，其中将分布学习为任意灵活的能量函数，然后将其归一化。基于分数的生成模型高度相关; 他们不是学习对能量函数本身进行建模，而是将基于能量的模型的分数学习为神经网络。</p>
-<p>对于许多模态，我们可以认为我们观察到的数据是由相关的看不见的潜在变量表示或生成的，我们可以用随机变量$z$表示。表达这种想法的最佳直觉是通过柏拉图的洞穴寓言。在寓言中，一群人一生都被锁在洞穴中，只能看到投射在他们面前墙壁上的二维阴影，这些阴影是由看不见的三维物体在火灾前通过的物体产生的。对这样的人来说，他们观察到的一切实际上都是由他们永远看不到的更高维度的抽象概念决定的。</p>
+                <h2 id="generative-models"><a class="markdownIt-Anchor" href="#generative-models"></a> Generative Models</h2>
+<p>给定来自感兴趣分布的观察到的样本<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span>，生成模型的目标是学习对其真实数据分布<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">p(x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">p</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span></span></span></span> 进行建模。一旦学会，我们就可以随意从我们的近似模型中生成新的样本。此外，在某些公式下，我们还可以使用学习的模型来评估观察或采样数据的可能性。生成对抗网络 (GANs) 对复杂分布的采样过程进行建模，该过程以对抗方式学习。另一类生成模型，称为 “基于似然”，旨在学习一种模型，该模型为观察到的数据样本分配了高似然性。这包括自回归模型，归一化流和变分自动编码器 (VAEs)。另一种类似的方法是基于能量的建模，其中将分布学习为任意灵活的能量函数，然后将其归一化。基于分数的生成模型高度相关; 他们不是学习对能量函数本身进行建模，而是将基于能量的模型的分数学习为神经网络。</p>
+<p>对于许多模态，我们可以认为我们观察到的数据是由相关的看不见的潜在变量表示或生成的，我们可以用随机变量<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>z</mi></mrow><annotation encoding="application/x-tex">z</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.04398em;">z</span></span></span></span>表示。表达这种想法的最佳直觉是通过柏拉图的洞穴寓言。在寓言中，一群人一生都被锁在洞穴中，只能看到投射在他们面前墙壁上的二维阴影，这些阴影是由看不见的三维物体在火灾前通过的物体产生的。对这样的人来说，他们观察到的一切实际上都是由他们永远看不到的更高维度的抽象概念决定的。</p>
 <p>类似地，我们在实际世界中遇到的对象也可以作为某些更高级表示的函数生成; 例如，此类表示可以封装抽象属性，例如颜色，大小，形状等。那么，我们观察到的东西就可以解释为这种抽象概念的三维投影或实例化，就像洞穴人观察到的东西实际上是三维物体的二维投影一样。尽管洞穴人永远看不到 (甚至完全理解) 隐藏的物体，但他们仍然可以对它们进行推理和推论; 以类似的方式，我们可以近似描述我们观察到的数据的潜在表示。</p>
 <p>柏拉图的寓言说明了潜在变量背后的思想，即确定观测值的潜在不可观察的表示形式，而这种类比的一个警告是，在生成建模中，我们通常寻求学习低维的潜在表示形式，而不是高维的表示形式。这是因为尝试学习比观察更高维度的表示是没有强烈先验的徒劳的尝试。另一方面，学习低维延迟也可以看作是一种压缩形式，并且可以潜在地发现描述观察结果的语义上有意义的结构。</p>
 <blockquote>
 <p>图像生成模型的本质：把简单分布(normal distribution 或者 uniform distribution)对应到一张张的图像上</p>
-<p>$c$文字条件，$x$ 图像，学习$p(x|c)$是很困难的，不能拿高斯分布或者任何分布表示，怎么近似表达出整个分布是生成模型的核心。</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">c</span></span></span></span>文字条件，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span> 图像，学习<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mo stretchy="false">(</mo><mi>x</mi><mi mathvariant="normal">∣</mi><mi>c</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">p(x|c)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">p</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mord">∣</span><span class="mord mathdefault">c</span><span class="mclose">)</span></span></span></span>是很困难的，不能拿高斯分布或者任何分布表示，怎么近似表达出整个分布是生成模型的核心。</p>
 </blockquote>
-<h2 id="Autoregressive-Model"><a href="#Autoregressive-Model" class="headerlink" title="Autoregressive Model"></a>Autoregressive Model</h2><p><a target="_blank" rel="noopener" href="https://openai.com/blog/imgae-gpt/">https://openai.com/blog/imgae-gpt/</a></p>
+<h2 id="autoregressive-model"><a class="markdownIt-Anchor" href="#autoregressive-model"></a> Autoregressive Model</h2>
+<p><a target="_blank" rel="noopener" href="https://openai.com/blog/imgae-gpt/">https://openai.com/blog/imgae-gpt/</a></p>
 <p>拉成一排 ，一排一排的生成像素</p>
-<h2 id="Variational-Auto-encoder-VAE"><a href="#Variational-Auto-encoder-VAE" class="headerlink" title="Variational Auto-encoder (VAE)"></a>Variational Auto-encoder (VAE)</h2><p>将图像和分布对应训练 一个decoder 和一个 encoder</p>
-<h2 id="Flow-based-Generative-Model"><a href="#Flow-based-Generative-Model" class="headerlink" title="Flow-based Generative Model"></a>Flow-based Generative Model</h2><p>刻意限制神经网络的架构 ，encoder是可逆的，输入和输出是一致大小的</p>
-<h2 id="Diffusion-Model"><a href="#Diffusion-Model" class="headerlink" title="Diffusion Model"></a>Diffusion Model</h2><p>Denoising Diffusion Probabilistic Models (DDPM) </p>
+<h2 id="variational-auto-encoder-vae"><a class="markdownIt-Anchor" href="#variational-auto-encoder-vae"></a> Variational Auto-encoder (VAE)</h2>
+<p>将图像和分布对应训练 一个decoder 和一个 encoder</p>
+<h2 id="flow-based-generative-model"><a class="markdownIt-Anchor" href="#flow-based-generative-model"></a> Flow-based Generative Model</h2>
+<p>刻意限制神经网络的架构 ，encoder是可逆的，输入和输出是一致大小的</p>
+<h2 id="diffusion-model"><a class="markdownIt-Anchor" href="#diffusion-model"></a> Diffusion Model</h2>
+<p>Denoising Diffusion Probabilistic Models (DDPM)</p>
 <p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2006.11239">https://arxiv.org/abs/2006.11239</a></p>
-<p>Stable Diffusion </p>
+<p>Stable Diffusion</p>
 <p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2112.10752">https://arxiv.org/abs/2112.10752</a></p>
-<p>DALL-E series  </p>
+<p>DALL-E series</p>
 <p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2204.06125">https://arxiv.org/abs/2204.06125</a></p>
 <p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2102.12092">https://arxiv.org/abs/2102.12092</a></p>
-<p>Imagen  </p>
+<p>Imagen</p>
 <p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2205.11487">https://arxiv.org/abs/2205.11487</a></p>
-<h2 id="Generative-Adversarial-Network-GAN"><a href="#Generative-Adversarial-Network-GAN" class="headerlink" title="Generative Adversarial Network (GAN)"></a>Generative Adversarial Network (GAN)</h2><p>学习一个decoder，在训练一个discriminator，去判断是否是真的图片，即图像的分布是否一样</p>
-<h2 id="评价指标"><a href="#评价指标" class="headerlink" title="评价指标"></a>评价指标</h2><p><strong>FID 值</strong>：评估图像生成模型的好坏，用预训练的CNN生成特征向量latent，假设真和假都是高斯分布，算两个高斯分布的距离frechet distance</p>
-<p><strong>CLIP值：</strong>Contrastive language-image pre-trainimg，文字输入文字编码器，图像输入图像编码器，看两个距离远不远。</p>
-<p>VAE + GAN         <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1512.09300">https://arxiv.org/abs/1512.09300</a><br>Flow +GAN        <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1705.08868">https://arxiv.org/abs/1705.08868</a><br>Diffusion +GAN<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2206.02262">https://arxiv.org/abs/2206.02262</a></p>
-<h2 id="学习问题–如何找到最大化似然函数-p-x-theta"><a href="#学习问题–如何找到最大化似然函数-p-x-theta" class="headerlink" title="学习问题–如何找到最大化似然函数$p(x;\theta)$"></a>学习问题–如何找到最大化似然函数$p(x;\theta)$</h2><h3 id="1-显式的建模（设定了-p-x-theta-的形式）"><a href="#1-显式的建模（设定了-p-x-theta-的形式）" class="headerlink" title="1. 显式的建模（设定了$p(x;\theta)$的形式）"></a>1. 显式的建模（设定了$p(x;\theta)$的形式）</h3><h4 id="1-1-精确建模"><a href="#1-1-精确建模" class="headerlink" title="1.1 精确建模"></a>1.1 精确建模</h4><ul>
+<h2 id="generative-adversarial-network-gan"><a class="markdownIt-Anchor" href="#generative-adversarial-network-gan"></a> Generative Adversarial Network (GAN)</h2>
+<p>学习一个decoder，在训练一个discriminator，去判断是否是真的图片，即图像的分布是否一样</p>
+<h2 id="评价指标"><a class="markdownIt-Anchor" href="#评价指标"></a> 评价指标</h2>
+<p><strong>FID 值</strong>：评估图像生成模型的好坏，用预训练的CNN生成特征向量latent，假设真和假都是高斯分布，算两个高斯分布的距离frechet distance</p>
+<p>**CLIP值：**Contrastive language-image pre-trainimg，文字输入文字编码器，图像输入图像编码器，看两个距离远不远。</p>
+<p>VAE + GAN         <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1512.09300">https://arxiv.org/abs/1512.09300</a><br>
+Flow +GAN        <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1705.08868">https://arxiv.org/abs/1705.08868</a><br>
+Diffusion +GANhttps://arxiv.org/abs/2206.02262</p>
+<h2 id="学习问题如何找到最大化似然函数pxtheta"><a class="markdownIt-Anchor" href="#学习问题如何找到最大化似然函数pxtheta"></a> 学习问题–如何找到最大化似然函数<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">;</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">p(x;\theta)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">p</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">θ</span><span class="mclose">)</span></span></span></span></h2>
+<h3 id="1-显式的建模设定了pxtheta的形式"><a class="markdownIt-Anchor" href="#1-显式的建模设定了pxtheta的形式"></a> 1. 显式的建模（设定了<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">;</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">p(x;\theta)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">p</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">θ</span><span class="mclose">)</span></span></span></span>的形式）</h3>
+<h4 id="11-精确建模"><a class="markdownIt-Anchor" href="#11-精确建模"></a> 1.1 精确建模</h4>
+<ul>
 <li>不含隐变量 Autoregressive Model</li>
 <li>含有隐变量 Flow-based Model</li>
 </ul>
-<h4 id="1-2-近似建模"><a href="#1-2-近似建模" class="headerlink" title="1.2 近似建模"></a>1.2 近似建模</h4><ul>
+<h4 id="12-近似建模"><a class="markdownIt-Anchor" href="#12-近似建模"></a> 1.2 近似建模</h4>
+<ul>
 <li>变分推断 VAE</li>
 <li>采样 MCMC</li>
 <li>扩散模型 Diffusion Model</li>
 </ul>
-<h3 id="2-隐式的建模（不关系-p-x-theta-的形式）"><a href="#2-隐式的建模（不关系-p-x-theta-的形式）" class="headerlink" title="2. 隐式的建模（不关系$p(x;\theta)$的形式）"></a>2. 隐式的建模（不关系$p(x;\theta)$的形式）</h3><ul>
+<h3 id="2-隐式的建模不关系pxtheta的形式"><a class="markdownIt-Anchor" href="#2-隐式的建模不关系pxtheta的形式"></a> 2. 隐式的建模（不关系<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">;</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">p(x;\theta)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">p</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">θ</span><span class="mclose">)</span></span></span></span>的形式）</h3>
+<ul>
 <li>直接建模 GAN</li>
 <li>简介建模 (MC)GSN</li>
 </ul>
-<h2 id="一个生成模型通用的框架"><a href="#一个生成模型通用的框架" class="headerlink" title="一个生成模型通用的框架"></a>一个生成模型通用的框架</h2><p>文字、semantic map、representation等条件输入<strong>Text Encoder</strong> </p>
+<h2 id="一个生成模型通用的框架"><a class="markdownIt-Anchor" href="#一个生成模型通用的框架"></a> 一个生成模型通用的框架</h2>
+<p>文字、semantic map、representation等条件输入<strong>Text Encoder</strong></p>
 <p>然后和image（选带噪音）一起塞到<strong>Generative Model</strong>（可以是任何生成模型）</p>
 <p>生成一个<strong>中间产物</strong>（类似于图像的压缩版本或者带噪音的版本或者特征表示）</p>
 <p>然后将这个<strong>中间产物</strong>输入到<strong>Decoder</strong>（可以是超分辨率，可以是去噪，任意类型任意个数的Decoder），恢复出图像</p>
@@ -989,28 +1004,9 @@
 
 <!-- mathjax2.0-->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-    });
-</script>
-
 
 
 <!-- mathjax3.0
-
-<script type="text/javascript" id="MathJax-script" async  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML"></script>
-<script>
-MathJax = {
-    tex:{
-            inlineMath: [['$', '$'], ['\\(', '\\)']]
-        },
-    svg:{
-            fontCache: 'global'
-        }
-    };
-</script>
 
 -->
 
@@ -1035,7 +1031,7 @@ MathJax = {
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">50.2k</span>
+                        class="white-color">57.8k</span>
             
             
             
@@ -1355,6 +1351,11 @@ $(function () {
     
     <script src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/instantpage/instantpage.js" type="module"></script>
     
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
 
 </body>
 

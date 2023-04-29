@@ -519,57 +519,71 @@
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/547520780">2022 Hexo 博客搭建和使用教程(Windows)</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yb411a7ty/?share_source=copy_web&amp;vd_source=d698f3adeb829e7ec38eaffd67915950">手把手教你从0开始搭建自己的个人博客|bilibili</a></p>
 </blockquote>
-<h2 id="Hexo-介绍"><a href="#Hexo-介绍" class="headerlink" title="Hexo 介绍:"></a>Hexo 介绍:</h2><blockquote>
+<h2 id="hexo-介绍"><a class="markdownIt-Anchor" href="#hexo-介绍"></a> Hexo 介绍:</h2>
+<blockquote>
 <p>Hexo 是一个基于 Node.js 的静态博客框架，可以帮助用户快速搭建并部署静态博客网站。与其他静态博客框架相比，Hexo 具有速度快、使用方便等优点，同时具备丰富的插件和主题支持，可以满足不同用户的需求。</p>
-<p>Hexo 的工作原理是将用户编写的 Markdown 文件转换为 HTML 文件，使用 <a href="https://link.zhihu.com/?target=http://daringfireball.net/projects/markdown/">Markdown</a>（或其他渲染引擎）解析文章，然后生成静态网站。用户可以通过 Hexo 提供的命令行工具来管理博客的内容和布局，同时支持多种第三方扩展，比如部署到 GitHub Pages 和其他云服务等。</p>
+<p>Hexo 的工作原理是将用户编写的 Markdown 文件转换为 HTML 文件，使用 <a href="https://link.zhihu.com/?target=http%3A//daringfireball.net/projects/markdown/">Markdown</a>（或其他渲染引擎）解析文章，然后生成静态网站。用户可以通过 Hexo 提供的命令行工具来管理博客的内容和布局，同时支持多种第三方扩展，比如部署到 GitHub Pages 和其他云服务等。</p>
 <p>Hexo 的安装和使用非常简单，只需要在本地安装 Node.js 和 Git 等基本工具，然后使用命令行安装 Hexo，就可以开始编写和发布博客了。由于 Hexo 是一个开源项目，用户可以通过 GitHub 等平台获取最新的版本和插件，并与全球的开发者社区交流和分享。</p>
 </blockquote>
-<h2 id="第一章-前期准备"><a href="#第一章-前期准备" class="headerlink" title="第一章 前期准备"></a>第一章 前期准备</h2><h3 id="1-1-安装前所需环境介绍"><a href="#1-1-安装前所需环境介绍" class="headerlink" title="1.1 安装前所需环境介绍"></a>1.1 安装前所需环境介绍</h3><p>安装 Hexo 相当简单，只需要先安装下列应用程序即可：</p>
+<h2 id="第一章-前期准备"><a class="markdownIt-Anchor" href="#第一章-前期准备"></a> 第一章 前期准备</h2>
+<h3 id="11-安装前所需环境介绍"><a class="markdownIt-Anchor" href="#11-安装前所需环境介绍"></a> 1.1 安装前所需环境介绍</h3>
+<p>安装 Hexo 相当简单，只需要先安装下列应用程序即可：</p>
 <ul>
-<li><a target="_blank" rel="noopener" href="http://nodejs.org/">Node.js</a> </li>
+<li><a target="_blank" rel="noopener" href="http://nodejs.org/">Node.js</a></li>
 <li><a target="_blank" rel="noopener" href="http://git-scm.com/">Git</a></li>
 </ul>
 <p>如果电脑已经具备所需工具，那么可以直接进入第二章开始安装 Hexo 了。</p>
 <p>如果还未安装这两款工具，那么请按照以下步骤进行安装。</p>
-<h3 id="1-2-安装-Git"><a href="#1-2-安装-Git" class="headerlink" title="1.2 安装 Git"></a>1.2 安装 Git</h3><blockquote>
+<h3 id="12-安装-git"><a class="markdownIt-Anchor" href="#12-安装-git"></a> 1.2 安装 Git</h3>
+<blockquote>
 <p>Git是一个分布式版本控制系统，最初由Linus Torvalds于2005年开发，旨在管理Linux内核的源代码。它可以在不同的计算机上并行地开发代码，并可以跟踪代码的版本历史记录，以便在需要时进行回滚或比较不同版本之间的差异。</p>
 </blockquote>
 <ul>
-<li><p>官方下载地址: <a target="_blank" rel="noopener" href="http://git-scm.com/">Git - Downloading Package</a></p>
+<li>
+<p>官方下载地址: <a target="_blank" rel="noopener" href="http://git-scm.com/">Git - Downloading Package</a></p>
 </li>
-<li><p>安装与Github配置使用: <a target="_blank" rel="noopener" href="https://github.com/jijunhao/git-skills">Git操作手册</a></p>
+<li>
+<p>安装与Github配置使用: <a target="_blank" rel="noopener" href="https://github.com/jijunhao/git-skills">Git操作手册</a></p>
 </li>
 </ul>
-<p><img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202209251035608.png"></p>
+<p><img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202209251035608.png" alt=""></p>
 <ul>
-<li><p>注意事项: 建议选择 64-bit Git for Windows Setup，并且安装时要勾选 <strong>Add to PATH</strong> 选项</p>
+<li>
+<p>注意事项: 建议选择 64-bit Git for Windows Setup，并且安装时要勾选 <strong>Add to PATH</strong> 选项</p>
 </li>
-<li><p>安装后验证: 在 cmd 中输入命令 <code>git --version</code>, 查看 Git 版本</p>
+<li>
+<p>安装后验证: 在 cmd 中输入命令 <code>git --version</code>, 查看 Git 版本</p>
 </li>
 </ul>
-<h3 id="1-3-安装-Node-js"><a href="#1-3-安装-Node-js" class="headerlink" title="1.3 安装 Node.js"></a>1.3 安装 Node.js</h3><blockquote>
+<h3 id="13-安装-nodejs"><a class="markdownIt-Anchor" href="#13-安装-nodejs"></a> 1.3 安装 Node.js</h3>
+<blockquote>
 <p>Node.js是一个基于Chrome V8 JavaScript引擎构建的开源、跨平台的运行时环境，可以让JavaScript代码在服务器端运行，具有事件驱动、非阻塞I/O等特点。它的出现使得JavaScript不仅可以在浏览器中作为脚本语言运行，还可以在服务器端处理数据、构建网络应用、开发命令行工具等。</p>
 </blockquote>
 <ul>
-<li>官方下载地址: <a target="_blank" rel="noopener" href="http://nodejs.org/">Node.js</a> </li>
+<li>官方下载地址: <a target="_blank" rel="noopener" href="http://nodejs.org/">Node.js</a></li>
 <li>安装与使用: <a target="_blank" rel="noopener" href="https://www.runoob.com/nodejs/nodejs-tutorial.html">菜鸟教程</a></li>
 </ul>
-<p><img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202209251035160.png"></p>
+<p><img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/202209251035160.png" alt=""></p>
 <ul>
-<li><p>注意事项: 使用 Node.js 官方安装程序时，请确保勾选 <strong>Add to PATH</strong> 选项（默认已勾选）</p>
+<li>
+<p>注意事项: 使用 Node.js 官方安装程序时，请确保勾选 <strong>Add to PATH</strong> 选项（默认已勾选）</p>
 </li>
-<li><p>安装后验证: 在 cmd 中输入命令 <code>node -v</code>, 查看 Node 版本</p>
+<li>
+<p>安装后验证: 在 cmd 中输入命令 <code>node -v</code>, 查看 Node 版本</p>
 </li>
 </ul>
-<h2 id="第二章-安装-Hexo"><a href="#第二章-安装-Hexo" class="headerlink" title="第二章 安装 Hexo"></a>第二章 安装 Hexo</h2><h3 id="2-1-安装-cnpm"><a href="#2-1-安装-cnpm" class="headerlink" title="2.1 安装 cnpm"></a>2.1 安装 cnpm</h3><p>直接用 npm 速度会比较慢（源在国外），因此要利用 npm 安装 cnpm 或者使用 clash 等软件。</p>
+<h2 id="第二章-安装-hexo"><a class="markdownIt-Anchor" href="#第二章-安装-hexo"></a> 第二章 安装 Hexo</h2>
+<h3 id="21-安装-cnpm"><a class="markdownIt-Anchor" href="#21-安装-cnpm"></a> 2.1 安装 cnpm</h3>
+<p>直接用 npm 速度会比较慢（源在国外），因此要利用 npm 安装 cnpm 或者使用 clash 等软件。</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#安装淘宝的cnpm管理器</span>
 <span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-g</span> cnpm <span class="token parameter variable">--registry</span><span class="token operator">=</span>http://registry.npm.taobao.org <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>参数说明: </p>
+<p>参数说明:</p>
 <p><code>-g</code> 表示安装到全局环境中</p>
 <p><code>--registry=https://registry.npm.taobao.org</code> 表示使用淘宝镜像安装 cnpm</p>
-<h3 id="2-2-安装-Hexo"><a href="#2-2-安装-Hexo" class="headerlink" title="2.2 安装 Hexo"></a>2.2 安装 Hexo</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">cnpm <span class="token function">install</span> <span class="token parameter variable">-g</span> hexo-cli<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h3 id="2-3-注意事项"><a href="#2-3-注意事项" class="headerlink" title="2.3 注意事项"></a>2.3 注意事项</h3><p>建议永远安装最新版本的 Hexo，以及 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/index.html#%E5%AE%89%E8%A3%85%E5%89%8D%E6%8F%90">推荐的 Node.js 版本</a>。</p>
+<h3 id="22-安装-hexo"><a class="markdownIt-Anchor" href="#22-安装-hexo"></a> 2.2 安装 Hexo</h3>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">cnpm <span class="token function">install</span> <span class="token parameter variable">-g</span> hexo-cli<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="23-注意事项"><a class="markdownIt-Anchor" href="#23-注意事项"></a> 2.3 注意事项</h3>
+<p>建议永远安装最新版本的 Hexo，以及 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/index.html#%E5%AE%89%E8%A3%85%E5%89%8D%E6%8F%90">推荐的 Node.js 版本</a>。</p>
 <table>
 <thead>
 <tr>
@@ -577,7 +591,8 @@
 <th>最低兼容 Node.js 版本</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>6.0+</td>
 <td>12.13.0</td>
 </tr>
@@ -609,26 +624,31 @@
 <td>0.0.1 - 2.8</td>
 <td>0.10</td>
 </tr>
-</tbody></table>
-<h3 id="2-4-Hexo常用命令"><a href="#2-4-Hexo常用命令" class="headerlink" title="2.4 Hexo常用命令"></a>2.4 Hexo常用命令</h3><p><code>hexo clean</code> 清除缓存文件和已生成的静态文件 public</p>
+</tbody>
+</table>
+<h3 id="24-hexo常用命令"><a class="markdownIt-Anchor" href="#24-hexo常用命令"></a> 2.4 Hexo常用命令</h3>
+<p><code>hexo clean</code> 清除缓存文件和已生成的静态文件 public</p>
 <p><code>hexo n [name]</code>生成文章，即在 source 文件夹下的 _posts 文件夹下创建 .md 文件</p>
 <p><code>hexo g</code> 在 public 文件夹下生成相关的 html 文件</p>
-<p><code>hexo s</code> 可以开启本地预览服务，打开浏览器访问 <a href="https://link.zhihu.com/?target=http://localhost:4000/">http://localhost:4000</a> 即可看到博客内容</p>
+<p><code>hexo s</code> 可以开启本地预览服务，打开浏览器访问 <a href="https://link.zhihu.com/?target=http%3A//localhost%3A4000/">http://localhost:4000</a> 即可看到博客内容</p>
 <p><code>hexo d</code> 将博客部署到远程服务器上</p>
-<h2 id="第三章-使用-Hexo-搭建博客并部署到-GitHub-Pages-上"><a href="#第三章-使用-Hexo-搭建博客并部署到-GitHub-Pages-上" class="headerlink" title="第三章 使用 Hexo 搭建博客并部署到 GitHub Pages 上"></a>第三章 使用 Hexo 搭建博客并部署到 GitHub Pages 上</h2><h3 id="3-1-在-Github-上创建仓库"><a href="#3-1-在-Github-上创建仓库" class="headerlink" title="3.1 在 Github 上创建仓库"></a>3.1 在 Github 上创建仓库</h3><p>在 GitHub 上创建一个新的仓库。您可以在 GitHub 上创建一个新的仓库，仓库名称应该为 <code>&lt;username&gt;.github.io</code>。其中，<code>&lt;username&gt;</code>是您的 GitHub 用户名。</p>
+<h2 id="第三章-使用-hexo-搭建博客并部署到-github-pages-上"><a class="markdownIt-Anchor" href="#第三章-使用-hexo-搭建博客并部署到-github-pages-上"></a> 第三章 使用 Hexo 搭建博客并部署到 GitHub Pages 上</h2>
+<h3 id="31-在-github-上创建仓库"><a class="markdownIt-Anchor" href="#31-在-github-上创建仓库"></a> 3.1 在 Github 上创建仓库</h3>
+<p>在 GitHub 上创建一个新的仓库。您可以在 GitHub 上创建一个新的仓库，仓库名称应该为 <code>&lt;username&gt;.github.io</code>。其中，<code>&lt;username&gt;</code>是您的 GitHub 用户名。</p>
 <blockquote>
 <p>注意配置 git 和 ssh 免密登录</p>
 <p><a target="_blank" rel="noopener" href="https://github.com/jijunhao/git-skills/blob/main/02%E9%85%8D%E7%BD%AEGit.md">配置git</a>    <a target="_blank" rel="noopener" href="https://github.com/jijunhao/git-skills/blob/main/%E9%99%84%E5%BD%95B-SSH%E5%AF%86%E5%8C%99.md">配置ssh密钥</a></p>
 </blockquote>
-<h3 id="3-2-初始化博客文件夹"><a href="#3-2-初始化博客文件夹" class="headerlink" title="3.2 初始化博客文件夹"></a>3.2 初始化博客文件夹</h3><p>创建一个空文件夹(名字可以随便取)，这将会是静态网页的本地存储位置。</p>
+<h3 id="32-初始化博客文件夹"><a class="markdownIt-Anchor" href="#32-初始化博客文件夹"></a> 3.2 初始化博客文件夹</h3>
+<p>创建一个空文件夹(名字可以随便取)，这将会是静态网页的本地存储位置。</p>
 <p>打开文件夹，在此文件夹下运行git bash（右键单击空白处）</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo init
 <span class="token function">npm</span> <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<h3 id="3-3-安装-hexo-deployer-git-插件"><a href="#3-3-安装-hexo-deployer-git-插件" class="headerlink" title="3.3 安装 hexo-deployer-git 插件"></a>3.3 安装 hexo-deployer-git 插件</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">cnpm <span class="token function">install</span> hexo-deployer-git <span class="token parameter variable">--save</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
+<h3 id="33-安装-hexo-deployer-git-插件"><a class="markdownIt-Anchor" href="#33-安装-hexo-deployer-git-插件"></a> 3.3 安装 hexo-deployer-git 插件</h3>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">cnpm <span class="token function">install</span> hexo-deployer-git <span class="token parameter variable">--save</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>此命令将安装Hexo的Git部署插件，用于将博客发布到GitHub Pages。</p>
-<h3 id="3-4-配置博客的-Git-信息"><a href="#3-4-配置博客的-Git-信息" class="headerlink" title="3.4 配置博客的 Git 信息"></a>3.4 配置博客的 Git 信息</h3><p>打开文件夹下的<code>_config.yml</code>文件，这个文件是用来配置你的博客的。其中，<code>&lt;git-repository-url&gt;</code> 是您在第一步中创建的GitHub仓库的URL地址。</p>
+<h3 id="34-配置博客的-git-信息"><a class="markdownIt-Anchor" href="#34-配置博客的-git-信息"></a> 3.4 配置博客的 Git 信息</h3>
+<p>打开文件夹下的<code>_config.yml</code>文件，这个文件是用来配置你的博客的。其中，<code>&lt;git-repository-url&gt;</code> 是您在第一步中创建的GitHub仓库的URL地址。</p>
 <pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">deploy</span><span class="token punctuation">:</span>
   <span class="token key atrule">type</span><span class="token punctuation">:</span> git
   <span class="token key atrule">repository</span><span class="token punctuation">:</span> &lt;git<span class="token punctuation">-</span>repository<span class="token punctuation">-</span>url<span class="token punctuation">&gt;</span>
@@ -639,12 +659,12 @@
 <span class="token comment">## git@github.com:&lt;username&gt;/&lt;username&gt;.github.io.git</span>
 
 <span class="token comment"># 分支也有讲究，一般是main或者master</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="3-5-生成并部署博客"><a href="#3-5-生成并部署博客" class="headerlink" title="3.5 生成并部署博客"></a>3.5 生成并部署博客</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo g
+<h3 id="35-生成并部署博客"><a class="markdownIt-Anchor" href="#35-生成并部署博客"></a> 3.5 生成并部署博客</h3>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo g
 hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
 <p>这两个命令将会生成 Hexo 博客的静态 HTML 文件，并将其部署到 GitHub Pages 上。</p>
-<h2 id="第五章-使用-Typora-编写博客"><a href="#第五章-使用-Typora-编写博客" class="headerlink" title="第五章 使用 Typora 编写博客"></a>第五章 使用 Typora 编写博客</h2><blockquote>
+<h2 id="第五章-使用-typora-编写博客"><a class="markdownIt-Anchor" href="#第五章-使用-typora-编写博客"></a> 第五章 使用 Typora 编写博客</h2>
+<blockquote>
 <p>Typora 是一款轻便简洁的 Markdown 编辑器，支持即时渲染技术，这也是与其他 Markdown 编辑器最显著的区别。即时渲染使得你写Markdown 就像是写 Word 文档一样流畅自如，不像其他编辑器的有编辑栏和显示栏。</p>
 </blockquote>
 <p>优点:</p>
@@ -657,7 +677,8 @@ hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
 </ul>
 <p>总之，Typora是一款非常实用和易用的Markdown编辑器，适合喜欢使用Markdown进行写作和编辑的用户，无论是写技术文档、写博客、写笔记还是写小说等等，Typora都是一个非常好的选择。</p>
 <p>官网: <a target="_blank" rel="noopener" href="https://typoraio.cn/">Typora 官方中文站</a></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>以上就是Hexo搭建一个简单的博客的过程。</p>
+<h2 id="总结"><a class="markdownIt-Anchor" href="#总结"></a> 总结</h2>
+<p>以上就是Hexo搭建一个简单的博客的过程。</p>
 <p>欢迎大家访问我的博客地址: <a href="https://jijunhao.github.io/">https://jijunhao.github.io/</a></p>
 <p>谢谢大家!</p>
 
@@ -1085,7 +1106,7 @@ hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">50.2k</span>
+                        class="white-color">57.8k</span>
             
             
             
@@ -1405,6 +1426,11 @@ $(function () {
     
     <script src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/instantpage/instantpage.js" type="module"></script>
     
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
 
 </body>
 

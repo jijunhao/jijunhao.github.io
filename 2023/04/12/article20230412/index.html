@@ -521,8 +521,10 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-图像分类-Image-classification"><a href="#1-图像分类-Image-classification" class="headerlink" title="1. 图像分类(Image classification)"></a>1. 图像分类(Image classification)</h2><p>图像分类是指将图像分为不同的类别或标签，通常使用机器学习和深度学习技术。给定一张输入图像，图像分类任务旨在判断该图像所属类别。这些算法利用计算机视觉技术和模式识别技术，从图像中提取有用的特征，然后将其与预定义的类别或标签匹配。这种技术的应用范围非常广泛，例如，它可以用于自动驾驶汽车中的道路标志识别，医学图像中的疾病检测，安全监控中的人脸识别，以及社交媒体中的图像过滤等。</p>
-<h3 id="1-1-相关概念"><a href="#1-1-相关概念" class="headerlink" title="1.1 相关概念"></a>1.1 相关概念</h3><ol>
+                <h2 id="1-图像分类image-classification"><a class="markdownIt-Anchor" href="#1-图像分类image-classification"></a> 1. 图像分类(Image classification)</h2>
+<p>图像分类是指将图像分为不同的类别或标签，通常使用机器学习和深度学习技术。给定一张输入图像，图像分类任务旨在判断该图像所属类别。这些算法利用计算机视觉技术和模式识别技术，从图像中提取有用的特征，然后将其与预定义的类别或标签匹配。这种技术的应用范围非常广泛，例如，它可以用于自动驾驶汽车中的道路标志识别，医学图像中的疾病检测，安全监控中的人脸识别，以及社交媒体中的图像过滤等。</p>
+<h3 id="11-相关概念"><a class="markdownIt-Anchor" href="#11-相关概念"></a> 1.1 相关概念</h3>
+<ol>
 <li><code>图像分类器（Image Classifier）</code>：图像分类器是一种用于将输入的图像分为不同类别的算法。常见的图像分类器包括基于深度学习的算法，如卷积神经网络（Convolutional Neural Network，CNN）。</li>
 <li><code>特征提取（Feature Extraction）</code>：特征提取是指从输入的图像中提取有用的特征表示，以便分类器能够更好地进行分类。在基于深度学习的图像分类算法中，通常使用卷积神经网络（CNN）来提取图像的特征。</li>
 <li><code>类别标签（Class Label）</code>：类别标签是用于表示不同类别的标签。通常用数字或字符串表示不同的类别。</li>
@@ -533,21 +535,27 @@
 <li><code>损失函数（Loss Function）</code>：损失函数是用于衡量分类器输出和真实标签之间的差异的函数。通常使用交叉熵损失函数来训练图像分类器。</li>
 <li><code>预处理（Preprocessing）</code>：预处理是指在输入图像被送入分类器之前，对其进行一些必要的预处理操作，如缩放、裁剪、归一化等。</li>
 </ol>
-<h3 id="1-2-常用数据集"><a href="#1-2-常用数据集" class="headerlink" title="1.2 常用数据集"></a>1.2 常用数据集</h3><blockquote>
+<h3 id="12-常用数据集"><a class="markdownIt-Anchor" href="#12-常用数据集"></a> 1.2 常用数据集</h3>
+<blockquote>
 <p><a target="_blank" rel="noopener" href="https://paperswithcode.com/datasets?task=image-classification&amp;page=1">https://paperswithcode.com/datasets?task=image-classification&amp;page=1</a></p>
 </blockquote>
 <p>以下是几种常用分类数据集：</p>
 <ul>
-<li><p><strong>MNIST</strong>：包含0-9手写数字图像的数据集。训练图像：60k、测试图像10k、10个类别、图像大小1×28×28。</p>
+<li>
+<p><strong>MNIST</strong>：包含0-9手写数字图像的数据集。训练图像：60k、测试图像10k、10个类别、图像大小1×28×28。</p>
 </li>
-<li><p><strong>CIFAR-10</strong> 和 <strong>CIFAR-100</strong>：分别包含10和100个类别的彩色图像。训练图像：50k、测试图像：10k、图像大小3×32×32。</p>
+<li>
+<p><strong>CIFAR-10</strong> 和 <strong>CIFAR-100</strong>：分别包含10和100个类别的彩色图像。训练图像：50k、测试图像：10k、图像大小3×32×32。</p>
 </li>
-<li><p><strong>ImageNet</strong>：1k个类别，最大的图像分类数据集之一。训练图像：1.2M、测试图像：50k、验证图像：50k、图像大小一般在256x256或224x224。</p>
+<li>
+<p><strong>ImageNet</strong>：1k个类别，最大的图像分类数据集之一。训练图像：1.2M、测试图像：50k、验证图像：50k、图像大小一般在256x256或224x224。</p>
 </li>
-<li><p>…</p>
+<li>
+<p>…</p>
 </li>
 </ul>
-<h3 id="1-3-卷积神经网络"><a href="#1-3-卷积神经网络" class="headerlink" title="1.3 卷积神经网络"></a>1.3 卷积神经网络</h3><p>将图像拉直成向量传入全连接层存在一些问题：参数量过大（224×224的神经元）；图像的局部不变性无法提取（伸缩、平移等）</p>
+<h3 id="13-卷积神经网络"><a class="markdownIt-Anchor" href="#13-卷积神经网络"></a> 1.3 卷积神经网络</h3>
+<p>将图像拉直成向量传入全连接层存在一些问题：参数量过大（224×224的神经元）；图像的局部不变性无法提取（伸缩、平移等）</p>
 <p><code>卷积神经网络（Convolutional Neural Network, CNN）</code>是一种深度学习模型，以下是卷积神经网络的相关概念：</p>
 <ol>
 <li><code>卷积层</code>：卷积层是卷积神经网络中最重要的组成部分，其通过滑动卷积核在输入图像上进行卷积操作，提取不同尺度的特征。卷积层通常包括多个卷积核和偏置项，每个卷积核对应一个输出通道。<strong>可调整的地方：卷积核大小(kernel_size)、步长(stride)、填充(padding)</strong></li>
@@ -556,8 +564,10 @@
 <li><code>全连接层</code>：全连接层是用于将卷积层和池化层提取的特征进行分类的一种操作。全连接层通常包括多个神经元和偏置项，其通过权重矩阵将输入图像映射到不同类别的概率分布。</li>
 </ol>
 <p>卷积神经网络的特性：<code>局部连接</code>、<code>权重共享</code>、<code>池化</code>、<code>迁移学习</code></p>
-<h3 id="1-4-经典网络结构"><a href="#1-4-经典网络结构" class="headerlink" title="1.4 经典网络结构"></a>1.4 经典网络结构</h3><p><strong>Fine-tuning</strong>：针对类似图像分类、目标检测等视觉任务，可以采用已有的经典网络结构，如AlexNet、VGG、ResNet等，进行微调以适应具体任务需求。在微调时，可以通过去掉最后一个全连接层和对应softmax，加上适合任务的全连接层和softmax，再固定住前面的层，只训练加入的部分。如果训练数据比较丰富，也可以考虑微调所有层。此外，还可以使用预训练模型，如ImageNet预训练模型，将其用于特定任务的微调。这样可以避免从头开始训练网络，从而节省时间和计算资源，并提高模型的性能。</p>
-<h4 id="LeNet-5"><a href="#LeNet-5" class="headerlink" title="LeNet-5"></a>LeNet-5</h4><blockquote>
+<h3 id="14-经典网络结构"><a class="markdownIt-Anchor" href="#14-经典网络结构"></a> 1.4 经典网络结构</h3>
+<p><strong>Fine-tuning</strong>：针对类似图像分类、目标检测等视觉任务，可以采用已有的经典网络结构，如AlexNet、VGG、ResNet等，进行微调以适应具体任务需求。在微调时，可以通过去掉最后一个全连接层和对应softmax，加上适合任务的全连接层和softmax，再固定住前面的层，只训练加入的部分。如果训练数据比较丰富，也可以考虑微调所有层。此外，还可以使用预训练模型，如ImageNet预训练模型，将其用于特定任务的微调。这样可以避免从头开始训练网络，从而节省时间和计算资源，并提高模型的性能。</p>
+<h4 id="lenet-5"><a class="markdownIt-Anchor" href="#lenet-5"></a> LeNet-5</h4>
+<blockquote>
 <p>亮点：卷积、最大池化</p>
 </blockquote>
 <p>LeNet的输入层为32x32的图像，经过两个卷积层和两个池化层后，输出为5x5的特征图。然后将特征图展开，分别经过两个全连接层，最后输出10个神经元，对应10个数字类别。</p>
@@ -584,8 +594,8 @@
         x <span class="token operator">=</span> self<span class="token punctuation">.</span>act<span class="token punctuation">(</span>self<span class="token punctuation">.</span>fc2<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span>
         x <span class="token operator">=</span> self<span class="token punctuation">.</span>fc3<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
         <span class="token keyword">return</span> x<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="AlexNet"><a href="#AlexNet" class="headerlink" title="AlexNet"></a>AlexNet</h4><blockquote>
+<h4 id="alexnet"><a class="markdownIt-Anchor" href="#alexnet"></a> AlexNet</h4>
+<blockquote>
 <p>亮点：不同大小的卷积核、ReLU激活函数、dropout正则化、交叉熵损失函数</p>
 </blockquote>
 <p>AlexNet的输入图像大小为224x224，经过五个卷积层和三个池化层后，输出大小为6x6x256的特征图。然后将特征图展开，分别经过两个全连接层，最后输出1000个神经元，对应1000个类别。</p>
@@ -641,16 +651,18 @@
         x <span class="token operator">=</span> self<span class="token punctuation">.</span>fc2<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
         x <span class="token operator">=</span> self<span class="token punctuation">.</span>fc3<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
         <span class="token keyword">return</span> x<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="VGG-16-x2F-VGG-19"><a href="#VGG-16-x2F-VGG-19" class="headerlink" title="VGG-16/VGG-19"></a>VGG-16/VGG-19</h4><blockquote>
+<h4 id="vgg-16vgg-19"><a class="markdownIt-Anchor" href="#vgg-16vgg-19"></a> VGG-16/VGG-19</h4>
+<blockquote>
 <p>亮点：使用3x3卷积核、多个卷积配一个池化的架构、ReLU激活函数、在全连接层引入dropout、优化算法改进</p>
 </blockquote>
 <p>VGG-16和VGG-19中的卷积层和全连接层都使用了ReLU激活函数，而且在全连接层之间使用了Dropout层来防止过拟合。此外，在训练过程中，使用了带动量的随机梯度下降算法来优化网络参数。</p>
-<h4 id="GoogLeNet"><a href="#GoogLeNet" class="headerlink" title="GoogLeNet"></a>GoogLeNet</h4><blockquote>
+<h4 id="googlenet"><a class="markdownIt-Anchor" href="#googlenet"></a> GoogLeNet</h4>
+<blockquote>
 <p>亮点：Inception模块、平均池化层、1x1卷积核</p>
 </blockquote>
 <p>Inception模块是GoogLeNet网络的核心，它采用了多个不同大小的卷积核并行进行卷积操作，然后将不同大小的卷积结果在通道维度上进行拼接，从而获得更加丰富的特征表达。每个Inception模块包含了多个分支，每个分支采用不同大小的卷积核进行卷积操作，然后将不同的卷积结果在通道维度上进行拼接。具体来说，每个分支的卷积核大小分别为1x1、3x3、5x5和3x3的最大池化，其中，1x1卷积核用于降低通道数，减少计算量；3x3和5x5的卷积核用于提取不同大小的特征，增加网络的丰富性；3x3的最大池化层用于提取图像的空间特征。通过将不同分支的卷积结果在通道维度上进行拼接，可以获得更加丰富的特征表达，从而提高图像分类的准确率。</p>
-<h4 id="ResNet"><a href="#ResNet" class="headerlink" title="ResNet"></a>ResNet</h4><blockquote>
+<h4 id="resnet"><a class="markdownIt-Anchor" href="#resnet"></a> ResNet</h4>
+<blockquote>
 <p>Residual Block、预激活（Pre-activation）、参数初始化（基于方差缩放的参数初始化）、学习率调整、批归一化（Batch Normalization）</p>
 </blockquote>
 <p>Residual跳跃连接将输入直接添加到输出中，从而允许信息在网络中跳过若干层。此外ResNet采用了一些优化策略来提高网络的性能：</p>
@@ -670,7 +682,6 @@
 
     <span class="token keyword">def</span> <span class="token function">forward</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> x<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token keyword">return</span> self<span class="token punctuation">.</span>fn<span class="token punctuation">(</span>x<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span> <span class="token operator">+</span> x<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>【论文阅读】Deep Residual Learning for Image Recognition</p>
 
 
@@ -680,28 +691,34 @@
 
 
 
-
-<h4 id="DenseNet"><a href="#DenseNet" class="headerlink" title="DenseNet"></a>DenseNet</h4><blockquote>
+<h4 id="densenet"><a class="markdownIt-Anchor" href="#densenet"></a> DenseNet</h4>
+<blockquote>
 <p>亮点：Dense Block、Transition Layer、Global Average Pooling</p>
 </blockquote>
 <p>Dense Block是DenseNet的核心模块，其本质上是一堆卷积层的堆叠，其中每个卷积层都接受前面所有层的输入特征作为输入，并将其与自己的输出特征连接在一起。这样，每个卷积层都可以直接访问前面所有层的输入特征，从而增强了特征重用和梯度流动。</p>
 <p>Transition Layer通常包括一个1x1的卷积层和一个平均池化层，可以将输入特征的通道数减半，并将特征图的空间分辨率降低一半。这样，可以有效地减少计算量和内存消耗，并提高模型的性能。</p>
 <p>在DenseNet的最后一个Dense Block之后，通常会使用一个全局平均池化层来将特征图的高度和宽度降为1，得到一个全局特征向量。这样，可以消除最后一层卷积层的空间信息，使得模型更加关注图像的全局特征。最后，可以使用一个全连接层将全局特征向量映射到输出类别。</p>
-<h4 id="SENet"><a href="#SENet" class="headerlink" title="SENet"></a>SENet</h4><blockquote>
+<h4 id="senet"><a class="markdownIt-Anchor" href="#senet"></a> SENet</h4>
+<blockquote>
 <p>“Squeeze-and-Excitation”（SE）模块的注意力机制</p>
 </blockquote>
-<h4 id="MobileNet"><a href="#MobileNet" class="headerlink" title="MobileNet"></a>MobileNet</h4><blockquote>
+<h4 id="mobilenet"><a class="markdownIt-Anchor" href="#mobilenet"></a> MobileNet</h4>
+<blockquote>
 <p>深度可分离卷积（Depthwise Separable Convolution）和线性瓶颈（Linear Bottleneck）</p>
 </blockquote>
-<h2 id="2-目标定位-Object-localization"><a href="#2-目标定位-Object-localization" class="headerlink" title="2. 目标定位(Object localization)"></a>2. 目标定位(Object localization)</h2><p>目标定位（object localization）是计算机视觉中的一个任务，旨在从图像中定位和识别出特定物体的位置和范围。与图像分类任务不同，目标定位需要不仅需要识别出物体所属的类别，还需要预测物体所在的位置和大小，通常用矩形框（bounding box）来表示。</p>
+<h2 id="2-目标定位object-localization"><a class="markdownIt-Anchor" href="#2-目标定位object-localization"></a> 2. 目标定位(Object localization)</h2>
+<p>目标定位（object localization）是计算机视觉中的一个任务，旨在从图像中定位和识别出特定物体的位置和范围。与图像分类任务不同，目标定位需要不仅需要识别出物体所属的类别，还需要预测物体所在的位置和大小，通常用矩形框（bounding box）来表示。</p>
 <p>目标定位通常包括两个子任务：物体检测（object detection）和物体定位（object localization）。物体检测是指在图像中检测出所有可能存在的物体，并对其进行分类和定位，常常采用滑动窗口或区域提议（region proposal）等方法。物体定位是指在已知物体存在的情况下，准确地定位并标注物体的位置和大小，常常采用回归（regression）或者分类回归（classification and regression）的方法。</p>
 <p>在目标定位的多任务学习中，可以将图像分类和关键点回归作为两个不同的任务，并在网络结构中引入两个输出分支，一个用于图像分类，一个用于关键点回归。具体地，分类分支可以采用全连接层加上softmax进行分类，回归分支可以采用全连接层或者卷积层进行参数回归。在训练过程中，可以同时对分类和回归任务进行优化，以提高整个网络的综合性能和泛化能力。</p>
 <p>需要注意的是，在人体位姿定位和人脸定位等任务中，关键点的数量通常比较多，因此回归分支需要输出多个参数，例如人体姿态估计中需要输出多个关节点的横纵坐标等信息。同时，由于关键点之间存在一定的关联性，因此可以采用一些特殊的网络结构或者损失函数来加强关键点的相关性，以提高定位精度和鲁棒性。</p>
-<h3 id="2-1-常用数据集"><a href="#2-1-常用数据集" class="headerlink" title="2.1 常用数据集"></a>2.1 常用数据集</h3><ul>
+<h3 id="21-常用数据集"><a class="markdownIt-Anchor" href="#21-常用数据集"></a> 2.1 常用数据集</h3>
+<ul>
 <li><strong>WIDER FACE</strong>：是一个用于人脸检测和定位的数据集，包含超过32,000张图像和40,000个人脸，是目前最为流行的人脸检测和定位数据集之一。</li>
 </ul>
-<h2 id="3-目标检测-Object-detection"><a href="#3-目标检测-Object-detection" class="headerlink" title="3. 目标检测(Object detection)"></a>3. 目标检测(Object detection)</h2><p>目标检测（Object detection）是计算机视觉领域中的一个重要任务，旨在从图像或视频中识别出存在的物体，并确定它们的位置和大小。与传统的图像分类任务和目标定位任务不同，目标检测需要同时对图像中的多个物体进行检测和定位，图像中出现的目标种类和数目都不定。常用的目标检测算法包括<code>基于候选区域的方法</code>（如RCNN、Fast R-CNN、Faster R-CNN等）和<code>基于直接回滚的方法</code>（如YOLO、SSD等）。</p>
-<h3 id="3-1-相关概念"><a href="#3-1-相关概念" class="headerlink" title="3.1 相关概念"></a>3.1 相关概念</h3><ol>
+<h2 id="3-目标检测object-detection"><a class="markdownIt-Anchor" href="#3-目标检测object-detection"></a> 3. 目标检测(Object detection)</h2>
+<p>目标检测（Object detection）是计算机视觉领域中的一个重要任务，旨在从图像或视频中识别出存在的物体，并确定它们的位置和大小。与传统的图像分类任务和目标定位任务不同，目标检测需要同时对图像中的多个物体进行检测和定位，图像中出现的目标种类和数目都不定。常用的目标检测算法包括<code>基于候选区域的方法</code>（如RCNN、Fast R-CNN、Faster R-CNN等）和<code>基于直接回滚的方法</code>（如YOLO、SSD等）。</p>
+<h3 id="31-相关概念"><a class="markdownIt-Anchor" href="#31-相关概念"></a> 3.1 相关概念</h3>
+<ol>
 <li><code>物体类别</code>：目标检测的第一步是确定图像中存在的物体类别，例如车、人、动物等。</li>
 <li><code>边界框（Bounding Box）</code>：边界框是是目标检测中常用的一种表示物体位置的方式。它是一个矩形框，通常用左上角点的坐标和右下角点的坐标来表示。在目标检测中，边界框的主要作用是定位物体的位置，并用于计算目标检测算法的性能指标。</li>
 <li><code>非极大值抑制（Non-Maximum Suppression, NMS）</code>：非极大值抑制是目标检测中常用的一种去重技术，用于去除重复的检测框。NMS的基本思想是对所有检测框按照置信度进行排序，然后从置信度最高的框开始，逐个遍历所有框，对于与当前框IOU大于某个阈值的框，将其去除。</li>
@@ -712,11 +729,13 @@
 <li><code>Online Hard Example Mining（OHEM）</code>：OHEM是目标检测中一种用于训练深度神经网络的技术，其目的是从训练数据中筛选出难以分类的样本，使模型能够更好地学习难例。</li>
 <li><code>对数空间回归（Log-Space Regression）</code>：对数空间回归是一种在目标检测中常用的边界框回归方法。与普通的边界框回归不同，对数空间回归将边界框的坐标值从线性空间转换为对数空间，以便更好地处理不同尺度下的边界框变化。</li>
 </ol>
-<h3 id="3-2-常用数据集"><a href="#3-2-常用数据集" class="headerlink" title="3.2 常用数据集"></a>3.2 常用数据集</h3><ul>
+<h3 id="32-常用数据集"><a class="markdownIt-Anchor" href="#32-常用数据集"></a> 3.2 常用数据集</h3>
+<ul>
 <li><strong>PASCAL VOC</strong>：包括20个类别的物体。通常是用VOC07和VOC12的trainval并集作为训练，用VOC07的测试集作为测试。</li>
 <li><strong>MS COCO</strong>：COCO包含80k训练图像、40k验证图像、和20k没有公开标记的测试图像(test-dev)，80个类别，平均每张图7.2个目标。通常是用80k训练和35k验证图像的并集作为训练，其余5k图像作为验证，20k测试图像用于线上测试。</li>
 </ul>
-<h3 id="3-3-基于候选区域的目标检测算法"><a href="#3-3-基于候选区域的目标检测算法" class="headerlink" title="3.3 基于候选区域的目标检测算法"></a>3.3 基于候选区域的目标检测算法</h3><p>基于候选区域的目标检测算法（Region-based Object Detection）是一类常用于目标检测的算法，其基本思想是通过在图像中生成一些候选区域（即可能包含物体的区域），然后对每个候选区域进行分类和回归等操作，以确定该区域是否包含目标物体及其准确位置。</p>
+<h3 id="33-基于候选区域的目标检测算法"><a class="markdownIt-Anchor" href="#33-基于候选区域的目标检测算法"></a> 3.3 基于候选区域的目标检测算法</h3>
+<p>基于候选区域的目标检测算法（Region-based Object Detection）是一类常用于目标检测的算法，其基本思想是通过在图像中生成一些候选区域（即可能包含物体的区域），然后对每个候选区域进行分类和回归等操作，以确定该区域是否包含目标物体及其准确位置。</p>
 <p>基于候选区域的目标检测算法主要包括以下几个步骤：</p>
 <ol>
 <li>候选区域生成：通过使用不同的方法（如选择性搜索Selective search、EdgeBoxes等）在图像中生成一些候选区域，这些区域包括可能包含目标物体的区域。</li>
@@ -725,10 +744,12 @@
 <li>边界框回归：对于被分类为包含目标物体的候选区域，使用回归器对其进行进一步的微调，以得到更准确的边界框位置。</li>
 <li>非极大值抑制（NMS）：对于重叠的候选区域，使用NMS算法进行抑制，以去除重复的检测结果。</li>
 </ol>
-<h4 id="R-CNN"><a href="#R-CNN" class="headerlink" title="R-CNN"></a>R-CNN</h4><blockquote>
+<h4 id="r-cnn"><a class="markdownIt-Anchor" href="#r-cnn"></a> R-CNN</h4>
+<blockquote>
 <p>亮点：引入神经网络分类</p>
 </blockquote>
-<h4 id="Fast-R-CNN"><a href="#Fast-R-CNN" class="headerlink" title="Fast R-CNN"></a>Fast R-CNN</h4><blockquote>
+<h4 id="fast-r-cnn"><a class="markdownIt-Anchor" href="#fast-r-cnn"></a> Fast R-CNN</h4>
+<blockquote>
 <p>亮点：RoI池化层（Region of Interest Pooling）、候选区域网络(Region Proposal Networks)、多任务损失函数</p>
 </blockquote>
 <p>RoI池化层（Region of Interest Pooling）：RoI池化层可以将不同大小的候选区域映射到相同大小的特征图上，减少了特征提取的计算量，提高了算法的速度。</p>
@@ -743,7 +764,6 @@
 
 
 
-
 <p>【论文阅读】Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks</p>
 
 
@@ -753,20 +773,22 @@
 
 
 
-
-<h4 id="R-FCN"><a href="#R-FCN" class="headerlink" title="R-FCN"></a>R-FCN</h4><blockquote>
+<h4 id="r-fcn"><a class="markdownIt-Anchor" href="#r-fcn"></a> R-FCN</h4>
+<blockquote>
 <p>亮点：在RoI池化层加一个全卷积层并平均池化</p>
 </blockquote>
 <p>在R-FCN中，候选区域首先被划分成一个固定的网格，每个网格对应于候选卷积特征的不同通道。然后，每个网格中的特征进行平均池化，得到一个固定大小的特征向量。这些特征向量经过分类器和回归器的处理，得到候选区域的类别和位置信息。</p>
 <blockquote>
 <p>基于候选区域的目标检测算法通过不断地优化网络结构和算法流程，逐渐提高了检测精度和计算效率。其中，网络中图像级别计算（提取深度特征）的比例逐渐提高，而区域级别计算（包括分类和回归）的比例逐渐降低，从而实现了高效的目标检测。具体而言，R-CNN是第一个采用候选区域的目标检测算法，需要对每个候选区域进行单独的前馈计算，速度较慢。Fast R-CNN通过RoI池化层将候选区域投影到特征映射上，从而实现了一次特征提取和共享，速度有所提升。Faster R-CNN则引入了RPN网络，可以直接生成候选区域，进一步提高了检测速度。R-FCN将分类和回归过程融合到全卷积网络中，实现了端到端的训练和高效的目标检测，大部分计算都是图像级别计算。这些算法的演进思路是逐渐提高网络中图像级别计算的比例，同时降低区域级别计算的比例，以实现更高效的目标检测。</p>
 </blockquote>
-<h3 id="3-4-基于直接回归的目标检测算法"><a href="#3-4-基于直接回归的目标检测算法" class="headerlink" title="3.4 基于直接回归的目标检测算法"></a>3.4 基于直接回归的目标检测算法</h3><p>基于直接回归的目标检测算法是一种不需要候选区域的方法，直接对整张图像进行分类和回归，通常可以达到实时目标检测的要求。这类方法的基本思路是直接从图像中提取深度特征，并对每个像素或一组像素进行分类和回归预测，得到目标的位置和类别信息。基于直接回归的目标检测算法通常分为两种类型：<code>单阶段方法</code>和<code>密集预测方法</code>。</p>
+<h3 id="34-基于直接回归的目标检测算法"><a class="markdownIt-Anchor" href="#34-基于直接回归的目标检测算法"></a> 3.4 基于直接回归的目标检测算法</h3>
+<p>基于直接回归的目标检测算法是一种不需要候选区域的方法，直接对整张图像进行分类和回归，通常可以达到实时目标检测的要求。这类方法的基本思路是直接从图像中提取深度特征，并对每个像素或一组像素进行分类和回归预测，得到目标的位置和类别信息。基于直接回归的目标检测算法通常分为两种类型：<code>单阶段方法</code>和<code>密集预测方法</code>。</p>
 <ul>
 <li>单阶段方法直接对每个位置进行分类和回归，如YOLO系列、RetinaNet等。这些方法通常具有较高的检测速度和较低的计算成本，但在检测精度方面可能会受到一定的影响。这是因为单阶段方法忽略了目标的复杂形状和尺寸变化，可能会导致目标漏检或误检。</li>
 <li>密集预测方法则在每个位置生成一组候选框，如FCN-Object-Detection、Deformable ConvNets等。这些方法通常具有更好的检测精度，但计算成本相对较高。</li>
 </ul>
-<h4 id="YOLO（You-Only-Look-Once）"><a href="#YOLO（You-Only-Look-Once）" class="headerlink" title="YOLO（You Only Look Once）"></a>YOLO（You Only Look Once）</h4><blockquote>
+<h4 id="yoloyou-only-look-once"><a class="markdownIt-Anchor" href="#yoloyou-only-look-once"></a> YOLO（You Only Look Once）</h4>
+<blockquote>
 <p>网格划分、在线运行、Darknet</p>
 </blockquote>
 <ol>
@@ -783,7 +805,6 @@
 
 
 
-
 <p>【论文阅读】YOLOv3: An Incremental Improvement</p>
 
 
@@ -793,8 +814,8 @@
 
 
 
-
-<h4 id="SSD（Single-Shot-MultiBox-Detector）"><a href="#SSD（Single-Shot-MultiBox-Detector）" class="headerlink" title="SSD（Single Shot MultiBox Detector）"></a>SSD（Single Shot MultiBox Detector）</h4><blockquote>
+<h4 id="ssdsingle-shot-multibox-detector"><a class="markdownIt-Anchor" href="#ssdsingle-shot-multibox-detector"></a> SSD（Single Shot MultiBox Detector）</h4>
+<blockquote>
 <p>多尺度的卷积神经网络</p>
 </blockquote>
 <p>【论文阅读】SSD: Single Shot MultiBox Detector</p>
@@ -806,33 +827,41 @@
 
 
 
-
-<h4 id="FPN"><a href="#FPN" class="headerlink" title="FPN"></a>FPN</h4><blockquote>
+<h4 id="fpn"><a class="markdownIt-Anchor" href="#fpn"></a> FPN</h4>
+<blockquote>
 <p>特征金字塔架构</p>
 </blockquote>
-<h4 id="RetinaNet"><a href="#RetinaNet" class="headerlink" title="RetinaNet"></a>RetinaNet</h4><blockquote>
+<h4 id="retinanet"><a class="markdownIt-Anchor" href="#retinanet"></a> RetinaNet</h4>
+<blockquote>
 <p>Focal Loss函数</p>
 </blockquote>
-<h2 id="4-语义分割-Semantic-Segmentation"><a href="#4-语义分割-Semantic-Segmentation" class="headerlink" title="4. 语义分割(Semantic Segmentation)"></a>4. 语义分割(Semantic Segmentation)</h2><p>语义分割（Semantic Segmentation）目标是将图像中的每个像素分配到其所属的语义类别。与目标检测不同，语义分割不仅需要检测图像中的物体，还需要对物体内部的像素进行分类。因此，语义分割通常被视为一种像素级别的分类，即判断图像中哪些像素属于哪个目标。</p>
-<h3 id="4-1-相关概念"><a href="#4-1-相关概念" class="headerlink" title="4.1 相关概念"></a>4.1 相关概念</h3><ol>
+<h2 id="4-语义分割semantic-segmentation"><a class="markdownIt-Anchor" href="#4-语义分割semantic-segmentation"></a> 4. 语义分割(Semantic Segmentation)</h2>
+<p>语义分割（Semantic Segmentation）目标是将图像中的每个像素分配到其所属的语义类别。与目标检测不同，语义分割不仅需要检测图像中的物体，还需要对物体内部的像素进行分类。因此，语义分割通常被视为一种像素级别的分类，即判断图像中哪些像素属于哪个目标。</p>
+<h3 id="41-相关概念"><a class="markdownIt-Anchor" href="#41-相关概念"></a> 4.1 相关概念</h3>
+<ol>
 <li><code>掩码（Mask）</code>：指将图像中的每个像素标记为其所属的语义类别的二进制图像。在语义分割中，掩码通常用于表示分割结果或用于实例分割。</li>
 <li><code>交并比（Intersection over Union，IoU）</code>：是一种用于衡量分割模型准确性的指标，表示预测的掩码与真实掩码之间的重叠程度。</li>
 </ol>
-<h3 id="4-2-常用数据集"><a href="#4-2-常用数据集" class="headerlink" title="4.2 常用数据集"></a>4.2 常用数据集</h3><ul>
+<h3 id="42-常用数据集"><a class="markdownIt-Anchor" href="#42-常用数据集"></a> 4.2 常用数据集</h3>
+<ul>
 <li><strong>PASCAL VOC</strong>：包括20个类别的物体。通常是用VOC07和VOC12的trainval并集作为训练，用VOC07的测试集作为测试。</li>
 <li><strong>MS COCO</strong>：COCO包含80k训练图像、40k验证图像、和20k没有公开标记的测试图像(test-dev)，80个类别，平均每张图7.2个目标。通常是用80k训练和35k验证图像的并集作为训练，其余5k图像作为验证，20k测试图像用于线上测试。</li>
 <li><strong>Cityscapes</strong>：是一个面向城市场景的语义分割数据集，包含了从城市街道到城市广场等不同场景的图像。该数据集包含了20个语义类别，是评估城市场景下的语义分割算法性能的重要数据集之一。</li>
 </ul>
-<h3 id="4-3-经典模型"><a href="#4-3-经典模型" class="headerlink" title="4.3 经典模型"></a>4.3 经典模型</h3><h4 id="FCN（Fully-Convolutional-Network）"><a href="#FCN（Fully-Convolutional-Network）" class="headerlink" title="FCN（Fully Convolutional Network）"></a>FCN（Fully Convolutional Network）</h4><blockquote>
+<h3 id="43-经典模型"><a class="markdownIt-Anchor" href="#43-经典模型"></a> 4.3 经典模型</h3>
+<h4 id="fcnfully-convolutional-network"><a class="markdownIt-Anchor" href="#fcnfully-convolutional-network"></a> FCN（Fully Convolutional Network）</h4>
+<blockquote>
 <p>全卷积代替全连接、反卷积（Deconvolution）、跳跃连接（Skip Connection）</p>
 </blockquote>
 <p>FCN的网络结构通常由两部分组成：编码器和解码器。编码器使用卷积层来提取图像的特征，将图像转化为高维特征图。解码器使用反卷积层将特征图还原为原始大小，同时进行像素级别的分类预测。此外，为了减少模型在分割边界处的错误，FCN还引入了跳跃连接（Skip Connection）来跨过不同层级的特征图，从而获得更全面的特征信息。</p>
 <p>反卷积（Deconvolution）和转置卷积（Transpose Convolution）是指卷积神经网络中一种常用的操作，用于将卷积层的输出还原为原始输入的大小。反卷积的滤波器在输出图像中进行滑动，每个由一个输入神经元乘以滤波器得到一个输出局部区域。</p>
-<h4 id="DeepLab"><a href="#DeepLab" class="headerlink" title="DeepLab"></a>DeepLab</h4><blockquote>
+<h4 id="deeplab"><a class="markdownIt-Anchor" href="#deeplab"></a> DeepLab</h4>
+<blockquote>
 <p>空洞卷积（Dilated Convolution）、全局池化（Global Pooling）</p>
 </blockquote>
 <p>DeepLab的网络结构由编码器和解码器两部分组成。编码器使用卷积层和空洞卷积层来提取图像的特征，其中空洞卷积层可以增加特征图的感受野，从而捕获更广阔的上下文信息。解码器使用反卷积层和双线性插值（Bilinear Interpolation）来将特征图还原为原始输入的大小，并进行像素级别的分类预测。此外，DeepLab还使用了全局平均池化层（Global Average Pooling）来减少模型参数和计算量。</p>
-<h4 id="U-Net"><a href="#U-Net" class="headerlink" title="U-Net"></a>U-Net</h4><blockquote>
+<h4 id="u-net"><a class="markdownIt-Anchor" href="#u-net"></a> U-Net</h4>
+<blockquote>
 <p>反卷积（Deconvolution）、上采样（Upsampling）、跳跃连接（Skip Connection）</p>
 </blockquote>
 <p>U-Net的网络结构由对称的编码器和解码器组成，中间通过跳跃连接连接起来。编码器由多个卷积层和池化层组成，用于提取图像的特征。解码器则由多个上采样层和卷积层组成，用于将特征图还原为原始输入的大小，并进行像素级别的分类预测。利用低层结果可以弥补随着网络加深丢失的细节和边缘信息。</p>
@@ -845,12 +874,14 @@
 
 
 
-
-<h2 id="5-实例分割-Instance-Segmentation"><a href="#5-实例分割-Instance-Segmentation" class="headerlink" title="5. 实例分割(Instance Segmentation)"></a>5. 实例分割(Instance Segmentation)</h2><p>实例分割（Instance Segmentation）是一种计算机视觉任务，旨在将图像中的每个像素分配给其对应的物体实例，并同时对物体进行精确的像素级别分割。例如，当图像中有多只猫时，语义分割会将两只猫整体的所有像素预测为“猫”这个类别。与此不同的是，实例分割需要区分出哪些像素属于第一只猫、哪些像素属于第二只猫。常见思想是：先用目标检测方法将图像中的不同实例框出，再用语义分割方法在不同包围盒内进行逐像素标记。</p>
-<h4 id="FCIS（Fully-Convolutional-Instance-aware-Semantic-Segmentation）"><a href="#FCIS（Fully-Convolutional-Instance-aware-Semantic-Segmentation）" class="headerlink" title="FCIS（Fully Convolutional Instance-aware Semantic Segmentation）"></a>FCIS（Fully Convolutional Instance-aware Semantic Segmentation）</h4><blockquote>
+<h2 id="5-实例分割instance-segmentation"><a class="markdownIt-Anchor" href="#5-实例分割instance-segmentation"></a> 5. 实例分割(Instance Segmentation)</h2>
+<p>实例分割（Instance Segmentation）是一种计算机视觉任务，旨在将图像中的每个像素分配给其对应的物体实例，并同时对物体进行精确的像素级别分割。例如，当图像中有多只猫时，语义分割会将两只猫整体的所有像素预测为“猫”这个类别。与此不同的是，实例分割需要区分出哪些像素属于第一只猫、哪些像素属于第二只猫。常见思想是：先用目标检测方法将图像中的不同实例框出，再用语义分割方法在不同包围盒内进行逐像素标记。</p>
+<h4 id="fcisfully-convolutional-instance-aware-semantic-segmentation"><a class="markdownIt-Anchor" href="#fcisfully-convolutional-instance-aware-semantic-segmentation"></a> FCIS（Fully Convolutional Instance-aware Semantic Segmentation）</h4>
+<blockquote>
 <p>FCN、RoI池化层、实例分割分支</p>
 </blockquote>
-<h4 id="Mask-R-CNN"><a href="#Mask-R-CNN" class="headerlink" title="Mask R-CNN"></a>Mask R-CNN</h4><blockquote>
+<h4 id="mask-r-cnn"><a class="markdownIt-Anchor" href="#mask-r-cnn"></a> Mask R-CNN</h4>
+<blockquote>
 <p>共享卷积层（Shared Convolutional Layer）、区域提议网络（Region Proposal Network，RPN）、分割分支、多任务损失函数（Multi-task Loss Function）</p>
 </blockquote>
 <p>共享卷积层用于提取图像的特征，RPN用于生成候选物体区域，并计算每个区域的物体得分和边界框位置。分割分支则基于RPN提供的候选物体区域，对每个物体生成一个掩码，从而实现像素级别的实例分割。分割分支使用了全卷积网络（Fully Convolutional Network，FCN）的结构，并对其进行了改进。具体来说，分割分支引入了一个并行的全连接层（Parallel Fully Connected Layer），用于生成每个物体的掩码。此外，分割分支还使用了RoI Pooling和RoI Align等技术，以提高掩码的准确性和稳定性。</p>
@@ -864,8 +895,8 @@
 
 
 
-
-<h4 id="PANet（Path-Aggregation-Network）"><a href="#PANet（Path-Aggregation-Network）" class="headerlink" title="PANet（Path Aggregation Network）"></a>PANet（Path Aggregation Network）</h4><blockquote>
+<h4 id="panetpath-aggregation-network"><a class="markdownIt-Anchor" href="#panetpath-aggregation-network"></a> PANet（Path Aggregation Network）</h4>
+<blockquote>
 <p>Path Aggregation模块</p>
 </blockquote>
 
@@ -1325,7 +1356,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">50.2k</span>
+                        class="white-color">57.8k</span>
             
             
             
@@ -1645,6 +1676,11 @@ $(function () {
     
     <script src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/instantpage/instantpage.js" type="module"></script>
     
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
 
 </body>
 

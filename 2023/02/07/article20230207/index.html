@@ -477,7 +477,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    259
+                    260
                 </div>
                 
 
@@ -509,47 +509,46 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="tar-文件"><a href="#tar-文件" class="headerlink" title=".tar 文件"></a>.tar 文件</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 仅打包，并非压缩</span>
+                <h3 id="tar-文件"><a class="markdownIt-Anchor" href="#tar-文件"></a> .tar 文件</h3>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 仅打包，并非压缩</span>
 <span class="token function">tar</span> <span class="token parameter variable">-xvf</span> FileName.tar         <span class="token comment"># 解包</span>
 <span class="token function">tar</span> <span class="token parameter variable">-cvf</span> FileName.tar DirName <span class="token comment"># 将DirName和其下所有文件（夹）打包123</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="gz文件"><a href="#gz文件" class="headerlink" title=".gz文件"></a>.gz文件</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># .gz</span>
+<h3 id="gz文件"><a class="markdownIt-Anchor" href="#gz文件"></a> .gz文件</h3>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># .gz</span>
 gunzip FileName.gz  <span class="token comment"># 解压1</span>
 <span class="token function">gzip</span> <span class="token parameter variable">-d</span> FileName.gz <span class="token comment"># 解压2</span>
 <span class="token function">gzip</span> FileName       <span class="token comment"># 压缩，只能压缩文件1234</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="tar-gz文件、-tgz文件"><a href="#tar-gz文件、-tgz文件" class="headerlink" title=".tar.gz文件、 .tgz文件"></a>.tar.gz文件、 .tgz文件</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># .tar.gz 和 .tgz</span>
+<h2 id="targz文件-tgz文件"><a class="markdownIt-Anchor" href="#targz文件-tgz文件"></a> .tar.gz文件、 .tgz文件</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># .tar.gz 和 .tgz</span>
 <span class="token function">tar</span> <span class="token parameter variable">-zxvf</span> FileName.tar.gz               <span class="token comment"># 解压</span>
 <span class="token function">tar</span> <span class="token parameter variable">-zcvf</span> FileName.tar.gz DirName       <span class="token comment"># 将DirName和其下所有文件（夹）压缩</span>
 <span class="token function">tar</span> <span class="token parameter variable">-C</span> DesDirName <span class="token parameter variable">-zxvf</span> FileName.tar.gz <span class="token comment"># 解压到目标路径1234</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="zip文件"><a href="#zip文件" class="headerlink" title=".zip文件"></a>.zip文件</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 感觉.zip占用空间比.tar.gz大</span>
+<h3 id="zip文件"><a class="markdownIt-Anchor" href="#zip文件"></a> .zip文件</h3>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 感觉.zip占用空间比.tar.gz大</span>
 <span class="token function">unzip</span> FileName.zip          <span class="token comment"># 解压</span>
 <span class="token function">zip</span> FileName.zip DirName    <span class="token comment"># 将DirName本身压缩</span>
 <span class="token function">zip</span> <span class="token parameter variable">-r</span> FileName.zip DirName <span class="token comment"># 压缩，递归处理，将指定目录下的所有文件和子目录一并压缩1234</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="rar文件"><a href="#rar文件" class="headerlink" title=".rar文件"></a>.rar文件</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># macOS和linux并没有自带rar，需要去下载</span>
+<h3 id="rar文件"><a class="markdownIt-Anchor" href="#rar文件"></a> .rar文件</h3>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># macOS和linux并没有自带rar，需要去下载</span>
 <span class="token function">unrar</span> x FileName.rar      <span class="token comment"># 解压</span>
 <span class="token function">rar</span> a FileName.rar DirName <span class="token comment"># 压缩</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="7z文件"><a href="#7z文件" class="headerlink" title=".7z文件"></a>.7z文件</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">7z x filename.7z           <span class="token comment"># 解压</span>
+<h3 id="7z文件"><a class="markdownIt-Anchor" href="#7z文件"></a> .7z文件</h3>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">7z x filename.7z           <span class="token comment"># 解压</span>
 7z a filename.7z DirName   <span class="token comment"># 压缩</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<h3 id="安装rar命令："><a href="#安装rar命令：" class="headerlink" title="安装rar命令："></a>安装rar命令：</h3><ul>
+<h3 id="安装rar命令"><a class="markdownIt-Anchor" href="#安装rar命令"></a> 安装rar命令：</h3>
+<ul>
 <li>Debian/Ubuntu系统：</li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> <span class="token function">rar</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <ul>
 <li>CentOS/RHEL系统：</li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> yum <span class="token function">install</span> <span class="token function">rar</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h3 id="安装7z命令："><a href="#安装7z命令：" class="headerlink" title="安装7z命令："></a>安装7z命令：</h3><ul>
+<h3 id="安装7z命令"><a class="markdownIt-Anchor" href="#安装7z命令"></a> 安装7z命令：</h3>
+<ul>
 <li>Debian/Ubuntu系统：</li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> p7zip-full<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <ul>
 <li>CentOS/RHEL系统：</li>
 </ul>
@@ -914,7 +913,7 @@ gunzip FileName.gz  <span class="token comment"># 解压1</span>
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">50.2k</span>
+                        class="white-color">57.8k</span>
             
             
             
@@ -1234,6 +1233,11 @@ $(function () {
     
     <script src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/instantpage/instantpage.js" type="module"></script>
     
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
 
 </body>
 
