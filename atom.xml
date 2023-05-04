@@ -6,7 +6,7 @@
   <link href="http://jijunhao.github.io/atom.xml" rel="self"/>
   
   <link href="http://jijunhao.github.io/"/>
-  <updated>2023-04-29T13:25:20.433Z</updated>
+  <updated>2023-05-04T14:29:52.693Z</updated>
   <id>http://jijunhao.github.io/</id>
   
   <author>
@@ -21,14 +21,17 @@
     <link href="http://jijunhao.github.io/2023/04/28/article20230428/"/>
     <id>http://jijunhao.github.io/2023/04/28/article20230428/</id>
     <published>2023-04-28T02:07:56.000Z</published>
-    <updated>2023-04-29T13:25:20.433Z</updated>
+    <updated>2023-05-04T14:29:52.693Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;Diffusion</summary>
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;参考文献：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://lilianweng.github.io/posts/2021-07-11-diffusion-models/#nice&quot;&gt;什么是扩散模型?&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a</summary>
         
       
     
@@ -207,14 +210,15 @@
     <link href="http://jijunhao.github.io/2023/04/18/article20230418/"/>
     <id>http://jijunhao.github.io/2023/04/18/article20230418/</id>
     <published>2023-04-18T10:07:56.000Z</published>
-    <updated>2023-04-29T08:41:48.285Z</updated>
+    <updated>2023-05-04T14:29:52.681Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;概率估计方法&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#概率估计方法&quot;&gt;&lt;/a&gt;</summary>
+    <summary type="html">&lt;h2 id=&quot;概率估计方法&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#概率估计方法&quot;&gt;&lt;/a&gt; 概率估计方法&lt;/h2&gt;
+&lt;p&gt;在实践中，概率分布通常是未知的，如何从样本中识别出潜在的概率分布是统计估计。当知道观测值 &lt;span</summary>
         
       
     
