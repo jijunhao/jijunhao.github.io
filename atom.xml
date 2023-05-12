@@ -6,7 +6,7 @@
   <link href="http://jijunhao.github.io/atom.xml" rel="self"/>
   
   <link href="http://jijunhao.github.io/"/>
-  <updated>2023-05-05T07:57:56.700Z</updated>
+  <updated>2023-05-11T08:47:22.047Z</updated>
   <id>http://jijunhao.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>人脸识别任务</title>
+    <link href="http://jijunhao.github.io/2023/04/30/article20230430/"/>
+    <id>http://jijunhao.github.io/2023/04/30/article20230430/</id>
+    <published>2023-04-30T02:07:56.000Z</published>
+    <updated>2023-05-11T08:47:22.047Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;face-recognition&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#face-recognition&quot;&gt;&lt;/a&gt; Face</summary>
+        
+      
+    
+    
+    
+    <category term="论文阅读" scheme="http://jijunhao.github.io/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/"/>
+    
+    
+    <category term="Face" scheme="http://jijunhao.github.io/tags/Face/"/>
+    
+  </entry>
   
   <entry>
     <title>Diffusion公式推导和理解</title>
@@ -531,31 +556,6 @@
     
     
     <category term="ChatGPT" scheme="http://jijunhao.github.io/tags/ChatGPT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>搜索引擎高级指令</title>
-    <link href="http://jijunhao.github.io/2023/02/08/article20230208/"/>
-    <id>http://jijunhao.github.io/2023/02/08/article20230208/</id>
-    <published>2023-02-08T14:10:50.000Z</published>
-    <updated>2023-04-09T04:56:16.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;简介&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#简介&quot;&gt;&lt;/a&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="技术工具" scheme="http://jijunhao.github.io/categories/%E6%8A%80%E6%9C%AF%E5%B7%A5%E5%85%B7/"/>
-    
-    
-    <category term="搜索引擎" scheme="http://jijunhao.github.io/tags/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/"/>
     
   </entry>
   

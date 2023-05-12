@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>人脸识别任务</title>
+      <link href="/2023/04/30/article20230430/"/>
+      <url>/2023/04/30/article20230430/</url>
+      
+        <content type="html"><![CDATA[<h2 id="face-recognition"><a class="markdownIt-Anchor" href="#face-recognition"></a> Face Recognition</h2><p>人脸识别是在已有的人脸数据库中，通过照片或视频图像对某个人脸进行正面身份确认的任务。它从检测开始，即从图像中区分人脸和其他物体，然后对检测到的人脸进行识别。</p><h2 id="robust-face-recognition"><a class="markdownIt-Anchor" href="#robust-face-recognition"></a> Robust Face Recognition</h2><p>鲁棒人脸识别是在无约束环境中执行识别的任务，其中人脸图像的视角、尺度、姿态、光照和表情存在变化。</p><h2 id="face-detection"><a class="markdownIt-Anchor" href="#face-detection"></a> Face Detection</h2><p>人脸检测是一项计算机视觉任务，涉及在数字图像或视频中自动识别和定位人脸。它是许多应用程序的基础技术，如人脸识别、人脸跟踪和面部分析。</p><h2 id="facial-landmark-detection"><a class="markdownIt-Anchor" href="#facial-landmark-detection"></a> Facial Landmark Detection</h2><p>人脸关键点检测是一项计算机视觉任务，涉及检测和定位人脸上特定的点或关键点，如眼睛、鼻子、嘴巴和下巴。其目标是在实时的人脸图像或视频中准确地识别这些关键点，并将它们用于各种应用，如人脸识别、面部表情分析和头部姿态估计。</p><h2 id="face-swapping"><a class="markdownIt-Anchor" href="#face-swapping"></a> Face Swapping</h2><p>人脸交换指的是在保持身体和环境背景不变的情况下，在图像或视频中交换人脸的任务。</p><h2 id="face-verification"><a class="markdownIt-Anchor" href="#face-verification"></a> Face Verification</h2><p>人脸验证是计算机视觉中的一项机器学习任务，涉及确定两个面部图像是否属于同一个人。该任务涉及从面部图像中提取特征，例如面部的形状和纹理，然后使用这些特征来比较和验证图像之间的相似性。</p><h2 id="face-generation"><a class="markdownIt-Anchor" href="#face-generation"></a> Face Generation</h2><p>生成人脸是从现有数据集中生成（或插值）新面孔的任务。</p><h2 id="face-alignment"><a class="markdownIt-Anchor" href="#face-alignment"></a> Face Alignment</h2><p>人脸对齐是指在数字图像中识别人脸的几何结构，并尝试基于平移、缩放和旋转获得人脸的规范对齐的任务。</p><h2 id="face-reconstruction"><a class="markdownIt-Anchor" href="#face-reconstruction"></a> Face Reconstruction</h2><p>人脸重建是从图像中恢复面部几何形状的任务。</p><h2 id="face-anti-spoofing"><a class="markdownIt-Anchor" href="#face-anti-spoofing"></a> Face Anti-Spoofing</h2><p>人脸反欺诈是通过使用照片、视频、面具或其他替代授权人脸的方式，防止虚假人脸验证的任务。一些攻击的例子包括：</p><ul><li>照片攻击：攻击者使用某人的照片，将图像打印或显示在数字设备上。</li><li>重放/视频攻击：这是一种更复杂的欺骗系统的方式，通常需要一个受害者面部的循环视频。这种方法确保行为和面部动作与持有某人的照片相比更加“自然”。</li><li>3D面具攻击：在此类型的攻击中，面具被用作欺诈的工具。它比播放面部视频更为复杂。除了自然的面部动作外，它还使欺骗一些额外的保护层（如深度传感器）的方法更容易。</li></ul><h2 id="face-identification"><a class="markdownIt-Anchor" href="#face-identification"></a> Face Identification</h2><p>Face Identification是将给定的人脸图像与已有的人脸数据库中的图像进行匹配的任务。它是人脸识别的第二个部分（第一个部分是检测）。它是一对多的映射：您需要在数据库中找到一个未知的人来确定该人的身份。</p><h2 id="facial-inpainting"><a class="markdownIt-Anchor" href="#facial-inpainting"></a> Facial Inpainting</h2><p>人脸修复（或面部完成）是指为人脸图像中缺失的像素生成合理的面部结构的任务。</p><h2 id="face-hallucination"><a class="markdownIt-Anchor" href="#face-hallucination"></a> Face Hallucination</h2><p>人脸增强是指从低分辨率（LR）的输入图像中生成高分辨率（HR）的人脸图像的任务。</p><h2 id="facial-expression-recognition-fer"><a class="markdownIt-Anchor" href="#facial-expression-recognition-fer"></a> Facial Expression Recognition (FER)</h2><p>面部表情识别（FER）是一项计算机视觉任务，旨在识别和分类人脸上描绘的情感表达。其目标是通过分析面部的各种特征，如眉毛、眼睛、嘴巴和其他特征，并将它们映射到一组情绪（例如愤怒、恐惧、惊讶、悲伤和幸福）来自动化实时情绪识别的过程。</p><h2 id="facial-action-unit-detection"><a class="markdownIt-Anchor" href="#facial-action-unit-detection"></a> Facial Action Unit Detection</h2><p>面部动作单元检测是从面部视频中检测动作单元的任务，例如嘴唇紧缩和面颊抬高。</p><h2 id="age-estimation"><a class="markdownIt-Anchor" href="#age-estimation"></a> Age Estimation</h2><p>年龄估计是从图像或其他类型的数据中估计一个人的年龄的任务。</p><h2 id="gender-prediction"><a class="markdownIt-Anchor" href="#gender-prediction"></a> Gender Prediction</h2><p>性别预测是从图像或其他数据中预测一个人的性别的任务。</p><h2 id="age-and-gender-classification"><a class="markdownIt-Anchor" href="#age-and-gender-classification"></a> Age And Gender Classification</h2><p>年龄和性别分类是从图像或视频中识别一个人的年龄和性别的双重任务。</p><h2 id="face-sketch-synthesis"><a class="markdownIt-Anchor" href="#face-sketch-synthesis"></a> Face Sketch Synthesis</h2><p>人脸素描合成是从输入的人脸照片中生成素描的任务。</p><h2 id="facial-attribute-classification"><a class="markdownIt-Anchor" href="#facial-attribute-classification"></a> Facial Attribute Classification</h2><p>面部属性分类是对面部图像的各种属性进行分类的任务，例如是否有胡须、是否戴帽子等。</p><h2 id="facial-beauty-prediction"><a class="markdownIt-Anchor" href="#facial-beauty-prediction"></a> Facial Beauty Prediction</h2><p>面部美感预测是预测面部吸引力的任务。</p><h2 id="3d-facial-expression-recognition"><a class="markdownIt-Anchor" href="#3d-facial-expression-recognition"></a> 3D Facial Expression Recognition</h2><p>三维面部表情识别是从图像或视频中对三维面部表情进行建模的任务。</p><h2 id="face-image-retrieval"><a class="markdownIt-Anchor" href="#face-image-retrieval"></a> Face Image Retrieval</h2><p>人脸图像检索是根据给定的标准（例如身份）检索与查询相似的人脸，并根据它们与查询的距离对它们进行排名的任务。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 论文阅读 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Face </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Diffusion公式推导和理解</title>
       <link href="/2023/04/28/article20230428/"/>
       <url>/2023/04/28/article20230428/</url>

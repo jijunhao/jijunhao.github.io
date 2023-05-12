@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="pip介绍及常用命令, Ubuntu,ML,DL,Math,CV等">
-    <meta name="description" content="pip介绍及常用命令">
+    <meta name="keywords" content="人脸识别任务, Ubuntu,ML,DL,Math,CV等">
+    <meta name="description" content="人脸识别任务：身份识别、属性识别、生成等">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>pip介绍及常用命令 | 季俊豪的博客</title>
+    <title>人脸识别任务 | 季俊豪的博客</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/favicon.png">
     
 
@@ -38,9 +38,7 @@
 
 
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/tocbot/tocbot.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/css/post.css">
-
 
 
 
@@ -434,12 +432,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/0.webp')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/15.webp')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">pip介绍及常用命令</h1>
+                    <h1 class="description center-align post-title">人脸识别任务</h1>
                 </div>
             </div>
         </div>
@@ -449,12 +447,10 @@
 
 
 
-<main class="post-container content">
+<main class="container content">
 
     
-    <div class="row">
-    <div id="main-content" class="col s12 m12 l9">
-        <!-- 文章内容详情 -->
+    <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -463,12 +459,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/pip/">
-                                <span class="chip bg-color">pip</span>
-                            </a>
-                        
-                            <a href="/tags/Python/">
-                                <span class="chip bg-color">Python</span>
+                            <a href="/tags/Face/">
+                                <span class="chip bg-color">Face</span>
                             </a>
                         
                     </div>
@@ -479,8 +471,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Python/" class="post-category">
-                                Python
+                            <a href="/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/" class="post-category">
+                                论文阅读
                             </a>
                         
                     </div>
@@ -492,28 +484,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-02-06
+                    2023-04-30
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-04-09
+                    2023-05-11
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    842
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    4 分
                 </div>
                 
 
@@ -538,109 +530,57 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="pip-简介"><a class="markdownIt-Anchor" href="#pip-简介"></a> pip 简介</h2>
-<p>pip是Python官方的包管理器，可以方便地安装、升级和卸载Python包。</p>
-<h2 id="pip-常用命令"><a class="markdownIt-Anchor" href="#pip-常用命令"></a> pip 常用命令</h2>
-<ol>
-<li>显示版本和路径</li>
-</ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token parameter variable">--version</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<ol start="2">
-<li>获取帮助</li>
-</ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token parameter variable">--help</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<ol start="3">
-<li>升级pip和升级包</li>
-</ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token function">install</span> <span class="token parameter variable">--upgrade</span> pip   <span class="token comment"># Linux/macOS </span>
-pip <span class="token function">install</span> <span class="token parameter variable">-U</span> pip          <span class="token comment"># windows</span>
-
-pip <span class="token function">install</span> <span class="token parameter variable">--upgrade</span> <span class="token operator">&lt;</span>package<span class="token operator">&gt;</span>  <span class="token comment"># 其中&lt;package&gt;是要升级的包名</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<ol start="4">
-<li>列出所有pip包</li>
-</ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<ol start="5">
-<li>安装包</li>
-</ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token function">install</span> <span class="token operator">&lt;</span>package<span class="token operator">&gt;</span>     <span class="token comment"># 其中&lt;package&gt;是要安装的包名</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<ol start="6">
-<li>卸载包</li>
-</ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip uninstall <span class="token operator">&lt;</span>package<span class="token operator">&gt;</span>    <span class="token comment"># 其中&lt;package&gt;是要卸载的包名</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<ol start="7">
-<li>搜索包</li>
-</ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip search <span class="token operator">&lt;</span>package<span class="token operator">&gt;</span>      <span class="token comment"># 其中&lt;package&gt;是要搜索的包名</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<ol start="8">
-<li>导出已安装的包列表</li>
-</ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip freeze <span class="token operator">&gt;</span> requirements.txt   <span class="token comment"># 将环境中已安装的包保存到requirements.txt文件中</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<blockquote>
-<p>安装 pip install -r requirements.txt</p>
-</blockquote>
-<h2 id="pip-换源"><a class="markdownIt-Anchor" href="#pip-换源"></a> pip 换源</h2>
-<blockquote>
-<p>pip 的源配置文件在不同操作系统下的位置可能会有所不同。</p>
+                <h2 id="face-recognition"><a class="markdownIt-Anchor" href="#face-recognition"></a> Face Recognition</h2>
+<p>人脸识别是在已有的人脸数据库中，通过照片或视频图像对某个人脸进行正面身份确认的任务。它从检测开始，即从图像中区分人脸和其他物体，然后对检测到的人脸进行识别。</p>
+<h2 id="robust-face-recognition"><a class="markdownIt-Anchor" href="#robust-face-recognition"></a> Robust Face Recognition</h2>
+<p>鲁棒人脸识别是在无约束环境中执行识别的任务，其中人脸图像的视角、尺度、姿态、光照和表情存在变化。</p>
+<h2 id="face-detection"><a class="markdownIt-Anchor" href="#face-detection"></a> Face Detection</h2>
+<p>人脸检测是一项计算机视觉任务，涉及在数字图像或视频中自动识别和定位人脸。它是许多应用程序的基础技术，如人脸识别、人脸跟踪和面部分析。</p>
+<h2 id="facial-landmark-detection"><a class="markdownIt-Anchor" href="#facial-landmark-detection"></a> Facial Landmark Detection</h2>
+<p>人脸关键点检测是一项计算机视觉任务，涉及检测和定位人脸上特定的点或关键点，如眼睛、鼻子、嘴巴和下巴。其目标是在实时的人脸图像或视频中准确地识别这些关键点，并将它们用于各种应用，如人脸识别、面部表情分析和头部姿态估计。</p>
+<h2 id="face-swapping"><a class="markdownIt-Anchor" href="#face-swapping"></a> Face Swapping</h2>
+<p>人脸交换指的是在保持身体和环境背景不变的情况下，在图像或视频中交换人脸的任务。</p>
+<h2 id="face-verification"><a class="markdownIt-Anchor" href="#face-verification"></a> Face Verification</h2>
+<p>人脸验证是计算机视觉中的一项机器学习任务，涉及确定两个面部图像是否属于同一个人。该任务涉及从面部图像中提取特征，例如面部的形状和纹理，然后使用这些特征来比较和验证图像之间的相似性。</p>
+<h2 id="face-generation"><a class="markdownIt-Anchor" href="#face-generation"></a> Face Generation</h2>
+<p>生成人脸是从现有数据集中生成（或插值）新面孔的任务。</p>
+<h2 id="face-alignment"><a class="markdownIt-Anchor" href="#face-alignment"></a> Face Alignment</h2>
+<p>人脸对齐是指在数字图像中识别人脸的几何结构，并尝试基于平移、缩放和旋转获得人脸的规范对齐的任务。</p>
+<h2 id="face-reconstruction"><a class="markdownIt-Anchor" href="#face-reconstruction"></a> Face Reconstruction</h2>
+<p>人脸重建是从图像中恢复面部几何形状的任务。</p>
+<h2 id="face-anti-spoofing"><a class="markdownIt-Anchor" href="#face-anti-spoofing"></a> Face Anti-Spoofing</h2>
+<p>人脸反欺诈是通过使用照片、视频、面具或其他替代授权人脸的方式，防止虚假人脸验证的任务。一些攻击的例子包括：</p>
 <ul>
-<li>Windows 系统下，pip 的配置文件默认存储在 <code>C:\Users\用户名\AppData\Roaming\pip\pip.ini</code> 目录下，其中用户名是你的 Windows 用户名。如果该文件不存在，则需要手动创建一个。</li>
-<li>Linux 系统下，pip 的配置文件默认存储在 <code>~/.config/pip/pip.conf</code> 文件中。如果该文件不存在，则需要手动创建一个。</li>
-<li>macOS 系统下，pip 的配置文件默认存储在 <code>~/Library/Application Support/pip/pip.conf</code> 文件中。如果该文件不存在，则需要手动创建一个。</li>
+<li>照片攻击：攻击者使用某人的照片，将图像打印或显示在数字设备上。</li>
+<li>重放/视频攻击：这是一种更复杂的欺骗系统的方式，通常需要一个受害者面部的循环视频。这种方法确保行为和面部动作与持有某人的照片相比更加“自然”。</li>
+<li>3D面具攻击：在此类型的攻击中，面具被用作欺诈的工具。它比播放面部视频更为复杂。除了自然的面部动作外，它还使欺骗一些额外的保护层（如深度传感器）的方法更容易。</li>
 </ul>
-</blockquote>
-<ol>
-<li>全局源(清华源)</li>
-</ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip config <span class="token builtin class-name">set</span> global.index-url https://pypi.tuna.tsinghua.edu.cn/simple<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<ol start="2">
-<li>临时源</li>
-</ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token function">install</span> <span class="token parameter variable">-i</span> https://pypi.tuna.tsinghua.edu.cn/simple <span class="token operator">&lt;</span>package-name<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<ol start="3">
-<li>其他源</li>
-</ol>
-<p>中科大: <a target="_blank" rel="noopener" href="https://pypi.mirrors.ustc.edu.cn/simple">https://pypi.mirrors.ustc.edu.cn/simple</a></p>
-<p>阿里源：<a target="_blank" rel="noopener" href="https://mirrors.aliyun.com/pypi/simple/">https://mirrors.aliyun.com/pypi/simple/</a></p>
-<p>豆瓣源 ：<a target="_blank" rel="noopener" href="http://pypi.douban.com/simple/">http://pypi.douban.com/simple/</a></p>
-<p>腾讯源：<a target="_blank" rel="noopener" href="http://mirrors.cloud.tencent.com/pypi/simple">http://mirrors.cloud.tencent.com/pypi/simple</a></p>
-<blockquote>
-<p><strong>注意https和http，http的需要信任(因为未加密)</strong>，可以通过下面两个方法解决</p>
-</blockquote>
-<ul>
-<li>安装时加入 <code>--trusted-host</code> 临时参数</li>
-</ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token function">install</span> <span class="token parameter variable">-i</span> https://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com【package-name】<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<ul>
-<li>在 <code>pip.conf</code> 中加入 <code>trusted-host</code> 选项，该方法是一劳永逸</li>
-</ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>global<span class="token punctuation">]</span>
-index-url <span class="token operator">=</span> http://mirrors.aliyun.com/pypi/simple/
-<span class="token punctuation">[</span>install<span class="token punctuation">]</span>
-trusted-host<span class="token operator">=</span>mirrors.aliyun.com<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="pip-缓存位置"><a class="markdownIt-Anchor" href="#pip-缓存位置"></a> pip 缓存位置</h2>
-<blockquote>
-<p>每次pip都会下载一些包，不会自动删除，手动删除即可</p>
-</blockquote>
-<p>pip 的缓存位置在不同的操作系统下会有所不同：</p>
-<ul>
-<li>Windows: 缓存位置为 <code>%APPDATA%\pip\cache</code>。其中，<code>%APPDATA%</code> 为当前用户的应用程序数据目录，通常位于 <code>C:\Users\{用户名}\AppData\Roaming</code>。</li>
-<li>macOS/Linux: 缓存位置为 <code>~/.cache/pip</code>。</li>
-</ul>
-<p>可以通过以下命令查看 pip 的配置信息，包括缓存位置：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip config list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>如果需要修改缓存位置，可以在 pip 的配置文件中进行设置。Windows 上的配置文件为 <code>%APPDATA%\pip\pip.ini</code> 或 <code>%APPDATA%\pip\pip.conf</code>，macOS/Linux 上的配置文件为 <code>~/.config/pip/pip.conf</code>。在配置文件中添加以下内容即可修改缓存位置：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>global<span class="token punctuation">]</span>
-cache-dir <span class="token operator">=</span> /path/to/cache/dir<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>其中 <code>/path/to/cache/dir</code> 替换为你希望设置的缓存路径。修改完成后，重启终端或者重新加载 pip 配置即可生效。</p>
-<h2 id="安装时间超时问题"><a class="markdownIt-Anchor" href="#安装时间超时问题"></a> 安装时间超时问题</h2>
-<p>pip的超时时间默认为15秒，如果下载速度过慢，可以使用以下命令设置超时时间为60秒：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token function">install</span> --default-timeout<span class="token operator">=</span><span class="token number">60</span> <span class="token operator">&lt;</span>package<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<ol>
-<li>添加参数<code>--default-timeout=1000</code></li>
-<li>在配置里面<code>[global]</code>下添加<code>timeout=1000</code></li>
-</ol>
-<h2 id="虚拟环境多python版本问题"><a class="markdownIt-Anchor" href="#虚拟环境多python版本问题"></a> 虚拟环境多python版本问题</h2>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">python <span class="token parameter variable">-m</span> pip <span class="token function">install</span> <span class="token operator">&lt;</span>package<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="face-identification"><a class="markdownIt-Anchor" href="#face-identification"></a> Face Identification</h2>
+<p>Face Identification是将给定的人脸图像与已有的人脸数据库中的图像进行匹配的任务。它是人脸识别的第二个部分（第一个部分是检测）。它是一对多的映射：您需要在数据库中找到一个未知的人来确定该人的身份。</p>
+<h2 id="facial-inpainting"><a class="markdownIt-Anchor" href="#facial-inpainting"></a> Facial Inpainting</h2>
+<p>人脸修复（或面部完成）是指为人脸图像中缺失的像素生成合理的面部结构的任务。</p>
+<h2 id="face-hallucination"><a class="markdownIt-Anchor" href="#face-hallucination"></a> Face Hallucination</h2>
+<p>人脸增强是指从低分辨率（LR）的输入图像中生成高分辨率（HR）的人脸图像的任务。</p>
+<h2 id="facial-expression-recognition-fer"><a class="markdownIt-Anchor" href="#facial-expression-recognition-fer"></a> Facial Expression Recognition (FER)</h2>
+<p>面部表情识别（FER）是一项计算机视觉任务，旨在识别和分类人脸上描绘的情感表达。其目标是通过分析面部的各种特征，如眉毛、眼睛、嘴巴和其他特征，并将它们映射到一组情绪（例如愤怒、恐惧、惊讶、悲伤和幸福）来自动化实时情绪识别的过程。</p>
+<h2 id="facial-action-unit-detection"><a class="markdownIt-Anchor" href="#facial-action-unit-detection"></a> Facial Action Unit Detection</h2>
+<p>面部动作单元检测是从面部视频中检测动作单元的任务，例如嘴唇紧缩和面颊抬高。</p>
+<h2 id="age-estimation"><a class="markdownIt-Anchor" href="#age-estimation"></a> Age Estimation</h2>
+<p>年龄估计是从图像或其他类型的数据中估计一个人的年龄的任务。</p>
+<h2 id="gender-prediction"><a class="markdownIt-Anchor" href="#gender-prediction"></a> Gender Prediction</h2>
+<p>性别预测是从图像或其他数据中预测一个人的性别的任务。</p>
+<h2 id="age-and-gender-classification"><a class="markdownIt-Anchor" href="#age-and-gender-classification"></a> Age And Gender Classification</h2>
+<p>年龄和性别分类是从图像或视频中识别一个人的年龄和性别的双重任务。</p>
+<h2 id="face-sketch-synthesis"><a class="markdownIt-Anchor" href="#face-sketch-synthesis"></a> Face Sketch Synthesis</h2>
+<p>人脸素描合成是从输入的人脸照片中生成素描的任务。</p>
+<h2 id="facial-attribute-classification"><a class="markdownIt-Anchor" href="#facial-attribute-classification"></a> Facial Attribute Classification</h2>
+<p>面部属性分类是对面部图像的各种属性进行分类的任务，例如是否有胡须、是否戴帽子等。</p>
+<h2 id="facial-beauty-prediction"><a class="markdownIt-Anchor" href="#facial-beauty-prediction"></a> Facial Beauty Prediction</h2>
+<p>面部美感预测是预测面部吸引力的任务。</p>
+<h2 id="3d-facial-expression-recognition"><a class="markdownIt-Anchor" href="#3d-facial-expression-recognition"></a> 3D Facial Expression Recognition</h2>
+<p>三维面部表情识别是从图像或视频中对三维面部表情进行建模的任务。</p>
+<h2 id="face-image-retrieval"><a class="markdownIt-Anchor" href="#face-image-retrieval"></a> Face Image Retrieval</h2>
+<p>人脸图像检索是根据给定的标准（例如身份）检索与查询相似的人脸，并根据它们与查询的距离对它们进行排名的任务。</p>
 
                 
             </div>
@@ -667,7 +607,7 @@ cache-dir <span class="token operator">=</span> /path/to/cache/dir<span aria-hid
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://jijunhao.github.io/2023/02/06/article20230206/">http://jijunhao.github.io/2023/02/06/article20230206/</a>
+                    <a href="http://jijunhao.github.io/2023/04/30/article20230430/">http://jijunhao.github.io/2023/04/30/article20230430/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -705,12 +645,8 @@ cache-dir <span class="token operator">=</span> /path/to/cache/dir<span aria-hid
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/pip/">
-                                    <span class="chip bg-color">pip</span>
-                                </a>
-                            
-                                <a href="/tags/Python/">
-                                    <span class="chip bg-color">Python</span>
+                                <a href="/tags/Face/">
+                                    <span class="chip bg-color">Face</span>
                                 </a>
                             
                         </div>
@@ -803,46 +739,48 @@ cache-dir <span class="token operator">=</span> /path/to/cache/dir<span aria-hid
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2023/02/07/article20230207/">
+                <a href="/2023/04/30/article20230430/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/9.webp" class="responsive-img" alt="Linux常用解压与压缩命令">
+                        <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/15.webp" class="responsive-img" alt="人脸识别任务">
                         
-                        <span class="card-title">Linux常用解压与压缩命令</span>
+                        <span class="card-title">人脸识别任务</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            常用解压与压缩命令
+                            人脸识别任务：身份识别、属性识别、生成等
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-02-07
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-30
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Linux/" class="post-category">
-                                    Linux
+                            <a href="/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/" class="post-category">
+                                    论文阅读
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Linux/">
-                        <span class="chip bg-color">Linux</span>
+                    <a href="/tags/Face/">
+                        <span class="chip bg-color">Face</span>
                     </a>
                     
                 </div>
@@ -856,31 +794,31 @@ cache-dir <span class="token operator">=</span> /path/to/cache/dir<span aria-hid
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/02/05/article20230205/">
+                <a href="/2023/04/28/article20230428/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/11.webp" class="responsive-img" alt="Miniconda的安装和使用">
+                        <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/13.webp" class="responsive-img" alt="Diffusion公式推导和理解">
                         
-                        <span class="card-title">Miniconda的安装和使用</span>
+                        <span class="card-title">Diffusion公式推导和理解</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Miniconda的安装和使用、常用conda命令的使用
+                            Diffusion公式推导和理解
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-02-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-28
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Python/" class="post-category">
-                                    Python
+                            <a href="/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/" class="post-category">
+                                    论文阅读
                                 </a>
                             
                             
@@ -890,12 +828,8 @@ cache-dir <span class="token operator">=</span> /path/to/cache/dir<span aria-hid
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Python/">
-                        <span class="chip bg-color">Python</span>
-                    </a>
-                    
-                    <a href="/tags/conda/">
-                        <span class="chip bg-color">conda</span>
+                    <a href="/tags/Diffusion/">
+                        <span class="chip bg-color">Diffusion</span>
                     </a>
                     
                 </div>
@@ -970,87 +904,6 @@ cache-dir <span class="token operator">=</span> /path/to/cache/dir<span aria-hid
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/codeBlock/codeShrink.js"></script>
 
 
-
-    </div>
-    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget card" style="background-color: white;">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
-            <div id="toc-content"></div>
-        </div>
-    </div>
-</div>
-
-<!-- TOC 悬浮按钮. -->
-
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fas fa-list-ul"></i>
-    </a>
-</div>
-
-
-<script src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/tocbot/tocbot.min.js"></script>
-<script>
-    $(function () {
-        tocbot.init({
-            tocSelector: '#toc-content',
-            contentSelector: '#articleContent',
-            headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
-        });
-
-        // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 - 64);
-        let $tocWidget = $('.toc-widget');
-        $(window).scroll(function () {
-            let scroll = $(window).scrollTop();
-            /* add post toc fixed. */
-            if (scroll > tocHeight) {
-                $tocWidget.addClass('toc-fixed');
-            } else {
-                $tocWidget.removeClass('toc-fixed');
-            }
-        });
-
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).hide();
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).show();
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
-        
-    });
-</script>
 
     
 
