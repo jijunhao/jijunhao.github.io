@@ -6,7 +6,7 @@
   <link href="http://jijunhao.github.io/atom.xml" rel="self"/>
   
   <link href="http://jijunhao.github.io/"/>
-  <updated>2023-05-11T08:47:22.047Z</updated>
+  <updated>2023-10-18T12:24:35.208Z</updated>
   <id>http://jijunhao.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>3D-Aware Adversarial Makeup Generation for Facial Privacy Protection</title>
+    <link href="http://jijunhao.github.io/2023/07/03/article20230703/"/>
+    <id>http://jijunhao.github.io/2023/07/03/article20230703/</id>
+    <published>2023-07-03T12:07:03.000Z</published>
+    <updated>2023-10-18T12:24:35.208Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;论文阅读3d-aware-adversarial-makeup-generation-for-facial-privacy-protection-2023-tpami&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="论文阅读" scheme="http://jijunhao.github.io/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/"/>
+    
+    
+    <category term="Privacy Protection" scheme="http://jijunhao.github.io/tags/Privacy-Protection/"/>
+    
+  </entry>
   
   <entry>
     <title>人脸识别任务</title>
@@ -528,34 +553,6 @@
     
     
     <category term="Hexo" scheme="http://jijunhao.github.io/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>QQ机器人——接入ChatGPT</title>
-    <link href="http://jijunhao.github.io/2023/03/13/article20230313/"/>
-    <id>http://jijunhao.github.io/2023/03/13/article20230313/</id>
-    <published>2023-03-13T11:38:56.000Z</published>
-    <updated>2023-04-29T08:39:05.580Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;参考文献&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://chat.openai.com/&quot;&gt;ChatGPT&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="技术工具" scheme="http://jijunhao.github.io/categories/%E6%8A%80%E6%9C%AF%E5%B7%A5%E5%85%B7/"/>
-    
-    
-    <category term="ChatGPT" scheme="http://jijunhao.github.io/tags/ChatGPT/"/>
     
   </entry>
   

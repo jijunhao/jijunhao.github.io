@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="标签: CV, Ubuntu,ML,DL,Math,CV等">
-    <meta name="description" content="本网站是个人兴趣爱好，总结分享经验，记录生活点滴的平台，希望在以后的学习旅途中，走出自己的风景。">
+    <meta name="keywords" content="3D-Aware Adversarial Makeup Generation for Facial Privacy Protection, Ubuntu,ML,DL,Math,CV等">
+    <meta name="description" content="基于GAN的3D化妆人脸身份隐私保护：机器无法识别、人可以识别；特征级别操作；算法3DAM-GAN">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>标签: CV | 季俊豪的博客</title>
+    <title>3D-Aware Adversarial Makeup Generation for Facial Privacy Protection | 季俊豪的博客</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/favicon.png">
     
 
@@ -38,9 +38,7 @@
 
 
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/tocbot/tocbot.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/css/post.css">
-
 
 
 
@@ -430,353 +428,473 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                感谢各位的来访，请在留言板上留下你的足迹
-                
-            </div>
+    
 
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/typed/typed.js"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: [ 
-                            
-                                "从来没有真正的绝境, 只有心灵的迷途",
-                            
-                                "Never really desperate, only the lost of the soul",
-                            
-                        ],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/15.webp')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">3D-Aware Adversarial Makeup Generation for Facial Privacy Protection</h1>
+                </div>
             </div>
         </div>
     </div>
+</div>
+
+
+
+
+<main class="container content">
+
+    
+    <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Privacy-Protection/">
+                                <span class="chip bg-color">Privacy Protection</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/" class="post-category">
+                                论文阅读
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2023-07-03
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2023-10-18
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    1.4k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    4 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/prism/prism.css">
+        
+
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="论文阅读3d-aware-adversarial-makeup-generation-for-facial-privacy-protection-2023-tpami"><a class="markdownIt-Anchor" href="#论文阅读3d-aware-adversarial-makeup-generation-for-facial-privacy-protection-2023-tpami"></a> 【论文阅读】3D-Aware Adversarial Makeup Generation for Facial Privacy Protection (2023 TPAMI)</h2>
+<h3 id="background"><a class="markdownIt-Anchor" href="#background"></a> Background</h3>
+<p>大量的人脸数据被上传到在线<strong>社交媒体平台</strong>，很容易被识别、处理和用于恶意目的。例如，用户可能会被未经授权的人脸识别（FR）系统识别，并且他们的个人资料可能会在未经同意的情况下被分析，这对个人信息的隐私和安全构成了相当大的威胁。</p>
+<h3 id="problem"><a class="markdownIt-Anchor" href="#problem"></a> Problem</h3>
+<ol>
+<li>传统的图像处理方法：马赛克（图像质量损失）；暗化（难以识别图像中的其他特征）；下采样（面部视觉识别发生明显改变）。在社交场景下，用户有时候希望分享自己的照片，不希望被遮盖这些脸部细节。</li>
+<li>基于GAN的换脸方法：用户可能希望展示真实的人脸照片，而不是完全不同的面部照片。</li>
+<li>基于对抗攻击的方法：有意义的扰动（Patch-based）和随机的扰动（Noise-based）。一方面，需要用到模型的梯度，对于黑盒模型的迁移性比较低。另一方面，图像质量较低。</li>
+</ol>
+<h3 id="相关工作"><a class="markdownIt-Anchor" href="#相关工作"></a> 相关工作</h3>
+<ol>
+<li>类似工作</li>
+</ol>
+<p>Adv-Makeup将对抗扰动隐藏在妆容中，增强了不可感知性。也是基于GAN的。</p>
+<p>AMTGAN通过黑盒设置下的化妆传输实现面部隐私保护。它首先将整体参考化妆转移到相应的源面部区域，然后引入具有输入多样性增强的集成训练，以生成针对目标身份的对抗性示例。</p>
+<ol start="2">
+<li>化妆GAN</li>
+</ol>
+<p>BeautyGAN 引入了双输入/输出生成器和面部组件上的像素级颜色直方图损失，以传输化妆细节。 BeautyGlow基于Glow模型，将输入图像的潜在代码分解为化妆和非化妆部分，然后重新组合它们以获得最终的化妆图像。 LADN 合并了多个重叠的局部鉴别器以更好地传输局部细节。 PSGAN通过引入注意力化妆变形模块，提出了一种姿势和表情稳健的 GAN 模型。 SOGAN解决了参考图像中不需要的阴影和遮挡问题。 PSGAN++提出实现稳健且可控的化妆转移以及卸妆。</p>
+<ol start="3">
+<li>3D重建技术</li>
+</ol>
+<p>3D人脸重建旨在从2D投影中恢复人脸的3D信息。作为 3D 人脸重建的常用统计模型，3D 可变形模型 (3DMM)从人脸的 3D 扫描中学习，并对 3D 形状和纹理信息的主要变化进行建模。随着深度学习的发展，基于CNN的方法被提出来估计3D Morphable Model参数，从而提高了重建的性能。使用3DMM参数，我们可以获得一系列3D表示，例如3D面部形状、纹理和UV纹理图。此外，神经渲染器可用于将 3D 人脸模型拟合到 2D 图像。在本文中，我们采用 3DMM 来获得形状和纹理表示，然后利用 UV 空间的对称性来合成带有化妆的对抗性人脸图像。</p>
+<ol start="4">
+<li>3D引导技术</li>
+</ol>
+<p>由于 3D 先验可以提供对面部几何的语义控制，因此已经提出了许多方法将其集成到基于 GAN 的面部图像合成框架中例如，StyleRig利用 3DMM 参数，通过具有固定权重的预训练 StyleGAN 生成器在面部提供类似装备的控制。 DiscoFaceGAN提出通过使用预定义参数模仿 3DMM 渲染的面部语义来监督 GAN 生成的面部图像，从而能够精确控制姿势、表情和照明等面部属性。 以无监督的方式学习 3D 头部几何形状，并实现精确的 3D 头部几何建模和高保真头部姿势操纵结果。为了提高人脸超分辨率的性能，引入了3D渲染分支来获取显着面部结构和身份知识的3D先验。在本文中，我们采用 3DMM 来解开纹理和形状空间，并在纹理空间中应用对抗性化妆迁移。</p>
+<h3 id="method"><a class="markdownIt-Anchor" href="#method"></a> Method</h3>
+<p>在本文中，我们提出了一种新颖的 3D 感知对抗化妆生成 GAN（3DAM-GAN），旨在通过化妆迁移生成自然对抗示例。为了解决源面和参考面之间的几何不一致问题，提出了一种新颖的 UV 生成器来从 3D 角度对齐面部纹理。具体来说，借助人脸固有的对称性以及UV空间中的可见性图，提出了化妆调整模块（MAM），通过消除参考图像中的遮挡和阴影的干扰来学习稳健的化妆风格信息。此外，由于UV空间中的纹理图是空间对齐的（即每个位置具有相同的语义），因此还引入了化妆传输模块（MTM），通过学习像素级注意图来提高化妆传输的准确性。此外，还引入了一种新颖的化妆损失，以进一步提高生成结果的质量，它明确地利用了紫外线空间中人脸的双边对称性，并为化妆转移过程提供了更准确和更强大的化妆监督。最后，我们引入了一种有针对性的化妆攻击机制，以防止生成的具有对抗性化妆风格的图像被未经授权的 FR 系统识别。基于引入集成训练策略，3DAM-GAN能够针对各种FR模型找到共同且信息丰富的梯度信号，并且对不同的黑盒FR系统具有更大的可迁移性。</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">JiJunhao</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://jijunhao.github.io/2023/07/03/article20230703/">http://jijunhao.github.io/2023/07/03/article20230703/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">JiJunhao</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Privacy-Protection/">
+                                    <span class="chip bg-color">Privacy Protection</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="card" data-aos="fade-up">
+    <div id="utteranc-container" class="card-content">
+        <script src="https://utteranc.es/client.js"
+            repo="jijunhao/utterances"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+        </script>
+    </div>
+</div>
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2023/07/03/article20230703/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/15.webp" class="responsive-img" alt="3D-Aware Adversarial Makeup Generation for Facial Privacy Protection">
+                        
+                        <span class="card-title">3D-Aware Adversarial Makeup Generation for Facial Privacy Protection</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            基于GAN的3D化妆人脸身份隐私保护：机器无法识别、人可以识别；特征级别操作；算法3DAM-GAN
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-07-03
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/" class="post-category">
+                                    论文阅读
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Privacy-Protection/">
+                        <span class="chip bg-color">Privacy Protection</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/04/30/article20230430/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/15.webp" class="responsive-img" alt="人脸识别任务">
+                        
+                        <span class="card-title">人脸识别任务</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            人脸识别任务：身份识别、属性识别、生成等
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-30
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/" class="post-category">
+                                    论文阅读
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Face/">
+                        <span class="chip bg-color">Face</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
 </div>
 
 
 <script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/banner/" + new Date().getDay() + '.webp';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('100')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 季俊豪的博客<br />'
+            + '文章作者: JiJunhao<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
 </script>
 
 
-    </div>
-</div>
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/codeBlock/codeBlockFuction.js"></script>
 
-<main class="content">
 
-    
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/prism/prism.js"></script>
 
-<div id="tags" class="container chip-container">
-    <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
-            </div>
-            <div class="tag-chips">
-                
-                
-                <a href="/tags/Hexo/" title="Hexo: 5">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Hexo" style="background-color: #F9EBEA;">Hexo
-                        <span class="tag-length">5</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Linux/" title="Linux: 3">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Linux" style="background-color: #F5EEF8;">Linux
-                        <span class="tag-length">3</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" title="机器学习: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="机器学习" style="background-color: #D5F5E3;">机器学习
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/conda/" title="conda: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="conda" style="background-color: #E8F8F5;">conda
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Python/" title="Python: 7">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Python" style="background-color: #FEF9E7;">Python
-                        <span class="tag-length">7</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/pip/" title="pip: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="pip" style="background-color: #F8F9F9;">pip
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/" title="搜索引擎: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="搜索引擎" style="background-color: #82E0AA;">搜索引擎
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/ChatGPT/" title="ChatGPT: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="ChatGPT" style="background-color: #D7BDE2;">ChatGPT
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Word/" title="Word: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Word" style="background-color: #A3E4D7;">Word
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Git/" title="Git: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Git" style="background-color: #85C1E9;">Git
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/PyTorch/" title="PyTorch: 4">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="PyTorch" style="background-color: #F8C471;">PyTorch
-                        <span class="tag-length">4</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%8A%80%E6%9C%AF%E5%B7%A5%E5%85%B7/" title="技术工具: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="技术工具" style="background-color: #F9E79F;">技术工具
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Zotero/" title="Zotero: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Zotero" style="background-color: #D7BDE2;">Zotero
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/CV/" title="CV: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            data-tagname="CV" style="background-color: #F8F9F9;">CV
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Math%EF%BC%8C%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" title="Math，机器学习: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Math，机器学习" style="background-color: #A3E4D7;">Math，机器学习
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/GAN/" title="GAN: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="GAN" style="background-color: #D7BDE2;">GAN
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Diffusion/" title="Diffusion: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Diffusion" style="background-color: #FEF9E7;">Diffusion
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Differential-Privacy/" title="Differential Privacy: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Differential Privacy" style="background-color: #F9E79F;">Differential Privacy
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Transformer/" title="Transformer: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Transformer" style="background-color: #F5EEF8;">Transformer
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Attention/" title="Attention: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Attention" style="background-color: #FFF;">Attention
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/AIGC/" title="AIGC: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="AIGC" style="background-color: #F9E79F;">AIGC
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Face/" title="Face: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Face" style="background-color: #82E0AA;">Face
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Privacy-Protection/" title="Privacy Protection: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Privacy Protection" style="background-color: #82E0AA;">Privacy Protection
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-            </div>
-        </div>
-    </div>
-</div>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/codeBlock/codeShrink.js"></script>
+
+
 
     
 
-    <article id="articles" class="container articles">
-        <div class="row tags-posts">
-            
-            
-            <div class="article tag-post col s12 m6 l4" data-tags="Python, PyTorch, CV" data-aos="fade-up">
-                <div class="card">
-                    <a href="/2023/04/13/article20230413/">
-                        <div class="card-image tag-image">
-                            
-                            
-                            <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/0.webp" class="responsive-img" alt="计算机视觉任务(二)">
-                            
-                            <span class="card-title">计算机视觉任务(二)</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-13
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/" class="post-category">
-                                计算机视觉
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            
-            <div class="article tag-post col s12 m6 l4" data-tags="Python, PyTorch, CV" data-aos="fade-up">
-                <div class="card">
-                    <a href="/2023/04/12/article20230412/">
-                        <div class="card-image tag-image">
-                            
-                            
-                            <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/20.webp" class="responsive-img" alt="计算机视觉任务(一)">
-                            
-                            <span class="card-title">计算机视觉任务(一)</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-12
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/" class="post-category">
-                                计算机视觉
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </article>
 </main>
 
 
+<!-- mathjax2.0-->
 
+
+
+<!-- mathjax3.0
+
+-->
 
     <footer class="page-footer bg-color">
     

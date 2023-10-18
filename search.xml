@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>3D-Aware Adversarial Makeup Generation for Facial Privacy Protection</title>
+      <link href="/2023/07/03/article20230703/"/>
+      <url>/2023/07/03/article20230703/</url>
+      
+        <content type="html"><![CDATA[<h2 id="论文阅读3d-aware-adversarial-makeup-generation-for-facial-privacy-protection-2023-tpami"><a class="markdownIt-Anchor" href="#论文阅读3d-aware-adversarial-makeup-generation-for-facial-privacy-protection-2023-tpami"></a> 【论文阅读】3D-Aware Adversarial Makeup Generation for Facial Privacy Protection (2023 TPAMI)</h2><h3 id="background"><a class="markdownIt-Anchor" href="#background"></a> Background</h3><p>大量的人脸数据被上传到在线<strong>社交媒体平台</strong>，很容易被识别、处理和用于恶意目的。例如，用户可能会被未经授权的人脸识别（FR）系统识别，并且他们的个人资料可能会在未经同意的情况下被分析，这对个人信息的隐私和安全构成了相当大的威胁。</p><h3 id="problem"><a class="markdownIt-Anchor" href="#problem"></a> Problem</h3><ol><li>传统的图像处理方法：马赛克（图像质量损失）；暗化（难以识别图像中的其他特征）；下采样（面部视觉识别发生明显改变）。在社交场景下，用户有时候希望分享自己的照片，不希望被遮盖这些脸部细节。</li><li>基于GAN的换脸方法：用户可能希望展示真实的人脸照片，而不是完全不同的面部照片。</li><li>基于对抗攻击的方法：有意义的扰动（Patch-based）和随机的扰动（Noise-based）。一方面，需要用到模型的梯度，对于黑盒模型的迁移性比较低。另一方面，图像质量较低。</li></ol><h3 id="相关工作"><a class="markdownIt-Anchor" href="#相关工作"></a> 相关工作</h3><ol><li>类似工作</li></ol><p>Adv-Makeup将对抗扰动隐藏在妆容中，增强了不可感知性。也是基于GAN的。</p><p>AMTGAN通过黑盒设置下的化妆传输实现面部隐私保护。它首先将整体参考化妆转移到相应的源面部区域，然后引入具有输入多样性增强的集成训练，以生成针对目标身份的对抗性示例。</p><ol start="2"><li>化妆GAN</li></ol><p>BeautyGAN 引入了双输入/输出生成器和面部组件上的像素级颜色直方图损失，以传输化妆细节。 BeautyGlow基于Glow模型，将输入图像的潜在代码分解为化妆和非化妆部分，然后重新组合它们以获得最终的化妆图像。 LADN 合并了多个重叠的局部鉴别器以更好地传输局部细节。 PSGAN通过引入注意力化妆变形模块，提出了一种姿势和表情稳健的 GAN 模型。 SOGAN解决了参考图像中不需要的阴影和遮挡问题。 PSGAN++提出实现稳健且可控的化妆转移以及卸妆。</p><ol start="3"><li>3D重建技术</li></ol><p>3D人脸重建旨在从2D投影中恢复人脸的3D信息。作为 3D 人脸重建的常用统计模型，3D 可变形模型 (3DMM)从人脸的 3D 扫描中学习，并对 3D 形状和纹理信息的主要变化进行建模。随着深度学习的发展，基于CNN的方法被提出来估计3D Morphable Model参数，从而提高了重建的性能。使用3DMM参数，我们可以获得一系列3D表示，例如3D面部形状、纹理和UV纹理图。此外，神经渲染器可用于将 3D 人脸模型拟合到 2D 图像。在本文中，我们采用 3DMM 来获得形状和纹理表示，然后利用 UV 空间的对称性来合成带有化妆的对抗性人脸图像。</p><ol start="4"><li>3D引导技术</li></ol><p>由于 3D 先验可以提供对面部几何的语义控制，因此已经提出了许多方法将其集成到基于 GAN 的面部图像合成框架中例如，StyleRig利用 3DMM 参数，通过具有固定权重的预训练 StyleGAN 生成器在面部提供类似装备的控制。 DiscoFaceGAN提出通过使用预定义参数模仿 3DMM 渲染的面部语义来监督 GAN 生成的面部图像，从而能够精确控制姿势、表情和照明等面部属性。 以无监督的方式学习 3D 头部几何形状，并实现精确的 3D 头部几何建模和高保真头部姿势操纵结果。为了提高人脸超分辨率的性能，引入了3D渲染分支来获取显着面部结构和身份知识的3D先验。在本文中，我们采用 3DMM 来解开纹理和形状空间，并在纹理空间中应用对抗性化妆迁移。</p><h3 id="method"><a class="markdownIt-Anchor" href="#method"></a> Method</h3><p>在本文中，我们提出了一种新颖的 3D 感知对抗化妆生成 GAN（3DAM-GAN），旨在通过化妆迁移生成自然对抗示例。为了解决源面和参考面之间的几何不一致问题，提出了一种新颖的 UV 生成器来从 3D 角度对齐面部纹理。具体来说，借助人脸固有的对称性以及UV空间中的可见性图，提出了化妆调整模块（MAM），通过消除参考图像中的遮挡和阴影的干扰来学习稳健的化妆风格信息。此外，由于UV空间中的纹理图是空间对齐的（即每个位置具有相同的语义），因此还引入了化妆传输模块（MTM），通过学习像素级注意图来提高化妆传输的准确性。此外，还引入了一种新颖的化妆损失，以进一步提高生成结果的质量，它明确地利用了紫外线空间中人脸的双边对称性，并为化妆转移过程提供了更准确和更强大的化妆监督。最后，我们引入了一种有针对性的化妆攻击机制，以防止生成的具有对抗性化妆风格的图像被未经授权的 FR 系统识别。基于引入集成训练策略，3DAM-GAN能够针对各种FR模型找到共同且信息丰富的梯度信号，并且对不同的黑盒FR系统具有更大的可迁移性。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 论文阅读 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Privacy Protection </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>人脸识别任务</title>
       <link href="/2023/04/30/article20230430/"/>
       <url>/2023/04/30/article20230430/</url>
