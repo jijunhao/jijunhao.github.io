@@ -6,7 +6,7 @@
   <link href="http://jijunhao.github.io/atom.xml" rel="self"/>
   
   <link href="http://jijunhao.github.io/"/>
-  <updated>2023-10-18T12:24:35.208Z</updated>
+  <updated>2023-10-23T15:11:52.996Z</updated>
   <id>http://jijunhao.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://jijunhao.github.io/2023/07/03/article20230703/"/>
     <id>http://jijunhao.github.io/2023/07/03/article20230703/</id>
     <published>2023-07-03T12:07:03.000Z</published>
-    <updated>2023-10-18T12:24:35.208Z</updated>
+    <updated>2023-10-23T15:11:52.996Z</updated>
     
     
       
@@ -38,6 +38,33 @@
     
     
     <category term="Privacy Protection" scheme="http://jijunhao.github.io/tags/Privacy-Protection/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Conditional Identity Anonymization Generative Adversarial Networks</title>
+    <link href="http://jijunhao.github.io/2023/05/01/article20230501/"/>
+    <id>http://jijunhao.github.io/2023/05/01/article20230501/</id>
+    <published>2023-05-01T12:07:03.000Z</published>
+    <updated>2023-10-23T15:13:08.339Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;论文阅读ciagan-conditional-identity-anonymization-generative-adversarial-networks-2020-cvpr&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="论文阅读" scheme="http://jijunhao.github.io/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/"/>
+    
+    
+    <category term="Privacy Protection" scheme="http://jijunhao.github.io/tags/Privacy-Protection/"/>
+    
+    <category term="人脸生成" scheme="http://jijunhao.github.io/tags/%E4%BA%BA%E8%84%B8%E7%94%9F%E6%88%90/"/>
     
   </entry>
   
@@ -528,31 +555,6 @@
     
     
     <category term="ChatGPT" scheme="http://jijunhao.github.io/tags/ChatGPT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo博客搭建进阶版</title>
-    <link href="http://jijunhao.github.io/2023/03/18/article20230318/"/>
-    <id>http://jijunhao.github.io/2023/03/18/article20230318/</id>
-    <published>2023-03-18T12:03:17.000Z</published>
-    <updated>2023-04-09T04:56:16.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;为什么选择-gitlab&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#为什么选择-gitlab&quot;&gt;&lt;/a&gt; 为什么选择</summary>
-        
-      
-    
-    
-    
-    <category term="博客" scheme="http://jijunhao.github.io/categories/%E5%8D%9A%E5%AE%A2/"/>
-    
-    
-    <category term="Hexo" scheme="http://jijunhao.github.io/tags/Hexo/"/>
     
   </entry>
   
