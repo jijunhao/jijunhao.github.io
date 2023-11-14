@@ -6,7 +6,7 @@
   <link href="http://jijunhao.github.io/atom.xml" rel="self"/>
   
   <link href="http://jijunhao.github.io/"/>
-  <updated>2023-11-13T14:24:01.958Z</updated>
+  <updated>2023-11-14T14:55:38.061Z</updated>
   <id>http://jijunhao.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>时间序列预测</title>
+    <link href="http://jijunhao.github.io/2023/09/02/article20230902/"/>
+    <id>http://jijunhao.github.io/2023/09/02/article20230902/</id>
+    <published>2023-09-02T12:07:03.000Z</published>
+    <updated>2023-11-14T14:55:38.061Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;时间序列&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#时间序列&quot;&gt;&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="数学建模" scheme="http://jijunhao.github.io/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/"/>
+    
+    
+    <category term="数学建模" scheme="http://jijunhao.github.io/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/"/>
+    
+  </entry>
+  
+  <entry>
     <title>灰色预测</title>
     <link href="http://jijunhao.github.io/2023/09/01/article20230901/"/>
     <id>http://jijunhao.github.io/2023/09/01/article20230901/</id>
     <published>2023-09-01T12:07:03.000Z</published>
-    <updated>2023-11-13T14:24:01.958Z</updated>
+    <updated>2023-11-14T14:55:38.061Z</updated>
     
     
       
@@ -528,31 +553,6 @@
     <category term="Linux" scheme="http://jijunhao.github.io/tags/Linux/"/>
     
     <category term="Python" scheme="http://jijunhao.github.io/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Word论文排版</title>
-    <link href="http://jijunhao.github.io/2023/03/24/article20230324/"/>
-    <id>http://jijunhao.github.io/2023/03/24/article20230324/</id>
-    <published>2023-03-24T11:38:56.000Z</published>
-    <updated>2023-04-09T04:56:16.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;word论文排版&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#word论文排版&quot;&gt;&lt;/a&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="技术工具" scheme="http://jijunhao.github.io/categories/%E6%8A%80%E6%9C%AF%E5%B7%A5%E5%85%B7/"/>
-    
-    
-    <category term="Word" scheme="http://jijunhao.github.io/tags/Word/"/>
     
   </entry>
   
