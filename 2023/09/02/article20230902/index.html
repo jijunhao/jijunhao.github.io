@@ -495,21 +495,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-11-14
+                    2023-11-15
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.6k
+                    4.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    15 分
+                    21 分
                 </div>
                 
 
@@ -742,7 +742,175 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
 <p>在总体上，AR§ 模型关注时间序列的自回归结构，MA(q) 模型关注白噪声误差项的影响，而 ARMA(p,q) 模型综合了两者。ARIMA 模型在此基础上引入了差分，使其更适用于非平稳时间序列的建模。</p>
 <blockquote>
 <p>平稳时间序列：序列的统计特性不随时间的平移而变化，即均值和协方差不随时间的平移而变化。</p>
+<p>一般来说有两种实现方法：手动建模(statsmodels)和自动建模(pmdarima)</p>
 </blockquote>
+<h4 id="41-基本流程"><a class="markdownIt-Anchor" href="#41-基本流程"></a> 4.1 基本流程</h4>
+<ol>
+<li>
+<p>平稳性检测：</p>
+<ul>
+<li>自相关图检验：观察时间序列的自相关图，检查是否存在明显的趋势和周期性。</li>
+<li>单位根检验（DF检验、ADF检验）：判断时间序列是否具有单位根，即是否是非平稳的。</li>
+</ul>
+</li>
+<li>
+<p>白噪声检验：</p>
+<ul>
+<li>Ljung-Box检验： 用于检验时间序列的残差序列是否是白噪声，即是否存在序列之间的相关性。</li>
+</ul>
+</li>
+<li>
+<p>平稳性处理方法：</p>
+<ul>
+<li>对数变换：通过取对数，可以减小数据的振动幅度，使其更加平滑。</li>
+<li>平滑技术：移动平均（一段时间内的均值均为估计值）、指数平均（通过变权来提高最近值的权重）</li>
+<li>差分技术：对等周期间隔的数据进行求减，可以用于减小数据的趋势。</li>
+<li>分解技术：将时间序列分离成不同的成分，例如长期趋势、季节趋势和随机成分，以便更好地理解和建模数据。</li>
+</ul>
+</li>
+<li>
+<p>识别ARIMA模型的参数：</p>
+<p>通过观察ACF（自相关函数）和PACF（偏自相关函数）来选择ARIMA模型的参数。ACF帮助确定移动平均部分的阶数（q），PACF帮助确定自回归部分的阶数（p）。</p>
+</li>
+<li>
+<p>拟合ARIMA模型、评估、预测</p>
+</li>
+</ol>
+<h4 id="42-代码"><a class="markdownIt-Anchor" href="#42-代码"></a> 4.2 代码</h4>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> statsmodels<span class="token punctuation">.</span>api <span class="token keyword">as</span> sm
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+<span class="token keyword">from</span> statsmodels<span class="token punctuation">.</span>tsa<span class="token punctuation">.</span>seasonal <span class="token keyword">import</span> seasonal_decompose
+<span class="token keyword">from</span> statsmodels<span class="token punctuation">.</span>graphics<span class="token punctuation">.</span>tsaplots <span class="token keyword">import</span> plot_acf<span class="token punctuation">,</span> plot_pacf
+<span class="token keyword">import</span> warnings
+warnings<span class="token punctuation">.</span>filterwarnings<span class="token punctuation">(</span><span class="token string">"ignore"</span><span class="token punctuation">)</span>  <span class="token comment"># 选择过滤警告</span>
+
+<span class="token comment"># Load data</span>
+data <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span><span class="token string">'sunspots.csv'</span><span class="token punctuation">)</span>
+data<span class="token punctuation">[</span><span class="token string">'year'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>values<span class="token punctuation">.</span>astype<span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"样本量为{}个"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Plot original data</span>
+data<span class="token punctuation">[</span><span class="token string">'counts'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>plot<span class="token punctuation">(</span>marker<span class="token operator">=</span><span class="token string">'o'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">"Year"</span><span class="token punctuation">,</span> fontsize<span class="token operator">=</span><span class="token number">15</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">"Counts"</span><span class="token punctuation">,</span> fontsize<span class="token operator">=</span><span class="token number">15</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span>loc<span class="token operator">=</span><span class="token string">'best'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>grid<span class="token punctuation">(</span>linestyle<span class="token operator">=</span><span class="token string">'--'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+ax1<span class="token operator">=</span>plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">121</span><span class="token punctuation">)</span><span class="token punctuation">;</span> plot_acf<span class="token punctuation">(</span>data<span class="token punctuation">[</span><span class="token string">'counts'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>ax<span class="token operator">=</span>ax1<span class="token punctuation">,</span>title<span class="token operator">=</span><span class="token string">'self-correlation'</span><span class="token punctuation">)</span>
+ax2<span class="token operator">=</span>plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">122</span><span class="token punctuation">)</span><span class="token punctuation">;</span> plot_pacf<span class="token punctuation">(</span>data<span class="token punctuation">[</span><span class="token string">'counts'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>ax<span class="token operator">=</span>ax2<span class="token punctuation">,</span>title<span class="token operator">=</span><span class="token string">'partial correlation'</span><span class="token punctuation">)</span>
+
+
+<span class="token comment"># Decompose the time series to check for seasonality</span>
+ts_decomposition <span class="token operator">=</span> seasonal_decompose<span class="token punctuation">(</span>data<span class="token punctuation">[</span><span class="token string">'counts'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> period<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">)</span>
+ts_decomposition<span class="token punctuation">.</span>plot<span class="token punctuation">(</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        md<span class="token operator">=</span>sm<span class="token punctuation">.</span>tsa<span class="token punctuation">.</span>ARIMA<span class="token punctuation">(</span>data<span class="token punctuation">[</span><span class="token string">'counts'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>order<span class="token operator">=</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span>j<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>fit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">[</span>i<span class="token punctuation">,</span>j<span class="token punctuation">,</span>md<span class="token punctuation">.</span>aic<span class="token punctuation">,</span>md<span class="token punctuation">.</span>bic<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Fit ARIMA model</span>
+order <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>  <span class="token comment"># Example order, you may need to adjust</span>
+arima_model <span class="token operator">=</span> sm<span class="token punctuation">.</span>tsa<span class="token punctuation">.</span>ARIMA<span class="token punctuation">(</span>data<span class="token punctuation">[</span><span class="token string">'counts'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> order<span class="token operator">=</span>order<span class="token punctuation">)</span>
+zmd <span class="token operator">=</span> arima_model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Summary of ARIMA model</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>zmd<span class="token punctuation">.</span>summary<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+
+<span class="token comment"># Plot original data, fitted values, and forecasted values</span>
+plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>data<span class="token punctuation">[</span><span class="token string">'counts'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'Original Data'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>zmd<span class="token punctuation">.</span>predict<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'red'</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'Fitted Values'</span><span class="token punctuation">)</span>
+forecast <span class="token operator">=</span> zmd<span class="token punctuation">.</span>forecast<span class="token punctuation">(</span>steps<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>forecast<span class="token punctuation">,</span> linestyle<span class="token operator">=</span><span class="token string">'--'</span><span class="token punctuation">,</span> marker<span class="token operator">=</span><span class="token string">'o'</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'black'</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'Forecasted Values'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'Original Data, Fitted Values, and Forecasted Values'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/image-20231115223326894.png?imageSlim" style="zoom:80%;">
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> statsmodels<span class="token punctuation">.</span>api <span class="token keyword">as</span> sm
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pylab <span class="token keyword">as</span> plt
+<span class="token keyword">import</span> pmdarima <span class="token keyword">as</span> pm
+<span class="token keyword">from</span> statsmodels<span class="token punctuation">.</span>tsa<span class="token punctuation">.</span>seasonal <span class="token keyword">import</span> seasonal_decompose
+<span class="token keyword">from</span> statsmodels<span class="token punctuation">.</span>graphics<span class="token punctuation">.</span>tsaplots <span class="token keyword">import</span> plot_acf<span class="token punctuation">,</span> plot_pacf  <span class="token comment"># 画图定阶</span>
+<span class="token keyword">from</span> statsmodels<span class="token punctuation">.</span>tsa<span class="token punctuation">.</span>stattools <span class="token keyword">import</span> adfuller                 <span class="token comment"># ADF检验</span>
+<span class="token keyword">from</span> statsmodels<span class="token punctuation">.</span>stats<span class="token punctuation">.</span>diagnostic <span class="token keyword">import</span> acorr_ljungbox        <span class="token comment"># 白噪声检验</span>
+
+<span class="token keyword">import</span> warnings
+warnings<span class="token punctuation">.</span>filterwarnings<span class="token punctuation">(</span><span class="token string">"ignore"</span><span class="token punctuation">)</span>  <span class="token comment"># 选择过滤警告</span>
+
+data<span class="token operator">=</span>pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span><span class="token string">'sunspots.csv'</span><span class="token punctuation">,</span>index_col<span class="token operator">=</span><span class="token string">'year'</span><span class="token punctuation">)</span>
+data<span class="token punctuation">.</span>index <span class="token operator">=</span> pd<span class="token punctuation">.</span>to_datetime<span class="token punctuation">(</span>data<span class="token punctuation">.</span>index<span class="token punctuation">,</span> <span class="token builtin">format</span><span class="token operator">=</span><span class="token string">'%Y'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"样本量为{}个"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+
+data<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>marker<span class="token operator">=</span><span class="token string">'o'</span><span class="token punctuation">)</span>
+<span class="token comment"># 设置坐标轴标签</span>
+plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">"Year"</span><span class="token punctuation">,</span> fontsize<span class="token operator">=</span><span class="token number">15</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">"Counts"</span><span class="token punctuation">,</span> fontsize<span class="token operator">=</span><span class="token number">15</span><span class="token punctuation">)</span>
+<span class="token comment"># 图例位置</span>
+plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span>loc<span class="token operator">=</span><span class="token string">'best'</span><span class="token punctuation">)</span>
+<span class="token comment"># 生成网格</span>
+plt<span class="token punctuation">.</span>grid<span class="token punctuation">(</span>linestyle<span class="token operator">=</span><span class="token string">'--'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 确定平稳序列还是非平稳序列</span>
+
+<span class="token comment"># 分解数据查看季节性   freq为周期</span>
+ts_decomposition <span class="token operator">=</span> seasonal_decompose<span class="token punctuation">(</span>data<span class="token punctuation">[</span><span class="token string">'counts'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> period<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">)</span>
+ts_decomposition<span class="token punctuation">.</span>plot<span class="token punctuation">(</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+<span class="token comment"># 使用训练集的数据来拟合模型</span>
+built_arimamodel <span class="token operator">=</span> pm<span class="token punctuation">.</span>auto_arima<span class="token punctuation">(</span>data<span class="token punctuation">,</span>
+                                 start_p<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>   <span class="token comment"># p最小值</span>
+                                 start_q<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>   <span class="token comment"># q最小值</span>
+                                 test<span class="token operator">=</span><span class="token string">'adf'</span><span class="token punctuation">,</span>  <span class="token comment"># ADF检验确认差分阶数d</span>
+                                 max_p<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span>     <span class="token comment"># p最大值</span>
+                                 max_q<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span>     <span class="token comment"># q最大值</span>
+                                 m<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>        <span class="token comment"># 季节性周期长度，当m=1时则不考虑季节性</span>
+                                 d<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span>      <span class="token comment"># 通过函数来计算d</span>
+                                 stepwise<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span>  <span class="token comment"># You can set stepwise to True or False based on your preference</span>
+                                 suppress_warnings<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span>  <span class="token comment"># Suppress warnings during the fitting process</span>
+                                 seasonal<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span>  <span class="token comment"># Enable or disable seasonality</span>
+                                 trace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span>  <span class="token comment"># Enable or disable printing additional information during the fitting process</span>
+                                 error_action<span class="token operator">=</span><span class="token string">'ignore'</span><span class="token punctuation">,</span>  <span class="token comment"># How to handle errors during the fitting process</span>
+                                 information_criterion<span class="token operator">=</span><span class="token string">'aic'</span><span class="token punctuation">,</span>
+                                 <span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>built_arimamodel<span class="token punctuation">.</span>summary<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+built_arimamodel<span class="token punctuation">.</span>plot_diagnostics<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+<span class="token comment"># Plotting original data and fitted values</span>
+plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>data<span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'Original Data'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>built_arimamodel<span class="token punctuation">.</span>predict_in_sample<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'red'</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'Fitted Values'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'Original Data vs Fitted Values'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Plotting original data, fitted values, and forecasted values for the next 10 periods</span>
+forecast<span class="token punctuation">,</span> conf_int <span class="token operator">=</span> built_arimamodel<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>n_periods<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span> return_conf_int<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>data<span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'Original Data'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>built_arimamodel<span class="token punctuation">.</span>predict_in_sample<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'red'</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'Fitted Values'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>pd<span class="token punctuation">.</span>date_range<span class="token punctuation">(</span>start<span class="token operator">=</span>data<span class="token punctuation">.</span>index<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> periods<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span> freq<span class="token operator">=</span><span class="token string">'Y'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> forecast<span class="token punctuation">,</span> linestyle<span class="token operator">=</span><span class="token string">'--'</span><span class="token punctuation">,</span> marker<span class="token operator">=</span><span class="token string">'o'</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'black'</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'Forecasted Values'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>fill_between<span class="token punctuation">(</span>pd<span class="token punctuation">.</span>date_range<span class="token punctuation">(</span>start<span class="token operator">=</span>data<span class="token punctuation">.</span>index<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> periods<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span> freq<span class="token operator">=</span><span class="token string">'Y'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>  conf_int<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> conf_int<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'green'</span><span class="token punctuation">,</span> alpha<span class="token operator">=</span><span class="token number">0.2</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'Confidence Interval'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'Original Data, Fitted Values, and Forecasted Values'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<img src="https://blog-1314109265.cos.ap-nanjing.myqcloud.com/image-20231115213959835.png?imageSlim" style="zoom:80%;">
 <h3 id="5-长短时记忆网络long-short-term-memorylstm"><a class="markdownIt-Anchor" href="#5-长短时记忆网络long-short-term-memorylstm"></a> 5. 长短时记忆网络（Long Short-Term Memory，LSTM）</h3>
 <ul>
 <li><strong>性质：</strong> 能够捕捉长期依赖关系，适用于非线性和非平稳的序列。</li>
@@ -1186,7 +1354,7 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">88.1k</span>
+                        class="white-color">89.1k</span>
             
             
             
