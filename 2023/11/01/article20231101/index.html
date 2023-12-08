@@ -1,0 +1,2426 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="SCI写作-Introduction, Ubuntu,ML,DL,Math,CV等">
+    <meta name="description" content="SCI写作-Introduction">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>SCI写作-Introduction | 季俊豪的博客</title>
+    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/favicon.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/css/matery.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/css/my.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/css/post.css">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/css/reward.css">
+    
+
+
+    <script src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/jquery/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/css/loading.css">
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="季俊豪的博客" type="application/atom+xml">
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+
+<body>
+    
+  <div id="loading-box">
+    <div class="loading-left-bg"></div>
+    <div class="loading-right-bg"></div>
+    <div class="spinner-box">
+      <div class="configure-border-1">
+        <div class="configure-core"></div>
+      </div>
+      <div class="configure-border-2">
+        <div class="configure-core"></div>
+      </div>
+      <div class="loading-word">加载中...</div>
+    </div>
+  </div>
+  <!-- 页面加载动画 -->
+  <script>
+    $(document).ready(function () {
+      document.body.style.overflow = 'auto';
+      document.getElementById('loading-box').classList.add("loaded")
+    })
+  </script>
+
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">季俊豪的博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>网址导航</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://www.bing.com">
+          
+          <span>New Bing</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://chat.openai.com">
+          
+          <span>OpenAi</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/navigate">
+          
+          <span>Navigate</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">季俊豪的博客</div>
+        <div class="logo-desc">
+            
+            本网站是个人兴趣爱好，总结分享经验，记录生活点滴的平台，希望在以后的学习旅途中，走出自己的风景。
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-list"></i>
+			
+			网址导航
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://www.bing.com " style="margin-left:75px">
+				  
+		          <span>New Bing</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://chat.openai.com " style="margin-left:75px">
+				  
+		          <span>OpenAi</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/navigate " style="margin-left:75px">
+				  
+		          <span>Navigate</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/jijunhao" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/jijunhao" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/11.webp')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">SCI写作-Introduction</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%86%99%E4%BD%9C/">
+                                <span class="chip bg-color">写作</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%86%99%E4%BD%9C/" class="post-category">
+                                写作
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2023-11-01
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2023-12-08
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    3k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    12 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/prism/prism.css">
+        
+
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="structure"><a class="markdownIt-Anchor" href="#structure"></a> Structure</h2>
+<p>Introduction是整篇论文的开端，是引导读者理解研究背景、问题、目的和方法的关键部分。</p>
+<ol>
+<li><strong>背景（Background）</strong>：在引言的开头，介绍研究领域的背景，突出该领域的重要性。阐明当前领域中的知识空白、争议或需要解决的问题。背景的范围取决于研究主题和读者。如果研究的主题是一个具体的问题，那么就要求读者有着较高的水平（知识)，那就可以一笔带过。如果研究的问题是指导性的或者社会性的，那么从更一般的背景知识开始介绍。此外，背景有很多个，介绍最一般性的那个背景，或者说公众最容易接受的背景，而不是具体的细节或者领域名词。</li>
+<li><strong>研究问题和目的（Research Issues and Objectives）</strong>：描述希望解决的问题，并阐述研究目的。确保研究问题是明确的、有针对性的，并能够为该领域做出贡献。</li>
+<li><strong>文献综述（Literature Review）</strong>：简要回顾与研究相关的文献，强调前人研究的重要发现和不足之处。通过文献综述，突出研究是如何与已有研究相连接的。这里的文献综述是一个范的描述。主要有三个目的：认可同行这方面的工作；把整个领域的方法做个大框架，明确自己的定位；表明自己与同行的区别。有三种原则：时间顺序（政策等描述）、方法分组（例如基于迭代、基于优化）、一般到具体（例如FGSM和I-FGSM）</li>
+<li><strong>研究方法（Research Methods）</strong>：简要介绍研究设计、实验方法或数据收集方法。确保读者能够理解研究是如何进行的，以及选择这些方法的理由。</li>
+<li><strong>重要性和贡献（Significance and Contributions）</strong>：强调研究对该领域的重要性，并明确指出研究可能为学术界和实际应用带来的贡献。通常一段加几个小点。</li>
+<li><strong>结构概述（Outline of the Paper）</strong>：总结整个论文的结构，以引导读者了解接下来的内容。</li>
+</ol>
+<h2 id="grammar"><a class="markdownIt-Anchor" href="#grammar"></a> Grammar</h2>
+<h3 id="1-时态"><a class="markdownIt-Anchor" href="#1-时态"></a> 1. 时态</h3>
+<p>一般现在时/现在进行时</p>
+<p>过去时/现在完成时：一般用于描述过去的工作。little attention has been paid to…表示到目前为止还是没有被关注</p>
+<h3 id="2-句子连接"><a class="markdownIt-Anchor" href="#2-句子连接"></a> 2. 句子连接</h3>
+<ul>
+<li>
+<p>重复（the apple）</p>
+</li>
+<li>
+<p>代词（it,they）</p>
+</li>
+<li>
+<p>抽象形式（this method，the system, these elements）</p>
+</li>
+<li>
+<p>which</p>
+</li>
+<li>
+<p>连接词</p>
+</li>
+</ul>
+<h4 id="21-原因"><a class="markdownIt-Anchor" href="#21-原因"></a> 2.1 原因</h4>
+<table>
+<thead>
+<tr>
+<th>连接词/短语</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>due to</td>
+<td>表示某事是由于某个原因或原因。</td>
+</tr>
+<tr>
+<td>on account of</td>
+<td>表示因为某个原因或原因而发生的事情。</td>
+</tr>
+<tr>
+<td>in view of</td>
+<td>表示基于某种考虑，通常引导进一步解释或行动。</td>
+</tr>
+<tr>
+<td>as</td>
+<td>用于引导原因或解释，表达由于某个原因而发生的情况</td>
+</tr>
+<tr>
+<td>because</td>
+<td>表示直接原因，引导表明某事发生的原因。</td>
+</tr>
+<tr>
+<td>since</td>
+<td>表示自从某个时间点以来一直持续的原因或结果。</td>
+</tr>
+</tbody>
+</table>
+<h4 id="22-结果"><a class="markdownIt-Anchor" href="#22-结果"></a> 2.2 结果</h4>
+<table>
+<thead>
+<tr>
+<th>连接词/短语</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>therefore</td>
+<td>由于前述原因，因此得出的逻辑结论。</td>
+</tr>
+<tr>
+<td>consequently</td>
+<td>作为先前情况或原因的直接结果。</td>
+</tr>
+<tr>
+<td>hence</td>
+<td>由于某个原因，因此产生了特定的结果。</td>
+</tr>
+<tr>
+<td>as a result</td>
+<td>由于之前提到的原因，发生了某个结果。</td>
+</tr>
+<tr>
+<td>which is why</td>
+<td>解释前述原因，为什么会出现某个结果。</td>
+</tr>
+<tr>
+<td>so</td>
+<td>表示前述情况的结果，常用于简洁地表达因果关系。</td>
+</tr>
+</tbody>
+</table>
+<h4 id="23-对比转折"><a class="markdownIt-Anchor" href="#23-对比转折"></a> 2.3 对比/转折</h4>
+<table>
+<thead>
+<tr>
+<th>连接词/短语</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>however</td>
+<td>表示与前述观点或情况相对立的转折关系。</td>
+</tr>
+<tr>
+<td>whereas</td>
+<td>引导对比关系，强调两者之间的差异。</td>
+</tr>
+<tr>
+<td>but</td>
+<td>表示转折或对比，连接两个相对立的观点或情况。</td>
+</tr>
+<tr>
+<td>on the other hand</td>
+<td>表示对前述观点的反驳或对比，引入另一方面的情况。</td>
+</tr>
+<tr>
+<td>while</td>
+<td>引导对比，表达两个相对独立的观点或情况。</td>
+</tr>
+<tr>
+<td>by contrast</td>
+<td>用于强调对比，指出两个相对立的事物之间的显著差异。</td>
+</tr>
+</tbody>
+</table>
+<h4 id="24-未预期的"><a class="markdownIt-Anchor" href="#24-未预期的"></a> 2.4 未预期的</h4>
+<table>
+<thead>
+<tr>
+<th>连接词/短语</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Although</td>
+<td>引导让步状语从句，表示尽管有某种情况，但另一情况仍成立。（困难）</td>
+</tr>
+<tr>
+<td>Even though</td>
+<td>与 “although” 相似，表示尽管即使。（困难）</td>
+</tr>
+<tr>
+<td>Though</td>
+<td>与 “although” 类似，引导让步状语从句。（困难）</td>
+</tr>
+<tr>
+<td>Despite</td>
+<td>表示尽管存在某种情况，但另一方面情况仍然成立。（困难名词）</td>
+</tr>
+<tr>
+<td>In spite of</td>
+<td>与 “despite” 类似，表示尽管。（困难名词）</td>
+</tr>
+<tr>
+<td>Regardless of</td>
+<td>表示不论，不管某种情况，其他情况仍然成立。（困难名词）</td>
+</tr>
+<tr>
+<td>Notwithstanding</td>
+<td>用于引出让步状语从句，表示尽管。（困难名词）</td>
+</tr>
+<tr>
+<td>Nevertheless</td>
+<td>表示尽管如此，但还是引入一个相反的观点。（结果）</td>
+</tr>
+<tr>
+<td>However</td>
+<td>表示与前述观点或情况相对立的转折关系。（结果）</td>
+</tr>
+<tr>
+<td>Yet</td>
+<td>用于引导让步状语从句，表示与前述情况相反。（结果）</td>
+</tr>
+<tr>
+<td>Nonetheless</td>
+<td>表示尽管如此，引入一个相反的观点。（结果）</td>
+</tr>
+<tr>
+<td>Even so</td>
+<td>表示即使如此，仍然引入对比或转折关系。（结果）</td>
+</tr>
+</tbody>
+</table>
+<p>Although it is difficult, we found the solution.</p>
+<p>In spite of the difficulty, we found the solution.</p>
+<p>It is difficult;Nevertheless we found the solution.</p>
+<h4 id="25-此外更进一步"><a class="markdownIt-Anchor" href="#25-此外更进一步"></a> 2.5 此外/更进一步</h4>
+<table>
+<thead>
+<tr>
+<th>连接词/短语</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>In addition</td>
+<td>用于引入额外的信息，使句子更加丰富。</td>
+</tr>
+<tr>
+<td>Moreover</td>
+<td>表示引入更多的信息，强调前述观点之外的其他方面。</td>
+</tr>
+<tr>
+<td>Furthermore</td>
+<td>用于引出进一步的信息，强调前述观点的延伸。</td>
+</tr>
+<tr>
+<td>Apart from that/which</td>
+<td>表示除了前述之外，还有其他事实或观点。</td>
+</tr>
+<tr>
+<td>Also</td>
+<td>与 “in addition” 类似，用于表达额外的事实或观点。</td>
+</tr>
+<tr>
+<td>Secondly (etc.)</td>
+<td>用于列举一系列信息，表示第二点、第三点等。</td>
+</tr>
+<tr>
+<td>In the second place (etc.)</td>
+<td>与 “secondly” 相似，用于列举信息中的第二点、第三点等。</td>
+</tr>
+<tr>
+<td>What is more</td>
+<td>用于引入额外的信息，强调前述观点之外的其他方面。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-主被动问题"><a class="markdownIt-Anchor" href="#3-主被动问题"></a> 3. 主被动问题</h3>
+<h4 id="31-主动"><a class="markdownIt-Anchor" href="#31-主动"></a> 3.1 主动</h4>
+<p>在学术写作中，特别是在科学论文中，建议避免过多使用第一人称代词（如"I"和 “we”），以保持客观性和学术严谨性。然而，这并不意味着绝对不能使用第一人称代词，而是要根据具体情况来决定何时使用。</p>
+<p>当研究是由一个研究团队或小组共同完成时，使用 “we” 是合适的。这有助于突出合作性质，并传达研究工作是集体努力的结果。</p>
+<ul>
+<li>例如： “In this study, we conducted experiments to investigate …”</li>
+</ul>
+<p>平时的报告基本都是一个人单独完成的，因此会说不要用 “we”。这适用于那些个人研究、实验或观点的情况。</p>
+<ul>
+<li>例如： “In my analysis, I found that …”</li>
+</ul>
+<p>此外，当描述一些被广泛接受的、公认的知识时，可以使用 “It is known/thought that …”。</p>
+<ul>
+<li>例如： “It is known that the Earth orbits the Sun.”</li>
+</ul>
+<h4 id="32-形式主语"><a class="markdownIt-Anchor" href="#32-形式主语"></a> 3.2 形式主语</h4>
+<ul>
+<li>This article / This paper / This section …</li>
+</ul>
+<h4 id="33-被动"><a class="markdownIt-Anchor" href="#33-被动"></a> 3.3 被动</h4>
+<ul>
+<li>As shown in Fig.1, …</li>
+</ul>
+<h2 id="单词和例句"><a class="markdownIt-Anchor" href="#单词和例句"></a> 单词和例句</h2>
+<h3 id="1-背景"><a class="markdownIt-Anchor" href="#1-背景"></a> 1. 背景</h3>
+<table>
+<thead>
+<tr>
+<th>词组</th>
+<th>词组</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(a) basic issue</td>
+<td>economically important</td>
+</tr>
+<tr>
+<td>(a) central problem</td>
+<td>(has) focused (on)</td>
+</tr>
+<tr>
+<td>(a) challenging area</td>
+<td>for a number of years</td>
+</tr>
+<tr>
+<td>(a) classic feature</td>
+<td>for many years</td>
+</tr>
+<tr>
+<td>(a) common issue</td>
+<td>frequent(ly)</td>
+</tr>
+<tr>
+<td>(a) considerable number</td>
+<td>generally</td>
+</tr>
+<tr>
+<td>(a) crucial issue</td>
+<td>(has been) extensively studied</td>
+</tr>
+<tr>
+<td>(a) current problem</td>
+<td>importance/important</td>
+</tr>
+<tr>
+<td>(a) dramatic increase</td>
+<td>many</td>
+</tr>
+<tr>
+<td>(an) essential element</td>
+<td>most</td>
+</tr>
+<tr>
+<td>(a) fundamental issue</td>
+<td>much study in recent years</td>
+</tr>
+<tr>
+<td>(a) growth in popularity</td>
+<td>nowadays</td>
+</tr>
+<tr>
+<td>(an) increasing number</td>
+<td>numerous investigations</td>
+</tr>
+<tr>
+<td>(an) interesting field</td>
+<td>of great concern</td>
+</tr>
+<tr>
+<td>(a) key technique</td>
+<td>of growing interest</td>
+</tr>
+<tr>
+<td>(a) leading cause (of)</td>
+<td>often</td>
+</tr>
+<tr>
+<td>(a) major issue</td>
+<td>one of the best-known</td>
+</tr>
+<tr>
+<td>(a) popular method</td>
+<td>over the past ten years</td>
+</tr>
+<tr>
+<td>(a) powerful tool/method</td>
+<td>play a key role (in)</td>
+</tr>
+<tr>
+<td>(a) profitable technology</td>
+<td>play a major part (in)</td>
+</tr>
+<tr>
+<td>(a) range (of)</td>
+<td>possible benefits</td>
+</tr>
+<tr>
+<td>(a) rapid rise</td>
+<td>potential applications</td>
+</tr>
+<tr>
+<td>(a) remarkable variety</td>
+<td>recent decades</td>
+</tr>
+<tr>
+<td>(a) significant increase</td>
+<td>recent(ly)</td>
+</tr>
+<tr>
+<td>(a) striking feature</td>
+<td>today</td>
+</tr>
+<tr>
+<td>(a) useful method</td>
+<td>traditional(ly)</td>
+</tr>
+<tr>
+<td>(a) vital aspect</td>
+<td>typical(ly)</td>
+</tr>
+<tr>
+<td>(a) worthwhile study</td>
+<td>usually</td>
+</tr>
+<tr>
+<td>(an) advantage</td>
+<td>well-documented</td>
+</tr>
+<tr>
+<td>attracted much attention</td>
+<td>well-known</td>
+</tr>
+<tr>
+<td>benefit/beneficial</td>
+<td>widely recognised</td>
+</tr>
+<tr>
+<td>commercial interest</td>
+<td>widespread</td>
+</tr>
+<tr>
+<td>during the past two decades</td>
+<td>worthwhile</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Numerous experiments have established that</strong> …</li>
+<li>… <strong>have generated considerable recent research interest</strong>.</li>
+<li>Analysis of change in the … <strong>is vital for two important reasons</strong>: …</li>
+<li><strong>It is generally accepted that</strong> …</li>
+<li>Privacy are <strong>attracting widespread interest in</strong> fields such as …</li>
+<li><strong>The importance of</strong> … has been demonstrated by …</li>
+<li>… <strong>play an important role in</strong> the development of …</li>
+<li><strong>Much research in recent years has focused on</strong> …</li>
+</ul>
+<h3 id="2-介绍文献综述常用动词"><a class="markdownIt-Anchor" href="#2-介绍文献综述常用动词"></a> 2. 介绍文献综述常用动词</h3>
+<table>
+<thead>
+<tr>
+<th>动词</th>
+<th>动词</th>
+<th>动词</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>achieve</td>
+<td>adopt</td>
+<td>address</td>
+</tr>
+<tr>
+<td>analyze</td>
+<td>apply</td>
+<td>argue</td>
+</tr>
+<tr>
+<td>assume</td>
+<td>attempt</td>
+<td>calculate</td>
+</tr>
+<tr>
+<td>categorize</td>
+<td>carry out</td>
+<td>choose</td>
+</tr>
+<tr>
+<td>claim</td>
+<td>classify</td>
+<td>collect</td>
+</tr>
+<tr>
+<td>compare</td>
+<td>concentrate (on)</td>
+<td>conclude</td>
+</tr>
+<tr>
+<td>conduct</td>
+<td>confirm</td>
+<td>consider</td>
+</tr>
+<tr>
+<td>construct</td>
+<td>correlate</td>
+<td>deal with</td>
+</tr>
+<tr>
+<td>debate</td>
+<td>define</td>
+<td>demonstrate</td>
+</tr>
+<tr>
+<td>describe</td>
+<td>design</td>
+<td>detect</td>
+</tr>
+<tr>
+<td>determine</td>
+<td>develop</td>
+<td>discover</td>
+</tr>
+<tr>
+<td>discuss</td>
+<td>enhance</td>
+<td>establish</td>
+</tr>
+<tr>
+<td>estimate</td>
+<td>evaluate</td>
+<td>examine</td>
+</tr>
+<tr>
+<td>explain</td>
+<td>explore</td>
+<td>extend</td>
+</tr>
+<tr>
+<td>find</td>
+<td>focus on</td>
+<td>formulate</td>
+</tr>
+<tr>
+<td>generate</td>
+<td>identify</td>
+<td>illustrate</td>
+</tr>
+<tr>
+<td>implement</td>
+<td>imply</td>
+<td>improve</td>
+</tr>
+<tr>
+<td>incorporate</td>
+<td>indicate</td>
+<td>interpret</td>
+</tr>
+<tr>
+<td>introduce</td>
+<td>investigate</td>
+<td>measure</td>
+</tr>
+<tr>
+<td>model</td>
+<td>monitor</td>
+<td>note</td>
+</tr>
+<tr>
+<td>observe</td>
+<td>obtain</td>
+<td>overcome</td>
+</tr>
+<tr>
+<td>perform</td>
+<td>point out</td>
+<td>prefer</td>
+</tr>
+<tr>
+<td>predict</td>
+<td>present</td>
+<td>produce</td>
+</tr>
+<tr>
+<td>propose</td>
+<td>prove</td>
+<td>provide</td>
+</tr>
+<tr>
+<td>publish</td>
+<td>put forward</td>
+<td>realize</td>
+</tr>
+<tr>
+<td>recognize</td>
+<td>recommend</td>
+<td>record</td>
+</tr>
+<tr>
+<td>report</td>
+<td>request</td>
+<td>require</td>
+</tr>
+<tr>
+<td>research</td>
+<td>resolve</td>
+<td>revise</td>
+</tr>
+<tr>
+<td>review</td>
+<td>show</td>
+<td>simulate</td>
+</tr>
+<tr>
+<td>solve</td>
+<td>state</td>
+<td>study</td>
+</tr>
+<tr>
+<td>suggest</td>
+<td>support</td>
+<td>test</td>
+</tr>
+<tr>
+<td>undertake</td>
+<td>use</td>
+<td>utilize</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-文献综述中提出文献问题的词语"><a class="markdownIt-Anchor" href="#3-文献综述中提出文献问题的词语"></a> 3. 文献综述中提出文献问题的词语</h3>
+<table>
+<thead>
+<tr>
+<th>词语</th>
+<th>词语</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ambiguous</td>
+<td>computationally demanding</td>
+</tr>
+<tr>
+<td>confused</td>
+<td>deficient</td>
+</tr>
+<tr>
+<td>doubtful</td>
+<td>expensive</td>
+</tr>
+<tr>
+<td>false</td>
+<td>far from perfect</td>
+</tr>
+<tr>
+<td>ill-defined</td>
+<td>impractical</td>
+</tr>
+<tr>
+<td>improbable</td>
+<td>inaccurate</td>
+</tr>
+<tr>
+<td>inadequate</td>
+<td>incapable (of)</td>
+</tr>
+<tr>
+<td>incompatible (with)</td>
+<td>incomplete</td>
+</tr>
+<tr>
+<td>inconclusive</td>
+<td>inconsistent</td>
+</tr>
+<tr>
+<td>inconvenient</td>
+<td>incorrect</td>
+</tr>
+<tr>
+<td>(the) absence of</td>
+<td>(an) alternative approach</td>
+</tr>
+<tr>
+<td>(a) challenge</td>
+<td>(a) defect</td>
+</tr>
+<tr>
+<td>(a) difficulty</td>
+<td>(a) disadvantage</td>
+</tr>
+<tr>
+<td>(a) drawback</td>
+<td>(an) error</td>
+</tr>
+<tr>
+<td>(a) flaw</td>
+<td>(a) gap in our knowledge</td>
+</tr>
+<tr>
+<td>(a) lack</td>
+<td>(a) limitation</td>
+</tr>
+<tr>
+<td>(a) need for clarification</td>
+<td>(the) next step</td>
+</tr>
+<tr>
+<td>no correlation (between)</td>
+<td>(an) obstacle</td>
+</tr>
+<tr>
+<td>(a) problem</td>
+<td>(a) risk</td>
+</tr>
+<tr>
+<td>(a) weakness</td>
+<td>ineffective</td>
+</tr>
+<tr>
+<td>inefficient</td>
+<td>inferior</td>
+</tr>
+<tr>
+<td>inflexible</td>
+<td>insufficient</td>
+</tr>
+<tr>
+<td>meaningless</td>
+<td>misleading</td>
+</tr>
+<tr>
+<td>non-existent</td>
+<td>not addressed</td>
+</tr>
+<tr>
+<td>not apparent</td>
+<td>not dealt with</td>
+</tr>
+<tr>
+<td>not repeatable</td>
+<td>not studied</td>
+</tr>
+<tr>
+<td>not sufficiently + adjective</td>
+<td>not well understood</td>
+</tr>
+<tr>
+<td>not/no longer useful</td>
+<td>of little value</td>
+</tr>
+<tr>
+<td>over-simplistic</td>
+<td>poor</td>
+</tr>
+<tr>
+<td>problematic</td>
+<td>questionable</td>
+</tr>
+<tr>
+<td>redundant</td>
+<td>restricted</td>
+</tr>
+<tr>
+<td>time-consuming</td>
+<td>unanswered</td>
+</tr>
+<tr>
+<td>uncertain</td>
+<td>unclear</td>
+</tr>
+<tr>
+<td>uneconomic</td>
+<td>unfounded</td>
+</tr>
+<tr>
+<td>unlikely</td>
+<td>unnecessary</td>
+</tr>
+<tr>
+<td>unproven</td>
+<td>unrealistic</td>
+</tr>
+<tr>
+<td>unresolved</td>
+<td>unsatisfactory</td>
+</tr>
+<tr>
+<td>unsolved</td>
+<td>unsuccessful</td>
+</tr>
+<tr>
+<td>unsupported</td>
+<td>(to be) confined to</td>
+</tr>
+<tr>
+<td>(to) demand clarification</td>
+<td>(to) disagree</td>
+</tr>
+<tr>
+<td>(to) fail to</td>
+<td>(to) fall short of</td>
+</tr>
+<tr>
+<td>(to) miscalculate</td>
+<td>(to) misjudge</td>
+</tr>
+<tr>
+<td>(to) misunderstand</td>
+<td>(to) need to re-examine</td>
+</tr>
+<tr>
+<td>(to) neglect</td>
+<td>(to) overlook</td>
+</tr>
+<tr>
+<td>(to) remain unstudied</td>
+<td>(to) require clarification</td>
+</tr>
+<tr>
+<td>(to) suffer (from)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>表达</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Few studies have…</td>
+<td>很少有研究…</td>
+</tr>
+<tr>
+<td>It is necessary to…</td>
+<td>有必要…</td>
+</tr>
+<tr>
+<td>Little evidence is available</td>
+<td>缺乏证据…</td>
+</tr>
+<tr>
+<td>Little work has been done</td>
+<td>进行的工作很少…</td>
+</tr>
+<tr>
+<td>More work is needed</td>
+<td>需要进行更多的工作…</td>
+</tr>
+<tr>
+<td>There is growing concern</td>
+<td>日益关注…</td>
+</tr>
+<tr>
+<td>There is an urgent need…</td>
+<td>急需…</td>
+</tr>
+<tr>
+<td>This is not the case</td>
+<td>情况并非如此…</td>
+</tr>
+<tr>
+<td>Unfortunately</td>
+<td>不幸的是…</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Few researchers have addressed the problem</strong> of…</li>
+<li><strong>There remains a need for</strong> an efficient method that can…</li>
+<li>The high absorbance makes this <strong>an impractical option</strong> in cases where…</li>
+<li><strong>Unfortunately</strong>, these methods do not always guarantee…</li>
+<li><strong>An alternative approach</strong> is necessary.</li>
+<li>The function of these proteins <strong>remains unclear</strong>.</li>
+<li><strong>Although</strong> this approach improves performance, it results in an unacceptable number of…</li>
+<li>Previous work has <strong>focused only on</strong>…</li>
+<li>However, the experimental configuration was <strong>far from optimal</strong>.</li>
+</ul>
+<h3 id="4本文的工作目的方法结论"><a class="markdownIt-Anchor" href="#4本文的工作目的方法结论"></a> 4.本文的工作目的/方法/结论</h3>
+<table>
+<thead>
+<tr>
+<th>单词</th>
+<th>搭配</th>
+<th>搭配</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>aim</td>
+<td>Our aim is to do …</td>
+<td>The primary aim of … is …</td>
+</tr>
+<tr>
+<td>goal</td>
+<td>Our overarching goal is …</td>
+<td>The ultimate goal of … is …</td>
+</tr>
+<tr>
+<td>intention</td>
+<td>With the intention of improving …, we …</td>
+<td>The initial intention of … is …</td>
+</tr>
+<tr>
+<td>objective</td>
+<td>Our specific objectives include …</td>
+<td>The main objective of … is …</td>
+</tr>
+<tr>
+<td>purpose</td>
+<td>Our overarching purpose is to understand …</td>
+<td>The specific purpose of … is …</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>常用修饰词</th>
+<th>解析</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>able to</td>
+<td>能够（表示能力或可能性）</td>
+</tr>
+<tr>
+<td>accurate/accurately</td>
+<td>准确的</td>
+</tr>
+<tr>
+<td>effective/effectively</td>
+<td>有效的</td>
+</tr>
+<tr>
+<td>efficient/efficiently</td>
+<td>高效的</td>
+</tr>
+<tr>
+<td>excellent results</td>
+<td>出色的结果</td>
+</tr>
+<tr>
+<td>innovation</td>
+<td>创新</td>
+</tr>
+<tr>
+<td>new</td>
+<td>新的</td>
+</tr>
+<tr>
+<td>novel method</td>
+<td>新颖的方法</td>
+</tr>
+<tr>
+<td>powerful</td>
+<td>强大的</td>
+</tr>
+<tr>
+<td>practical</td>
+<td>实用的</td>
+</tr>
+<tr>
+<td>simple</td>
+<td>简单的</td>
+</tr>
+<tr>
+<td>straightforward</td>
+<td>直接的（搭配易于理解的 “easy to follow”）</td>
+</tr>
+<tr>
+<td>successful</td>
+<td>成功的</td>
+</tr>
+<tr>
+<td>valuable</td>
+<td>有价值的</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>常用代词</th>
+<th>解析</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(our) approach</td>
+<td>我们的方法</td>
+</tr>
+<tr>
+<td>(the) present work</td>
+<td>当前的工作</td>
+</tr>
+<tr>
+<td>(this) paper</td>
+<td>本文</td>
+</tr>
+<tr>
+<td>(this) project</td>
+<td>本项目</td>
+</tr>
+<tr>
+<td>(this) report</td>
+<td>本报告</td>
+</tr>
+<tr>
+<td>(this) section</td>
+<td>本节</td>
+</tr>
+<tr>
+<td>(this) study</td>
+<td>本研究</td>
+</tr>
+<tr>
+<td>(this) work</td>
+<td>本工作</td>
+</tr>
+<tr>
+<td>begin by/with</td>
+<td>以…开始（用于开篇句）</td>
+</tr>
+<tr>
+<td>close attention is paid to</td>
+<td>强调对…的关注</td>
+</tr>
+<tr>
+<td>here</td>
+<td>在这里（用于指代本文的内容）</td>
+</tr>
+<tr>
+<td>overview</td>
+<td>概述、总览</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>常用动词</th>
+<th>解析</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(to) attempt</td>
+<td>尝试</td>
+</tr>
+<tr>
+<td>(to) compare</td>
+<td>比较</td>
+</tr>
+<tr>
+<td>(to) concentrate</td>
+<td>集中（注意力、精力等）</td>
+</tr>
+<tr>
+<td>(on)</td>
+<td>在…上（用于与 “concentrate” 搭配）</td>
+</tr>
+<tr>
+<td>(to) conclude</td>
+<td>得出结论</td>
+</tr>
+<tr>
+<td>(to) describe</td>
+<td>描述</td>
+</tr>
+<tr>
+<td>(to) discuss</td>
+<td>讨论</td>
+</tr>
+<tr>
+<td>(to) enable</td>
+<td>使能够（提供可能性或机会）</td>
+</tr>
+<tr>
+<td>(to) evaluate</td>
+<td>评估</td>
+</tr>
+<tr>
+<td>(to) expect</td>
+<td>期望（预期发生）</td>
+</tr>
+<tr>
+<td>(to) facilitate</td>
+<td>促进、使便利</td>
+</tr>
+<tr>
+<td>(to) illustrate</td>
+<td>举例说明</td>
+</tr>
+<tr>
+<td>(to) improve</td>
+<td>改进</td>
+</tr>
+<tr>
+<td>(to) manage to</td>
+<td>设法、成功地</td>
+</tr>
+<tr>
+<td>(to) minimise</td>
+<td>最小化</td>
+</tr>
+<tr>
+<td>(to) offer</td>
+<td>提供</td>
+</tr>
+<tr>
+<td>(to) outline</td>
+<td>概述</td>
+</tr>
+<tr>
+<td>(to) predict</td>
+<td>预测</td>
+</tr>
+<tr>
+<td>(to) present</td>
+<td>展示、呈现</td>
+</tr>
+<tr>
+<td>(to) propose</td>
+<td>提出建议、提议</td>
+</tr>
+<tr>
+<td>(to) provide</td>
+<td>提供</td>
+</tr>
+<tr>
+<td>(to) reveal</td>
+<td>揭示、展示</td>
+</tr>
+<tr>
+<td>(to) succeed</td>
+<td>成功</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>This paper focuses on/introduces</strong>…</li>
+<li><strong>The purpose of this study is to describe and examine</strong>…</li>
+<li><strong>In order to</strong> …, we…</li>
+<li><strong>In this paper, we present/performed</strong>…</li>
+<li><strong>The approach we have used in this study</strong> aims to…</li>
+</ul>
+<h3 id="5-结构概述常用词"><a class="markdownIt-Anchor" href="#5-结构概述常用词"></a> 5. 结构概述常用词</h3>
+<ul>
+<li>Section  （节）</li>
+<li>Chapter （章）</li>
+</ul>
+<ul>
+<li>discuss 讨论    （一般用于Experiment）</li>
+<li>compare 对比 （一般用于Related Work）</li>
+<li>analyze 分析   （一般用于Experiment）</li>
+<li>describe 描述 （一般用于Method）</li>
+<li><strong>This paper is organized as follows</strong>:…</li>
+<li><strong>(is) set out as follows:</strong></li>
+<li><strong>(is/are) presented in detail</strong></li>
+</ul>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">JiJunhao</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://jijunhao.github.io/2023/11/01/article20231101/">http://jijunhao.github.io/2023/11/01/article20231101/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">JiJunhao</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E5%86%99%E4%BD%9C/">
+                                    <span class="chip bg-color">写作</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="card" data-aos="fade-up">
+    <div id="utteranc-container" class="card-content">
+        <script src="https://utteranc.es/client.js"
+            repo="jijunhao/utterances"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+        </script>
+    </div>
+</div>
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2023/11/01/article20231101/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/11.webp" class="responsive-img" alt="SCI写作-Introduction">
+                        
+                        <span class="card-title">SCI写作-Introduction</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            SCI写作-Introduction
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-11-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%86%99%E4%BD%9C/" class="post-category">
+                                    写作
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%86%99%E4%BD%9C/">
+                        <span class="chip bg-color">写作</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/09/02/article20230902/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/21.webp" class="responsive-img" alt="时间序列预测">
+                        
+                        <span class="card-title">时间序列预测</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            时间序列预测的理论和代码
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-09-02
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/" class="post-category">
+                                    数学建模
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">
+                        <span class="chip bg-color">数学建模</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('100')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 季俊豪的博客<br />'
+            + '文章作者: JiJunhao<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/prism/prism.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+<!-- mathjax2.0-->
+
+
+
+<!-- mathjax3.0
+
+-->
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2022-2023</span>
+            
+            <a href="/about" target="_blank">JiJunhao</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+                <span id="translate">|&nbsp;繁/简：</span><a id="translateLink" href="javascript:translatePage();">繁</a>
+            
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">92.1k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2022";
+                        var startMonth = "9";
+                        var startDate = "24";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/jijunhao" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:2818657803@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2818657803" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2818657803" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+</div>
+    </div>
+</footer>
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/materialize/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/aos/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/js/matery.js"></script>
+
+    
+
+    
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/js/tw_cn.js"></script>
+        <script type="text/javascript">
+          var defaultEncoding = 2; //网站编写字体是否繁体，1-繁体，2-简体
+          var translateDelay = 0; //延迟时间,若不在前, 要设定延迟翻译时间, 如100表示100ms,默认为0
+          var cookieDomain = "http://jijunhao.github.io"; //Cookie地址, 一定要设定, 通常为你的网址
+          var msgToTraditionalChinese = "繁"; //此处可以更改为你想要显示的文字
+          var msgToSimplifiedChinese = "简"; //同上，但两处均不建议更改
+          var translateButtonId = "translateLink"; //默认互换id
+          translateInitilization();
+        </script>
+    
+    
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/instantpage/instantpage.js" type="module"></script>
+    	
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
+
+</body>
+
+</html>
