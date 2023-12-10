@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="A Survey on Differential Privacy for Unstructured Data Content, Ubuntu,ML,DL,Math,CV等">
-    <meta name="description" content="非结构数据上的差分隐私">
+    <meta name="keywords" content="SCI写作-Experiments, Ubuntu,ML,DL,Math,CV等">
+    <meta name="description" content="SCI写作-Experiments">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>A Survey on Differential Privacy for Unstructured Data Content | 季俊豪的博客</title>
+    <title>SCI写作-Experiments | 季俊豪的博客</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/favicon.png">
     
 
@@ -38,7 +38,9 @@
 
 
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/tocbot/tocbot.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/css/post.css">
+
 
 
 
@@ -432,12 +434,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/7.webp')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/13.webp')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">A Survey on Differential Privacy for Unstructured Data Content</h1>
+                    <h1 class="description center-align post-title">SCI写作-Experiments</h1>
                 </div>
             </div>
         </div>
@@ -447,10 +449,12 @@
 
 
 
-<main class="container content">
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -459,12 +463,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Differential-Privacy/">
-                                <span class="chip bg-color">Differential Privacy</span>
-                            </a>
-                        
-                            <a href="/tags/Privacy-Protection/">
-                                <span class="chip bg-color">Privacy Protection</span>
+                            <a href="/tags/%E5%86%99%E4%BD%9C/">
+                                <span class="chip bg-color">写作</span>
                             </a>
                         
                     </div>
@@ -475,8 +475,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/" class="post-category">
-                                论文阅读
+                            <a href="/categories/%E5%86%99%E4%BD%9C/" class="post-category">
+                                写作
                             </a>
                         
                     </div>
@@ -488,28 +488,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-06-01
+                    2023-11-03
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-11-13
+                    2023-12-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.3k
+                    1.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    11 分
+                    8 分
                 </div>
                 
 
@@ -534,24 +534,775 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="论文阅读a-survey-on-differential-privacy-for-unstructured-data-content-2022-acm"><a class="markdownIt-Anchor" href="#论文阅读a-survey-on-differential-privacy-for-unstructured-data-content-2022-acm"></a> 【论文阅读】A Survey on Differential Privacy for Unstructured Data Content (2022 ACM)</h2>
-<h3 id="4-受-dp-保护的非结构化数据内容的可用性和隐私性分析"><a class="markdownIt-Anchor" href="#4-受-dp-保护的非结构化数据内容的可用性和隐私性分析"></a> 4 受 DP 保护的非结构化数据内容的可用性和隐私性分析</h3>
-<p>DP及其变体为非结构化数据提供了严格的隐私保证，以对抗具有任意背景信息的对手。虽然隐私损失是用 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">ϵ</span></span></span></span> 值来量化的，但效用损失是在实验评估中在真实数据与其混淆版本之间进行测量的。不同的数据类型会采用不同的效用损失度量来量化效用。</p>
-<h4 id="41-dp-保护图像中的分析"><a class="markdownIt-Anchor" href="#41-dp-保护图像中的分析"></a> 4.1 DP 保护图像中的分析</h4>
-<p>与原始图像内容相比，混淆版本主要由于矢量化和 DP 噪声注入而失去了效用。这里主要讨论矢量化带来的效用损失。众所周知，图像通常表示为具有像素值元素的 n × m 矩阵。对于 PixDP 方法，像素化在较大的块中呈现具有平均像素值的图像，相当于具有较少元素的矩阵。块越大，人类感知的视觉质量越弱。关于欧几里德隐私方法[27]，SVD技术从矩阵中提取关键奇异值来展示图像的几何结构和特征。它失去了截断整个向量值并保留一些关键奇异值的一些效用。更多奇异值可用于在更近的视觉感知中重建图像。在[59]和[13]中，GAN 用于学习特征空间中的图像潜在表示。潜在向量的准确度由合成图像和真实图像的接近程度决定。总体而言，[13, 59]中的高级特征空间中捕获的图像质量比[27]中的中级几何空间和[26]低级像素空间中的图像质量更好。</p>
-<p>通常，采用两种效用指标来量化真实图像与其混淆图像之间的差异，包括均方误差（MSE）和结构相似指数（SSIM）[106]。 MSE 最常用于比较数据差异，而 SSIM 由亮度、对比度和结构比较组成，以更复杂的方式评估图像差异。另外还采用另一个实用指标 Fréchet Inception Distance (FID) 指标来衡量 GAN 中的图像质量。感知不可区分性方法 [13] 显示出比 [27] 中的 SVD-Privacy 更高的 SSIM 和更低的 FID 指标，其次是 pix DP [26]。这是因为在应用 DP 混淆之前，GAN 比图像内容的奇异值和像素化捕获更多的人类感知信息和图像语义。其他提取关键特征的方法，例如离散余弦变换（DCT）和离散小波变换（DWT）可以代替 SVD 来表示图像，并且像 SVD-Privacy 一样工作。基于像素、奇异值和 DCT 等数字图像信号定义的 DP 方法可以直接生成模糊图像，但感知质量较低。尽管在神经网络上定义的DP方法可以合成高水平的图像质量，但它们面临着昂贵且耗时的超参数调整困难。</p>
-<p>由于马赛克和模糊的流行混淆方法已经过测试，失去了针对卷积神经网络（CNN）攻击的功能，并且原始图像以高达 96% 的极高准确率恢复[63]，因此通过对它们进行基准测试来评估 DP 混淆，假设对手在训练集中拥有受 DP 保护的图像及其标签。结果表明，对手可以使用 CNN 以较低的精度识别测试集中相同级别 DP 保护图像的标签。由于较低的重识别精度表明较高的隐私级别，因此 pix DP 模型 [26] 提供比 SVD-Privacy [27] 更强的保护。目前尚不清楚人工智能攻击是否会对[13, 59]中基于 GAN 的隐私方法造成重大隐私风险。</p>
-<h4 id="42-dp-保护音频中的分析"><a class="markdownIt-Anchor" href="#42-dp-保护音频中的分析"></a> 4.2 DP 保护音频中的分析</h4>
-<p>在语音不可区分性方案 [44] 中，x 向量系统 [88] 从声纹中提取特征，并使用 DNN 嵌入用 512 维向量表示它们。它可以进一步节省一些实用程序来开发更复杂的语音嵌入来量化声纹。为了评估效用，采用概率线性判别分析（PLDA）分类器[100]中的说话人验证准确性（ACC）以及MSE。 MSE计算原始声纹与其混淆在向量空间中的差异，PLDA度量中的ACC衡量有多少由混淆声纹和原始内容组成的混淆语音可以被验证。较低的 MSE 意味着较高的效用，而较高的 ACC 则具有相同的效果。除了前面提到的机器计算的效用指标之外，原始语音和混淆语音之间的差异是根据人类的感知通过人类意见得分的指标来测量的。另一个有趣的指标，自然度，也被用来评估效用，它只能由人类捕获。对于模糊语音的重新识别（也称为语音识别），三层双向长短期记忆（BLSTM）神经网络[40]使用连接时间分类目标和字符标签进行训练。语音识别中的标签分类结果与字符错误率 (CER) 指标进行比较。 CER 的整体识别率较低，表明即使在低隐私制度下，语音不可区分性对于基于 RNN 的攻击也具有很强的鲁棒性。</p>
-<h4 id="43-dp-保护视频中的分析"><a class="markdownIt-Anchor" href="#43-dp-保护视频中的分析"></a> 4.3 DP 保护视频中的分析</h4>
-<p>在视频 DP [104] 和对象不可区分性 [103] 中，对象要么使用 RGB 颜色像素模型提取，要么以视频中的存在 (1)/不存在 (0) 状态表示，其中在模型表示期间不会丢失额外的效用过程。此外，在DP噪声添加之前采用像素采样或帧采样，以便为关键组件获得更多效用。样本的最优选择受到效用损失最小化的约束。为了测量视频DP中的效用损失，采用KL散度和MSE这两个指标分别计算原始视频与其扰动之间的RGB计数分布差异和RGB值差异。精确度和召回率还通过使用最先进的轮廓检测算法来评估原始对象在所有检测到的对象中的比例以及检测到的原始对象在所有原始对象中的比例[118]。精确率结果显示出稳定的较高准确率，而召回率结果则随着 ε 值的增加而呈现出增加的趋势。对于一些统计查询，例如对象的密度和在某些地方的停留时间，视频DP方案与传统的隐私集成查询系统[65]进行比较，并表现出更好的实用性。经测试，配备 DNN 深度学习方法的对手相对较弱，与马赛克模糊方法相比，适应视频 DP 混淆的成功率约为 20%。对象不可区分性方案中的效用损失是通过原始视频与其随机化之间的不同对象计数和对象轨迹的比较来指定的。轨迹偏差测量在 0.1 到 0.2 之间，而计数差异估计为数十。视觉感知的差异也可以用原始帧和合成帧来描述，其中合成帧由随机出现的对象和插值的背景信息组成。总体而言，与 LDP [20] 中的聚合统计数据中较大规模的数据集可以减少效用损失这一事实相一致，采样对象较多的视频将遭受较少的效用损失。由于该方案处理对象存在/不存在事件而不是对象特征，因此这里不检查深度学习攻击。</p>
-<h4 id="44-dp-保护文本中的分析"><a class="markdownIt-Anchor" href="#44-dp-保护文本中的分析"></a> 4.4 DP 保护文本中的分析</h4>
-<p>word2vector、Glove和FastText等词嵌入模型用于将离散词表示为连续空间中的实数向量，其中词之间的语义相似性通过它们的向量距离来反映[67]。单词之间更多的结构关系被用来学习更有效的单词向量。例如，庞加莱嵌入[72]利用单词之间的分层语义关系来获得广义的单词向量及其子集。随着双曲隐私中庞加莱嵌入的采用[35]，文本混淆中的效用损失减少了。因此，提高文本学习表示领域中词向量的质量以实现更实用的文本隐私模型是一个挑战。在基于 Metric DP 的文本隐私模型 [31, 34–36, 114–116, 120] 中，实值向量在连续空间中受到扰动，然后转换回离散空间中的单词。扰动会带来一些实用性损失，以换取隐私收益，而离散化过程不可避免地会丢失一些信息。</p>
-<p>基本隐私方法 [31, 109] 分别通过 DP 和度量 DP 保证实现有效的隐私和效用权衡。工作[109]采用F1分数度量来评估分类准确性。它采用JStylo作者归属算法对AI攻击进行建模，并显示了其对该攻击的鲁棒性。另一种[31]是基于欧氏距离的基线度量DP方法。它将正确预测的计数作为效用测量。更准确地说，作者采用作者识别和主题分类任务，包括用于作者识别的 1-NN 和 Koppel 算法 [55]，以及用于主题分类的 5-NN 和 fastText。</p>
-<p>包括[34, 35]在内的工作通过利用度量空间中文本嵌入的结构距离属性来研究效用的增加。作品[34]采用Earth Mover的距离来增强实用性。它使用二元分类、多类分类和问答任务来演示效用损失。为了量化效用损失，需要分类精度、平均精度和平均倒数排名。至于隐私评估，这项工作采用查询加扰方法[89]来评估现实的隐私损失。另一项工作[35]在词嵌入中使用层次关系来保持扰动词的层次效用。作者执行机器学习和自然语言任务，通过与完全随机的基线和无隐私词嵌入（包括 InferSent、SkipThought 和 FastText）进行比较来评估预测准确性分数。为了确认其针对作者归属攻击的隐私保证，他们使用传统的 Koppel 算法来适应混淆。</p>
-<p>在基于欧几里得距离的隐私模型中，研究[114]和[120]的目标是增强文本实用性。 [114] 中的作者在噪声注入之前减少了替代候选的范围。与基线拉普拉斯扰动相比，显示了对抗性攻击的鲁棒性表现。 [120] 中的作者指定了文本敏感度级别，并且仅扰乱高度敏感的级别。特别是，他们使用 BERT 嵌入，因为它比传统嵌入具有优越性。他们还测量模型对掩码令牌推理攻击的鲁棒性。</p>
-<p>研究人员 [115] 和 [116] 专注于当文本被混淆为文本本身时的隐私改进。在[115]中，由于关键贡献是增强了稀疏区域中单词的隐私，因此将马哈拉诺比斯机制保证的隐私与[31, 34]中多元拉普拉斯机制保证的隐私进行了比较。更准确地说，计算稀疏区域中的单词受到其他单词而不是自身的干扰的概率。至于效用，在比较多元拉普拉斯、正则化马哈拉诺比斯和纯马哈拉诺比斯机制时，采用了常见的分类指标，包括准确度、精确度和召回率。在[116]中，改善文本隐私的见解是当 DP 噪声很小时，将私有嵌入离散化到前 k 个最接近的单词。关于效用测量，推理误差与另一种隐私增强方法（即马哈拉诺比斯方法）和基线多变量拉普拉斯方法进行了比较。</p>
-<p>该研究[36]可以应用于任何基于距离度量的文本隐私模型。它的根本贡献是降低初始文本嵌入的高维性以提高实用性。一些效用损失是随机预测造成的；然而，由于较少的 DP 噪声添加带来的效用增益，它的权重过大。一方面，对嵌入模型进行实证研究。这里，效用误差是通过实向量对的欧几里得距离（分别为内积）和私有向量对的欧几里得距离（分别为内积）之间的差异来衡量的。实用性还通过 SVM 线性分类任务中的准确性和 AUC 指标进行评估。另一方面，在NLP数据库上应用实证研究，训练和测试精度构成评估指标。</p>
+                <h2 id="experiments的写作要点"><a class="markdownIt-Anchor" href="#experiments的写作要点"></a> Experiments的写作要点</h2>
+<p>首先得分清楚实验（Experiments）、结果（Results）、分析（Analysis）、讨论（Discussions）、总结（Conclusions）的区别。</p>
+<ul>
+<li>实验（Experiments）：为了验证提出方法的有效性，阐明实验设计、环境以及作用</li>
+<li>结果（Results）：呈现实验中获得的数据和观察结果。在大多数情况下，结果以图、表的形式给出。</li>
+<li>分析（Analysis）：对实验结果进行解释和深入探讨，阐明数据的意义和趋势</li>
+<li>讨论（Discussions）：对实验结果和分析的进一步探讨，相比于前人的工作的优势和劣势</li>
+<li>总结（Conclusions）：对整个研究进行概括，强调研究的主要发现、结论和贡献</li>
+</ul>
+<p>在不同的期刊和论文撰写过程中，上面几个组件的位置不同，具体看放在哪里。最显著的就是讨论（Discussions）是否放在Experiments里面。是否有必要加。</p>
+<h2 id="单词与词组"><a class="markdownIt-Anchor" href="#单词与词组"></a> 单词与词组</h2>
+<h3 id="1-建立与方法的联系"><a class="markdownIt-Anchor" href="#1-建立与方法的联系"></a> 1. 建立与方法的联系</h3>
+<ul>
+<li>As discussed previously, …</li>
+<li>As mentioned earlier/before, …</li>
+<li>As outlined in the introduction, …</li>
+<li>As reported, …</li>
+<li>In order to …, we examined …</li>
+<li>It is important to reiterate that …</li>
+<li>It is known from the literature that …</li>
+<li>It was predicted that …</li>
+<li>It was suggested in the Introduction that …</li>
+<li>Our aim/purpose/intention was to …</li>
+<li>Since/because …, we investigated …</li>
+<li>the aforementioned theory/aim/prediction etc.</li>
+<li>The main purpose of this work was to …</li>
+<li>To investigate …, we needed to …</li>
+<li>We reasoned/predicted that …</li>
+</ul>
+<h3 id="2-结果的总体概括"><a class="markdownIt-Anchor" href="#2-结果的总体概括"></a> 2. 结果的总体概括</h3>
+<p>这包括介绍结果的一般模式或趋势的方法，以便读者知道会发生什么。</p>
+<ul>
+<li>Generally speaking, …</li>
+<li>In general, …</li>
+<li>In most/all cases, …</li>
+<li>In the main, …</li>
+<li>In this section, we compare/evaluate/present …</li>
+<li>It is apparent that in all/most/the majority of cases, …</li>
+<li>It is evident from the results that …</li>
+<li>On the whole, …</li>
+<li>The overall response was …</li>
+<li>The results are divided into two parts as follows: …</li>
+<li>Using the method described above, we obtained …</li>
+</ul>
+<h3 id="3-展示结果"><a class="markdownIt-Anchor" href="#3-展示结果"></a> 3. 展示结果</h3>
+<p>被动</p>
+<ul>
+<li>As detailed/indicated/listed/present/shown/summarised  in Fig. 1, …</li>
+<li>As illustrated by Fig. 1, …</li>
+<li>As can be seen from/in* Fig.1, …</li>
+<li>… can be found in Fig.1</li>
+<li>… can be identified from/in Fig.1</li>
+<li>… can be observed in Fig. 1</li>
+<li>… can be seen from/in Figure 1</li>
+<li>Comparing Figs. 1 and 4 shows that …</li>
+<li>Data in Fig. 1 suggest/indicate that …</li>
+<li>… displayed in Fig. 1</li>
+<li>From Fig. 1 it can be seen that …</li>
+<li>Inspection of Fig. 1 indicates …</li>
+<li>… is/are given in Fig.1</li>
+<li>… is/are represented (etc.) in</li>
+<li>… is/are visible in Fig. 1</li>
+<li>In Fig. 1 we compare/present …</li>
+<li>Results are given in Fig.1.</li>
+<li>we observe from Fig. 1 that …</li>
+</ul>
+<p>主动</p>
+<ul>
+<li>contains</li>
+<li>corresponds (to)</li>
+<li>demonstrates</li>
+<li>displays</li>
+<li>gives</li>
+<li>illustrates</li>
+<li>lists</li>
+<li>plots</li>
+<li>presents</li>
+<li>provides</li>
+<li>reports</li>
+<li>represents</li>
+<li>reveals</li>
+<li>shows</li>
+<li>summarises</li>
+</ul>
+<h3 id="4-结果分析"><a class="markdownIt-Anchor" href="#4-结果分析"></a> 4. 结果分析</h3>
+<ul>
+<li>客观评价</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>第一列</th>
+<th>第二列</th>
+<th>第三列</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>accelerated</td>
+<td>be constant</td>
+<td>matched</td>
+</tr>
+<tr>
+<td>all</td>
+<td>be different</td>
+<td>none</td>
+</tr>
+<tr>
+<td>changed</td>
+<td>be equal</td>
+<td>occurred</td>
+</tr>
+<tr>
+<td>declined</td>
+<td>be found</td>
+<td>peaked</td>
+</tr>
+<tr>
+<td>decreased</td>
+<td>be higher</td>
+<td>preceded</td>
+</tr>
+<tr>
+<td>delayed</td>
+<td>be highest</td>
+<td>produced</td>
+</tr>
+<tr>
+<td>dropped</td>
+<td>be identical</td>
+<td>reduced</td>
+</tr>
+<tr>
+<td>existed</td>
+<td>be lower</td>
+<td>remained constant</td>
+</tr>
+<tr>
+<td>expanded</td>
+<td>be present</td>
+<td>remained the same</td>
+</tr>
+<tr>
+<td>fell</td>
+<td>be seen</td>
+<td>rose</td>
+</tr>
+<tr>
+<td>found</td>
+<td>be unaffected</td>
+<td>solely</td>
+</tr>
+<tr>
+<td>increased</td>
+<td>be unchanged</td>
+<td>varied</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>主观评价</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>第一列</th>
+<th>第二列</th>
+<th>第三列</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>abundant(ly)</td>
+<td>imperceptible(ibly)</td>
+<td>remarkable(ably)</td>
+</tr>
+<tr>
+<td>acceptable(ably)</td>
+<td>important(ly)</td>
+<td>resembling</td>
+</tr>
+<tr>
+<td>adequate(ly)</td>
+<td>in particular,</td>
+<td>satisfactory</td>
+</tr>
+<tr>
+<td>almost</td>
+<td>in principle</td>
+<td>scarce(ly)</td>
+</tr>
+<tr>
+<td>appreciable(ably)</td>
+<td>inadequate</td>
+<td>serious(ly)</td>
+</tr>
+<tr>
+<td>appropriate(ly)</td>
+<td>interesting(ly),</td>
+<td>severe(ly)</td>
+</tr>
+<tr>
+<td>brief/(ly)</td>
+<td>it appears that</td>
+<td>sharp(ly)</td>
+</tr>
+<tr>
+<td>clear(ly)</td>
+<td>large(ly)</td>
+<td>significant(ly)</td>
+</tr>
+<tr>
+<td>comparable (ably)</td>
+<td>likelihood</td>
+<td>similar</td>
+</tr>
+<tr>
+<td>considerable(ably)</td>
+<td>low</td>
+<td>simple(ply)</td>
+</tr>
+<tr>
+<td>consistent(ly)</td>
+<td>main(ly)</td>
+<td>smooth(ly)</td>
+</tr>
+<tr>
+<td>distinct(ly)</td>
+<td>marked(ly)</td>
+<td>somewhat</td>
+</tr>
+<tr>
+<td>dominant(ly)</td>
+<td>measurable(ably)</td>
+<td>steep(ly)</td>
+</tr>
+<tr>
+<td>dramatic(ally)</td>
+<td>mild(ly)</td>
+<td>striking(ly)</td>
+</tr>
+<tr>
+<td>drastic(ally)</td>
+<td>minimal(ly)</td>
+<td>strong(ly)</td>
+</tr>
+<tr>
+<td>equivalent</td>
+<td>more or less</td>
+<td>substantial(ly)</td>
+</tr>
+<tr>
+<td>essential(ly)</td>
+<td>most(ly)</td>
+<td>sudden(ly)</td>
+</tr>
+<tr>
+<td>excellent</td>
+<td>negligible(ibly)</td>
+<td>sufficient(ly)</td>
+</tr>
+<tr>
+<td>excessive(ly)</td>
+<td>noticeable(ably)</td>
+<td>suitable(ably)</td>
+</tr>
+<tr>
+<td>exceptional(ly)</td>
+<td>obvious(ly)</td>
+<td>surprising(ly)</td>
+</tr>
+<tr>
+<td>extensive(ly)</td>
+<td>only</td>
+<td>tendency</td>
+</tr>
+<tr>
+<td>extreme(ly)</td>
+<td>overwhelming(ly)</td>
+<td>the majority of</td>
+</tr>
+<tr>
+<td>fair(ly)</td>
+<td>poor(ly)</td>
+<td>too + adjective</td>
+</tr>
+<tr>
+<td>few</td>
+<td>powerful(ly)</td>
+<td>unexpected(ly)</td>
+</tr>
+<tr>
+<td>general(ly)</td>
+<td>quick(ly)</td>
+<td>unusual(ly)</td>
+</tr>
+<tr>
+<td>good</td>
+<td>radical(ly)</td>
+<td>valuable</td>
+</tr>
+<tr>
+<td>high(ly)</td>
+<td>rapid(ly)</td>
+<td>very</td>
+</tr>
+<tr>
+<td>immense(ly)</td>
+<td></td>
+<td>virtual(ly)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-与其他研究结果的比较"><a class="markdownIt-Anchor" href="#5-与其他研究结果的比较"></a> 5. 与其他研究结果的比较</h3>
+<ul>
+<li>
+<p>定量的分析（Quantitative Analysis）</p>
+</li>
+<li>
+<p>定性分析（Qualitative Analysis）</p>
+</li>
+</ul>
+<blockquote>
+<p>注意两者在实际中的区别</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>第一列</th>
+<th>第二列</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>as anticipated</td>
+<td>is/are better than</td>
+</tr>
+<tr>
+<td>as expected,</td>
+<td>is/are in good agreement</td>
+</tr>
+<tr>
+<td>as predicted by…</td>
+<td>is/are identical (to)</td>
+</tr>
+<tr>
+<td>as reported by…</td>
+<td>is/are not dissimilar (to)</td>
+</tr>
+<tr>
+<td>compare well with</td>
+<td>is/are parallel (to)</td>
+</tr>
+<tr>
+<td>concur</td>
+<td>is/are similar (to)</td>
+</tr>
+<tr>
+<td>confirm</td>
+<td>is/are unlike</td>
+</tr>
+<tr>
+<td>consistent with</td>
+<td>match</td>
+</tr>
+<tr>
+<td>contrary to</td>
+<td>prove</td>
+</tr>
+<tr>
+<td>corroborate</td>
+<td>refute</td>
+</tr>
+<tr>
+<td>correlate</td>
+<td>reinforce</td>
+</tr>
+<tr>
+<td>disprove</td>
+<td>support</td>
+</tr>
+<tr>
+<td>inconsistent with</td>
+<td>validate</td>
+</tr>
+<tr>
+<td>in line with</td>
+<td>verify</td>
+</tr>
+</tbody>
+</table>
+<h3 id="6-结果中存在的问题"><a class="markdownIt-Anchor" href="#6-结果中存在的问题"></a> 6. 结果中存在的问题</h3>
+<ul>
+<li>弱化问题并展示好的结果</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>短语</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(a) preliminary attempt</td>
+<td>这是一项初步尝试</td>
+</tr>
+<tr>
+<td>despite this,</td>
+<td>尽管如此，</td>
+</tr>
+<tr>
+<td>however,</td>
+<td>然而，</td>
+</tr>
+<tr>
+<td>immaterial</td>
+<td>不重要的，无关紧要的</td>
+</tr>
+<tr>
+<td>incomplete</td>
+<td>不完整的，未完成的</td>
+</tr>
+<tr>
+<td>infinitesimal</td>
+<td>极小的，微不足道的</td>
+</tr>
+<tr>
+<td>insignificant</td>
+<td>不重要的，微不足道的</td>
+</tr>
+<tr>
+<td>less than ideal</td>
+<td>不理想的，不完美的</td>
+</tr>
+<tr>
+<td>less than perfect</td>
+<td>不完美的，不理想的</td>
+</tr>
+<tr>
+<td>(a) minor deficit/limitation</td>
+<td>（一项）轻微的缺陷/限制，小瑕疵</td>
+</tr>
+<tr>
+<td>negligible</td>
+<td>可忽略的，微不足道的</td>
+</tr>
+<tr>
+<td>nevertheless</td>
+<td>尽管如此，然而</td>
+</tr>
+<tr>
+<td>not always reliable</td>
+<td>不总是可靠的</td>
+</tr>
+<tr>
+<td>not always accurate</td>
+<td>不总是准确的</td>
+</tr>
+<tr>
+<td>not ideal</td>
+<td>不理想的</td>
+</tr>
+<tr>
+<td>not identical</td>
+<td>不相同的</td>
+</tr>
+<tr>
+<td>not completely clear</td>
+<td>不完全清晰的</td>
+</tr>
+<tr>
+<td>not perfect</td>
+<td>不完美的</td>
+</tr>
+<tr>
+<td>not precise</td>
+<td>不精确的</td>
+</tr>
+<tr>
+<td>not significant</td>
+<td>不显著的，不重要的</td>
+</tr>
+<tr>
+<td>of no consequence</td>
+<td>毫不重要，毫无意义</td>
+</tr>
+<tr>
+<td>of no/little significance</td>
+<td>毫不重要，意义不大</td>
+</tr>
+<tr>
+<td>only</td>
+<td>仅仅，只是</td>
+</tr>
+<tr>
+<td>reasonable results were obtained</td>
+<td>获得了合理的结果</td>
+</tr>
+<tr>
+<td>room for improvement</td>
+<td>有改进的空间</td>
+</tr>
+<tr>
+<td>slightly (disappointing)</td>
+<td>稍微令人失望的</td>
+</tr>
+<tr>
+<td>(a) slight mismatch/limitation</td>
+<td>（一项）轻微的不匹配/限制，小瑕疵</td>
+</tr>
+<tr>
+<td>somewhat (problematic)</td>
+<td>有些问题的，有点棘手的</td>
+</tr>
+<tr>
+<td>(a) technicality</td>
+<td>（一项）技术细节，技术难题</td>
+</tr>
+<tr>
+<td>unimportant</td>
+<td>不重要的，微不足道的</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>给出问题的原因</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>短语</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>may/could/might have been</td>
+<td>或</td>
+</tr>
+<tr>
+<td>or</td>
+<td>或</td>
+</tr>
+<tr>
+<td>was/were:</td>
+<td>是/是（过去时）</td>
+</tr>
+<tr>
+<td>beyond the scope of this study</td>
+<td>超出了本研究的范围</td>
+</tr>
+<tr>
+<td>caused by</td>
+<td>由…引起</td>
+</tr>
+<tr>
+<td>difficult to (simulate)</td>
+<td>难以（模拟）</td>
+</tr>
+<tr>
+<td>due to</td>
+<td>由于，因为</td>
+</tr>
+<tr>
+<td>hard to (control)</td>
+<td>难以（控制）</td>
+</tr>
+<tr>
+<td>inevitable</td>
+<td>不可避免的</td>
+</tr>
+<tr>
+<td>it should be noted that…</td>
+<td>应该注意的是…</td>
+</tr>
+<tr>
+<td>not attempted</td>
+<td>没有尝试过</td>
+</tr>
+<tr>
+<td>not examined</td>
+<td>没有被检查</td>
+</tr>
+<tr>
+<td>not explored in this study</td>
+<td>在本研究中没有被探讨</td>
+</tr>
+<tr>
+<td>not investigated</td>
+<td>没有被调查</td>
+</tr>
+<tr>
+<td>not the focus of this paper</td>
+<td>不是本文的重点</td>
+</tr>
+<tr>
+<td>not within the scope of this study</td>
+<td>不在本研究的范围内</td>
+</tr>
+<tr>
+<td>possible source(s) of error</td>
+<td>可能的误差来源（s）</td>
+</tr>
+<tr>
+<td>unavoidable</td>
+<td>不可避免的</td>
+</tr>
+<tr>
+<td>unexpected</td>
+<td>意外的</td>
+</tr>
+<tr>
+<td>unfortunately</td>
+<td>不幸的，遗憾的</td>
+</tr>
+<tr>
+<td>unpredictable</td>
+<td>不可预测的</td>
+</tr>
+<tr>
+<td>unworkable</td>
+<td>行不通的，无法实现的</td>
+</tr>
+<tr>
+<td>unavailable</td>
+<td>不可获得的</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>提供解决方案</li>
+</ul>
+<blockquote>
+<p>Future Work一般不写。有两种情况写：1)审稿人给出意见说有问题，解决不了写；2）自己认为工作存在一定的问题写</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>短语</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Further work is planned</td>
+<td>已计划进一步工作</td>
+</tr>
+<tr>
+<td>Future work should…</td>
+<td>未来的工作应该…</td>
+</tr>
+<tr>
+<td>Future work will…</td>
+<td>未来的工作将…</td>
+</tr>
+<tr>
+<td>In future, care should be taken</td>
+<td>未来，应当谨慎</td>
+</tr>
+<tr>
+<td>In future, it is advised that…</td>
+<td>未来，建议…</td>
+</tr>
+</tbody>
+</table>
+<h3 id="7-结果的影响"><a class="markdownIt-Anchor" href="#7-结果的影响"></a> 7. 结果的影响</h3>
+<table>
+<thead>
+<tr>
+<th>第一列</th>
+<th>第二列</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>apparently</td>
+<td>It is logical that</td>
+</tr>
+<tr>
+<td>could be due to</td>
+<td>It is thought/believed that</td>
+</tr>
+<tr>
+<td>could be explained by</td>
+<td>It seems that</td>
+</tr>
+<tr>
+<td>could account for</td>
+<td>It seems plausible (etc.) that</td>
+</tr>
+<tr>
+<td>could be attributed to</td>
+<td>likely</td>
+</tr>
+<tr>
+<td>could be interpreted as</td>
+<td>could/may/might/can</td>
+</tr>
+<tr>
+<td>could be seen as</td>
+<td>means that</td>
+</tr>
+<tr>
+<td>evidently</td>
+<td>perhaps</td>
+</tr>
+<tr>
+<td>imply/implies that</td>
+<td>possibly/possibility</td>
+</tr>
+<tr>
+<td>indicate/indicating that</td>
+<td>potentially</td>
+</tr>
+<tr>
+<td>in some circumstances</td>
+<td>presumably</td>
+</tr>
+<tr>
+<td>is owing to</td>
+<td>probably</td>
+</tr>
+<tr>
+<td>is/are associated with</td>
+<td>provide compelling evidence</td>
+</tr>
+<tr>
+<td>is/are likely</td>
+<td>seem to</td>
+</tr>
+<tr>
+<td>is/are linked to</td>
+<td>suggest(ing) that</td>
+</tr>
+<tr>
+<td>is/are related to</td>
+<td>support the idea that</td>
+</tr>
+<tr>
+<td>It appears that</td>
+<td>tend to</td>
+</tr>
+<tr>
+<td>It could be concluded that…</td>
+<td>tendency</td>
+</tr>
+<tr>
+<td>It could be inferred that</td>
+<td>unlikely</td>
+</tr>
+<tr>
+<td>It could be speculated that</td>
+<td>There is evidence for</td>
+</tr>
+<tr>
+<td>It could be assumed that</td>
+<td>We could infer that</td>
+</tr>
+<tr>
+<td>It is conceivable that</td>
+<td>We have confidence that</td>
+</tr>
+<tr>
+<td>It is evident that</td>
+<td>would seem to suggest/indicate</td>
+</tr>
+</tbody>
+</table>
 
                 
             </div>
@@ -578,7 +1329,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://jijunhao.github.io/2023/06/01/article20230601/">http://jijunhao.github.io/2023/06/01/article20230601/</a>
+                    <a href="http://jijunhao.github.io/2023/11/03/article20231103/">http://jijunhao.github.io/2023/11/03/article20231103/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -616,12 +1367,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Differential-Privacy/">
-                                    <span class="chip bg-color">Differential Privacy</span>
-                                </a>
-                            
-                                <a href="/tags/Privacy-Protection/">
-                                    <span class="chip bg-color">Privacy Protection</span>
+                                <a href="/tags/%E5%86%99%E4%BD%9C/">
+                                    <span class="chip bg-color">写作</span>
                                 </a>
                             
                         </div>
@@ -714,46 +1461,48 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2023/07/03/article20230703/">
+                <a href="/2023/11/03/article20231103/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/15.webp" class="responsive-img" alt="3D-Aware Adversarial Makeup Generation for Facial Privacy Protection">
+                        <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/13.webp" class="responsive-img" alt="SCI写作-Experiments">
                         
-                        <span class="card-title">3D-Aware Adversarial Makeup Generation for Facial Privacy Protection</span>
+                        <span class="card-title">SCI写作-Experiments</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            基于GAN的3D化妆人脸身份隐私保护：机器无法识别、人可以识别；特征级别操作；算法3DAM-GAN
+                            SCI写作-Experiments
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-07-03
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-11-03
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/" class="post-category">
-                                    论文阅读
+                            <a href="/categories/%E5%86%99%E4%BD%9C/" class="post-category">
+                                    写作
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Privacy-Protection/">
-                        <span class="chip bg-color">Privacy Protection</span>
+                    <a href="/tags/%E5%86%99%E4%BD%9C/">
+                        <span class="chip bg-color">写作</span>
                     </a>
                     
                 </div>
@@ -767,31 +1516,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/05/01/article20230501/">
+                <a href="/2023/11/02/article20231102/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/9.webp" class="responsive-img" alt="Conditional Identity Anonymization Generative Adversarial Networks">
+                        <img src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/medias/featureimages/2.webp" class="responsive-img" alt="SCI写作-Method">
                         
-                        <span class="card-title">Conditional Identity Anonymization Generative Adversarial Networks</span>
+                        <span class="card-title">SCI写作-Method</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            基于GAN的人脸身份匿名化隐私保护：机器和人无法识别、支持检测等算法、满足真实性、视频；特征级别操作；算法CIAGAN
+                            SCI写作-Method
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-11-02
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/" class="post-category">
-                                    论文阅读
+                            <a href="/categories/%E5%86%99%E4%BD%9C/" class="post-category">
+                                    写作
                                 </a>
                             
                             
@@ -801,12 +1550,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Privacy-Protection/">
-                        <span class="chip bg-color">Privacy Protection</span>
-                    </a>
-                    
-                    <a href="/tags/%E4%BA%BA%E8%84%B8%E7%94%9F%E6%88%90/">
-                        <span class="chip bg-color">人脸生成</span>
+                    <a href="/tags/%E5%86%99%E4%BD%9C/">
+                        <span class="chip bg-color">写作</span>
                     </a>
                     
                 </div>
@@ -881,6 +1626,87 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/codeBlock/codeShrink.js"></script>
 
 
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/gh/jijunhao/jijunhao.github.io/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
 
     
 

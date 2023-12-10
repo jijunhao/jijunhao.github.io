@@ -6,7 +6,7 @@
   <link href="http://jijunhao.github.io/atom.xml" rel="self"/>
   
   <link href="http://jijunhao.github.io/"/>
-  <updated>2023-12-10T08:43:17.000Z</updated>
+  <updated>2023-12-10T12:56:28.227Z</updated>
   <id>http://jijunhao.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SCI写作-Experiments</title>
+    <link href="http://jijunhao.github.io/2023/11/03/article20231103/"/>
+    <id>http://jijunhao.github.io/2023/11/03/article20231103/</id>
+    <published>2023-11-03T15:23:23.000Z</published>
+    <updated>2023-12-10T12:56:28.227Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;experiments的写作要点&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#experiments的写作要点&quot;&gt;&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="写作" scheme="http://jijunhao.github.io/categories/%E5%86%99%E4%BD%9C/"/>
+    
+    
+    <category term="写作" scheme="http://jijunhao.github.io/tags/%E5%86%99%E4%BD%9C/"/>
+    
+  </entry>
   
   <entry>
     <title>SCI写作-Method</title>
@@ -519,34 +544,6 @@
     <category term="技术工具" scheme="http://jijunhao.github.io/tags/%E6%8A%80%E6%9C%AF%E5%B7%A5%E5%85%B7/"/>
     
     <category term="Zotero" scheme="http://jijunhao.github.io/tags/Zotero/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PyTorch常用操作</title>
-    <link href="http://jijunhao.github.io/2023/04/09/article20230409/"/>
-    <id>http://jijunhao.github.io/2023/04/09/article20230409/</id>
-    <published>2023-04-09T02:38:56.000Z</published>
-    <updated>2023-04-09T04:56:16.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;数据集加载&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#数据集加载&quot;&gt;&lt;/a&gt; 数据集加载&lt;/h2&gt;
-&lt;h3 id=&quot;1-网络数据集&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Python" scheme="http://jijunhao.github.io/categories/Python/"/>
-    
-    
-    <category term="Python" scheme="http://jijunhao.github.io/tags/Python/"/>
-    
-    <category term="PyTorch" scheme="http://jijunhao.github.io/tags/PyTorch/"/>
     
   </entry>
   
