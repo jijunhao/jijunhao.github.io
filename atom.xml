@@ -6,7 +6,7 @@
   <link href="http://jijunhao.github.io/atom.xml" rel="self"/>
   
   <link href="http://jijunhao.github.io/"/>
-  <updated>2023-12-08T15:53:52.894Z</updated>
+  <updated>2023-12-10T08:43:17.000Z</updated>
   <id>http://jijunhao.github.io/</id>
   
   <author>
@@ -17,18 +17,43 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>SCI写作-Method</title>
+    <link href="http://jijunhao.github.io/2023/11/02/article20231102/"/>
+    <id>http://jijunhao.github.io/2023/11/02/article20231102/</id>
+    <published>2023-11-02T12:07:03.000Z</published>
+    <updated>2023-12-10T08:43:17.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;method的写作要点&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#method的写作要点&quot;&gt;&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="写作" scheme="http://jijunhao.github.io/categories/%E5%86%99%E4%BD%9C/"/>
+    
+    
+    <category term="写作" scheme="http://jijunhao.github.io/tags/%E5%86%99%E4%BD%9C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>SCI写作-Introduction</title>
     <link href="http://jijunhao.github.io/2023/11/01/article20231101/"/>
     <id>http://jijunhao.github.io/2023/11/01/article20231101/</id>
     <published>2023-11-01T12:07:03.000Z</published>
-    <updated>2023-12-08T15:53:52.894Z</updated>
+    <updated>2023-12-10T08:43:16.999Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;structure&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#structure&quot;&gt;&lt;/a&gt;</summary>
+    <summary type="html">&lt;h2 id=&quot;introduction的写作要点&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#introduction的写作要点&quot;&gt;&lt;/a&gt;</summary>
         
       
     
@@ -511,34 +536,6 @@
         
     <summary type="html">&lt;h2 id=&quot;数据集加载&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#数据集加载&quot;&gt;&lt;/a&gt; 数据集加载&lt;/h2&gt;
 &lt;h3 id=&quot;1-网络数据集&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Python" scheme="http://jijunhao.github.io/categories/Python/"/>
-    
-    
-    <category term="Python" scheme="http://jijunhao.github.io/tags/Python/"/>
-    
-    <category term="PyTorch" scheme="http://jijunhao.github.io/tags/PyTorch/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>归一化方法</title>
-    <link href="http://jijunhao.github.io/2023/04/08/article20230408/"/>
-    <id>http://jijunhao.github.io/2023/04/08/article20230408/</id>
-    <published>2023-04-08T02:38:56.000Z</published>
-    <updated>2023-04-29T08:04:58.326Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;常用归一化方法&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#常用归一化方法&quot;&gt;&lt;/a&gt; 常用归一化方法&lt;/h2&gt;
-&lt;h3 id=&quot;1-batchnorm&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot;</summary>
         
       
     
