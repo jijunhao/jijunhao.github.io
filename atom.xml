@@ -6,7 +6,7 @@
   <link href="http://jijunhao.github.io/atom.xml" rel="self"/>
   
   <link href="http://jijunhao.github.io/"/>
-  <updated>2023-12-10T12:56:28.227Z</updated>
+  <updated>2023-12-11T06:51:12.108Z</updated>
   <id>http://jijunhao.github.io/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SCI写作-Abstract</title>
+    <link href="http://jijunhao.github.io/2023/11/05/article20231105/"/>
+    <id>http://jijunhao.github.io/2023/11/05/article20231105/</id>
+    <published>2023-11-05T15:23:23.000Z</published>
+    <updated>2023-12-11T06:51:12.108Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;abstract的写作要点&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#abstract的写作要点&quot;&gt;&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="写作" scheme="http://jijunhao.github.io/categories/%E5%86%99%E4%BD%9C/"/>
+    
+    
+    <category term="写作" scheme="http://jijunhao.github.io/tags/%E5%86%99%E4%BD%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SCI写作-Conclusion</title>
+    <link href="http://jijunhao.github.io/2023/11/04/article20231104/"/>
+    <id>http://jijunhao.github.io/2023/11/04/article20231104/</id>
+    <published>2023-11-04T15:23:23.000Z</published>
+    <updated>2023-12-11T06:51:12.108Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;conclusion的写作要点&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#conclusion的写作要点&quot;&gt;&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="写作" scheme="http://jijunhao.github.io/categories/%E5%86%99%E4%BD%9C/"/>
+    
+    
+    <category term="写作" scheme="http://jijunhao.github.io/tags/%E5%86%99%E4%BD%9C/"/>
+    
+  </entry>
   
   <entry>
     <title>SCI写作-Experiments</title>
@@ -488,62 +538,6 @@
     <category term="PyTorch" scheme="http://jijunhao.github.io/tags/PyTorch/"/>
     
     <category term="CV" scheme="http://jijunhao.github.io/tags/CV/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>计算机视觉任务(一)</title>
-    <link href="http://jijunhao.github.io/2023/04/12/article20230412/"/>
-    <id>http://jijunhao.github.io/2023/04/12/article20230412/</id>
-    <published>2023-04-12T15:07:56.000Z</published>
-    <updated>2023-04-29T08:39:46.203Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;1-图像分类image-classification&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#1-图像分类image-classification&quot;&gt;&lt;/a&gt; 1. 图像分类(Image</summary>
-        
-      
-    
-    
-    
-    <category term="计算机视觉" scheme="http://jijunhao.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
-    
-    
-    <category term="Python" scheme="http://jijunhao.github.io/tags/Python/"/>
-    
-    <category term="PyTorch" scheme="http://jijunhao.github.io/tags/PyTorch/"/>
-    
-    <category term="CV" scheme="http://jijunhao.github.io/tags/CV/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Zotero-文献管理工具</title>
-    <link href="http://jijunhao.github.io/2023/04/10/article20230410/"/>
-    <id>http://jijunhao.github.io/2023/04/10/article20230410/</id>
-    <published>2023-04-10T02:07:56.000Z</published>
-    <updated>2023-04-19T10:38:06.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Zotero是一款开源的免费的文献管理软件，可以帮助研究人员、学生和学者收集、组织和引用研究文献。它能够自动从网络上抓取文章和其他文献的元数据，包括作者、标题、出版物信息等，并将其保存在本地数据库中。用户还可以使用Zotero创建标签、笔记和文件夹来组织他们的文献收藏，并在</summary>
-        
-      
-    
-    
-    
-    <category term="技术工具" scheme="http://jijunhao.github.io/categories/%E6%8A%80%E6%9C%AF%E5%B7%A5%E5%85%B7/"/>
-    
-    
-    <category term="技术工具" scheme="http://jijunhao.github.io/tags/%E6%8A%80%E6%9C%AF%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="Zotero" scheme="http://jijunhao.github.io/tags/Zotero/"/>
     
   </entry>
   
