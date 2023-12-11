@@ -6,7 +6,7 @@
   <link href="http://jijunhao.github.io/atom.xml" rel="self"/>
   
   <link href="http://jijunhao.github.io/"/>
-  <updated>2023-12-11T06:51:12.108Z</updated>
+  <updated>2023-12-11T08:15:09.100Z</updated>
   <id>http://jijunhao.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>EfficientViT Memory Efficient Vision Transformer with Cascaded Group Attention</title>
+    <link href="http://jijunhao.github.io/2023/11/06/article20231106/"/>
+    <id>http://jijunhao.github.io/2023/11/06/article20231106/</id>
+    <published>2023-11-06T15:23:23.000Z</published>
+    <updated>2023-12-11T08:15:09.100Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;div class=&quot;row&quot;&gt;
+    &lt;embed src=&quot;https://arxiv.org/pdf/2305.07027v1.pdf&quot; width=&quot;100%&quot; height=&quot;550&quot; type=&quot;application/pdf&quot;&gt;
+	&lt;/div&gt;
+
+
+
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="论文阅读" scheme="http://jijunhao.github.io/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/"/>
+    
+    
+    <category term="写作，CV" scheme="http://jijunhao.github.io/tags/%E5%86%99%E4%BD%9C%EF%BC%8CCV/"/>
+    
+  </entry>
   
   <entry>
     <title>SCI写作-Abstract</title>
@@ -508,36 +539,6 @@
     
     
     <category term="Math，机器学习" scheme="http://jijunhao.github.io/tags/Math%EF%BC%8C%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>计算机视觉任务(二)</title>
-    <link href="http://jijunhao.github.io/2023/04/13/article20230413/"/>
-    <id>http://jijunhao.github.io/2023/04/13/article20230413/</id>
-    <published>2023-04-13T04:07:56.000Z</published>
-    <updated>2023-04-29T08:39:54.478Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;generative-models&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#generative-models&quot;&gt;&lt;/a&gt; Generative Models&lt;/h2&gt;
-&lt;p&gt;给定来自感兴趣分布的观察到的样本&lt;span</summary>
-        
-      
-    
-    
-    
-    <category term="计算机视觉" scheme="http://jijunhao.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
-    
-    
-    <category term="Python" scheme="http://jijunhao.github.io/tags/Python/"/>
-    
-    <category term="PyTorch" scheme="http://jijunhao.github.io/tags/PyTorch/"/>
-    
-    <category term="CV" scheme="http://jijunhao.github.io/tags/CV/"/>
     
   </entry>
   
