@@ -1675,34 +1675,6 @@ thead {
     color: #999;
 }
 
-#aboutme .introductiont {
-    margin: 1.5rem auto 3rem;
-    max-width: 700px;
-    text-align: left;
-    line-height: 1.2rem;
-    font-size: 1.5rem;
-}
-
-#aboutme .introductionl {
-    margin: 1.5rem auto 1rem;
-    max-width: 700px;
-    text-align: left;
-    line-height: 1.1rem;
-    color: #3c4858;
-    font-size: 1.1rem;
-}
-
-
-#aboutme .introductionl::marker {
-    unicode-bidi: isolate;
-    font-variant-numeric: tabular-nums;
-    text-transform: none;
-    text-indent: 0px !important;
-    text-align: start !important;
-    text-align-last: start !important;
-}
-
-
 .post-charts,
 .my-projects,
 .my-skills,
