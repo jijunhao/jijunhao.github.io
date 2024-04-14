@@ -1675,23 +1675,6 @@ thead {
     color: #999;
 }
 
-#aboutme .ul {
-    font-family: Georgia, serif;
-    list-style-position: outside;
-    list-style-type: square;
-    margin-top: 0.2em;
-    padding-top: 0;
-    margin-bottom: 0.8em;
-}
-
-#aboutme .li {
-    font-family: Georgia, serif;
-    margin-top:0.9em;
-    display: list-item;
-    text-align: -webkit-match-parent;
-    unicode-bidi: isolate;
-}
-
 .post-charts,
 .my-projects,
 .my-skills,
