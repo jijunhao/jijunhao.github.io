@@ -6,7 +6,7 @@
   <link href="http://jijunhao.github.io/atom.xml" rel="self"/>
   
   <link href="http://jijunhao.github.io/"/>
-  <updated>2023-12-11T08:15:09.100Z</updated>
+  <updated>2024-04-15T02:53:12.633Z</updated>
   <id>http://jijunhao.github.io/</id>
   
   <author>
@@ -17,11 +17,43 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>机器学习论文中公式规范</title>
+    <link href="http://jijunhao.github.io/2024/04/01/article20240401/"/>
+    <id>http://jijunhao.github.io/2024/04/01/article20240401/</id>
+    <published>2024-04-01T15:23:23.000Z</published>
+    <updated>2024-04-15T02:53:12.633Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;普通字体（正常风格）：用于普通文本等。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;LaTeX 写法：直接输入文本即可。&lt;/li&gt;
+&lt;li&gt;LaTeX 展示：This is normal</summary>
+        
+      
+    
+    
+    
+    <category term="写作" scheme="http://jijunhao.github.io/categories/%E5%86%99%E4%BD%9C/"/>
+    
+    
+    <category term="机器学习" scheme="http://jijunhao.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="写作" scheme="http://jijunhao.github.io/tags/%E5%86%99%E4%BD%9C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>EfficientViT Memory Efficient Vision Transformer with Cascaded Group Attention</title>
     <link href="http://jijunhao.github.io/2023/11/06/article20231106/"/>
     <id>http://jijunhao.github.io/2023/11/06/article20231106/</id>
     <published>2023-11-06T15:23:23.000Z</published>
-    <updated>2023-12-11T08:15:09.100Z</updated>
+    <updated>2024-04-15T02:44:08.381Z</updated>
     
     
       
@@ -43,7 +75,9 @@
     <category term="论文阅读" scheme="http://jijunhao.github.io/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/"/>
     
     
-    <category term="写作，CV" scheme="http://jijunhao.github.io/tags/%E5%86%99%E4%BD%9C%EF%BC%8CCV/"/>
+    <category term="CV" scheme="http://jijunhao.github.io/tags/CV/"/>
+    
+    <category term="写作" scheme="http://jijunhao.github.io/tags/%E5%86%99%E4%BD%9C/"/>
     
   </entry>
   
@@ -202,7 +236,7 @@
     <link href="http://jijunhao.github.io/2023/09/01/article20230901/"/>
     <id>http://jijunhao.github.io/2023/09/01/article20230901/</id>
     <published>2023-09-01T12:07:03.000Z</published>
-    <updated>2024-04-15T02:34:12.514Z</updated>
+    <updated>2024-04-15T02:54:25.355Z</updated>
     
     
       
@@ -513,32 +547,6 @@
     
     
     <category term="GAN" scheme="http://jijunhao.github.io/tags/GAN/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>概率估计方法</title>
-    <link href="http://jijunhao.github.io/2023/04/18/article20230418/"/>
-    <id>http://jijunhao.github.io/2023/04/18/article20230418/</id>
-    <published>2023-04-18T10:07:56.000Z</published>
-    <updated>2024-04-15T02:25:06.767Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;概率估计方法&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#概率估计方法&quot;&gt;&lt;/a&gt; 概率估计方法&lt;/h2&gt;
-&lt;p&gt;在实践中，概率分布通常是未知的，如何从样本中识别出潜在的概率分布是统计估计。当知道观测值 &lt;span</summary>
-        
-      
-    
-    
-    
-    <category term="人工智能" scheme="http://jijunhao.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
-    
-    
-    <category term="Math，机器学习" scheme="http://jijunhao.github.io/tags/Math%EF%BC%8C%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
